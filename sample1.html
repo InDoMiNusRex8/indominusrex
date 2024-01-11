@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <script>
+      window.MathJax = {
+        options: {
+          enableAssistiveMml: false // Disable assistive MathML
+        },
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+      };
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+    <style>
+    .input {
+      width: 20px;
+      text-align: center;
+      font-family: Computer Modern Serif, sans-serif;
+    }
+
+    .red {
+      background-color: darkred;
+    }
+    </style>
+</head>
+<body>
+
+<math display="block" class="tml-display" style="display:block math;">
+  <mrow>
+    <msubsup>
+      <mo movablelimits="false">∫</mo>
+      <mn>2</mn>
+      <mn>3</mn>
+    </msubsup>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+      <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" type="text" maxlength="1" class="input" size="1" data-answer="1" value="" autocomplete="off" placeholder="A" />
+        </annotation-xml></semantics></mn>
+        <mn>
+        <semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" type="text" maxlength="1" class="input" size="1" data-answer="9" value="" autocomplete="off" placeholder="B" />
+        </annotation-xml></semantics>
+      </mn>
+      </mrow>
+      <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" type="text" maxlength="1" class="input" size="1" data-answer="3" value="" autocomplete="off" placeholder="C" />
+        </annotation-xml></semantics></mn>
+    </mfrac>
+  </mrow>
+</math>
+
+<br>
+<button id="checkButton" style="margin-top: 10px; font-family: Computer Modern Serif, sans-serif;">Check Answers</button>
+<div id="resultMessage" style="margin-top: 10px; font-family: Computer Modern Serif, sans-serif;"></div>
+
+
+<div id="timerDisplay" style="font-family: Computer Modern Serif, sans-serif;">Time remaining: <span id="timer">80:00</span></div>
+
+
+<script>
+  let timer;
+  let timerSeconds = 4800; // Set the timer duration in seconds
+
+  function startTimer() {
+    timer = setInterval(function () {
+      timerSeconds--;
+      const minutes = Math.floor(timerSeconds / 60);
+      const seconds = timerSeconds % 60;
+      const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      document.getElementById('timer').textContent = formattedTime; // Update the displayed timer value
+      if (timerSeconds <= 0) {
+        clearInterval(timer);
+        const allCorrect = checkAllAnswers(); // Check all answers when time's up
+        document.getElementById('checkButton').style.display = 'none'; // Hide the check button after time's up
+        const resultMessage = document.getElementById('resultMessage');
+        if (allCorrect) {
+          resultMessage.textContent = 'Time\'s up! All answers are correct!';
+        } else {
+          resultMessage.textContent = 'Time\'s up! Some answers are incorrect. Please try again.';
+        }
+      }
+    }, 1000);
+  }
+
+
+
+  function startQuiz() {
+    startTimer();
+  }
+
+  function isInAssistiveMathML(element) {
+    // Traverse up the DOM tree to check if the element is inside an <annotation-xml> node
+    while (element !== document.documentElement) {
+      if (element.nodeName.toLowerCase() === 'annotation-xml') {
+        return true; // The element is inside an <annotation-xml> node
+      }
+      element = element.parentNode;
+    }
+    return false; // The element is not inside an <annotation-xml> node
+  }
+
+  function checkAnswer(element) {
+    if (isInAssistiveMathML(element)) {
+      return true; // Ignore input fields inside assistive MathML
+    }
+
+    const inputValue = element.value.replace(/[^0-9-]/g, '');
+    const correctAnswer = element.dataset.answer;
+
+    console.log('Input Value:', inputValue);
+    console.log('Correct Answer:', correctAnswer);
+
+    const isCorrect = inputValue === correctAnswer;
+
+    element.style.backgroundColor = '';
+    if (!isCorrect) {
+      element.style.backgroundColor = 'red';
+    }
+
+    return isCorrect;
+  }
+
+  function checkAllAnswers() {
+    const inputFields = document.querySelectorAll('input[data-answer]');
+    let allCorrect = true;
+    let totalScore = 0;
+    let anyAnswerProvided = false;
+
+    inputFields.forEach(function (element) {
+      if (!checkAnswer(element)) {
+        allCorrect = false;
+      } else {
+        // Calculate score based on the number of correct characters
+        const inputValue = element.value.replace(/[^0-9-]/g, ''); // Remove non-digit and non-dash characters
+        if (inputValue.length > 0) {
+          anyAnswerProvided = true;
+          totalScore += 1; // Add 1 point if there is at least one correct character
+        }
+      }
+    });
+
+    const resultMessage = document.getElementById('resultMessage');
+    if (allCorrect && anyAnswerProvided) {
+      resultMessage.textContent = `All answers are correct! Your score is ${totalScore}.`;
+    } else if (anyAnswerProvided) {
+      resultMessage.textContent = `Your score is ${totalScore}. Some answers are incorrect. Please try again.`;
+    } else {
+      resultMessage.textContent = `Your score is 0. No answers were provided. Please try again.`;
+    }
+
+    clearInterval(timer); // Always stop the timer when checking answers
+
+    const checkButton = document.getElementById('checkButton');
+    checkButton.style.display = 'none'; // Hide the "Check Answers" button
+
+    return allCorrect; // Return whether all answers are correct
+  }
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    startQuiz(); // Start the quiz automatically when the page is loaded
+
+    // Add event listener for Enter key press
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent the default action of submitting forms
+        document.getElementById('checkButton').click(); // Simulate a click on the "Check Answers" button
+      }
+    });
+
+    document.getElementById('checkButton').addEventListener('click', function () {
+      checkAllAnswers();
+    });
+  });
+</script>
+
+</body>
+</html>

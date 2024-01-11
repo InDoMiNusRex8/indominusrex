@@ -15,10 +15,43 @@
 	      margin: 10px;
 	    }
 	 </style>
+
+	 <script>
+	     function checkInput() {
+	       var input = document.getElementById('textInput').value;
+	       var hiddenText = document.getElementById('hiddenText');
+
+	       if (input.toLowerCase() === 'sample') {
+	         hiddenText.style.display = 'block';
+	       } else {
+	         hiddenText.style.display = 'none';
+	       }
+	     }
+
+	     function handleKeyPress(event) {
+	       if (event.key === 'Enter') {
+	         checkInput();
+	       }
+	     }
+	   </script>
+	   <style>
+	     #hiddenText {
+	       display: none;
+	     }
+	   </style>
 </head>
 <body>
-	<h1>Select a language</h1>
-	  <a href="/indominusrex/eng.html" style="text-align: center"><button>English</button></a>
+	<h1 style="font-family: Computer Modern;">Select a language</h1>
+	  <a href="/indominusrex/eng.html" style="text-align: center; font-family: Computer Modern;"><button>English</button></a>
 	  <a href="/indominusrex/jap.html" style="text-align: center; font-family: Zen Old Mincho;"><button>日本語</button></a>
+
+	  <input type="text" id="textInput" onkeypress="handleKeyPress(event)">
+	    <div id="hiddenText">
+	      <p>Sample pages:</p>
+	      <ol>
+	      	<li><a href="/indominusrex/sample1.html">Sample 1</a></li>
+
+	      </ol>
+	    </div>
 </body>
 </html>
