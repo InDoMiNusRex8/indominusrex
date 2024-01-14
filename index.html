@@ -21,44 +21,48 @@
 		}
 	 </style>
 
-	 <script>
-	     function checkInput() {
-	       var input = document.getElementById('textInput').value;
-	       var hiddenText = document.getElementById('hiddenText');
-
-	       if (input.toLowerCase() === 'sample') {
-	         hiddenText.style.display = 'block';
-	       } else {
-	         hiddenText.style.display = 'none';
-	       }
-	     }
-
-	     function handleKeyPress(event) {
-	       if (event.key === 'Enter') {
-	         checkInput();
-	       }
-	     }
-	   </script>
-	   <style>
-	     #hiddenText {
-	       display: none;
-	     }
-	   </style>
 </head>
 <body>
-	<h1 >Select a language</h1>
+
+	<nav class="navbar navbar-expand-lg bg-light">
+	  <div class="container-fluid">
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="/indominusrex">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="/indominusrex/contact.html">About me</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Sample pages</a>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Languages
+	          </a>
+	          <ul class="dropdown-menu">
+	            <li><a class="dropdown-item" href="/indominusrex/eng.html">English</a></li>
+	            <li><a class="dropdown-item" style="font-family: 'Zen Old Mincho', sans-serif !important;" href="/indominusrex/jap.html">日本語</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
 	  
-	  <a class="btn btn-primary" href="/indominusrex/eng.html" role="button" style="font-family: Computer Modern Serif;">English</a>
-	  <a class="btn btn-primary" href="/indominusrex/jap.html" role="button" style="font-family: Zen Old Mincho;">日本語</a>
 	  
 
-	  <input type="text" onkeypress="handleKeyPress(event)">
-	    <div id="hiddenText">
+	  
+	    
 	      <p>Sample pages:</p>
 	      <ol>
 	      	<li><a href="/indominusrex/sample1.html">Sample 1</a></li>
 
 	      </ol>
-	    </div>
+	    
 </body>
 </html>
