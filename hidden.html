@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hidden Page</title>
-  <link rel="stylesheet" href="styles.css">
-  <style type="text/css">
-    
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
     .container {
       margin-top: 100px;
     }
@@ -26,7 +30,24 @@
       color: red;
     }
 
+    #hiddenContent {
+      display: none;
+    }
   </style>
+</head>
+<body>
+  <div class="container" id="passwordForm">
+    <h1>Enter the password to unlock the hidden page</h1>
+    <input type="password" id="password">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="message"></p>
+  </div>
+
+  <div class="container" id="hiddenContent">
+    <h2>Hidden Content</h2>
+    <p>This content is hidden until you enter the correct password.</p>
+  </div>
+
   <script>
     const password = "your_password"; // Replace with your desired password
     const input = document.getElementById("password");
@@ -49,21 +70,5 @@
       }
     }
   </script>
-
-</head>
-<body>
-  <div class="container" id="passwordForm">
-    <h1>Enter the password to unlock the hidden page</h1>
-    <input type="password" id="password">
-    <button onclick="checkPassword()">Submit</button>
-    <p id="message"></p>
-  </div>
-
-  <div class="container" id="hiddenContent" style="display: none;">
-    <h2>Hidden Content</h2>
-    <p>This content is hidden until you enter the correct password.</p>
-  </div>
-
-  
 </body>
 </html>
