@@ -3,32 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-  <style type="text/css">
-  * {
-      font-family: Computer Modern Serif;
-    } 
-
-  @media (max-width: 768px) {
-        p {
-          padding: 0 90px 10px 90px;
-          font-size: 11px; /* Font size for smaller screens */
-        }
-    } 
-  </style>
-  <style>
-        #hidden-content {
-            display: none;
-        }
-    </style>
     <script>
         var password = prompt("Enter the password to unlock the hidden content:");
         if (password === "1234") {
-            document.getElementById("hidden-content").style.display = "block";
+            window.location.href = "/indominusrex/ejunotes.html";
         } else {
             alert("Incorrect password. You will be redirected to the homepage.");
             window.location.href = "/indominusrex/";
@@ -36,39 +14,6 @@
     </script>
 </head>
 <body>
-    <div id="hidden-content">
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/indominusrex">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/indominusrex/contact.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/indominusrex/sampleland.html">Sample pages</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/indominusrex/hidden.html" style="color: #f8f9fa;">???</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-        <h1>This is the hidden content!</h1>
-        <div class="list-group">
-          <a class="list-group-item list-group-item-light disabled" aria-disabled="true">MATH I</a>
-          <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-          <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-          <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-        </div>
-    </div>
     
 </body>
 </html>
