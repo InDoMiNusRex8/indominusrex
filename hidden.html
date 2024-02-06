@@ -73,7 +73,9 @@
     function disableHiddenPageLinks() {
       const links = document.querySelectorAll("a[href='/indominusrex/hidden.html']");
       links.forEach(link => {
-        link.classList.add("disabled");
+        link.removeAttribute("href");
+        link.style.pointerEvents = "none";
+        link.style.color = "gray";
         link.setAttribute("aria-disabled", "true");
       });
     }
