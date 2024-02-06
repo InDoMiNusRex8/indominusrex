@@ -28,34 +28,42 @@
 
   </style>
   <script>
-      const password = "your_password"; // Replace with your desired password
-      const input = document.getElementById("password");
-      const message = document.getElementById("message");
+    const password = "your_password"; // Replace with your desired password
+    const input = document.getElementById("password");
+    const message = document.getElementById("message");
+    const passwordForm = document.getElementById("passwordForm");
+    const hiddenContent = document.getElementById("hiddenContent");
 
-      function checkPassword() {
-        if (input.value === password) {
-          window.location.href = "hidden.html";
-        } else {
-          message.textContent = "Incorrect password. Redirecting...";
-          input.value = "";
-          setTimeout(() => {
-            window.location.href = "index.html"; // Replace with your homepage URL
-          }, 3000); // Redirect after 3 seconds (adjust as needed)
-          document.querySelector("a[href='hidden.html']").classList.add("disabled"); // Disable the link
-          document.querySelector("a[href='hidden.html']").setAttribute("aria-disabled", "true"); // Set aria-disabled attribute to true
-        }
+    function checkPassword() {
+      if (input.value === password) {
+        passwordForm.style.display = "none"; // Hide the password form
+        hiddenContent.style.display = "block"; // Show the hidden content
+      } else {
+        message.textContent = "Incorrect password. Redirecting...";
+        input.value = "";
+        setTimeout(() => {
+          window.location.href = "index.html"; // Replace with your homepage URL
+        }, 3000); // Redirect after 3 seconds (adjust as needed)
+        document.querySelector("a[href='hidden.html']").classList.add("disabled"); // Disable the link
+        document.querySelector("a[href='hidden.html']").setAttribute("aria-disabled", "true"); // Set aria-disabled attribute to true
       }
-    </script>
+    }
+  </script>
 
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="passwordForm">
     <h1>Enter the password to unlock the hidden page</h1>
     <input type="password" id="password">
     <button onclick="checkPassword()">Submit</button>
     <p id="message"></p>
   </div>
 
+  <div class="container" id="hiddenContent" style="display: none;">
+    <h2>Hidden Content</h2>
+    <p>This content is hidden until you enter the correct password.</p>
+  </div>
 
+  
 </body>
 </html>
