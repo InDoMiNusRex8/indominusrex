@@ -27,21 +27,25 @@
     }
 
   </style>
-  <script type="text/javascript">
-    const password = "your_password"; // Replace with your desired password
-    const input = document.getElementById("password");
-    const message = document.getElementById("message");
+  <script>
+      const password = "your_password"; // Replace with your desired password
+      const input = document.getElementById("password");
+      const message = document.getElementById("message");
 
-    function checkPassword() {
-      if (input.value === password) {
-        window.location.href = "hidden.html";
-      } else {
-        message.textContent = "Incorrect password. Please try again.";
-        input.value = "";
+      function checkPassword() {
+        if (input.value === password) {
+          window.location.href = "hidden.html";
+        } else {
+          message.textContent = "Incorrect password. Redirecting...";
+          input.value = "";
+          setTimeout(() => {
+            window.location.href = "index.html"; // Replace with your homepage URL
+          }, 3000); // Redirect after 3 seconds (adjust as needed)
+          document.querySelector("a[href='hidden.html']").classList.add("disabled"); // Disable the link
+          document.querySelector("a[href='hidden.html']").setAttribute("aria-disabled", "true"); // Set aria-disabled attribute to true
+        }
       }
-    }
-
-  </script>
+    </script>
 
 </head>
 <body>
