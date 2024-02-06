@@ -5,6 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hidden Page</title>
   <link rel="stylesheet" href="styles.css">
+  <style type="text/css">
+    
+    .container {
+      margin-top: 100px;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 20px;
+      color: red;
+    }
+
+  </style>
+  <script type="text/javascript">
+    const password = "your_password"; // Replace with your desired password
+    const input = document.getElementById("password");
+    const message = document.getElementById("message");
+
+    function checkPassword() {
+      if (input.value === password) {
+        window.location.href = "hidden.html";
+      } else {
+        message.textContent = "Incorrect password. Please try again.";
+        input.value = "";
+      }
+    }
+
+  </script>
+
 </head>
 <body>
   <div class="container">
@@ -14,6 +52,6 @@
     <p id="message"></p>
   </div>
 
-  <script src="script.js"></script>
+
 </body>
 </html>
