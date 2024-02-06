@@ -1,85 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hidden Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-    }
-
-    .container {
-      margin-top: 100px;
-    }
-
-    input {
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-    button {
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-
-    #message {
-      margin-top: 20px;
-      color: red;
-    }
-
-    #hiddenContent {
-      display: none;
-    }
-  </style>
+    <title>Hidden Page</title>
+    <style>
+        #hidden-content {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to the Hidden Page</h1>
-    <form onsubmit="return checkPassword(event)">
-      <label for="password">Enter the password:</label>
-      <input type="password" id="password" required>
-      <button type="submit">Submit</button>
-      <p id="message"></p>
-    </form>
-  </div>
-
-  <div class="container" id="hiddenContent">
-    <h2>Hidden Content</h2>
-    <p>This content is hidden until you enter the correct password.</p>
-  </div>
-
-  <script>
-    const password = "pass"; // Replace with your desired password
-    const input = document.getElementById("password");
-    const message = document.getElementById("message");
-    const hiddenContent = document.getElementById("hiddenContent");
-
-    function checkPassword() {
-      if (input.value === password) {
-        window.location.href = "/indominusrex/hidden.html";
-      } else {
-        message.textContent = "Incorrect password. Redirecting...";
-        input.value = "";
-        setTimeout(() => {
-          window.location.href = "/indominusrex/"; // Replace with your homepage URL
-        }, 300);
-        disableHiddenPageLinks(); // Disable all links to the hidden page
-      }
-    }
-
-    function disableHiddenPageLinks() {
-      const links = document.querySelectorAll("a[href='/indominusrex/hidden.html']");
-      links.forEach(link => {
-        link.removeAttribute("href");
-        link.style.pointerEvents = "none";
-        link.style.color = "gray";
-        link.setAttribute("aria-disabled", "true");
-      });
-    }
-
-  </script>
+    <div id="hidden-content">
+        <h1>This is the hidden content!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+    </div>
+    <script>
+        var password = prompt("Enter the password to unlock the hidden content:");
+        if (password === "1234") {
+            document.getElementById("hidden-content").style.display = "block";
+        } else {
+            alert("Incorrect password. You will be redirected to the homepage.");
+            window.location.href = "/";
+        }
+    </script>
 </body>
 </html>
