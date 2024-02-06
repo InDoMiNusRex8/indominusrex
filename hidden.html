@@ -36,11 +36,14 @@
   </style>
 </head>
 <body>
-  <div class="container" id="passwordForm">
-    <h1>Enter the password to unlock the hidden page</h1>
-    <input type="password" id="password">
-    <button onclick="checkPassword()">Submit</button>
-    <p id="message"></p>
+  <div class="container">
+    <h1>Welcome to the Hidden Page</h1>
+    <form onsubmit="return checkPassword(event)">
+      <label for="password">Enter the password:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Submit</button>
+      <p id="message"></p>
+    </form>
   </div>
 
   <div class="container" id="hiddenContent">
@@ -49,26 +52,32 @@
   </div>
 
   <script>
-    const password = "your_password"; // Replace with your desired password
+    const password = "pass"; // Replace with your desired password
     const input = document.getElementById("password");
     const message = document.getElementById("message");
-    const passwordForm = document.getElementById("passwordForm");
     const hiddenContent = document.getElementById("hiddenContent");
 
     function checkPassword() {
       if (input.value === password) {
-        passwordForm.style.display = "none"; // Hide the password form
-        hiddenContent.style.display = "block"; // Show the hidden content
+        window.location.href = "/indominusrex/hidden.html";
       } else {
         message.textContent = "Incorrect password. Redirecting...";
         input.value = "";
         setTimeout(() => {
           window.location.href = "/indominusrex/"; // Replace with your homepage URL
-        }, 300); // Redirect after 3 seconds (adjust as needed)
-        document.querySelector("a[href='/indominusrex/']").classList.add("disabled"); // Disable the link
-        document.querySelector("a[href='/indominusrex/']").setAttribute("aria-disabled", "true"); // Set aria-disabled attribute to true
+        }, 300);
+        disableHiddenPageLinks(); // Disable all links to the hidden page
       }
     }
+
+    function disableHiddenPageLinks() {
+      const links = document.querySelectorAll("a[href='/indominusrex/hidden.html']");
+      links.forEach(link => {
+        link.classList.add("disabled");
+        link.setAttribute("aria-disabled", "true");
+      });
+    }
+
   </script>
 </body>
 </html>
