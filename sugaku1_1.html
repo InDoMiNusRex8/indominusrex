@@ -19,9 +19,10 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
       p {
-        padding: 30px 170px 10px 20px;
+        padding: 10px 20px 10px 20px;
         font-size: 17px;
       }
       h2 { 
@@ -38,12 +39,26 @@
       }
       #horizontal li {
           float:left;
-          width:20vw;
+          width:14vw;
           list-style-type:decimal;
       }
+        .tcolorbox-h {
+          margin-left: auto;
+          margin-right: auto;
+          border: 3px solid black;
+          background: rgba(0,105,148, 0.1);
+          width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+          padding: 10px 10px 15px 10px;
+          margin-bottom: 20px;
+          border-radius: 25px;}
+
         .tcolorbox {
-          border: 1px solid black;
-          padding: 10px 30px 15px 30px;
+          margin-left: auto;
+          margin-right: auto;
+          border: 3px solid black;
+          background: rgba(0,105,148, 0.1);
+          width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+          padding: 10px 30px 0px 30px;
           margin-bottom: 20px;
           border-radius: 25px;}
 
@@ -57,9 +72,9 @@
 <body>
   
 
-  <h2>Multiplication of Monomials</h2>
-  <h3>Exponent Rules ( <i>m</i>, <i>n</i> are natural numbers)</h3>
-  <div id="horizontal" class="tcolorbox">
+  <h2>Multiplication of monomials</h2>
+  <h3>Exponent rules (\(m,n\in \mathbb{R}\) and \(a,b>0\))</h3>
+  <div id="horizontal" class="tcolorbox-h">
     <ol>
       <li>\(a^m a^n=a^{(m+n)}\)</li>
       <li>\((a^m)^n=a^{mn}\)</li>
@@ -67,11 +82,12 @@
     </ol>
   </div>
 
-  <h2>Expansion of Expressions</h2>
-  <p>Converting an expression from its product form into its sum form is called "expanding".</p>
-  <p><strong>Ex.</strong> \(\underset{\textrm{product form}}{\underline{a(x+y)}}=\underset{\textrm{sum form}}{\underline{ax+ay}}\)</p>
+  <h2>Expansion of expressions</h2>
+  <p>Converting an expression from its product form into its sum form is called "expanding".  <strong>Ex.</strong> \(\underset{\textrm{product form}}{\underline{a(x+y)}}=\underset{\textrm{sum form}}{\underline{ax+ay}}\)</p>
 
-  <h3>Expansion Formulas</h3>
+  <h3>Expansion formulas <a class="btn btn-info" data-bs-toggle="offcanvas" href="#offcanvas1" role="button" aria-controls="offcanvas1">
+      <i class="bi bi-plus-lg"></i>
+    </a> </h3>
   <div class="tcolorbox">
     <ol>
       <li>\((a+b)^2=a^2+2ab+b^2\)</li>
@@ -87,11 +103,34 @@
     </ol>
   </div>
 
-  <h2>Factorization of Expressions</h2>
+    
+    
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas1" aria-labelledby="offcanvas1">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvas1"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <p >Must memorize numbers 1, 2, 3, 7, 8, 9, and 10. 6 is next in priority. The rest of the formulas rely on multiplying out each term.  </p>
+
+          <p>This will rarely be used, but in case the exponent goes beyond 3, make use of the binomial theorem.</p>
+          <p>\[(a+b)^n={}_{n}\textrm{C}_0 a^n b^0 + {}_{n}\textrm{C}_1 a^{n-1} b^1 + \hspace{10cm}\]\[ \hspace{0.2cm} {}_{n}\textrm{C}_2 a^{n-2} b^2 + \cdots +{}_{n}\textrm{C}_{n-1} a^{1} b^{n-1} +{}_{n}\textrm{C}_{n} a^{0} b^{n} \]</p>
+
+          <p>where \({}_{n}\textrm{C}_k=\overset{\text{k terms}}{\overbrace{\frac{n \times (n-1) \times \ldots \times (n-k+1)}{k!}}}\) .</p>
+        
+        </div>
+      </div>
+    </div>
+
+  <h2>Factorization of expressions</h2>
   <p>The process of factorizing a polynomial into its product form is called factorization. It is the reverse operation of expanding.</p>
   <p>Expansion: \((x+1)^2 =x^2 +2x+1\quad \quad\) Factorization: \(x^2 +2x+1=(x+1)^2\)</p>
 
-  <h3>Factorization Formulas</h3>
+  <h3>Factorization formulas <a class="btn btn-info" data-bs-toggle="offcanvas" href="#offcanvas2" role="button" aria-controls="offcanvas2">
+      <i class="bi bi-plus-lg"></i>
+    </a></h3>
   <div class="tcolorbox">
     <ol>
       <li>\(a^2+2ab+b^2=(a+b)^2\)</li>
@@ -106,6 +145,22 @@
     </ol>
   </div>
 
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas2" aria-labelledby="offcanvas2">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvas2"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <p >Must memorize numbers 1, 2, 3, 7, 8, 9, and 10. 6 is next in priority. The rest of the formulas rely on multiplying out each term.  </p>
+
+        
+      
+      </div>
+    </div>
+  </div>
+
+
   <h2>Real Numbers</h2>
   <div class="tikz-picture">
     <p>Real numbers</p>
@@ -119,10 +174,10 @@
 
   <h2>Absolute Value</h2>
   <p>On the number line, the distance from 0 to point \(a\) is called the absolute value and is represented by \(\lvert a\rvert\).</p>
-  <p>\( \lvert a\rvert= \begin{cases*}
-    a & (\(a\geqq 0\))\\
-    -a &(\(a<0\))
-  \end{cases*}\)</p>
+  <p>\[ \lvert a\rvert= \begin{cases}
+    a & a\geqq 0\\
+    -a & a<0
+  \end{cases}\]</p>
   <div class="tikz-picture">
     <p>Number line illustration</p>
   </div>
@@ -133,7 +188,7 @@
   <div class="tcolorbox">
     <ol>
       <li>\((\sqrt{a})^2=a\)</li>
-      <li>\(\sqrt{a^2}=a\)</li>
+      <li>\(\sqrt{a^2}=\lvert a\rvert\)</li>
       <li>\(\sqrt{k^2 a}=k\sqrt{a}\)</li>
       <li>\(\sqrt{a}\sqrt{b}=\sqrt{ab}\)</li>
     </ol>
