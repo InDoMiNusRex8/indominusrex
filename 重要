@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+  <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+   <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script> 
+
+   <script>
+      window.MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+      };
+   </script>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+      p {
+        padding: 10px 20px 10px 20px;
+        font-size: 17px;
+      }
+      h2 { 
+        font-weight: bold;
+        font-size: 45px
+      }
+
+      h3 {
+        font-size: 28px
+      }
+
+      * {
+      font-family: 'Computer Modern Serif', sans-serif !important;
+      }
+      #horizontal li {
+          float:left;
+          width:14vw;
+          list-style-type:decimal;
+      }
+        .tcolorbox-h {
+          margin-left: auto;
+          margin-right: auto;
+          border: 3px solid black;
+          background: rgba(0,105,148, 0.1);
+          width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+          padding: 10px 10px 15px 10px;
+          margin-bottom: 20px;
+          border-radius: 25px;}
+
+        .tcolorbox {
+          margin-left: auto;
+          margin-right: auto;
+          border: 3px solid black;
+          background: rgba(0,105,148, 0.1);
+          width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+          padding: 10px 30px 0px 30px;
+          margin-bottom: 20px;
+          border-radius: 25px;}
+
+    @media (max-width: 768px) {
+          p {
+            padding: 10px 90px 10px 90px;
+            font-size: 11px; /* Font size for smaller screens */
+          }
+      }
+   </style>
+<body>
+  
+<div id="1">
+  <h3>剛体のつり合い</h3>
+<p>鉛直な壁面上のちょうつがいOのまわりに自由に回転できる，質量m，長さlの棒がある。棒は60°傾き，先端を水平な糸で壁と結ばれている。糸の張力Tと，棒がOから受ける力の大きさFと向き（壁からの角度をθとしてtanθ）を求めよ。</p>
+</div>
+</body>
+</html>
