@@ -1,0 +1,44 @@
+{
+    "1": {
+        "A": {
+            "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{2n+11}{n^{2}+2n+4}$": "<p>$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{2n+11}{n^{2}+2n+4}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{2+\\dfrac{11}{n}}{n+2+\\dfrac{4}{n}}$</p><p>$=\\boldsymbol{0}$</p>"
+        },
+        "B": {
+            "$\\displaystyle \\int_0^1 x^2 \\, dx$": "<p>$\\displaystyle \\int_0^1 x^2 \\, dx$</p><p>$\\displaystyle = \\frac{1}{3}$</p>"
+        },
+        "C": {
+            "$\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n^2}$": "<p>$\\displaystyle \\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$</p>"
+        },
+        "D": {
+            "$\\displaystyle e^{i\\pi} + 1 = 0$": "<p>$\\displaystyle e^{i\\pi} + 1 = 0$</p><p>The famous Euler's identity!</p>"
+        }
+    },
+    "2": {
+        "A": {
+            "$\\displaystyle \\frac{d}{dx}(e^x)$": "<p>$\\displaystyle \\frac{d}{dx}(e^x) = e^x$</p>"
+        },
+        "B": {
+            "$\\displaystyle \\frac{d}{dx}(x^3)$": "<p>$\\displaystyle \\frac{d}{dx}(x^3) = 3x^2$</p>"
+        },
+        "C": {
+            "$\\displaystyle \\int_0^1 x^3 \\, dx$": "<p>$\\displaystyle \\int_0^1 x^3 \\, dx = \\frac{1}{4}$</p>"
+        },
+        "D": {
+            "$\\displaystyle \\int_{0}^{\\infty} e^{-x} \\, dx$": "<p>$\\displaystyle \\int_{0}^{\\infty} e^{-x} \\, dx = 1$</p>"
+        }
+    },
+    "3": {
+        "A": {
+            "$\\displaystyle \\int_0^\\infty \\frac{\\sin(x)}{x} \\, dx$": "<p>$\\displaystyle \\int_0^\\infty \\frac{\\sin(x)}{x} \\, dx = \\frac{\\pi}{2}$</p>"
+        },
+        "B": {
+            "$\\displaystyle \\zeta(2)$": "<p>$\\displaystyle \\zeta(2) = \\frac{\\pi^2}{6}$</p>"
+        },
+        "C": {
+            "$\\displaystyle \\int_{-\\infty}^{\\infty} e^{-x^2} dx$": "<p>$\\displaystyle \\int_{-\\infty}^{\\infty} e^{-x^2} dx = \\sqrt{\\pi}$</p>"
+        },
+        "D": {
+            "$\\displaystyle \\frac{d}{dx}(\\ln(x))$": "<p>$\\displaystyle \\frac{d}{dx}(\\ln(x)) = \\frac{1}{x}$</p>"
+        }
+    }
+}
