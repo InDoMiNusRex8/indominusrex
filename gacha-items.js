@@ -159,7 +159,7 @@ const gachaItems = {
         "C": [{
     question: "$\\displaystyle \\lim_{n \\to \\infty}\\left(\\dfrac{1}{n+\\dfrac{1}{2}}+\\dfrac{1}{n+\\dfrac{3}{2}}+\\dfrac{1}{n+\\dfrac{5}{2}}+\\cdots+\\dfrac{2}{6n-1}\\right)$",
     // 区分求積(奇数番目の和)，サイトの練習
-    answer: "<div style=\"text-align: center\"><img src=\"noteimages/kubunkyuseki23.png\" alt=\"奇数和の図\" width=\"80%\"></div><p>　$\\displaystyle\\lim_{n \\to \\infty}\\left(\\dfrac{1}{n+\\dfrac{1}{2}}+\\dfrac{1}{n+\\dfrac{3}{2}}+\\dfrac{1}{n+\\dfrac{5}{2}}+\\cdots+\\dfrac{1}{3n-\\dfrac{1}{2}}\\right)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\sum_{k=1}^{2n}\\dfrac{1}{n+\\dfrac{2k-1}{2}}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\sum_{k=1}^{2n}\\dfrac{1}{1+\\dfrac{2k-1}{2n}}\\cdot\\dfrac{1}{n}$</p><p>$\\displaystyle =\\int_{0}^{2}\\dfrac{1}{1+x}\\,dx$</p><p>$\\displaystyle =\\boldsymbol{\\log3}$</p><p><b style=\"color: black\">別解</b></p><p>　$\\displaystyle\\lim_{n \\to \\infty}\\left(\\dfrac{1}{n+\\dfrac{1}{2}}+\\dfrac{1}{n+\\dfrac{3}{2}}+\\dfrac{1}{n+\\dfrac{5}{2}}+\\cdots+\\dfrac{1}{3n-\\dfrac{1}{2}}\\right)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\left(\\dfrac{1}{n+\\dfrac{1}{2}}+\\dfrac{1}{n+\\dfrac{3}{2}}+\\dfrac{1}{n+\\dfrac{5}{2}}+\\cdots+\\dfrac{1}{n+\\dfrac{4n-1}{2}}\\right)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\left(\\sum_{k=1}^{4n}\\dfrac{1}{n+\\dfrac{k}{2}}-\\sum_{k=1}^{2n}\\dfrac{1}{n+\\dfrac{2k}{2}}\\right)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\frac{1}{n}\\left(\\sum_{k=1}^{4n}\\dfrac{1}{1+\\dfrac{1}{2}\\dfrac{k}{n}}-\\sum_{k=1}^{2n}\\dfrac{1}{1+\\dfrac{k}{n}}\\right)$</p><p>$\\displaystyle =\\int_{0}^{4}\\dfrac{1}{1+\\dfrac{1}{2}x}\\,dx-\\int_{0}^{2}\\dfrac{1}{1+x}\\,dx$</p><p>$\\displaystyle =\\left[2\\log\\left(1+\\dfrac{1}{2}x\\right)\\right]_{0}^{4}-\\Bigl[\\log\\left(1+x\\right)\\Bigr]_{0}^{2}$</p><p>$\\displaystyle =2\\log3-\\log3$</p><p>$\\displaystyle =\\boldsymbol{\\log3}$</p>",
+    answer: "<p>　$\\displaystyle\\lim_{n \\to \\infty}\\left(\\dfrac{1}{n+\\dfrac{1}{2}}+\\dfrac{1}{n+\\dfrac{3}{2}}+\\dfrac{1}{n+\\dfrac{5}{2}}+\\cdots+\\dfrac{1}{3n-\\dfrac{1}{2}}\\right)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\sum_{k=1}^{2n}\\dfrac{1}{n+\\dfrac{2k-1}{2}}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\sum_{k=1}^{2n}\\dfrac{1}{1+\\dfrac{2k-1}{2n}}\\cdot\\dfrac{1}{n}$</p><p>$\\displaystyle =\\int_{0}^{2}\\dfrac{1}{1+x}\\,dx$</p><p>$\\displaystyle =\\boldsymbol{\\log3}$</p><p><b style=\"color: black\">別解</b></p><p>　$\\displaystyle\\lim_{n \\to \\infty}\\left(\\dfrac{1}{n+\\dfrac{1}{2}}+\\dfrac{1}{n+\\dfrac{3}{2}}+\\dfrac{1}{n+\\dfrac{5}{2}}+\\cdots+\\dfrac{1}{3n-\\dfrac{1}{2}}\\right)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\left(\\dfrac{1}{n+\\dfrac{1}{2}}+\\dfrac{1}{n+\\dfrac{3}{2}}+\\dfrac{1}{n+\\dfrac{5}{2}}+\\cdots+\\dfrac{1}{n+\\dfrac{4n-1}{2}}\\right)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\left(\\sum_{k=1}^{4n}\\dfrac{1}{n+\\dfrac{k}{2}}-\\sum_{k=1}^{2n}\\dfrac{1}{n+\\dfrac{2k}{2}}\\right)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\frac{1}{n}\\left(\\sum_{k=1}^{4n}\\dfrac{1}{1+\\dfrac{1}{2}\\dfrac{k}{n}}-\\sum_{k=1}^{2n}\\dfrac{1}{1+\\dfrac{k}{n}}\\right)$</p><p>$\\displaystyle =\\int_{0}^{4}\\dfrac{1}{1+\\dfrac{1}{2}x}\\,dx-\\int_{0}^{2}\\dfrac{1}{1+x}\\,dx$</p><p>$\\displaystyle =\\left[2\\log\\left(1+\\dfrac{1}{2}x\\right)\\right]_{0}^{4}-\\Bigl[\\log\\left(1+x\\right)\\Bigr]_{0}^{2}$</p><p>$\\displaystyle =2\\log3-\\log3$</p><p>$\\displaystyle =\\boldsymbol{\\log3}$</p>",
     weight: 3,
 }, {
     question: "$\\displaystyle \\lim_{x \\to \\infty}\\dfrac{x}{e^{x}}$",
@@ -169,7 +169,7 @@ const gachaItems = {
 }, {
     question: "$\\displaystyle \\lim_{n \\to \\infty} \\sum_{k=1}^{n}\\dfrac{1}{k}$",
     // 調和級数，面積評価
-    answer: "<div style=\"text-align: center\"><img src=\"noteimages/mugenkyuusuu-zu.png\" alt=\"調和級数の図\" width=\"100%\"></div><p>$0&lt;k\\leqq x \\leqq k+1$ において，$y=\\dfrac{1}{x}$ は単調減少より</p><p style=\"text-align: center\">$\\displaystyle \\dfrac{1}{x}\\leqq \\dfrac{1}{k}$</p><p>$k\\leqq x \\leqq k+1$ において両辺積分すると</p><p style=\"text-align: center\">$\\displaystyle \\int_{k}^{k+1}\\dfrac{1}{x}\\,dx&lt; \\int_{k}^{k+1}\\dfrac{1}{k}\\,dx=\\dfrac{1}{k}$</p><p>$k=1,2,\\cdots,n$ で辺々足していくと</p><p style=\"text-align: center\">$\\displaystyle \\int_{1}^{n+1}\\dfrac{1}{x}\\,dx&lt; \\sum_{k=1}^{n}\\dfrac{1}{k}$</p><p>左辺を計算して</p><p style=\"text-align: center\">$\\displaystyle \\log(n+1)&lt; \\sum_{k=1}^{n}\\dfrac{1}{k}$</p><p>$\\displaystyle \\lim_{n \\to \\infty}\\log(n+1)=\\infty$ より</p><p style=\"text-align: center\">$\\displaystyle \\lim_{n \\to \\infty} \\sum_{k=1}^{n}\\dfrac{1}{k}=\\boldsymbol{\\infty}$</p>",
+    answer: "<p>$0&lt;k\\leqq x \\leqq k+1$ において，$y=\\dfrac{1}{x}$ は単調減少より</p><p style=\"text-align: center\">$\\displaystyle \\dfrac{1}{x}\\leqq \\dfrac{1}{k}$</p><p>$k\\leqq x \\leqq k+1$ において両辺積分すると</p><p style=\"text-align: center\">$\\displaystyle \\int_{k}^{k+1}\\dfrac{1}{x}\\,dx&lt; \\int_{k}^{k+1}\\dfrac{1}{k}\\,dx=\\dfrac{1}{k}$</p><p>$k=1,2,\\cdots,n$ で辺々足していくと</p><p style=\"text-align: center\">$\\displaystyle \\int_{1}^{n+1}\\dfrac{1}{x}\\,dx&lt; \\sum_{k=1}^{n}\\dfrac{1}{k}$</p><p>左辺を計算して</p><p style=\"text-align: center\">$\\displaystyle \\log(n+1)&lt; \\sum_{k=1}^{n}\\dfrac{1}{k}$</p><p>$\\displaystyle \\lim_{n \\to \\infty}\\log(n+1)=\\infty$ より</p><p style=\"text-align: center\">$\\displaystyle \\lim_{n \\to \\infty} \\sum_{k=1}^{n}\\dfrac{1}{k}=\\boldsymbol{\\infty}$</p>",
     weight: 3,
 }, {
     question: "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{n!}{2^n}$",
@@ -247,22 +247,22 @@ const gachaItems = {
     answer: "<p>$\\displaystyle I(m,n)=\\int_{1}^{e}x^{m}(\\log x)^{n}\\,dx$ とおく．</p><p>　$I(m,n)$</p><p>$\\displaystyle =\\int_{1}^{e}x^{m}(\\log x)^{n}\\,dx$</p><p>$\\displaystyle =\\left[\\dfrac{1}{m+1}x^{m+1}(\\log x)^{n}\\right]_{1}^{e}-\\int_{1}^{e}\\dfrac{1}{m+1}x^{m+1}\\cdot n(\\log x)^{n-1}\\cdot\\dfrac{1}{x}\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{m+1}e^{m+1}-\\dfrac{n}{m+1}I(m,n-1)$</p><p>$\\Longleftrightarrow \\ \\dfrac{n}{m+1}I(m,n-1)=\\dfrac{1}{m+1}e^{m+1}-I(m,n)$</p><p style=\"text-align: center\">$\\therefore \\ \\dfrac{n+1}{m+1}I(m,n)=\\dfrac{1}{m+1}e^{m+1}-I(m,n+1)$</p><p>ここで，$1\\leqq x \\leqq e$ において $x^{m}(\\log x)^{n}\\geqq0$ より $I(m,n)\\geqq 0$ なので</p><p style=\"text-align: center;\">$\\dfrac{n+1}{m+1}I(m,n)\\leqq \\dfrac{1}{m+1}e^{m+1}$</p><p style=\"text-align: center;\">$\\therefore \\ 0\\leqq I(m,n)\\leqq \\dfrac{e^{m+1}}{n+1}$</p><p>$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{e^{m+1}}{n+1}=0$ より</p><p style=\"text-align: center;\">$\\displaystyle \\lim_{n \\to \\infty}I(m,n)=\\boldsymbol{0}$</p>",
     weight: 3,
 }, {
-    question: "<span class=\"animation caution gaming\">$\\displaystyle \\lim_{x \\to 0}\\left(\\dfrac{\\sin x}{x}\\right)^{\\frac{1}{x^{2}}}$</span>",
+    question: "$\\displaystyle \\lim_{x \\to 0}\\left(\\dfrac{\\sin x}{x}\\right)^{\\frac{1}{x^{2}}}$</span>",
     // 超級1，ごよ
     answer: "<p>超級です．是非Twitterでハッシュタグ #極限ガチャ または #極限ガチャ超級 で解いてツイートしてみてください．こちらのTwitterアカウントがいいねやリプライ，リツイートなどで反応致します．</p>",
     weight: 1,
 }, {
-    question: "<span class=\"animation caution gaming\">$\\displaystyle \\lim_{n \\to \\infty}\\left(\\dfrac{3-\\sqrt[n]{3}}{2}\\right)^{n}$</span>",
+    question: "$\\displaystyle \\lim_{n \\to \\infty}\\left(\\dfrac{3-\\sqrt[n]{3}}{2}\\right)^{n}$</span>",
     // 超級2，ごよ
     answer: "<p>超級です．是非Twitterでハッシュタグ #極限ガチャ または #極限ガチャ超級 で解いてツイートしてみてください．こちらのTwitterアカウントがいいねやリプライ，リツイートなどで反応致します．</p>",
     weight: 1,
 }, {
-    question: "<span class=\"animation caution gaming\">$\\displaystyle \\lim_{x \\to \\infty}x\\left\\{e-\\left(1+\\dfrac{1}{x}\\right)^{x}\\right\\}$</span>",
+    question: "$\\displaystyle \\lim_{x \\to \\infty}x\\left\\{e-\\left(1+\\dfrac{1}{x}\\right)^{x}\\right\\}$</span>",
     // 超級3，ごよ
     answer: "<p>超級です．是非Twitterでハッシュタグ #極限ガチャ または #極限ガチャ超級 で解いてツイートしてみてください．こちらのTwitterアカウントがいいねやリプライ，リツイートなどで反応致します．</p>",
     weight: 1,
 }, {
-    question: "<span class=\"animation caution gaming\">$\\displaystyle \\lim_{n \\to \\infty}\\sum_{k=1}^{n}\\dfrac{1}{n^{\\frac{3}{2}}}\\left[\\sqrt{2k-1}\\right]$</span>",
+    question: "$\\displaystyle \\lim_{n \\to \\infty}\\sum_{k=1}^{n}\\dfrac{1}{n^{\\frac{3}{2}}}\\left[\\sqrt{2k-1}\\right]$</span>",
     // 超級4，AKR，格子点，奇数和の区分求積
     answer: "<p>超級です．是非Twitterでハッシュタグ #極限ガチャ または #極限ガチャ超級 で解いてツイートしてみてください．こちらのTwitterアカウントがいいねやリプライ，リツイートなどで反応致します．</p>",
     weight: 1,
