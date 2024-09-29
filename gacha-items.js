@@ -448,7 +448,7 @@ const gachaItems = {
     // Twitterで見かけた問題改
         },
         "C": {
-            [{
+            
     "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{13\\sin x+5}\\,dx$":
     // 上級1，三角関数
     "<p>$\\tan\\dfrac{x}{2}=t$ とおくと</p><p>　$\\sin x$</p><p>$=\\dfrac{2\\sin\\dfrac{x}{2}\\cos\\dfrac{x}{2}}{\\cos^{2}\\dfrac{x}{2}+\\sin^{2}\\dfrac{x}{2}}$</p><p>$=\\dfrac{2\\tan\\dfrac{x}{2}}{1+\\tan^{2}\\dfrac{x}{2}}$</p><p>$=\\dfrac{2t}{1+t^2}$</p><p>また</p><p>　$\\dfrac{1}{2\\cos^{2}\\dfrac{x}{2}}\\, dx=dt$</p><p>　$dx=\\dfrac{2}{1+t^2}\\, dt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{13\\sin x+5}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{\\dfrac{26t}{1+t^{2}}+5}\\cdot\\dfrac{2}{1+t^2}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{2}{(5t+1)(t+5)}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{12}\\int_{}^{} \\ \\left(\\dfrac{5}{5t+1}-\\dfrac{1}{t+5}\\right)\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{12}\\left(\\log|5t+1|-\\log|t+5|\\right)+C$</p><p>$=\\boldsymbol{\\dfrac{1}{12}\\log\\left|\\dfrac{5\\tan\\dfrac{x}{2}+1}{\\tan\\dfrac{x}{2}+5}\\right|+C}$</p>",
@@ -572,7 +572,7 @@ const gachaItems = {
 
     
     
-}, ]
+
         },
         "D": {
 
