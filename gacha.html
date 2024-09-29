@@ -41,6 +41,20 @@ video {
     height: 100%;
     object-fit: cover; /* Cover the entire container */
 }
+
+.roll-button {
+    background-image: url('imagegacha/button.webp'); /* Replace with your image path */
+    background-size: cover; /* Adjusts the background to cover the entire button */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    border: none; /* Remove default border */
+    width: auto; /* Set desired width */
+    height: auto; /* Adjust height automatically */
+    /* display: block; /* Optional: to ensure it's displayed as a block */
+    margin: 0 auto; /* Center the image horizontally */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: black; /* Change text color (if any) */
+    font-size: 16px; /* Set font size */
+}
 </style>
 </head>
 <body>
@@ -67,7 +81,7 @@ video {
         </select>
     </p>
 
-    <button onclick="gachaRoll()">Roll</button>
+    <button id="rollButton" class="roll-button" onclick="gachaRoll()">Roll</button>
 
     <div id="result"></div>
     
