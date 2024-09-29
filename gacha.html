@@ -107,7 +107,7 @@ h1, label, select, option, button {
             const explanation = answerParts.length > 1 ? answerParts[1].trim() : resultValue; // Get the explanation after the colon
 
             // Display the formula and explanation in separate sections
-            document.getElementById('result').innerHTML = `<p style="font-size:20px">${resultKey}</p>`;
+            document.getElementById('result').innerHTML = `<p style="font-size:20px; text-align: center;">${resultKey}</p>`;
             document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
 
             // Show the "Toggle Answer" button
