@@ -31,7 +31,7 @@ h1, label, select, option, button {
     background-repeat: no-repeat; /* Prevents the background from repeating */
     border: none; /* Remove default border */
     width: 200px; /* Set desired width */
-    height: 20px; /* Adjust height automatically */
+    height: 40px; /* Adjust height automatically */
     display: block; /* Optional: to ensure it's displayed as a block */
     margin: 0 auto; /* Center the image horizontally */
     cursor: pointer; /* Change cursor to pointer on hover */
@@ -107,7 +107,7 @@ h1, label, select, option, button {
             const explanation = answerParts.length > 1 ? answerParts[1].trim() : resultValue; // Get the explanation after the colon
 
             // Display the formula and explanation in separate sections
-            document.getElementById('result').innerHTML = `<p>${resultKey}</p>`;
+            document.getElementById('result').innerHTML = `<p style="font-size:20px">${resultKey}</p>`;
             document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
 
             // Show the "Toggle Answer" button
