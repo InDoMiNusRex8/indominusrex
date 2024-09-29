@@ -23,27 +23,7 @@
     font-family: 'Genshin', sans-serif; /* Use the font */
 }
     
-    #videoContainer {
-    position: fixed; /* Fix it to the viewport */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.8); /* Optional: dark background behind the video */
-    z-index: 999; /* Make sure it's on top of everything */
-    display: flex; /* Center the video */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
 
-.hidden {
-    display: none; /* Hide the container */
-}
-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the entire container */
-}
 
 .roll-button {
     background-image: url('imagegacha/button.webp'); /* Replace with your image path */
@@ -52,7 +32,7 @@ video {
     border: none; /* Remove default border */
     width: auto; /* Set desired width */
     height: auto; /* Adjust height automatically */
-    /* display: block; /* Optional: to ensure it's displayed as a block */
+    display: block; /* Optional: to ensure it's displayed as a block */
     margin: 0 auto; /* Center the image horizontally */
     cursor: pointer; /* Change cursor to pointer on hover */
     color: black; /* Change text color (if any) */
@@ -92,13 +72,7 @@ video {
 
     <div id="answer" class="hidden"></div>
 
-    <!-- Video element -->
-    <div id="videoContainer" class="hidden">
-    <video id="video" width="100%" height="100%" autoplay>
-        <source id="videoSource" src="" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
+
 
 
 
@@ -108,6 +82,7 @@ video {
     let items = {}; // This will store the gacha items
 
     // Assuming gachaItems is defined in gacha-items.js
+    // You can directly assign it to the items variable
     items = gachaItems; // Assuming gachaItems is available in the global scope
 
     // Gacha roll function
@@ -126,39 +101,19 @@ video {
             const answerParts = resultValue.split(":");
             const explanation = answerParts.length > 1 ? answerParts[1].trim() : resultValue; // Get the explanation after the colon
 
-            // Set the video source based on the selected type
-            const videoSource = document.getElementById('videoSource');
-            videoSource.src = `videogacha/${selectedType}.mp4`; // Corrected path syntax
-            const video = document.getElementById('video');
+            // Display the formula and explanation in separate sections
+            document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
+            document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
 
-            // Play the video
-            const videoContainer = document.getElementById('videoContainer');
-            videoContainer.classList.remove('hidden'); // Show video container
-            video.load(); // Load the new video source
-            video.play();
+            // Show the "Toggle Answer" button
+            document.getElementById('toggleButton').classList.remove('hidden');
+            document.getElementById('toggleButton').textContent = "Show Answer";
 
-            // Hide the result and answer initially
-            document.getElementById('result').innerHTML = ''; 
-            document.getElementById('answer').innerHTML = ''; 
+            // Hide the answer by default
+            document.getElementById('answer').classList.add('hidden');
 
-            video.onended = function() {
-                // After the video ends, display the question
-                document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
-                document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
-
-                // Show the "Toggle Answer" button
-                document.getElementById('toggleButton').classList.remove('hidden');
-                document.getElementById('toggleButton').textContent = "Show Answer";
-
-                // Hide the answer by default
-                document.getElementById('answer').classList.add('hidden');
-
-                // Ensure MathJax is triggered to render LaTeX
-                MathJax.typesetPromise();
-
-                // Hide the video container
-                videoContainer.classList.add('hidden'); // Hide video after it ends
-            };
+            // Ensure MathJax is triggered to render LaTeX
+            MathJax.typesetPromise();
         } else {
             document.getElementById('result').textContent = "No items found for this selection.";
         }
