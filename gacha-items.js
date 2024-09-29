@@ -21,7 +21,7 @@ const gachaItems = {
     //対数，ごよ４
     "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{(n+1)+(n+2)+\\cdots+2n}{1+2+\\cdots+n}$": "<p>　$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{(n+1)+(n+2)+\\cdots+2n}{1+2+\\cdots+n}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{(n+1+2n)n\\cdot \\dfrac{1}{2}}{\\sum\\limits_{k=1}^{n}k}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{3n+1}{n+1}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{3+\\dfrac{1}{n}}{1+\\dfrac{1}{n}}$</p><p>$=\\boldsymbol{3}$</p>",
     //和，ごよ５，アプリ版専用
-    "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{\\sin n}{n}$": "<p>$-1\\leqq \\sin n \\leqq 1$ より</p><p style=\"text-align: center\">$-\\dfrac{1}{n}\\leqq \\dfrac{\\sin n}{n} \\leqq \\dfrac{1}{n}$</p><p>$\\displaystyle \\lim_{n \\to \\infty}\\left(-\\dfrac{1}{n}\\right)=\\lim_{n \\to \\infty}\\dfrac{1}{n}=0$ より</p><p style=\"text-align: center\">$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{\\sin n}{n}=\\boldsymbol{0}$</p>",
+    "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{\\sin n}{n}$": "<p>Since $-1\\leqq \\sin n \\leqq 1$</p><p style=\"text-align: center\">$-\\dfrac{1}{n}\\leqq \\dfrac{\\sin n}{n} \\leqq \\dfrac{1}{n}$</p><p>$\\displaystyle \\lim_{n \\to \\infty}\\left(-\\dfrac{1}{n}\\right)=\\lim_{n \\to \\infty}\\dfrac{1}{n}=0$ より</p><p style=\"text-align: center\">$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{\\sin n}{n}=\\boldsymbol{0}$</p>",
     // はさみうち，サイトの例題
     "$\\displaystyle \\lim_{n \\to \\infty}\\left(\\dfrac{1}{n^{2}+1}+\\dfrac{1}{n^{2}+2}+\\cdots+\\dfrac{1}{n^{2}+n}\\right)$ ": "<p>$\\displaystyle A_n=\\dfrac{1}{n^{2}+1}+\\dfrac{1}{n^{2}+2}+\\cdots+\\dfrac{1}{n^{2}+n}$ とおく．</p><p>$\\displaystyle 0 &lt; \\dfrac{1}{n^{2}+k} &lt; \\dfrac{1}{n^2}$ $(k=1,2,\\cdots,n)$ だから</p><p>$\\displaystyle 0 &lt; A_n &lt; \\dfrac{1}{n^2}+\\dfrac{1}{n^2}+\\cdots+\\dfrac{1}{n^2}=\\dfrac{1}{n^2}\\cdot n=\\dfrac{1}{n}$</p><p>$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{1}{n}=0$ より $\\displaystyle \\lim_{n \\to \\infty}A_n=\\boldsymbol{0}$</p>",
     //はさみうち，ごよ６
@@ -29,9 +29,9 @@ const gachaItems = {
     // 無限等比数列，サイトの例題
     "$\\displaystyle \\lim_{n \\to \\infty}\\{5^{n}-(-4)^n\\}$": "<p>　$\\displaystyle \\lim_{n \\to \\infty}\\{5^{n}-(-4)^n\\}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}5^{n} \\left\\{1- \\left( -\\dfrac{4}{5} \\right)^n \\right\\}$</p><p>$=\\boldsymbol{\\infty}$</p>",
     //等比，ごよ７
-    "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{x^{n}+x+1}{x^{2n}+1}$　$( \\ x \\ は実数 \\ )$": "<p>$\\displaystyle f(x)=\\dfrac{x^{n}+x+1}{x^{2n}+1}$ とおく</p>(ⅰ) $|x|&lt;1$ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)$</p><p>$\\displaystyle =\\dfrac{0+x+1}{0+1}=x+1$</p><br><p>(ⅱ) $|x|&gt;1$ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{\\dfrac{1}{x^{n}}+\\dfrac{x+1}{x^{2n}}}{1+\\dfrac{1}{x^{2n}}}=0$</p><br><p>(ⅲ) $x=1$ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\dfrac{3}{2}$</p><br><p>(ⅳ) $x=-1$ のとき</p><p>分子の $x^{n}$ が振動するので定義されない．</p><p>以上より</p><p style=\"text-align: center\">$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\begin{cases} \\boldsymbol{x+1 \\ \\ \\ (-1&lt; x &lt; 1)} \\\\ \\boldsymbol{0 \\ \\ \\ (x&lt;-1，1&lt;x)} \\\\ \\boldsymbol{\\dfrac{3}{2} \\ \\ \\ (x=1)}\\end{cases}$</p>",
+    "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{x^{n}+x+1}{x^{2n}+1}$　$( \\ x \\ is a real number \\ )$": "<p>Set $\\displaystyle f(x)=\\dfrac{x^{n}+x+1}{x^{2n}+1}$</p>(ⅰ) When $|x|&lt;1$</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)$</p><p>$\\displaystyle =\\dfrac{0+x+1}{0+1}=x+1$</p><br><p>(ⅱ) $|x|&gt;1$ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{\\dfrac{1}{x^{n}}+\\dfrac{x+1}{x^{2n}}}{1+\\dfrac{1}{x^{2n}}}=0$</p><br><p>(ⅲ) $x=1$ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\dfrac{3}{2}$</p><br><p>(ⅳ) $x=-1$ のとき</p><p>分子の $x^{n}$ が振動するので定義されない．</p><p>以上より</p><p style=\"text-align: center\">$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\begin{cases} \\boldsymbol{x+1 \\ \\ \\ (-1&lt; x &lt; 1)} \\\\ \\boldsymbol{0 \\ \\ \\ (x&lt;-1，1&lt;x)} \\\\ \\boldsymbol{\\dfrac{3}{2} \\ \\ \\ (x=1)}\\end{cases}$</p>",
     // 無限等比数列，サイトの例題
-    "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{x^{2n+1}-1}{x^{2n}+1}$　$( \\ x \\ は実数 \\ )$": "<p>$\\displaystyle f(x)=\\dfrac{x^{2n+1}-1}{x^{2n}+1}$ とおく．</p><p>(i) $ |x| < 1$ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\dfrac{0-1}{0+1}=-1$</p><p>(ii) $ |x| > 1$ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\lim_{n \\to \\infty}\\dfrac{x-\\dfrac{1}{x^{2n}}}{1+\\dfrac{1}{x^{2n}}}=x$</p><p>(iii) $ x=1 $ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\dfrac{1-1}{1+1}=0$</p><p>(iv) $ x=-1 $ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\dfrac{-1-1}{1+1}=-1$</p><p>以上より</p><p style=\"text-align: center\">$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\begin{cases} \\boldsymbol{-1 \\ \\ \\ (-1 \\leqq x < 1)} \\\\ \\boldsymbol{x \\ \\ \\ (x &lt; -1，1&lt;x)} \\\\ \\boldsymbol{0 \\ \\ \\ (x=1)}\\end{cases}$</p>",
+    "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{x^{2n+1}-1}{x^{2n}+1}$　$( \\ x \\ is a real number \\ )$": "<p>Set $\\displaystyle f(x)=\\dfrac{x^{2n+1}-1}{x^{2n}+1}$.</p><p>(i) When $ |x| < 1$</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\dfrac{0-1}{0+1}=-1$</p><p>(ii) $ |x| > 1$ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\lim_{n \\to \\infty}\\dfrac{x-\\dfrac{1}{x^{2n}}}{1+\\dfrac{1}{x^{2n}}}=x$</p><p>(iii) $ x=1 $ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\dfrac{1-1}{1+1}=0$</p><p>(iv) $ x=-1 $ のとき</p><p>　$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\dfrac{-1-1}{1+1}=-1$</p><p>以上より</p><p style=\"text-align: center\">$\\displaystyle \\lim_{n \\to \\infty}f(x)=\\begin{cases} \\boldsymbol{-1 \\ \\ \\ (-1 \\leqq x < 1)} \\\\ \\boldsymbol{x \\ \\ \\ (x &lt; -1，1&lt;x)} \\\\ \\boldsymbol{0 \\ \\ \\ (x=1)}\\end{cases}$</p>",
     //等比場合分け，ごよ８
     "$\\displaystyle \\lim_{n \\to \\infty}\\sum_{k=1}^{n}\\dfrac{1}{(2k+1)(2k+3)}$": "<p>　$\\displaystyle \\lim_{n \\to \\infty}\\sum_{k=1}^{n}\\dfrac{1}{(2k+1)(2k+3)}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\sum_{k=1}^{n}\\dfrac{1}{2}\\left(\\dfrac{1}{2k+1}-\\dfrac{1}{2k+3}\\right)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{1}{2}\\sum_{k=1}^{n}\\left(\\dfrac{1}{2k+1}-\\dfrac{1}{2k+3}\\right)$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{1}{2}\\left\\{\\left(\\dfrac{1}{3}-\\dfrac{1}{5}\\right)+\\left(\\dfrac{1}{5}-\\dfrac{1}{7}\\right)+\\cdots+\\left(\\dfrac{1}{2n+1}-\\dfrac{1}{2n+3}\\right)\\right\\}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{1}{2}\\left(\\dfrac{1}{3}-\\dfrac{1}{2n+3}\\right)$</p><p>$=\\boldsymbol{\\dfrac{1}{6}}$</p>",
     // 無限級数，サイトの例題
@@ -59,7 +59,7 @@ const gachaItems = {
     //有理化関数，ごよ１３
     "$\\displaystyle \\lim_{x \\to \\infty}\\{\\log_2 (8x^2+2)-2\\log_2 (x+3)\\}$": "<p>　$\\displaystyle \\lim_{x \\to \\infty}\\{\\log_2 (8x^2+2)-2\\log_2 (x+3)\\}$</p><p>$\\displaystyle =\\lim_{x \\to \\infty}\\{\\log_2 (8x^2+2)-\\log_2 (x+3)^2\\}$</p><p>$\\displaystyle =\\lim_{x \\to \\infty} \\log_2 \\dfrac{8x^2+2}{(x+3)^2}$</p><p>$\\displaystyle =\\lim_{x \\to \\infty} \\log_2 \\dfrac{8+\\dfrac{2}{x^2}}{ \\left(1+\\dfrac{3}{x}\\right)^2}$</p><p>$\\displaystyle =\\log_2 8$</p><p>$=\\boldsymbol{3}$</p>",
     //対数，ごよ１６
-    "$\\displaystyle \\lim_{x \\to \\infty}\\left(\\dfrac{b}{a}x-\\dfrac{b}{a}\\sqrt{x^{2}-a^{2}}\\right)$　$( \\ a,b \\ は正の実数)$": "<p>　$\\displaystyle \\lim_{x \\to \\infty}\\left(\\dfrac{b}{a}x-\\dfrac{b}{a}\\sqrt{x^{2}-a^{2}}\\right)$</p><p>$\\displaystyle =\\lim_{x \\to \\infty}\\dfrac{b}{a}\\left(x-\\sqrt{x^{2}-a^{2}}\\right)$</p><p>$\\displaystyle =\\lim_{x \\to \\infty}\\dfrac{b}{a}\\left(\\dfrac{a^2}{x+\\sqrt{x^{2}-a^{2}}}\\right)$</p><p>$=\\boldsymbol{0}$</p>",
+    "$\\displaystyle \\lim_{x \\to \\infty}\\left(\\dfrac{b}{a}x-\\dfrac{b}{a}\\sqrt{x^{2}-a^{2}}\\right)$　$( \\ a,b \\ are positive real numbers)$": "<p>　$\\displaystyle \\lim_{x \\to \\infty}\\left(\\dfrac{b}{a}x-\\dfrac{b}{a}\\sqrt{x^{2}-a^{2}}\\right)$</p><p>$\\displaystyle =\\lim_{x \\to \\infty}\\dfrac{b}{a}\\left(x-\\sqrt{x^{2}-a^{2}}\\right)$</p><p>$\\displaystyle =\\lim_{x \\to \\infty}\\dfrac{b}{a}\\left(\\dfrac{a^2}{x+\\sqrt{x^{2}-a^{2}}}\\right)$</p><p>$=\\boldsymbol{0}$</p>",
     //双曲線の漸近線，アプリ版専用
     "$\\displaystyle \\lim_{x \\to 0}\\dfrac{1-\\cos x}{x\\sin x}$": "<p>　$\\displaystyle \\lim_{x \\to 0}\\dfrac{1-\\cos x}{x\\sin x} \\cdot \\dfrac{1+\\cos x}{1+\\cos x}$</p><p>$\\displaystyle =\\lim_{x \\to 0}\\dfrac{\\sin^{2} x}{x\\sin x (1+\\cos x)}$</p><p>$\\displaystyle =\\lim_{x \\to 0}\\dfrac{\\sin x}{x}\\cdot \\dfrac{1}{1+\\cos x}$</p><p>$=1\\cdot \\dfrac{1}{2}=\\boldsymbol{\\dfrac{1}{2}}$</p>",
     // 三角関数の極限，サイトの例題
@@ -251,22 +251,22 @@ const gachaItems = {
            
     "$\\displaystyle \\lim_{x \\to 0}\\left(\\dfrac{\\sin x}{x}\\right)^{\\frac{1}{x^{2}}}$":
     // 超級1，ごよ
-    "<p>超級です．是非Twitterでハッシュタグ #極限ガチャ または #極限ガチャ超級 で解いてツイートしてみてください．こちらのTwitterアカウントがいいねやリプライ，リツイートなどで反応致します．</p>",
+    "<p>TBA</p>",
     
 
     "$\\displaystyle \\lim_{n \\to \\infty}\\left(\\dfrac{3-\\sqrt[n]{3}}{2}\\right)^{n}$":
     // 超級2，ごよ
-    "<p>超級です．是非Twitterでハッシュタグ #極限ガチャ または #極限ガチャ超級 で解いてツイートしてみてください．こちらのTwitterアカウントがいいねやリプライ，リツイートなどで反応致します．</p>",
+    "<p>TBA</p>",
     
 
     "$\\displaystyle \\lim_{x \\to \\infty}x\\left\\{e-\\left(1+\\dfrac{1}{x}\\right)^{x}\\right\\}$":
     // 超級3，ごよ
-    "<p>超級です．是非Twitterでハッシュタグ #極限ガチャ または #極限ガチャ超級 で解いてツイートしてみてください．こちらのTwitterアカウントがいいねやリプライ，リツイートなどで反応致します．</p>",
+    "<p>TBA</p>",
     
 
     "$\\displaystyle \\lim_{n \\to \\infty}\\sum_{k=1}^{n}\\dfrac{1}{n^{\\frac{3}{2}}}\\left[\\sqrt{2k-1}\\right]$":
     // 超級4，AKR，格子点，奇数和の区分求積
-    "<p>超級です．是非Twitterでハッシュタグ #極限ガチャ または #極限ガチャ超級 で解いてツイートしてみてください．こちらのTwitterアカウントがいいねやリプライ，リツイートなどで反応致します．</p>",  
+    "<p>TBA</p>",  
 }
     },
     "2": {
