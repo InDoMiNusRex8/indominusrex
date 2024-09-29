@@ -1,4 +1,4 @@
-{
+const gachaItems = {
     "1": {
         "A": {
             "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{2n+11}{n^{2}+2n+4}$": "<p>　$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{2n+11}{n^{2}+2n+4}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{2+\\dfrac{11}{n}}{n+2+\\dfrac{4}{n}}$</p><p>$=\\boldsymbol{0}$</p>",
@@ -123,3 +123,5 @@
         }
     }
 }
+
+console.log(gachaItems);
