@@ -4,30 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gacha System</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        .result {
-            font-size: 24px;
-            margin-top: 20px;
-            color: #333;
-        }
-        .gacha-btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .gacha-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+  <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+   <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script> 
+
+   <script>
+      window.MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+      };
+   </script>
+    
 </head>
 <body>
 
@@ -45,9 +34,10 @@
     <p>
     <label for="type">Select Type:</label>
     <select id="type">
-        <option value="common">Common</option>
-        <option value="rare">Rare</option>
-        <option value="super-rare">Super Rare</option>
+        <option value="a">Common</option>
+        <option value="b">Rare</option>
+        <option value="c">Super Rare</option>
+        <option value="d">Super Rare</option>
     </select>
     </p>
 
@@ -55,27 +45,8 @@
 
     <div class="result" id="result">Good luck!</div>
 
+    <script src="gacha-items.js"></script>
     <script>
-        // Define the items based on levels and types
-const items = {
-    "1": { // Level 1
-        "common": ['Level 1 Common Item 1', 'Level 1 Common Item 2'],
-        "rare": ['Level 1 Rare Item 1', 'Level 1 Rare Item 2'],
-        "super-rare": ['Level 1 Super Rare Item 1']
-    },
-    "2": { // Level 2
-        "common": ['Level 2 Common Item 1', 'Level 2 Common Item 2'],
-        "rare": ['Level 2 Rare Item 1', 'Level 2 Rare Item 2'],
-        "super-rare": ['Level 2 Super Rare Item 1', 'Level 2 Super Rare Item 2']
-    },
-    "3": { // Level 3
-        "common": ['Level 3 Common Item 1', 'Level 3 Common Item 2'],
-        "rare": ['Level 3 Rare Item 1'],
-        "super-rare": ['Level 3 Super Rare Item 1', 'Level 3 Super Rare Item 2']
-    }
-};
-
-
         // Gacha roll function
         function gachaRoll() {
     const selectedLevel = document.getElementById('level').value;
