@@ -56,21 +56,42 @@
     <div class="result" id="result">Good luck!</div>
 
     <script>
-        // Array of possible gacha items
-        const items = [
-            'Common Item 1', 
-            'Common Item 2', 
-            'Rare Item 1', 
-            'Super Rare Item', 
-            'Ultra Rare Item'
-        ];
+        // Define the items based on levels and types
+const items = {
+    "1": { // Level 1
+        "common": ['Level 1 Common Item 1', 'Level 1 Common Item 2'],
+        "rare": ['Level 1 Rare Item 1', 'Level 1 Rare Item 2'],
+        "super-rare": ['Level 1 Super Rare Item 1']
+    },
+    "2": { // Level 2
+        "common": ['Level 2 Common Item 1', 'Level 2 Common Item 2'],
+        "rare": ['Level 2 Rare Item 1', 'Level 2 Rare Item 2'],
+        "super-rare": ['Level 2 Super Rare Item 1', 'Level 2 Super Rare Item 2']
+    },
+    "3": { // Level 3
+        "common": ['Level 3 Common Item 1', 'Level 3 Common Item 2'],
+        "rare": ['Level 3 Rare Item 1'],
+        "super-rare": ['Level 3 Super Rare Item 1', 'Level 3 Super Rare Item 2']
+    }
+};
+
 
         // Gacha roll function
         function gachaRoll() {
-            const randomIndex = Math.floor(Math.random() * items.length);
-            const result = items[randomIndex];
-            document.getElementById('result').textContent = `You got: ${result}!`;
-        }
+    const selectedLevel = document.getElementById('level').value;
+    const selectedType = document.getElementById('type').value;
+
+    // Retrieve items based on selected level and type
+    const selectedItems = items[selectedLevel][selectedType];
+    
+    // Randomly select an item from the selected category
+    const randomIndex = Math.floor(Math.random() * selectedItems.length);
+    const result = selectedItems[randomIndex];
+    
+    // Display the result
+    document.getElementById('result').textContent = `You got: ${result} from Level ${selectedLevel} (${selectedType})!`;
+}
+
     </script>
 
 </body>
