@@ -47,12 +47,19 @@
     <div id="answer" class="hidden"></div>
 
     <script src="/indominusrex/gacha-items.js"></script>
-<script>
+   <script>
     let items = {}; // This will store the gacha items
 
-    // Assuming gachaItems is defined in gacha-items.js
-    // You can directly assign it to the items variable
-    items = gachaItems; // Assuming gachaItems is available in the global scope
+    // Fetch the items from the JavaScript file
+    fetch('gacha-items.js')
+        .then(response => response.text())
+        .then(data => {
+            eval(data); // Evaluate the JS code to make gachaItems available
+            items = gachaItems; // Store the fetched data into the items variable
+        })
+        .catch(error => {
+            console.error('Error fetching the gacha items:', error);
+        });
 
     // Gacha roll function
     function gachaRoll() {
@@ -61,14 +68,40 @@
 
         if (items[selectedLevel] && items[selectedLevel][selectedType]) {
             const selectedItems = items[selectedLevel][selectedType];
-            const itemKeys = Object.keys(selectedItems); // Get the keys (math expressions)
-            const randomIndex = Math.floor(Math.random() * itemKeys.length); // Randomly pick one
-            const resultKey = itemKeys[randomIndex]; // Get the selected key (math expression)
-            const resultValue = selectedItems[resultKey]; // Get the corresponding value (explanation)
 
-            // Split the resultValue to separate the explanation if it includes a colon
-            const answerParts = resultValue.split(":");
-            const explanation = answerParts.length > 1 ? answerParts[1].trim() : resultValue; // Get the explanation after the colon
+            let resultKey, resultValue, explanation;
+
+            if (selectedType === 'c') {
+                // Type C: Consider weight for gacha roll
+                const weightedItems = selectedItems.map(item => ({
+                    question: item.question,
+                    answer: item.answer,
+                    weight: item.weight
+                }));
+
+                // Create a cumulative weight array
+                const totalWeight = weightedItems.reduce((sum, item) => sum + item.weight, 0);
+                const random = Math.random() * totalWeight;
+
+                let cumulativeWeight = 0;
+                for (const item of weightedItems) {
+                    cumulativeWeight += item.weight;
+                    if (random < cumulativeWeight) {
+                        resultKey = item.question; // Store the selected question
+                        resultValue = item.answer; // Store the selected answer
+                        break;
+                    }
+                }
+
+                explanation = resultValue.split(":").length > 1 ? resultValue.split(":")[1].trim() : resultValue;
+            } else {
+                // For other types (A and B), randomly select an item without weights
+                const itemKeys = Object.keys(selectedItems);
+                const randomIndex = Math.floor(Math.random() * itemKeys.length);
+                resultKey = itemKeys[randomIndex];
+                resultValue = selectedItems[resultKey];
+                explanation = resultValue.split(":").length > 1 ? resultValue.split(":")[1].trim() : resultValue;
+            }
 
             // Display the formula and explanation in separate sections
             document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
@@ -105,6 +138,7 @@
         MathJax.typesetPromise(); // This triggers MathJax to reprocess any LaTeX in the answer section
     }
 </script>
+
 
 
 
