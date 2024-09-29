@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .result {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+        }
+        .gacha-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .gacha-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gacha Roll</h1>
+    <p>Click the button to draw a random item!</p>
+
+    <button class="gacha-btn" onclick="gachaRoll()">Roll Gacha</button>
+
+    <div class="result" id="result">Good luck!</div>
+
+    <script>
+        // Array of possible gacha items
+        const items = [
+            'Common Item 1', 
+            'Common Item 2', 
+            'Rare Item 1', 
+            'Super Rare Item', 
+            'Ultra Rare Item'
+        ];
+
+        // Gacha roll function
+        function gachaRoll() {
+            const randomIndex = Math.floor(Math.random() * items.length);
+            const result = items[randomIndex];
+            document.getElementById('result').textContent = `You got: ${result}!`;
+        }
+    </script>
+
+</body>
+</html>
