@@ -108,7 +108,6 @@ video {
     let items = {}; // This will store the gacha items
 
     // Assuming gachaItems is defined in gacha-items.js
-    // You can directly assign it to the items variable
     items = gachaItems; // Assuming gachaItems is available in the global scope
 
     // Gacha roll function
@@ -129,15 +128,21 @@ video {
 
             // Set the video source based on the selected type
             const videoSource = document.getElementById('videoSource');
-            videoSource.src = `$videogacha/{selectedType}.mp4`; // Assuming video files are named 'a.mp4', 'b.mp4', etc.
+            videoSource.src = `videogacha/${selectedType}.mp4`; // Corrected path syntax
             const video = document.getElementById('video');
 
             // Play the video
             const videoContainer = document.getElementById('videoContainer');
-            videoContainer.classList.remove('hidden');
+            videoContainer.classList.remove('hidden'); // Show video container
+            video.load(); // Load the new video source
             video.play();
 
+            // Hide the result and answer initially
+            document.getElementById('result').innerHTML = ''; 
+            document.getElementById('answer').innerHTML = ''; 
+
             video.onended = function() {
+                // After the video ends, display the question
                 document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
                 document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
 
@@ -152,7 +157,7 @@ video {
                 MathJax.typesetPromise();
 
                 // Hide the video container
-                videoContainer.classList.add('hidden');
+                videoContainer.classList.add('hidden'); // Hide video after it ends
             };
         } else {
             document.getElementById('result').textContent = "No items found for this selection.";
