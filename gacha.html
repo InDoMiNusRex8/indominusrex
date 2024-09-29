@@ -110,19 +110,33 @@ video {
             const answerParts = resultValue.split(":");
             const explanation = answerParts.length > 1 ? answerParts[1].trim() : resultValue; // Get the explanation after the colon
 
-            // Display the formula and explanation in separate sections
-            document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
-            document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
+            // Set the video source based on the selected type
+            const videoSource = document.getElementById('videoSource');
+            videoSource.src = `${selectedType}.mp4`; // Assuming video files are named 'a.mp4', 'b.mp4', etc.
+            const video = document.getElementById('video');
 
-            // Show the "Toggle Answer" button
-            document.getElementById('toggleButton').classList.remove('hidden');
-            document.getElementById('toggleButton').textContent = "Show Answer";
+            // Play the video
+            const videoContainer = document.getElementById('videoContainer');
+            videoContainer.classList.remove('hidden');
+            video.play();
+            
+            video.onended = function() {
+                document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
+                document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
 
-            // Hide the answer by default
-            document.getElementById('answer').classList.add('hidden');
+                // Show the "Toggle Answer" button
+                document.getElementById('toggleButton').classList.remove('hidden');
+                document.getElementById('toggleButton').textContent = "Show Answer";
 
-            // Ensure MathJax is triggered to render LaTeX
-            MathJax.typesetPromise();
+                // Hide the answer by default
+                document.getElementById('answer').classList.add('hidden');
+
+                // Ensure MathJax is triggered to render LaTeX
+                MathJax.typesetPromise();
+
+                // Hide the video container
+                videoContainer.classList.add('hidden');
+            };
         } else {
             document.getElementById('result').textContent = "No items found for this selection.";
         }
