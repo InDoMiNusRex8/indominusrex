@@ -52,15 +52,19 @@
     const selectedLevel = document.getElementById('level').value;
     const selectedType = document.getElementById('type').value;
 
-    // Retrieve items based on selected level and type
     const selectedItems = items[selectedLevel][selectedType];
-    
-    // Randomly select an item from the selected category
-    const randomIndex = Math.floor(Math.random() * selectedItems.length);
-    const result = selectedItems[randomIndex];
-    
-    // Display the result
-    document.getElementById('result').textContent = `You got: ${result} from Level ${selectedLevel} (${selectedType})!`;
+    const itemKeys = Object.keys(selectedItems); // Get the keys (math expressions)
+    const randomIndex = Math.floor(Math.random() * itemKeys.length); // Randomly pick one
+    const resultKey = itemKeys[randomIndex]; // Get the selected key (math expression)
+    const resultValue = selectedItems[resultKey]; // Get the corresponding value (explanation)
+
+    // Display the formula and explanation in HTML
+    document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>${resultValue}`;
+
+    // Ensure MathJax is triggered to render LaTeX
+    if (window.MathJax) {
+        MathJax.typesetPromise(); // Re-render math expressions
+    }
 }
 
     </script>
