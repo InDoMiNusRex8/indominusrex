@@ -67,9 +67,13 @@
                 const resultKey = itemKeys[randomIndex]; // Get the selected key (math expression)
                 const resultValue = selectedItems[resultKey]; // Get the corresponding value (explanation)
 
+                // Split the resultValue to separate the explanation if it includes a colon
+                const answerParts = resultValue.split(":");
+                const explanation = answerParts.length > 1 ? answerParts[1].trim() : resultValue; // Get the explanation after the colon
+
                 // Display the formula and explanation in separate sections
                 document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
-                document.getElementById('answer').innerHTML = resultValue;
+                document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
 
                 // Show the "Toggle Answer" button
                 document.getElementById('toggleButton').classList.remove('hidden');
@@ -79,46 +83,28 @@
                 document.getElementById('answer').classList.add('hidden');
 
                 // Ensure MathJax is triggered to render LaTeX
-                MathJax.typesetPromise(); // This triggers MathJax to reprocess the newly added LaTeX content
+                MathJax.typesetPromise();
             } else {
                 document.getElementById('result').textContent = "No items found for this selection.";
             }
         }
 
-        // Gacha roll function
-function gachaRoll() {
-    const selectedLevel = document.getElementById('level').value;
-    const selectedType = document.getElementById('type').value;
+        // Function to toggle the answer visibility
+        function toggleAnswer() {
+            const answerDiv = document.getElementById('answer');
+            const toggleButton = document.getElementById('toggleButton');
 
-    if (items[selectedLevel] && items[selectedLevel][selectedType]) {
-        const selectedItems = items[selectedLevel][selectedType];
-        const itemKeys = Object.keys(selectedItems); // Get the keys (math expressions)
-        const randomIndex = Math.floor(Math.random() * itemKeys.length); // Randomly pick one
-        const resultKey = itemKeys[randomIndex]; // Get the selected key (math expression)
-        const resultValue = selectedItems[resultKey]; // Get the corresponding value (explanation)
+            if (answerDiv.classList.contains('hidden')) {
+                answerDiv.classList.remove('hidden'); // Show answer
+                toggleButton.textContent = "Hide Answer"; // Change button text to "Hide Answer"
+            } else {
+                answerDiv.classList.add('hidden'); // Hide answer
+                toggleButton.textContent = "Show Answer"; // Change button text to "Show Answer"
+            }
 
-        // Split the resultValue to separate the explanation if it includes a colon
-        const answerParts = resultValue.split(":");
-        const explanation = answerParts.length > 1 ? answerParts[1].trim() : resultValue; // Get the explanation after the colon
-
-        // Display the formula and explanation in separate sections
-        document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
-        document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
-
-        // Show the "Toggle Answer" button
-        document.getElementById('toggleButton').classList.remove('hidden');
-        document.getElementById('toggleButton').textContent = "Show Answer";
-
-        // Hide the answer by default
-        document.getElementById('answer').classList.add('hidden');
-
-        // Ensure MathJax is triggered to render LaTeX
-        MathJax.typesetPromise();
-    } else {
-        document.getElementById('result').textContent = "No items found for this selection.";
-    }
-}
-
+            // Reprocess MathJax for any LaTeX content
+            MathJax.typesetPromise(); // This triggers MathJax to reprocess any LaTeX in the answer section
+        }
     </script>
 
 </body>
