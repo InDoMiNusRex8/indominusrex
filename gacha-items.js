@@ -1,5 +1,5 @@
 const gachaItems = {
-    "1": {
+    "3": {
         "A": {
             "$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{2n+11}{n^{2}+2n+4}$": "<p>　$\\displaystyle \\lim_{n \\to \\infty}\\dfrac{2n+11}{n^{2}+2n+4}$</p><p>$\\displaystyle =\\lim_{n \\to \\infty}\\dfrac{2+\\dfrac{11}{n}}{n+2+\\dfrac{4}{n}}$</p><p>$=\\boldsymbol{0}$</p>",
     // 普通，サイトの例題
@@ -283,7 +283,21 @@ const gachaItems = {
             "$\\displaystyle \\int_{0}^{\\infty} e^{-x} \\, dx$": "<p>$\\displaystyle \\int_{0}^{\\infty} e^{-x} \\, dx = 1$</p>"
         }
     },
-    "3": {
+    "1": {
+        "A": {
+            "$\\displaystyle \\frac{d}{dx}(e^x)$": "<p>$\\displaystyle \\frac{d}{dx}(e^x) = e^x$</p>"
+        },
+        "B": {
+            "$\\displaystyle \\frac{d}{dx}(x^3)$": "<p>$\\displaystyle \\frac{d}{dx}(x^3) = 3x^2$</p>"
+        },
+        "C": {
+            "$\\displaystyle \\int_0^1 x^3 \\, dx$": "<p>$\\displaystyle \\int_0^1 x^3 \\, dx = \\frac{1}{4}$</p>"
+        },
+        "D": {
+            "$\\displaystyle \\int_{0}^{\\infty} e^{-x} \\, dx$": "<p>$\\displaystyle \\int_{0}^{\\infty} e^{-x} \\, dx = 1$</p>"
+        }
+    },
+    "4": {
         "A": {
             "$\\displaystyle \\int_0^\\infty \\frac{\\sin(x)}{x} \\, dx$": "<p>$\\displaystyle \\int_0^\\infty \\frac{\\sin(x)}{x} \\, dx = \\frac{\\pi}{2}$</p>"
         },
