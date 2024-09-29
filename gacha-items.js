@@ -299,16 +299,385 @@ const gachaItems = {
     },
     "4": {
         "A": {
-            "$\\displaystyle \\int_0^\\infty \\frac{\\sin(x)}{x} \\, dx$": "<p>$\\displaystyle \\int_0^\\infty \\frac{\\sin(x)}{x} \\, dx = \\frac{\\pi}{2}$</p>"
+            "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{4x^{2}-4x+1}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{4x^{2}-4x+1}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{(2x-1)^{2}}\\,dx$</p><p>$=\\boldsymbol{-\\dfrac{1}{2(2x-1)}+C}$</p>",
+    // 普通
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{3x-2}{x+1}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{3x-2}{x+1}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{3(x+1)-5}{x+1}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(3-\\dfrac{5}{x+1}\\right)\\,dx$</p><p>$=\\boldsymbol{3x-5\\log|x+1|+C}$</p>",
+    // 普通
+    "$\\displaystyle \\int_{}^{} \\ \\pi^{2x-1}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\pi^{2x-1}\\,dx$</p><p>$=\\boldsymbol{\\dfrac{\\pi^{2x-1}}{2\\log\\pi}+C}$</p>",
+    // 普通
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{e^{3x}}{e^{x}+1}\\,dx$": "<p>$e^{x}+1=t$ とおくと，$e^{x}dx=dt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{e^{3x}}{e^{x}+1}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{(t-1)^{2}}{t}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(t-2+\\dfrac{1}{t}\\right)\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{2}t^{2}-2t+\\log |t|+C$</p><p>$=\\dfrac{1}{2}(e^{x}+1)^{2}-2(e^{x}+1)+\\log (e^{x}+1)+C$</p><p>$=\\boldsymbol{\\dfrac{e^{2x}}{2}-e^{x}+\\log (e^{x}+1)+C}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\cos x}\\,dx$": "<p>$\\sin{x}=t$ とおくと，$\\cos xdx=dt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\cos x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{\\cos x}{1-\\sin^{2}x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{1-t^2}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{(1-t)(1+t)}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{2}\\int_{}^{} \\ \\left(\\dfrac{1}{1-t}+\\dfrac{1}{1+t}\\right)\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{2}\\left(-\\log|1-t|+\\log|1+t|\\right)+C$</p><p>$=\\boldsymbol{\\dfrac{1}{2}\\log\\dfrac{1+\\sin x}{1-\\sin x}+C}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\sin x}\\,dx$": "<p>$\\cos{x}=t$ とおくと，$-\\sin xdx=dt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\sin x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{\\sin x}{1-\\cos^{2}x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{}\\dfrac{-1}{1-t^2}\\,dt$</p><p>$\\displaystyle =\\int_{}^{}\\dfrac{1}{(t-1)(t+1)}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{2}\\int_{}^{} \\ \\left(\\dfrac{1}{t-1}-\\dfrac{1}{t+1}\\right)\\,dt$</p><p>$=\\dfrac{1}{2}(\\log |t-1|-\\log |t+1|)+C$</p><p>$=\\dfrac{1}{2}\\log \\dfrac{|\\cos x-1|}{|\\cos x+1|}+C$</p><p>$=\\boldsymbol{\\dfrac{1}{2}\\log \\dfrac{1-\\cos x}{1+\\cos x}+C}$</p><p><b style=\"color: black\">別解</b></p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\sin x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{2\\sin\\frac{x}{2}\\cos\\frac{x}{2}}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{\\tan\\frac{x}{2}}\\cdot\\dfrac{1}{2\\cos^{2}\\frac{x}{2}}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{\\tan\\frac{x}{2}}\\left(\\tan\\frac{x}{2}\\right)'\\,dx$</p><p>$=\\boldsymbol{\\log \\left|\\tan\\dfrac{x}{2}\\right|+C}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{}^{} \\ \\tan x\\,dx$": "<p>$\\cos{x}=t$ とおくと，$-\\sin xdx=dt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\tan x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{\\sin x}{\\cos x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{-1}{t}\\,dt$</p><p>$\\displaystyle =-\\log |t|+C$</p><p>$=\\boldsymbol{-\\log|\\cos x|+C}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{x(\\log x)^{2}}\\,dx$": "<p>$\\log{x}=t$ とおくと，$\\dfrac{1}{x}dx=dt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{x(\\log x)^{2}}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{t^{2}}\\,dt$</p><p>$\\displaystyle =-\\dfrac{1}{t}+C$</p><p>$=\\boldsymbol{-\\dfrac{1}{\\log x}+C}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{e^{x}-e^{-x}}{e^{x}+e^{-x}}\\,dx$": "<p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{e^{x}-e^{-x}}{e^{x}+e^{-x}}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{(e^{x}+e^{-x})'}{e^{x}+e^{-x}}\\,dx$</p><p>$=\\boldsymbol{\\log(e^{x}+e^{-x})+C}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{}^{} \\ xe^{-2x}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ xe^{-2x}\\,dx$</p><p>$\\displaystyle =x\\left(-\\dfrac{1}{2}e^{-2x}\\right)-\\int_{}^{} \\ 1\\cdot \\left(-\\dfrac{1}{2}e^{-2x}\\right)\\,dx$</p><p>$\\displaystyle =-\\dfrac{x}{2}e^{-2x}+\\int_{}^{} \\ \\dfrac{1}{2}e^{-2x}\\,dx$</p><p>$=\\boldsymbol{-\\dfrac{x}{2}e^{-2x}-\\dfrac{1}{4}e^{-2x}+C}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{}^{} \\ \\log x\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ 1\\cdot \\log x\\,dx$</p><p>$\\displaystyle =x\\log x-\\int_{}^{} \\ x\\cdot \\dfrac{1}{x}\\,dx$</p><p>$=\\boldsymbol{x\\log x-x+C}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{}^{} \\ \\log(x+2)\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\log(x+2)\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ (x+2)'\\log(x+2)\\,dx$</p><p>$\\displaystyle =(x+2)\\log(x+2)-\\int_{}^{} \\ (x+2)\\dfrac{1}{x+2}\\,dx$</p><p>$=\\boldsymbol{(x+2)\\log(x+2)-x+C}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{}^{} \\ x\\log x\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ x\\log x\\,dx$</p><p>$\\displaystyle =\\dfrac{x^2}{2}\\log x-\\int_{}^{} \\ \\dfrac{x^2}{2}\\cdot\\dfrac{1}{x}\\,dx$</p><p>$=\\boldsymbol{\\dfrac{x^2}{2}\\log x-\\dfrac{x^2}{4}+C}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{}^{} \\ \\log_{2}x\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\log_{2}x\\,dx$</p><p>$\\displaystyle =x\\log_{2} x-\\int_{}^{} \\ x\\cdot\\dfrac{1}{x\\log2}\\,dx$</p><p>$=\\boldsymbol{x\\log_{2}x-\\dfrac{x}{\\log2}+C}$</p><p><b style=\"color: black\">別解</b></p><p>　$\\displaystyle \\int_{}^{} \\ \\log_{2}x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{\\log x}{\\log2}\\,dx$</p><p>$\\displaystyle =\\dfrac{x\\log x}{\\log 2}-\\int_{}^{} \\ x\\cdot\\dfrac{1}{x\\log 2}\\,dx$</p><p>$=\\boldsymbol{x\\log_{2}x-\\dfrac{x}{\\log 2}+C}$</p>",
+    "$\\displaystyle \\int_{}^{} \\ x^{2}\\cos x\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ x^{2}\\cos x\\,dx$</p><p>$\\displaystyle =x^{2}\\sin x-\\int_{}^{} \\ 2x\\sin x\\,dx$</p><p>$\\displaystyle =x^{2}\\sin x-\\left(2x(-\\cos x)-\\int_{}^{} \\ 2(-\\cos x)\\,dx\\right)$</p><p>$\\displaystyle =x^{2}\\sin x+2x\\cos x-\\int_{}^{} \\ 2\\cos x\\,dx$</p><p>$=\\boldsymbol{x^{2}\\sin x+2x\\cos x-2\\sin x+C}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{}^{} \\ x\\sin^{2} x\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ x\\sin^{2} x\\,dx$</p><p>$=\\displaystyle \\int_{}^{} \\ x\\cdot\\dfrac{1-\\cos2x}{2}\\,dx$</p><p>$=\\displaystyle \\dfrac{1}{2}\\int_{}^{} \\ (x-x\\cos2x)\\,dx$</p><p>$=\\displaystyle \\dfrac{1}{2}\\left\\{\\dfrac{x^{2}}{2}-\\left(\\dfrac{x}{2}\\sin2x-\\int_{}^{} \\ \\dfrac{1}{2}\\sin2x\\,dx\\right)\\right\\}$</p><p>$=\\displaystyle \\dfrac{x^{2}}{4}-\\dfrac{x}{4}\\sin2x+\\dfrac{1}{4}\\int_{}^{} \\ \\sin2x\\,dx$</p<p>$=\\boldsymbol{\\displaystyle \\dfrac{x^{2}}{4}-\\dfrac{x}{4}\\sin2x-\\dfrac{1}{8}\\cos2x+C}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{x}{5^{x}}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{x}{5^{x}}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ x\\cdot 5^{-x}\\,dx$</p><p>$\\displaystyle =x\\left(-\\dfrac{5^{-x}}{\\log5}\\right)-\\int_{}^{} \\ \\left(-\\dfrac{5^{-x}}{\\log5}\\right)\\,dx$</p><p>$\\displaystyle =-\\dfrac{x}{5^{x}\\log5}+\\int_{}^{} \\ \\dfrac{5^{-x}}{\\log5}\\,dx$</p><p>$\\displaystyle =\\boldsymbol{-\\dfrac{x}{5^{x}\\log5}-\\dfrac{1}{5^{x}(\\log5)^{2}}+C}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{x^{2}+6x+9}{x+2}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{x^{2}+6x+9}{x+2}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{(x+4)(x+2)+1}{x+2}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(x+4+\\dfrac{1}{x+2}\\right)\\,dx$</p><p>$=\\boldsymbol{\\dfrac{1}{2}x^{2}+4x+\\log|x+2|+C}$</p>",
+    // 分数関数
+    "$\\displaystyle \\int_{}^{} \\ \\sin^{2}x\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\sin^{2}x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1-\\cos 2x}{2}\\,dx$</p><p>$=\\boldsymbol{\\dfrac{1}{2}x-\\dfrac{1}{4}\\sin2x+C}$</p>",
+    // 三角関数
+    "$\\displaystyle \\int_{}^{} \\ \\cos^{2}x\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\cos^{2}x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1+\\cos 2x}{2}\\,dx$</p><p>$=\\boldsymbol{\\dfrac{1}{2}x+\\dfrac{1}{4}\\sin2x+C}$</p>",
+    // 三角関数
+    "$\\displaystyle \\int_{}^{} \\ \\cos^{3}x\\,dx$": "<p>$\\sin x=t$ とおくと，$\\cos x\\, dx=dt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\cos^{3}x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ (  1-\\sin^{2}x)\\cos x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ (  1-t^{2})\\,dt$</p><p>$\\displaystyle =t-\\dfrac{1}{3}t^{3}+C$</p><p>$=\\boldsymbol{\\sin x-\\dfrac{1}{3}\\sin^{3}x+C}$</p><p><b style=\"color: black\">別解</b></p><p><a href=\"3baikaku.html\">3倍角の公式</a>を使う．</p><p>　$\\displaystyle \\int_{}^{} \\ \\cos^{3}x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(\\dfrac{1}{4}\\cos 3x+\\dfrac{3}{4}\\cos x\\right)\\,dx$</p><p>$=\\boldsymbol{\\dfrac{1}{12}\\sin 3x+\\dfrac{3}{4}\\sin x+C}$</p>",
+    // 三角関数
+    "$\\displaystyle \\int_{}^{} \\ \\tan^{2}x\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\tan^{2}x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(\\dfrac{1}{\\cos^{2}x}-1\\right)\\,dx$</p><p>$=\\boldsymbol{\\tan x-x+C}$</p>",
+    // 三角関数
+    "$\\displaystyle \\int_{}^{} \\ \\cos 4x\\cos 2x\\,dx$": "<p><a href=\"wasekisekiwa.html\">積和変換公式</a>を使う．</p><p>　$\\displaystyle \\int_{}^{} \\ \\cos 4x\\cos 2x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{2}\\{\\cos(4x+2x)+\\cos(4x-2x)\\}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{2}(\\cos 6x+\\cos 2x)\\,dx$</p><p>$=\\boldsymbol{\\dfrac{1}{12}\\sin 6x+\\dfrac{1}{4}\\sin2x+C}$</p>",
+    // 三角関数
+    "$\\displaystyle \\int_{}^{} \\ \\sin^{2}x\\cos^{3}x\\,dx$": "<p>$\\sin x=t$ とおくと，$\\cos x\\, dx=dt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\sin^{2}x\\cos^{3}x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\sin^{2}x(1-\\sin^{2}x)\\cos x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ t^{2}(1-t^{2})\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{3}t^{3}-\\dfrac{1}{5}t^{5}+C$</p><p>$=\\boldsymbol{\\dfrac{1}{3}\\sin^{3}x-\\dfrac{1}{5}\\sin^{5}x+C}$</p>",
+    // 三角関数，置換
+    "$\\displaystyle \\int_{}^{} \\ \\sin x\\cos x\\cos2x\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\sin x\\cos x\\cos2x\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{2}\\int_{}^{} \\ \\sin2x\\cos2x\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{4}\\int_{}^{} \\ \\sin4x\\,dx$</p><p>$=\\boldsymbol{-\\dfrac{1}{16}\\cos4x+C}$</p>",
+    // 三角関数
+    "$\\displaystyle \\int_{0}^{2}\\sqrt{4-x^{2}}\\,dx$": "<img src=\"noteimages/integration-by-substitution1.png\" alt=\"円関数の積分1\" width=\"100%\"><p>扇型の面積であることを利用すると</p><p>　$\\displaystyle \\int_{0}^{2}\\sqrt{4-x^{2}}\\,dx$</p><p>$=4\\pi\\times\\dfrac{1}{4}=\\boldsymbol{\\pi}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{-2}^{4}\\sqrt{16-x^{2}}\\,dx$": "<img src=\"noteimages/integration-by-substitution2.png\" alt=\"円関数の積分2\" width=\"100%\"><p>扇型と直角三角形の面積の和であることを利用すると</p><p>　$\\displaystyle \\int_{-2}^{4}\\sqrt{16-x^{2}}\\,dx$</p><p>$=16\\pi\\times\\dfrac{1}{3}+2\\cdot 2\\sqrt{3}\\cdot \\dfrac{1}{2}=\\boldsymbol{\\dfrac{16}{3}\\pi+2\\sqrt{3}}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{0}^{1}\\dfrac{1}{\\sqrt{4-x^{2}}}\\,dx$": "<p>$x=2\\sin\\theta$ とおくと，$dx=2\\cos\\theta d\\theta$</p><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$0 \\ \\to \\ 1$</td></tr><tr><th>$\\theta$</th><td>$0 \\ \\to \\ \\dfrac{\\pi}{6}$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{0}^{1}\\dfrac{1}{\\sqrt{4-x^{2}}}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{6}}\\dfrac{1}{\\sqrt{4-4\\sin^{2}\\theta}}\\cdot 2\\cos\\theta\\,d\\theta$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{6}}\\dfrac{1}{\\sqrt{4\\cos^{2}\\theta}}\\cdot 2\\cos\\theta\\,d\\theta$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{6}}1\\,d\\theta$</p><p>$=\\boldsymbol{\\dfrac{\\pi}{6}}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{-1}^{3}\\dfrac{1}{x^{2}+3}\\,dx$": "<p>$x=\\sqrt{3}\\tan\\theta$ $\\left(-\\dfrac{\\pi}{2}&lt; \\theta &lt;\\dfrac{\\pi}{2}\\right)$ とおくと</p><p>　$dx=\\dfrac{\\sqrt{3}}{\\cos^{2}\\theta}d\\theta$</p><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$-1 \\ \\to \\ 3$</td></tr><tr><th>$\\theta$</th><td>$-\\dfrac{\\pi}{6} \\ \\to \\ \\dfrac{\\pi}{3}$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{-1}^{3}\\dfrac{1}{x^{2}+3}\\,dx$</p><p>$\\displaystyle =\\int_{-\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\dfrac{1}{3(1+\\tan^{2}\\theta)}\\cdot \\dfrac{\\sqrt{3}}{\\cos^{2}\\theta}\\,d\\theta$</p><p>$\\displaystyle =\\int_{-\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\dfrac{\\sqrt{3}}{3}\\,d\\theta$</p><p>$\\displaystyle =\\left[\\dfrac{\\sqrt{3}}{3}\\theta\\right]_{-\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}$</p><p>$=\\boldsymbol{\\dfrac{\\sqrt{3}}{6}\\pi}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{2}^{5}x\\sqrt{x-2}\\,dx$": "<p>　$\\displaystyle \\int_{2}^{5}x\\sqrt{x-2}\\,dx$</p><p>$\\displaystyle =\\int_{2}^{5}(x-2+2)\\sqrt{x-2}\\,dx$</p><p>$\\displaystyle =\\int_{2}^{5}\\left\\{(x-2)^{\\frac{3}{2}}+2(x-2)^{\\frac{1}{2}}\\right\\}\\,dx$</p><p>$\\displaystyle =\\left[\\dfrac{2}{5}(x-2)^{\\frac{5}{2}}+\\dfrac{4}{3}(x-2)^{\\frac{3}{2}}\\right]_{2}^{5}$</p><p>$=\\boldsymbol{\\dfrac{38\\sqrt{3}}{5}}$</p>",
+    // 置換
+    "$\\displaystyle \\int_{0}^{\\pi}x\\sin 2x\\,dx$": "<p>　$\\displaystyle \\int_{0}^{\\pi}x\\sin 2x\\,dx$</p><p>$\\displaystyle =\\left[x\\left(-\\dfrac{1}{2}\\cos 2x\\right)\\right]_{0}^{\\pi}-\\int_{0}^{\\pi}\\left(-\\dfrac{1}{2}\\cos 2x\\right)\\,dx$</p><p>$\\displaystyle =-\\dfrac{\\pi}{2}+\\int_{0}^{\\pi}\\dfrac{1}{2}\\cos 2x\\,dx$</p><p>$\\displaystyle =-\\dfrac{\\pi}{2}+\\left[\\dfrac{1}{4}\\sin 2x\\right]_{0}^{\\pi}$</p><p>$=\\boldsymbol{-\\dfrac{\\pi}{2}}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{1}^{2}x(\\log x)^{2}\\,dx$": "<p>　$\\displaystyle \\int_{1}^{2}x(\\log x)^{2}\\,dx$</p><p>$\\displaystyle =\\left[\\dfrac{x^{2}}{2}(\\log x)^{2}\\right]_{1}^{2}-\\int_{1}^{2}\\dfrac{x^{2}}{2}\\cdot 2(\\log x)\\dfrac{1}{x}\\,dx$</p><p>$\\displaystyle =2(\\log 2)^{2}-\\int_{1}^{2}x(\\log x)\\,dx$</p><p>$\\displaystyle =2(\\log 2)^{2}-\\left(\\left[\\dfrac{x^{2}}{2}(\\log x)\\right]_{1}^{2}-\\int_{1}^{2}\\dfrac{x^2}{2}\\cdot\\dfrac{1}{x}\\,dx\\right)$</p><p>$\\displaystyle =2(\\log 2)^{2}-2\\log 2+\\int_{1}^{2}\\dfrac{x}{2}\\,dx$</p><p>$\\displaystyle =2(\\log 2)^{2}-2\\log 2+\\left[\\dfrac{x^2}{4} \\right]_{1}^{2}$</p><p>$=\\boldsymbol{2(\\log 2)^{2}-2\\log 2+\\dfrac{3}{4}}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{\\alpha}^{\\beta}(x-\\alpha)(x-\\beta)\\,dx$": "<p>　$\\displaystyle \\int_{\\alpha}^{\\beta}(x-\\alpha)(x-\\beta)\\,dx$</p><p>$\\displaystyle =\\left[\\dfrac{1}{2}(x-\\alpha)^{2}(x-\\beta)\\right]_{\\alpha}^{\\beta}-\\int_{\\alpha}^{\\beta}\\dfrac{1}{2}(x-\\alpha)^{2}\\,dx$</p><p>$\\displaystyle =-\\left[\\dfrac{1}{6}(x-\\alpha)^{3}\\right]_{\\alpha}^{\\beta}$</p><p>$\\displaystyle =\\boldsymbol{-\\dfrac{1}{6}(\\beta-\\alpha)^{3}}$</p>",
+    // 1/6公式
+    "$\\displaystyle \\int_{1}^{2}\\dfrac{4x+5}{2x^{2}+5x-3}\\,dx$": "<p>　$\\displaystyle \\int_{1}^{2}\\dfrac{4x+5}{2x^{2}+5x-3}\\,dx$</p><p>$\\displaystyle =\\Bigl[\\log |2x^{2}+5x-3|\\Bigr]_{1}^{2}$</p><p>$\\displaystyle =\\log15-\\log4$</p><p>$=\\boldsymbol{\\log\\dfrac{15}{4}}$</p>",
+    // 基本&分数関数
+    "$\\displaystyle \\int_{0}^{\\frac{1}{2}}\\dfrac{5x+1}{2x^{2}-x-1}\\,dx$": "<p>　$\\dfrac{5x+1}{2x^{2}-x-1}=\\dfrac{a}{2x+1}+\\dfrac{b}{x-1}$</p><p>として，両辺 $2x^{2}-x-1$ かけると</p><p>　$5x+1=a(x-1)+b(2x+1)$</p><p>　$\\therefore \\ \\begin{cases}5=a+2b \\\\ 1=-a+b\\end{cases}$</p><p>　$\\therefore \\ a=1$，$b=2$</p><p>　$\\displaystyle \\int_{0}^{\\frac{1}{2}}\\dfrac{5x+1}{2x^{2}-x-1}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{1}{2}}\\left(\\dfrac{1}{2x+1}+\\dfrac{2}{x-1}\\right)\\,dx$</p><p>$\\displaystyle =\\left[\\dfrac{1}{2}\\log |2x+1|+2\\log|x-1|\\right]_{0}^{\\frac{1}{2}}$</p><p>$\\displaystyle =\\dfrac{1}{2}\\log2+2\\log\\dfrac{1}{2}$</p><p>$=\\boldsymbol{-\\dfrac{3}{2}\\log2}$</p>",
+    // 分数関数
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\sin6x\\cos4x\\,dx$": "<p><a href=\"wasekisekiwa.html\">積和変換公式</a>を使う．</p><p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\sin6x\\cos4x\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{1}{2}\\{\\sin(6x+4x)+\\sin(6x-4x)\\}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{1}{2}(\\sin10x+\\sin2x)\\,dx$</p><p>$\\displaystyle =\\left[-\\dfrac{1}{20}\\cos10x-\\dfrac{1}{4}\\cos2x\\right]_{0}^{\\frac{\\pi}{2}}$</p><p>$=\\boldsymbol{\\dfrac{3}{5}}$</p>",
+    // 三角関数
+    "$\\displaystyle \\int_{-1}^{1}\\dfrac{x+1}{x^{2}+1}\\,dx$": "<p>　$\\displaystyle \\int_{-1}^{1}\\dfrac{x+1}{x^{2}+1}\\,dx$</p><p>$\\displaystyle =\\int_{-1}^{1}\\left(\\dfrac{x}{x^{2}+1}+\\dfrac{1}{x^{2}+1}\\right)\\,dx$</p><p>$\\displaystyle =2\\int_{0}^{1}\\dfrac{1}{x^{2}+1}\\,dx$</p><p>$\\displaystyle =2\\int_{0}^{\\frac{\\pi}{4}}\\dfrac{1}{\\tan^{2}\\theta+1}\\cdot\\dfrac{1}{\\cos^{2}\\theta}\\,d\\theta$</p><p>$\\displaystyle =2\\Bigl[\\theta\\Bigr]_{0}^{\\frac{\\pi}{4}}$</p><p>$=\\boldsymbol{\\dfrac{\\pi}{2}}$</p>",
+    // 偶関数奇関数
+    "$\\displaystyle \\int_{-\\pi}^{\\pi}(x+1)\\sin x\\,dx$": "<p>　$\\displaystyle \\int_{-\\pi}^{\\pi}(x+1)\\sin x\\,dx$</p><p>$\\displaystyle =\\int_{-\\pi}^{\\pi}(x\\sin x+\\sin x)\\,dx$</p><p>$\\displaystyle =2\\int_{0}^{\\pi}x\\sin x\\,dx$</p><p>$\\displaystyle =2\\Bigl[x(-\\cos x)+\\sin x \\Bigr]_{0}^{\\pi}$</p><p>$=\\boldsymbol{2\\pi}$</p>",
+    // 偶関数奇関数
+    "$\\displaystyle \\int_{-4}^{1}\\left|\\dfrac{1}{2}x+1\\right|\\,dx$": "<p>グラフで該当の定積分を図示すると</p><div style=\"text-align: center\"><img src=\"noteimages/integrals-zettaichi2.png\" alt=\"絶対値付き関数の定積分2\" width=\"100%\"></div><p>　$\\displaystyle \\int_{-4}^{1}\\left|\\dfrac{1}{2}x+1\\right|\\,dx$</p><p>$=2\\cdot1\\cdot\\dfrac{1}{2}+3\\cdot\\dfrac{3}{2}\\cdot\\dfrac{1}{2}=\\boldsymbol{\\dfrac{13}{4}}$</p>",
+    // 絶対値
+    "$\\displaystyle \\int_{0}^{1}\\left|e^{x}-2\\right|\\,dx$": "<p>　$\\displaystyle \\int_{0}^{1}\\left|e^{x}-2\\right|\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\log 2}(2-e^{x})\\,dx+\\int_{\\log 2}^{1}(e^{x}-2)\\,dx$</p><p>$\\displaystyle =\\Bigl[2x-e^{x}\\Bigr]_{0}^{\\log 2}+\\Bigl[e^{x}-2x\\Bigr]_{\\log 2}^{1}$</p><p>$\\displaystyle =2(2\\log2-2)+1+e-2$</p><p>$=\\boldsymbol{e+4\\log2-5}$</p>",
+    // 絶対値
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\left|\\sin x-\\dfrac{1}{2}\\right|\\,dx$": "<p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\left|\\sin x-\\dfrac{1}{2}\\right|\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{6}}\\left(\\dfrac{1}{2}-\\sin x\\right)\\,dx+\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{2}}\\left(\\sin x-\\dfrac{1}{2}\\right)\\,dx$</p><p>$\\displaystyle =\\left[\\dfrac{1}{2}x+\\cos x\\right]_{0}^{\\frac{\\pi}{6}}+\\left[-\\cos x-\\dfrac{1}{2}x\\right]_{\\frac{\\pi}{6}}^{\\frac{\\pi}{2}}$</p><p>$\\displaystyle =2\\left(\\dfrac{\\pi}{12}+\\dfrac{\\sqrt{3}}{2}\\right)-1-\\dfrac{\\pi}{4}$</p><p>$=\\boldsymbol{\\sqrt{3}-1-\\dfrac{\\pi}{12}}$</p>",
+    // 絶対値
         },
         "B": {
-            "$\\displaystyle \\zeta(2)$": "<p>$\\displaystyle \\zeta(2) = \\frac{\\pi^2}{6}$</p>"
+            "$\\displaystyle \\int_{}^{} \\ e^{x}\\sin x\\,dx$": "<p>$\\displaystyle I=\\int_{}^{} \\ e^{x}\\sin x\\,dx$ とおく．</p><p>　$\\displaystyle I$</p><p>$\\displaystyle =e^{x}\\sin x-\\int_{}^{} \\ e^{x}\\cos x\\,dx$</p><p>$\\displaystyle =e^{x}\\sin x-\\left(e^{x}\\cos x-\\int_{}^{} \\ e^{x}(-\\sin x)\\,dx\\right)$</p><p>$\\displaystyle =e^{x}\\sin x-e^{x}\\cos x-\\int_{}^{} \\ e^{x}\\sin x\\,dx$</p><p>$\\displaystyle =e^{x}(\\sin x-\\cos x)-I$</p><p>$\\displaystyle 2I=e^{x}(\\sin x-\\cos x)$ だが，積分定数を入れて</p><p>　$\\boldsymbol{I=\\dfrac{e^{x}}{2}(\\sin x-\\cos x)+C}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{2x^{4}-x^{3}-x^{2}+x+2}{x^{2}(x-1)}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{2x^{4}-x^{3}-x^{2}+x+2}{x^{2}(x-1)}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{(x^{3}-x^{2})(2x+1)+x+2}{x^{2}(x-1)}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(2x+1+\\dfrac{x+2}{x^{2}(x-1)}\\right)\\,dx$</p><p>ここで</p><p>　$\\dfrac{x+2}{x^{2}(x-1)}=\\dfrac{a}{x}+\\dfrac{b}{x^2}+\\dfrac{c}{x-1}$</p><p>として，両辺 $x^{2}(x-1)$ かけると</p><p>　$x+2=ax(x-1)+b(x-1)+cx^2$</p><p>　$\\therefore \\ \\begin{cases}0=a+c \\\\ 1=-a+b \\\\ 2=-b\\end{cases}$</p><p>　$\\therefore \\ a=-3$，$b=-2$，$c=3$</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{2x^{4}-x^{3}-x^{2}+x+2}{x^{2}(x-1)}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(2x+1-\\dfrac{3}{x}-\\dfrac{2}{x^2}+\\dfrac{3}{x-1}\\right)\\,dx$</p><p>$=x^{2}+x-3\\log|x|+\\dfrac{2}{x}+3\\log|x-1|+C$</p><p>$=\\boldsymbol{x^{2}+x+\\dfrac{2}{x}+3\\log\\left|\\dfrac{x-1}{x}\\right|+C}$</p>",
+    // 分数関数
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{4x^{2}+x+1}{x^{3}-1}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{4x^{2}+x+1}{x^{3}-1}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{3x^{2}+x^{2}+x+1}{x^{3}-1}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(\\dfrac{3x^{2}}{x^{3}-1}+\\dfrac{1}{x-1}\\right)\\,dx$</p><p>$=\\log|x^{3}-1|+\\log|x-1|+C$</p><p>$=\\boldsymbol{\\log(x-1)^{2}(x^{2}+x+1)+C}$</p><p><b style=\"color: black\">別解</b></p><p>　$\\dfrac{4x^{2}+x+1}{x^{3}-1}=\\dfrac{a}{x-1}+\\dfrac{bx+c}{x^{2}+x+1}$</p><p>として，両辺 $x^{3}-1$ かけると</p><p>$4x^{2}+x+1=a(x^{2}+x+1)+(bx+c)(x-1)=(a+b)x^{2}+(a-b+c)x+a-c$</p><p>　$\\therefore \\ \\begin{cases}4=a+b \\\\ 1=a-b+c \\\\ 1=a-c\\end{cases}$</p><p>　$\\therefore \\ a=b=2$，$c=1$</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{4x^{2}+x+1}{x^{3}-1}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(\\dfrac{2}{x-1}+\\dfrac{2x+1}{x^{2}+x+1}\\right)\\,dx$</p><p>$=2\\log|x-1|+\\log|x^{2}+x+1|+C$</p><p>$=\\boldsymbol{\\log(x-1)^{2}(x^{2}+x+1)+C}$</p>",
+    // 分数関数
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\sin^{2}x}\\,dx$": "<p>$\\tan x=t$ とおくと $\\dfrac{1}{\\cos^{2}x}dx=dt$</p><p>つまり $dx=\\cos^{2}xdt=\\dfrac{1}{1+\\tan^{2}x}dt=\\dfrac{1}{1+t^{2}}dt$</p><p>また $\\sin^{2}x=1-\\cos^{2}x=1-\\dfrac{1}{1+t^{2}}=\\dfrac{t^{2}}{1+t^{2}}$</p><p>より</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\sin^{2}x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1+t^{2}}{t^{2}}\\cdot\\dfrac{1}{1+t^{2}}\\,dt$</p><p>$=-\\dfrac{1}{t}+C$</p><p>$=\\boldsymbol{-\\dfrac{1}{\\tan x}+C}$</p>",
+    // 三角関数
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{x\\sqrt{1+x^{3}}}\\,dx$": "<p>$\\sqrt{1+x^{3}}=t$ とおくと，$1+x^{3}=t^{2}$</p><p>　$3x^{2}dx=2tdt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{x\\sqrt{1+x^{3}}}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{x^{2}}{x^{3}\\sqrt{1+x^{3}}}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{(t^{2}-1)t}\\cdot\\dfrac{2}{3}t\\,dt$</p><p>$\\displaystyle =\\dfrac{2}{3}\\int_{}^{} \\ \\dfrac{1}{(t+1)(t-1)}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{3}\\int_{}^{} \\ \\left(\\dfrac{1}{t-1}-\\dfrac{1}{t+1}\\right)\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{3}(\\log|t-1|-\\log|t+1|)+C$</p><p>$\\displaystyle =\\dfrac{1}{3}\\log\\dfrac{|t-1|}{|t+1|}+C$</p><p>$=\\boldsymbol{\\dfrac{1}{3}\\log\\dfrac{\\left|\\sqrt{1+x^{3}}-1\\right|}{\\sqrt{1+x^{3}}+1}+C}$</p>",
+    // 置換，分数関数，2001横浜国大改
+    "$\\displaystyle \\int_{}^{} \\ \\left(x-\\dfrac{1}{x}\\right)(\\log x)^{2}\\,dx$": "<p>$\\log x=t$ とおく．$x=e^{t}$ より $dx=e^{t}dt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\left(x-\\dfrac{1}{x}\\right)(\\log x)^{2}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(e^{t}-\\dfrac{1}{e^{t}}\\right)t^{2}e^{t}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ (t^{2}e^{2t}-t^{2})\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{2}t^{2}e^{2t}-\\int_{}^{} \\ te^{2t}\\,dt-\\int_{}^{} \\ t^{2}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{2}t^{2}e^{2t}-\\left(\\dfrac{1}{2}te^{2t}-\\int_{}^{} \\ \\dfrac{1}{2}e^{2t}\\,dt\\right)-\\int_{}^{} \\ t^{2}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{2}t^{2}e^{2t}-\\dfrac{1}{2}te^{2t}+\\dfrac{1}{4}e^{2t}-\\dfrac{1}{3}t^{3}+C$</p><p>$=\\boldsymbol{\\dfrac{x^{2}}{2}(\\log x)^{2}-\\dfrac{x^{2}}{2}\\log x+\\dfrac{x^2}{4}-\\dfrac{1}{3}(\\log x)^{3}+C}$</p>",
+    // 置換，部分，2011弘前大改
+    "$\\displaystyle \\int_{}^{} \\ \\tan^{3}x\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\tan^{3}x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\tan x\\left(\\dfrac{1}{\\cos^{2}x}-1\\right)\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left\(\\tan x (\\tan x)'+\\dfrac{-\\sin x}{\\cos x}\\right)\\,dx$</p><p>$=\\boldsymbol{\\dfrac{1}{2}\\tan^{2}x+\\log |\\cos x|+C}$</p>",
+    // 三角関数，置換
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{x^{2}+2ax+b}\\,dx$　$( \\ a^{2}\\geqq b \\ )$": "<p>(ⅰ) $a^{2}=b$ のとき</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{x^{2}+2ax+b}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{(x+a)^{2}}\\,dx$</p><p>$=\\boldsymbol{-\\dfrac{1}{x+a}+C}$</p><p>(ⅱ) $a^2 &gt;b$ のとき</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{x^{2}+2ax+b}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{(x+a)^{2}-(a^{2}-b)}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{(x+a-\\sqrt{a^{2}-b})(x+a+\\sqrt{a^{2}-b})}\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{2\\sqrt{a^{2}-b}}\\int_{}^{} \\ \\left(\\dfrac{1}{x+a-\\sqrt{a^{2}-b}}-\\dfrac{1}{x+a+\\sqrt{a^{2}-b}}\\right)\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{2\\sqrt{a^{2}-b}}\\left(\\log|x+a-\\sqrt{a^{2}-b}|-\\log|x+a+\\sqrt{a^{2}-b}|\\right)+C$</p><p>$=\\boldsymbol{\\dfrac{1}{2\\sqrt{a^{2}-b}}\\log\\left|\\dfrac{x+a-\\sqrt{a^{2}-b}}{x+a+\\sqrt{a^{2}-b}}\\right|+C}$</p>",
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{\\log x}{(x+1)^{2}}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{\\log x}{(x+1)^{2}}\\,dx$</p><p>$\\displaystyle =-\\dfrac{\\log x}{x+1}-\\int_{}^{} \\ \\left(-\\dfrac{1}{x+1}\\cdot\\dfrac{1}{x}\\right)\\,dx$</p><p>$\\displaystyle =-\\dfrac{\\log x}{x+1}+\\int_{}^{} \\ \\left(\\dfrac{1}{x}-\\dfrac{1}{x+1}\\right)\\,dx$</p><p>$\\displaystyle =-\\dfrac{\\log x}{x+1}+\\log |x|-\\log |x+1|+C$</p><p>$=\\boldsymbol{-\\dfrac{\\log x}{x+1}+\\log \\dfrac{x}{x+1}+C}$</p>",
+    // 部分，分数関数
+    "$\\displaystyle \\int_{}^{} \\ \\log(x+\\sqrt{x^{2}+1})\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\log(x+\\sqrt{x^{2}+1})\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ (x)'\\log(x+\\sqrt{x^{2}+1})\\,dx$</p><p>$\\displaystyle =x\\log(x+\\sqrt{x^{2}+1})-\\int_{}^{} \\ x\\cdot\\dfrac{1}{x+\\sqrt{x^{2}+1}}\\left(1+\\dfrac{x}{\\sqrt{x^{2}+1}}\\right)\\,dx$</p><p>$\\displaystyle =x\\log(x+\\sqrt{x^{2}+1})-\\int_{}^{} \\ \\dfrac{x}{\\sqrt{x^{2}+1}}\\,dx$</p><p>$\\displaystyle =x\\log(x+\\sqrt{x^{2}+1})-\\dfrac{1}{2}\\int_{}^{} \\ 2x(x^{2}+1)^{-\\frac{1}{2}}\\,dx$</p><p>$\\displaystyle =x\\log(x+\\sqrt{x^{2}+1})-\\dfrac{1}{2}\\cdot 2(x^{2}+1)^{\\frac{1}{2}}+C$</p><p>$=\\boldsymbol{x\\log(x+\\sqrt{x^{2}+1})-\\sqrt{x^{2}+1}+C}$</p>",
+    // 部分，置換
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\cos^{4}x}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\cos^{4}x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ (1+\\tan^{2}x)\\dfrac{1}{\\cos^{2}x}\\,dx$</p><p>$\\displaystyle =\\boldsymbol{\\tan x+\\dfrac{1}{3}\\tan^{3}x+C}$</p>",
+    "$\\displaystyle \\int{}{}\\dfrac{\\log(\\sin^{2}x)}{\\tan x}\\,dx$": "<p>$\\log(\\sin^{2}x)=t$ とおくと，$\\dfrac{2\\sin x \\cos x}{\\sin^{2}x}dx=dt$ より $\\dfrac{1}{\\tan x}dx=\\dfrac{1}{2}dt$．</p><p>　$\\displaystyle \\int{}{}\\dfrac{\\log(\\sin^{2}x)}{\\tan x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{t}{2}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{4}t^{2}+C$</p><p>$\\displaystyle =\\dfrac{1}{4}\\{\\log(\\sin^{2}x)\\}^{2}+C$</p><p>$\\displaystyle =\\dfrac{1}{4}(2\\log|\\sin x|)^{2}+C$</p><p>$\\displaystyle =\\boldsymbol{(\\log|\\sin x|)^{2}+C}$</p>",
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{\\sin 3x}{\\cos x}\\,dx$": "<p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{\\sin 3x}{\\cos x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{3\\sin x-4\\sin^{3}x}{\\cos x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{3\\sin x-4\\sin x(1-\\cos^{2}x)}{\\cos x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(\\dfrac{-\\sin x}{\\cos x}+2\\sin2x\\right)\\,dx$</p><p>$=\\boldsymbol{\\log|\\cos x|-\\cos 2x+C}$</p>",
+    "$\\displaystyle \\int_{0}^{\\pi}e^{-x}\\cos 2x\\,dx$": "<p>$\\displaystyle I=\\int_{}^{} \\ e^{-x}\\cos 2x\\,dx$ とおく．</p><p>　$\\displaystyle I$</p><p>$\\displaystyle =-e^{-x}\\cos2x-\\int_{}^{} \\ (-e^{-x})(-2\\sin 2x)\\,dx$</p><p>$\\displaystyle =-e^{-x}\\cos2x-2\\int_{}^{} \\ e^{-x}\\sin 2x\\,dx$</p><p>$\\displaystyle =-e^{-x}\\cos2x-2\\left(-e^{-x}\\sin 2x-\\int_{}^{} \\ (-e^{-x})2\\cos 2x\\,dx\\right)$</p><p>$\\displaystyle =-e^{-x}\\cos2x+2e^{-x}\\sin2x-4I$</p><p>$\\displaystyle 5I=e^{-x}\\left(2\\sin 2x-\\cos 2x\\right)$ だが，積分定数を入れて</p><p>　$I=\\dfrac{e^{-x}}{5}(2\\sin 2x-\\cos 2x)+C$</p><p>これより</p><p>　$\\displaystyle \\int_{0}^{\\pi}e^{-x}\\cos 2x\\,dx$</p><p>$=\\left[\\dfrac{e^{-x}}{5}(2\\sin 2x-\\cos 2x)\\right]_{0}^{\\pi}$</p><p>$=\\boldsymbol{\\dfrac{1}{5}(1-e^{-\\pi})}$</p>",
+    // 部分
+    "$\\displaystyle \\int_{\\alpha}^{\\beta}(x-\\alpha)x(x-\\beta)\\,dx$": "<p>　$\\displaystyle \\int_{\\alpha}^{\\beta}(x-\\alpha)x(x-\\beta)\\,dx$</p><p>$\\displaystyle =\\int_{\\alpha}^{\\beta}(x-\\alpha)(x-\\beta)(x-\\beta+\\beta)\\,dx$</p><p>$\\displaystyle =\\int_{\\alpha}^{\\beta}(x-\\alpha)(x-\\beta)^{2}\\,dx+\\int_{\\alpha}^{\\beta}\\beta(x-\\alpha)(x-\\beta)\\,dx$</p><p>$\\displaystyle =\\left[\\dfrac{1}{3}(x-\\alpha)(x-\\beta)^{3}\\right]_{\\alpha}^{\\beta}-\\int_{\\alpha}^{\\beta}\\dfrac{1}{3}(x-\\beta)^{3}\\,dx+\\beta\\int_{\\alpha}^{\\beta}(x-\\alpha)(x-\\beta)\\,dx$</p><p>$\\displaystyle =-\\left[\\dfrac{1}{12}(x-\\beta)^{4}\\right]_{\\alpha}^{\\beta}+\\beta\\left(\\left[\\dfrac{1}{2}(x-\\alpha)(x-\\beta)^{2}\\right]_{\\alpha}^{\\beta}-\\int_{\\alpha}^{\\beta}\\dfrac{1}{2}(x-\\beta)^{2}\\,dx\\right)$</p><p>$\\displaystyle =\\dfrac{1}{12}(\\alpha-\\beta)^{4}-\\beta\\left[\\dfrac{1}{6}(x-\\beta)^{3}\\right]_{\\alpha}^{\\beta}$</p><p>$\\displaystyle =\\dfrac{1}{12}(\\alpha-\\beta)^{4}+\\dfrac{\\beta}{6}(\\alpha-\\beta)^{3}$</p><p>$\\displaystyle =\\dfrac{(\\alpha-\\beta)^{3}}{12}(\\alpha-\\beta+2\\beta)$</p><p>$\\displaystyle =\\boldsymbol{-\\dfrac{(\\beta-\\alpha)^{3}}{12}(\\alpha+\\beta)}$</p>",
+    // 1/6公式の応用
+    "$\\displaystyle \\int_{-3}^{2}(x+3)(x-2)^{2}\\,dx$": "<p>　$\\displaystyle \\int_{-3}^{2}(x+3)(x-2)^{2}\\,dx$</p><p>$\\displaystyle =\\left[\\dfrac{1}{3}(x+3)(x-2)^{3}\\right]_{-3}^{2}-\\int_{-3}^{2}\\dfrac{1}{3}(x-2)^{3}\\,dx$</p><p>$\\displaystyle =-\\left[\\dfrac{1}{12}(x-2)^{4}\\right]_{-3}^{2}$</p><p>$\\displaystyle =\\boldsymbol{\\dfrac{625}{12}}$</p>",
+    // 1/12公式
+    "$\\displaystyle \\int_{-1}^{5}(x+1)(x-2)^{3}(x-5)\\,dx$": "<p>　$\\displaystyle \\int_{-1}^{5}(x+1)(x-2)^{3}(x-5)\\,dx$</p><p>$\\displaystyle =\\int_{-3}^{3}(t+3)t^{3}(t-3)\\,dt$　$(t=x-2)$</p><p>$\\displaystyle =\\int_{-3}^{3}(t^{5}-9t^{3})\\,dt$</p><p>$\\displaystyle =\\boldsymbol{0}$</p>",
+    // 置換，偶関数奇関数
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}|3\\sin x-4\\cos x|\\,dx$": "<p>　$3\\sin x-4\\cos x=5\\sin(x-\\alpha)$</p><p>とする．ここで $\\cos\\alpha=\\dfrac{3}{5}$，$\\sin\\alpha=\\dfrac{4}{5}$ である．</p><p>　$|3\\sin x-4\\cos x|$</p><p>$=\\begin{cases}-3\\sin x+4\\cos x \\ (0\\leqq x&lt; \\alpha) \\\\ 3\\sin x-4\\cos x \\ \\left(\\alpha \\leqq x\\leqq \\dfrac{\\pi}{2}\\right)\\end{cases}$</p><p>より</p><p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}|3\\sin x-4\\cos x|\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\alpha}(-3\\sin x+4\\cos x)\\,dx+\\int_{\\alpha}^{\\frac{\\pi}{2}}(3\\sin x-4\\cos x)\\,dx$</p><p>$\\displaystyle =\\Bigl[3\\cos x +4\\sin x\\Bigr]_{0}^{\\alpha}+\\Bigl[-3\\cos x -4\\sin x\\Bigr]_{\\alpha}^{\\frac{\\pi}{2}}$</p><p>$\\displaystyle =2(3\\cos\\alpha+4\\sin\\alpha)-3-4$</p><p>$=\\boldsymbol{3}$</p>",
+    // 絶対値
+    "$\\displaystyle \\int_{0}^{2\\pi}\\sqrt{2-2\\cos x}\\,dx$": "<p>　$\\displaystyle \\int_{0}^{2\\pi}\\sqrt{2-2\\cos x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{2\\pi}\\sqrt{2-2\\cos 2\\cdot\\dfrac{x}{2}}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{2\\pi}\\sqrt{2-2\\left(1-2\\sin^{2}\\dfrac{x}{2}\\right)}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{2\\pi}\\sqrt{4\\sin^{2}\\dfrac{x}{2}}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{2\\pi}\\left|2\\sin\\dfrac{x}{2}\\right|\\,dx$</p><p>$\\displaystyle =\\int_{0}^{2\\pi}2\\sin\\dfrac{x}{2}\\,dx$</p><p>$\\displaystyle =\\left[-4\\cos\\dfrac{x}{2}\\right]_{0}^{2\\pi}$</p><p>$=\\boldsymbol{8}$</p>",
+    // 三角関数
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\cos^{2}x\\sin x\\tan\\dfrac{x}{2}\\,dx$": "<p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\cos^{2}x\\sin x\\tan\\dfrac{x}{2}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\cos^{2}x \\cdot 2\\sin\\dfrac{x}{2}\\cos\\dfrac{x}{2} \\cdot \\dfrac{\\sin\\dfrac{x}{2}}{\\cos\\dfrac{x}{2}}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\cos^{2}x \\cdot 2\\sin^{2}\\dfrac{x}{2}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\cos^{2}x(1-\\cos x)\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}(\\cos^{2}x-\\cos^{3}x)\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\left\\{\\dfrac{1+\\cos2x}{2}-(1-\\sin^{2}x)\\cos x\\right\\}\\,dx$</p><p>$\\displaystyle =\\left[\\dfrac{1}{2}x+\\dfrac{1}{4}\\sin 2x-\\sin x+\\dfrac{1}{3}\\sin^{3}x\\right]_{0}^{\\frac{\\pi}{2}}$</p><p>$=\\boldsymbol{\\dfrac{\\pi}{4}-\\dfrac{2}{3}}$</p>",
+    // 2014埼玉医科大
+    "$\\displaystyle \\int_{0}^{\\log2}\\dfrac{e^x}{e^{2x}-2e^{x}+2}\\,dx$": "<p>$e^{x}-1=\\tan u$ とおくと，$e^{x}\\,dx=\\dfrac{1}{\\cos^{2}u}\\,du$</p><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$0 \\ \\to \\ \\log2$</td></tr><tr><th>$u$</th><td>$0 \\ \\to \\ \\dfrac{\\pi}{4}$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{0}^{\\log2}\\dfrac{e^x}{e^{2x}-2e^{x}+2}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\log2}\\dfrac{1}{(e^{x}-1)^{2}+1}\\cdot e^{x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}}\\dfrac{1}{\\tan^{2}u+1}\\cdot\\dfrac{1}{\\cos^{2}u}\\,du$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}}1\\,du$</p><p>$=\\boldsymbol{\\dfrac{\\pi}{4}}$</p>",
+    // 置換2回，オリジナル
+    "$\\displaystyle \\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\dfrac{\\log(\\sin x)}{\\tan x}\\,dx$": "<p>$\\sin x=t$ とおくと，$\\cos x\\,dx=dt$</p><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$\\dfrac{\\pi}{6} \\ \\to \\ \\dfrac{\\pi}{3}$</td></tr><tr><th>$u$</th><td>$\\dfrac{1}{2} \\ \\to \\ \\dfrac{\\sqrt{3}}{2}$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\dfrac{\\log(\\sin x)}{\\tan x}\\,dx$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\dfrac{\\log(\\sin x)}{\\sin x}\\cdot \\cos x\\,dx$</p><p>$\\displaystyle =\\int_{\\frac{1}{2}}^{\\frac{\\sqrt{3}}{2}}\\dfrac{\\log t}{t}\\,dt$</p><p>$\\displaystyle =\\left[\\dfrac{1}{2}(\\log t)^{2}\\right]_{\\frac{1}{2}}^{\\frac{\\sqrt{3}}{2}}$</p><p>$\\displaystyle =\\dfrac{1}{2}\\left\\{\\left(\\log\\dfrac{\\sqrt{3}}{2}\\right)^{2}-\\left(\\log\\dfrac{1}{2}\\right)^{2}\\right\\}$</p><p>$\\displaystyle =\\dfrac{1}{2}\\left(\\log\\dfrac{\\sqrt{3}}{2}+\\log\\dfrac{1}{2}\\right)\\left(\\log\\dfrac{\\sqrt{3}}{2}-\\log\\dfrac{1}{2}\\right)$</p><p>$\\displaystyle =\\dfrac{1}{2}\\left(\\log\\dfrac{\\sqrt{3}}{4}\\right)\\left(\\log\\sqrt{3}\\right)$</p><p>$\\displaystyle =\\dfrac{1}{8}\\left(\\log\\dfrac{3}{16}\\right)\\left(\\log3\\right)$</p><p>$=\\boldsymbol{\\dfrac{\\log3}{8}\\left(\\log3-4\\log2\\right)}$</p>",
+    // 置換2回，2020横浜国大改
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{6}}\\dfrac{1}{3\\sin^{2}x+\\cos^{2}x}\\,dx$": "<p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{6}}\\dfrac{1}{3\\sin^{2}x+\\cos^{2}x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{6}}\\dfrac{1}{3\\tan^{2}x+1}\\cdot \\dfrac{1}{\\cos^{2}x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{1}{\\sqrt{3}}}\\dfrac{1}{3u^{2}+1}\\,du$　$(u=\\tan x)$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}}\\dfrac{1}{\\tan^{2}\\theta+1}\\cdot\\dfrac{1}{\\sqrt{3}\\cos^{2}\\theta}\\,d\\theta$　$(\\tan \\theta=\\sqrt{3}u)$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}}\\dfrac{1}{\\sqrt{3}}\\,d\\theta$</p><p>$=\\boldsymbol{\\dfrac{\\sqrt{3}\\pi}{12}}$</p>",
+    // 2006横浜国大改
+    "$\\displaystyle \\int_{\\frac{4}{3}}^{2}\\dfrac{1}{x^{2}\\sqrt{x-1}}\\,dx$": "<p>$\\sqrt{x-1}=t$ とおくと</p><p>　$x-1=t^2$</p><p>　$dx=2t\\,dt$</p><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$\\dfrac{4}{3} \\ \\to \\ 2$</td></tr><tr><th>$t$</th><td>$\\dfrac{1}{\\sqrt{3}} \\ \\to \\ 1$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{\\frac{4}{3}}^{2}\\dfrac{1}{x^{2}\\sqrt{x-1}}\\,dx$</p><p>$\\displaystyle =\\int_{\\frac{1}{\\sqrt{3}}}^{1}\\dfrac{1}{(t^{2}+1)^{2}t}\\cdot2t\\,dt$</p><p>$\\displaystyle =\\int_{\\frac{1}{\\sqrt{3}}}^{1}\\dfrac{2}{(t^{2}+1)^{2}}\\,dt$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{4}}\\dfrac{2}{(\\tan^{2}u+1)^{2}}\\cdot\\dfrac{1}{\\cos^{2}u}\\,du$　$(t=\\tan u)$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{4}}\\dfrac{2}{\\tan^{2}u+1}\\,du$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{4}}2\\cos^{2}u\\,du$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{4}}(1+\\cos 2u)\\,du$</p><p>$=\\left[u+\\dfrac{1}{2}\\sin2u\\right]_{\\frac{\\pi}{6}}^{\\frac{\\pi}{4}}$</p><p>$=\\boldsymbol{\\dfrac{\\pi}{12}+\\dfrac{2-\\sqrt{3}}{4}}$</p>",
+    // 置換2回，2007横浜国大
+    "$\\displaystyle \\int_{1}^{e}3^{\\log x}\\,dx$": "<p>$A=3^{\\log x}$ とおいて，両辺自然対数をとると</p><p>　$\\log A=\\log 3^{\\log x}=(\\log 3)(\\log x)=\\log x^{\\log 3}$</p><p>　$\\therefore \\ A=x^{\\log 3}$</p><p>　$\\displaystyle \\int_{1}^{e}3^{\\log x}\\,dx$</p><p>$\\displaystyle =\\int_{1}^{e}x^{\\log 3}\\,dx$</p><p>$=\\left[\\dfrac{1}{1+\\log 3}x^{1+\\log 3}\\right]_{1}^{e}$</p><p>$=\\dfrac{1}{1+\\log 3}(e^{1+\\log 3}-1)$</p><p>$=\\boldsymbol{\\dfrac{3e-1}{1+\\log 3}}$</p>",
+    // 2003横浜国大改
+    "$\\displaystyle \\int_{\\frac{\\pi}{3}}^{\\frac{2}{3}\\pi}\\dfrac{2+\\sin x}{1+\\cos x}\\,dx$": "<p>　$\\displaystyle \\int_{\\frac{\\pi}{3}}^{\\frac{2}{3}\\pi}\\dfrac{2+\\sin x}{1+\\cos x}\\,dx$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{3}}^{\\frac{2}{3}\\pi}\\left(\\dfrac{2}{1+\\cos x}+\\dfrac{\\sin x}{1+\\cos x}\\right)\\,dx$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{3}}^{\\frac{2}{3}\\pi}\\left(\\dfrac{2}{1+2\\cos^{2}\\frac{x}{2}-1}-\\dfrac{-\\sin x}{1+\\cos x}\\right)\\,dx$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{3}}^{\\frac{2}{3}\\pi}\\left(\\dfrac{1}{\\cos^{2}\\frac{x}{2}}-\\dfrac{(1+\\cos x)'}{1+\\cos x}\\right)\\,dx$</p><p>$\\displaystyle =\\left[2\\tan\\dfrac{x}{2}-\\log(1+\\cos x)\\right]_{\\frac{\\pi}{3}}^{\\frac{2}{3}\\pi}$</p><p>$=\\boldsymbol{\\dfrac{4\\sqrt{3}}{3}+\\log 3}$</p>",
+    // 2012横浜国大改
+    "$\\displaystyle \\int_{1}^{3}\\dfrac{\\log(x+1)}{x^{2}}\\,dx$": "<p>　$\\displaystyle \\int_{1}^{3}\\dfrac{\\log(x+1)}{x^{2}}\\,dx$</p><p>$\\displaystyle =\\left[-\\dfrac{1}{x}\\log(x+1)\\right]_{1}^{3}-\\int_{1}^{3}\\left\\{-\\dfrac{1}{x(x+1)}\\right\\}\\,dx$</p><p>$\\displaystyle =-\\dfrac{1}{3}\\log 4+\\log 2+\\int_{1}^{3}\\left(\\dfrac{1}{x}-\\dfrac{1}{x+1}\\right)\\,dx$</p><p>$\\displaystyle =-\\dfrac{2}{3}\\log 2+\\log 2+\\Bigl[\\log|x|-\\log|x+1|\\Bigr]_{1}^{3}$</p><p>$\\displaystyle =\\dfrac{1}{3}\\log 2+\\log 3-\\log4+\\log 2$</p><p>$=\\boldsymbol{\\log 3-\\dfrac{2}{3}\\log 2}$</p>",
+    // 2010弘前大
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{3}}\\dfrac{x}{\\cos^{2}x}\\,dx$": "<p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{3}}\\dfrac{x}{\\cos^{2}x}\\,dx$</p><p>$\\displaystyle =\\Bigl[x\\tan x\\Bigr]_{0}^{\\frac{\\pi}{3}}-\\int_{0}^{\\frac{\\pi}{3}}\\tan x\\,dx$</p><p>$\\displaystyle =\\dfrac{\\sqrt{3}\\pi}{3}+\\int_{0}^{\\frac{\\pi}{3}}\\dfrac{-\\sin x}{\\cos x}\\,dx$</p><p>$\\displaystyle =\\dfrac{\\sqrt{3}\\pi}{3}+\\Bigl[\\log |\\cos x|\\Bigr]_{0}^{\\frac{\\pi}{3}}$</p><p>$=\\boldsymbol{\\dfrac{\\sqrt{3}\\pi}{3}-\\log 2}$</p>",
+    // 部分，置換，2019京大改
+    "$\\displaystyle \\int_{1}^{2}\\dfrac{x^{5}}{e^{x^{3}}}\\,dx$": "<p>$x^{3}=t$ とおくと $3x^{2}dx=dt$</p><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$1 \\ \\to \\ 2$</td></tr><tr><th>$t$</th><td>$1 \\ \\to \\ 8$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{1}^{2}\\dfrac{x^{5}}{e^{x^{3}}}\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{3}\\int_{1}^{2}x^{3}e^{-x^{3}}\\cdot 3x^{2}\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{3}\\int_{1}^{8}te^{-t}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{3}\\left(\\Bigl[-te^{-t}\\Bigr]_{1}^{8}-\\int_{1}^{8}(-e^{-t})\\,dt \\right)$</p><p>$\\displaystyle =\\dfrac{1}{3}\\left(-8e^{-8}+e^{-1}+\\int_{1}^{8}e^{-t}\\,dt \\right)$</p><p>$=\\boldsymbol{-3e^{-8}+\\dfrac{2}{3}e^{-1}}$</p>",
+    // 置換，部分，オリジナル
+    "$\\displaystyle \\int_{0}^{\\sqrt{2}}x^{2}\\sqrt{4-x^{2}}\\,dx$": "<p>$x=2\\sin\\theta$ とおくと，$dx=2\\cos\\theta d\\theta$</p><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$0 \\ \\to \\ \\sqrt{2}$</td></tr><tr><th>$\\theta$</th><td>$0 \\ \\to \\ \\dfrac{\\pi}{4}$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{0}^{\\sqrt{2}}x^{2}\\sqrt{4-x^{2}}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}}4\\sin^{2}\\theta\\sqrt{4-4\\sin^{2}\\theta}\\cdot2\\cos\\theta\\,d\\theta$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}}16\\sin^{2}\\theta\\cos^{2}\\theta\\,d\\theta$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}}4\\sin^{2}2\\theta\\,d\\theta$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}}2(1-\\cos4\\theta)\\,d\\theta$</p><p>$\\displaystyle =\\left[2\\theta-\\dfrac{1}{2}\\sin4\\theta\\right]_{0}^{\\frac{\\pi}{4}}$</p><p>$=\\boldsymbol{\\dfrac{\\pi}{2}}$</p>",
+    // 置換，三角関数，2021神戸大改
+    "$\\displaystyle \\int_{0}^{1} x\\sqrt{-x^{2}+2x}\\,dx$": "<p>　$\\displaystyle \\int_{0}^{1} x\\sqrt{-x^{2}+2x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{1} (x-1+1)\\sqrt{-x^{2}+2x}\\,dx$</p><p>$\\displaystyle =-\\dfrac{1}{2}\\int_{0}^{1} (-2x+2)(-x^{2}+2x)^{\\frac{1}{2}}\\,dx+\\int_{0}^{1}\\sqrt{-x^{2}+2x}\\,dx$</p><p>$\\displaystyle =-\\dfrac{1}{2}\\left[\\dfrac{2}{3}(-x^{2}+2x)^{\\frac{3}{2}}\\right]_{0}^{1}+\\int_{0}^{1} \\sqrt{1-(x-1)^{2}}\\,dx$</p><p>$\\displaystyle =-\\dfrac{1}{3}+\\int_{-1}^{0} \\sqrt{1-t^{2}}\\,dt$　( $t=x-1$ )</p><p>$\\displaystyle \\int_{-1}^{0}\\sqrt{1-t^{2}}\\,dt$ は単位円の第 $2$ 象限部分と $x$ 軸と $y$ 軸で囲まれた部分(四分円)の面積より $\\dfrac{\\pi}{4}$．</p><p>　$\\displaystyle \\int_{0}^{1}x\\sqrt{-x^{2}+2x}\\,dx=\\boldsymbol{-\\dfrac{1}{3}+\\dfrac{\\pi}{4}}$</p>",
+    // オリジナル，円の面積利用
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{3}}|\\sin x-2\\cos x|\\,dx$": "<p>　$\\sin x-2\\cos x=\\sqrt{5}\\sin(x-\\alpha)$</p><p>とする．ここで $\\cos\\alpha=\\dfrac{1}{\\sqrt{5}}$，$\\sin\\alpha=\\dfrac{2}{\\sqrt{5}}$ である．</p><p>$\\tan\\dfrac{\\pi}{3}=\\sqrt{3}$，$\\tan\\alpha=2$ より，$\\dfrac{\\pi}{3}&lt;\\alpha &lt;\\dfrac{\\pi}{2}$．つまり $0\\leqq x\\leqq \\dfrac{\\pi}{3}$ で $\\sqrt{5}\\sin\\left(x-\\alpha\\right)&lt;0$．</p><p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{3}}|\\sin x-2\\cos x|\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{3}}(-\\sin x+2\\cos x)\\,dx$</p><p>$\\displaystyle =\\Bigl[\\cos x+2\\sin x\\Bigr]_{0}^{\\frac{\\pi}{3}}$</p><p>$\\displaystyle =\\boldsymbol{\\sqrt{3}-\\dfrac{1}{2}}$</p>",
+    // 絶対値
+    "$\\displaystyle \\int_{0}^{1} \\dfrac{x+1}{(x^{2}+1)^{2}}\\,dx$": "<p>$x=\\tan\\theta$ とおくと，$dx=\\dfrac{1}{\\cos^{2}\\theta}d\\theta$</p><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$0 \\ \\to \\ 1$</td></tr><tr><th>$\\theta$</th><td>$0 \\ \\to \\ \\dfrac{\\pi}{4}$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{0}^{1}\\dfrac{x+1}{(x^{2}+1)^{2}}\\,dx$</p><p>$=\\displaystyle \\int_{0}^{\\frac{\\pi}{4}}\\dfrac{\\tan\\theta+1}{\\frac{1}{\\cos^{4}\\theta}}\\cdot\\dfrac{1}{\\cos^{2}\\theta}\\,d\\theta$</p><p>$=\\displaystyle \\int_{0}^{\\frac{\\pi}{4}}(\\sin\\theta\\cos\\theta+\\cos^{2}\\theta)\\,d\\theta$</p><p>$=\\displaystyle \\int_{0}^{\\frac{\\pi}{4}}\\left(\\dfrac{1}{2}\\sin2\\theta+\\dfrac{1+\\cos2\\theta}{2}\\right)\\,d\\theta$</p><p>$=\\left[-\\dfrac{1}{4}\\cos2\\theta+\\dfrac{\\theta}{2}+\\dfrac{1}{4}\\sin2\\theta\\right]_{0}^{\\frac{\\pi}{4}}$</p><p>$=\\boldsymbol{\\dfrac{\\pi}{8}+\\dfrac{1}{2}}$</p>",
+    // 置換，三角関数
+    "$\\displaystyle \\int_{-\\frac{1}{3}}^{\\frac{1}{2}}\\dfrac{1}{1+x^{2}}\\,dx$": "<p>$x=\\tan\\theta$ $\\left(-\\dfrac{\\pi}{2}&lt;\\theta&lt;\\dfrac{\\pi}{2}\\right)$，$\\tan\\alpha=-\\dfrac{1}{3}$ $\\left(-\\dfrac{\\pi}{2}&lt;\\alpha &lt;0\\right)$，$\\tan\\beta=\\dfrac{1}{2}$ $\\left(0&lt;\\beta&lt;\\dfrac{\\pi}{2}\\right)$ とおくと $dx=\\dfrac{1}{\\cos^{2}\\theta}d\\theta$</p><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$-\\dfrac{1}{3} \\ \\to \\ \\dfrac{1}{2}$</td></tr><tr><th>$\\theta$</th><td>$\\alpha \\ \\to \\ \\beta$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{-\\frac{1}{3}}^{\\frac{1}{2}}\\dfrac{1}{1+x^{2}}\\,dx$</p><p>$\\displaystyle =\\int_{\\alpha}^{\\beta}\\dfrac{1}{1+\\tan^{2}\\theta}\\cdot\\dfrac{1}{\\cos^{2}\\theta}\\,d\\theta$</p><p>$\\displaystyle =\\beta-\\alpha$</p><p>ここで</p><p>　$\\tan(\\beta-\\alpha)$</p><p>$=\\dfrac{\\tan\\beta-\\tan\\alpha}{1+\\tan\\beta\\tan\\alpha}$</p><p>$=\\dfrac{\\dfrac{1}{2}-\\left(-\\dfrac{1}{3}\\right)}{1+\\dfrac{1}{2}\\left(-\\dfrac{1}{3}\\right)}$</p><p>$=1$</p><p>$0&lt;\\beta-\\alpha&lt;\\pi$ より</p><p>　$\\displaystyle \\int_{-\\frac{1}{3}}^{\\frac{1}{2}}\\dfrac{1}{1+x^{2}}\\,dx=\\beta-\\alpha=\\boldsymbol{\\dfrac{\\pi}{4}}$</p>",
+    // Twitterで見かけた問題改
         },
         "C": {
-            "$\\displaystyle \\int_{-\\infty}^{\\infty} e^{-x^2} dx$": "<p>$\\displaystyle \\int_{-\\infty}^{\\infty} e^{-x^2} dx = \\sqrt{\\pi}$</p>"
+            [{
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{13\\sin x+5}\\,dx$":
+    // 上級1，三角関数
+    "<p>$\\tan\\dfrac{x}{2}=t$ とおくと</p><p>　$\\sin x$</p><p>$=\\dfrac{2\\sin\\dfrac{x}{2}\\cos\\dfrac{x}{2}}{\\cos^{2}\\dfrac{x}{2}+\\sin^{2}\\dfrac{x}{2}}$</p><p>$=\\dfrac{2\\tan\\dfrac{x}{2}}{1+\\tan^{2}\\dfrac{x}{2}}$</p><p>$=\\dfrac{2t}{1+t^2}$</p><p>また</p><p>　$\\dfrac{1}{2\\cos^{2}\\dfrac{x}{2}}\\, dx=dt$</p><p>　$dx=\\dfrac{2}{1+t^2}\\, dt$</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{13\\sin x+5}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{1}{\\dfrac{26t}{1+t^{2}}+5}\\cdot\\dfrac{2}{1+t^2}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{2}{(5t+1)(t+5)}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{12}\\int_{}^{} \\ \\left(\\dfrac{5}{5t+1}-\\dfrac{1}{t+5}\\right)\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{12}\\left(\\log|5t+1|-\\log|t+5|\\right)+C$</p><p>$=\\boldsymbol{\\dfrac{1}{12}\\log\\left|\\dfrac{5\\tan\\dfrac{x}{2}+1}{\\tan\\dfrac{x}{2}+5}\\right|+C}$</p>",
+    
+
+    "$\\displaystyle \\int_{}^{}\\dfrac{1}{\\sqrt{x^{2}+1}}\\,dx$":
+    // 上級2，双曲線関数
+    "<p>$\\displaystyle x=\\dfrac{e^{t}-e^{-t}}{2}$ とおくと，$dx=\\dfrac{e^{t}+e^{-t}}{2}\\,dt$</p><p>　$\\displaystyle \\int_{}^{}\\dfrac{1}{\\sqrt{x^{2}+1}}\\,dx$</p><p>$\\displaystyle =\\int_{}^{}\\dfrac{1}{\\sqrt{\\left(\\dfrac{e^{t}-e^{-t}}{2}\\right)^{2}+1}}\\cdot\\dfrac{e^{t}+e^{-t}}{2}\\,dt$</p><p>$\\displaystyle =\\int_{}^{}\\dfrac{1}{\\sqrt{\\left(\\dfrac{e^{t}+e^{-t}}{2}\\right)^{2}}}\\cdot\\dfrac{e^{t}+e^{-t}}{2}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ 1 \\,dt$</p><p>$\\displaystyle =t+C$</p><p>ここで</p><p>　$\\displaystyle x=\\dfrac{e^{t}-e^{-t}}{2}$</p><p>$\\Longleftrightarrow \\ e^{2t}-2xe^{t}-1=0$</p><p>$\\Longleftrightarrow \\ e^{t}=x+\\sqrt{x^{2}+1}$　$(\\because e^{t}>0)$</p><p>$\\Longleftrightarrow \\ t=\\log(x+\\sqrt{x^{2}+1})$</p><p>より</p><p>　$\\displaystyle \\int_{}^{}\\dfrac{1}{\\sqrt{x^{2}+1}}\\,dx$</p><p>$=\\boldsymbol{\\log\\left(x+\\sqrt{x^{2}+1}\\right)+C}$</p>",
+    
+
+    "$\\displaystyle \\int_{}^{}\\sqrt{x^{2}+1}\\,dx$":
+    // 上級3，双曲線関数
+    "<p>$\\displaystyle x=\\dfrac{e^{t}-e^{-t}}{2}$ とおくと $dx=\\dfrac{e^{t}+e^{-t}}{2}dt$</p><p>　$\\displaystyle \\int_{}^{}\\sqrt{x^{2}+1}\\,dx$</p><p>$\\displaystyle =\\int_{}^{}\\sqrt{\\dfrac{e^{2t}+e^{-2t}+2}{4}}\\cdot\\dfrac{e^{t}+e^{-t}}{2}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{e^{t}+e^{-t}}{2}\\cdot\\dfrac{e^{t}+e^{-t}}{2}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{e^{2t}+e^{-2t}+2}{4}\\,dt$</p><p>$\\displaystyle =\\dfrac{e^{2t}-e^{-2t}}{8}+\\dfrac{1}{2}t+C$</p><p>$\\displaystyle =\\dfrac{(e^{t}+e^{-t})(e^{t}-e^{-t})}{8}+\\dfrac{1}{2}t+C$</p><p>ここで</p><p>　$\\displaystyle x=\\dfrac{e^{t}-e^{-t}}{2}$</p><p>$\\Longleftrightarrow \\ e^{2t}-2xe^{t}-1=0$</p><p>$\\Longleftrightarrow \\ e^{t}=x+\\sqrt{x^{2}+1} \\ ( \\because e^{t}>0)$</p><p>$\\Longleftrightarrow \\ t=\\log(x+\\sqrt{x^{2}+1})$</p><p>より</p><p>　$\\displaystyle \\int_{}^{}\\sqrt{x^{2}+1}\\,dx$</p><p>$\\displaystyle =\\dfrac{(e^{t}+e^{-t})2x}{8}+\\dfrac{1}{2}t+C$</p><p>$\\displaystyle =\\dfrac{\\left(x+\\sqrt{x^{2}+1}+\\dfrac{1}{x+\\sqrt{x^{2}+1}}\\right)x}{4}+\\dfrac{1}{2}\\log(x+\\sqrt{x^{2}+1})+C$</p><p>$=\\boldsymbol{\\dfrac{1}{2}x\\sqrt{x^{2}+1}+\\dfrac{1}{2}\\log(x+\\sqrt{x^{2}+1})+C}$</p>",
+    
+
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\sin^{3}x}\\,dx$":
+    // 上級4，三角関数
+    "<p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\sin^{3}x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{\\sin x}{(1-\\cos^{2}x)^2}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{-1}{(1-t^{2})^2}\\,dt$　$(t=\\cos x)$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{-1}{(1+t)^{2}(1-t)^{2}}\\,dt$</p><p>ここで</p><p>$\\dfrac{-1}{(1+t)^{2}(1-t)^{2}}=\\dfrac{a}{1+t}+\\dfrac{b}{1-t}+\\dfrac{c}{(1+t)^2}+\\dfrac{d}{(1-t)^2}$</p><p>とおく．両辺 $(1+t)^{2}(1-t)^{2}$ 倍すると</p><p>$-1=a(1+t)(1-t)^{2}+b(1+t)^{2}(1-t)+c(1-t)^{2}+d(1+t)^{2}$</p><p>展開して係数比較すると</p><p>　$\\begin{cases}a-b=0 \\\\ -a-b+c+d=0 \\\\ -a+b-2c+2d=0 \\\\ a+b+c+d=-1 \\end{cases}$</p><p>解くと $a=b=c=d=-\\dfrac{1}{4}$</p><p>これより</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\sin^{3}x}\\,dx$</p><p>$\\displaystyle =-\\dfrac{1}{4}\\int_{}^{} \\ \\left\\{\\dfrac{1}{1+t}+\\dfrac{1}{1-t}+\\dfrac{1}{(1+t)^2}+\\dfrac{1}{(1-t)^2}\\right\\}\\,dt$</p><p>$\\displaystyle =-\\dfrac{1}{4}\\left(\\log|1+t|-\\log|1-t|-\\dfrac{1}{1+t}+\\dfrac{1}{1-t}\\right)+C$</p><p>$\\displaystyle =-\\dfrac{1}{4}\\left(\\log\\left|\\dfrac{1+t}{1-t}\\right|+\\dfrac{2t}{1-t^2}\\right)+C$</p><p>$\\displaystyle =-\\dfrac{1}{4}\\left(\\log\\left|\\dfrac{1+\\cos x}{1-\\cos x}\\right|+\\dfrac{2\\cos x}{1-\\cos^{2}x}\\right)+C$</p><p>$=\\boldsymbol{\\dfrac{1}{4}\\log\\dfrac{1-\\cos x}{1+\\cos x}-\\dfrac{\\cos x}{2\\sin^{2}x}+C}$</p>",
+    
+
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\sin^{4}x}\\,dx$":
+    // 上級5，三角関数
+    "<p>$\\tan x=t$ とおくと $\\dfrac{1}{\\cos^{2}x}dx=dt$</p><p>つまり $dx=\\cos^{2}xdt=\\dfrac{1}{1+\\tan^{2}x}dt=\\dfrac{1}{1+t^{2}}dt$</p><p>また $\\sin^{2}x=1-\\cos^{2}x=1-\\dfrac{1}{1+t^{2}}=\\dfrac{t^{2}}{1+t^{2}}$</p><p>より</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{\\sin^{4}x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(\\dfrac{1+t^{2}}{t^{2}}\\right)^{2}\\dfrac{1}{1+t^{2}}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(\\dfrac{1}{t^4}+\\dfrac{1}{t^2}\\right)\\,dt$</p><p>$=-\\dfrac{1}{3t^3}-\\dfrac{1}{t}+C$</p><p>$=\\boldsymbol{-\\dfrac{1}{3\\tan^{3}x}-\\dfrac{1}{\\tan x}+C}$</p>",
+    
+
+    "$\\displaystyle \\int_{}^{} \\ xe^{x}\\sin x\\,dx$":
+    // 上級6，部分積分の応用
+    "<p>$\\displaystyle I=\\int_{}^{} \\ e^{x}\\sin x\\,dx$ とおく．</p><p>　$\\displaystyle I$</p><p>$\\displaystyle =e^{x}\\sin x-\\int_{}^{} \\ e^{x}\\cos x\\,dx$</p><p>$\\displaystyle =e^{x}\\sin x-\\left(e^{x}\\cos x-\\int_{}^{} \\ e^{x}(-\\sin x)\\,dx\\right)$</p><p>$\\displaystyle =e^{x}\\sin x-e^{x}\\cos x-\\int_{}^{} \\ e^{x}\\sin x\\,dx$</p><p>$\\displaystyle =e^{x}(\\sin x-\\cos x)-I$</p><p>$\\displaystyle 2I=e^{x}(\\sin x-\\cos x)$ だが，積分定数を入れて</p><p>　$I=\\dfrac{e^{x}}{2}(\\sin x-\\cos x)+C$</p><p>　$\\displaystyle \\int_{}^{} \\ xe^{x}\\sin x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ x\\left(\\dfrac{e^{x}}{2}(\\sin x-\\cos x)\\right)'\\,dx$</p><p>$\\displaystyle =\\dfrac{xe^{x}}{2}(\\sin x-\\cos x)-\\int_{}^{} \\ \\dfrac{e^{x}}{2}(\\sin x-\\cos x)\\,dx$</p><p>$\\displaystyle =\\dfrac{xe^{x}}{2}(\\sin x-\\cos x)-\\dfrac{1}{2}I+\\dfrac{1}{2}\\int_{}^{} \\ e^{x}\\cos x\\,dx$</p><p>$\\displaystyle =\\dfrac{xe^{x}}{2}(\\sin x-\\cos x)-\\dfrac{1}{2}I+\\dfrac{1}{2}(e^{x}\\sin x-I)$</p><p>$\\displaystyle =\\dfrac{xe^{x}}{2}(\\sin x-\\cos x)-\\dfrac{e^{x}}{2}(\\sin x-\\cos x)+\\dfrac{e^{x}}{2}\\sin x+C$</p><p>$=\\boldsymbol{\\dfrac{e^{x}}{2}(x\\sin x-x\\cos x+\\cos x)+C}$</p>",
+    
+
+    "$\\displaystyle \\int_{}^{} \\sqrt{1-e^{-2x}}\\,dx$":
+    // 上級7，2008横浜国大
+    "<p>$\\displaystyle \\sqrt{1-e^{-2x}}=t$ とおくと，$1-e^{-2x}=t^2$ より</p><p>　$2e^{-2x}dx=2tdt$</p><p>　$\\displaystyle \\int_{}^{} \\sqrt{1-e^{-2x}}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ t\\cdot \\dfrac{t}{e^{-2x}}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{t^{2}}{1-t^{2}}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{t^{2}-1+1}{1-t^{2}}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left\\{\\dfrac{1}{(1-t)(1+t)}-1\\right\\}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(\\dfrac{\\frac{1}{2}}{1-t}+\\dfrac{\\frac{1}{2}}{1+t}-1\\right)\\,dt$</p><p>$\\displaystyle =-\\dfrac{1}{2}\\log|1-t|+\\dfrac{1}{2}\\log|1+t|-t+C$</p><p>$\\displaystyle =\\dfrac{1}{2}\\log\\left|\\dfrac{1+\\sqrt{1-e^{-2x}}}{1-\\sqrt{1-e^{-2x}}}\\right|-\\sqrt{1-e^{-2x}}+C$</p><p>$=\\boldsymbol{\\log(1+\\sqrt{1-e^{-2x}})+x-\\sqrt{1-e^{-2x}}+C}$</p>",
+    
+
+    "$\\displaystyle \\int_{}^{} \\ \\sqrt{\\dfrac{1}{x^2}+1}\\,dx$　$( \\ x&gt;0 \\ )$":
+    // 上級8，logxの曲線の長さ
+    "<p>　$\\displaystyle \\int_{}^{} \\ \\sqrt{\\dfrac{1}{x^2}+1}\\,dx$　$(x&gt;0)$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{\\sqrt{1+x^{2}}}{x}\\,dx$</p><p>$\\sqrt{1+x^{2}}=t$ とおくと，$1+x^{2}=t^{2}$．$2xdx=2tdt$．</p><p>　$\\displaystyle \\int_{}^{} \\ \\dfrac{\\sqrt{1+x^{2}}}{x}\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{t}{x^{2}}\\cdot x\\,dx$</p><p>$\\displaystyle =\\int_{}^{} \\ \\dfrac{t^{2}}{t^{2}-1}\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left(1+\\dfrac{1}{t^{2}-1}\\right)\\,dt$</p><p>$\\displaystyle =\\int_{}^{} \\ \\left\\{1+\\dfrac{1}{2(t-1)}-\\dfrac{1}{2(t+1)}\\right\\}\\,dt$</p><p>$\\displaystyle =t+\\dfrac{1}{2}\\log|t-1|-\\dfrac{1}{2}\\log|t+1|+C$</p><p>$\\displaystyle =\\boldsymbol{\\sqrt{1+x^{2}}+\\dfrac{1}{2}\\log\\dfrac{\\sqrt{1+x^{2}}-1}{\\sqrt{1+x^{2}}+1}+C}$</p>",
+    
+    
+
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\sin^{9} x\\,dx$":
+    // 上級9，ウォリス積分
+    "<p>$\\displaystyle I_{n}=\\int_{0}^{\\frac{\\pi}{2}}\\sin^{n}x\\,dx$ とおくと</p><p>　$I_{n}$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\left(-\\cos x\\right)'\\sin^{n-1}x\\,dx$</p><p>$\\displaystyle =\\Bigl[-\\cos x\\sin^{n-1}x\\Bigr]_{0}^{\\frac{\\pi}{2}}-\\int_{0}^{\\frac{\\pi}{2}}(n-1)\\sin^{n-2}x(-\\cos^{2} x)\\,dx$</p><p>$\\displaystyle =(n-1)\\int_{0}^{\\frac{\\pi}{2}}\\sin^{n-2}x\\cos^{2}x\\,dx$</p><p>$\\displaystyle =(n-1)\\int_{0}^{\\frac{\\pi}{2}}\\sin^{n-2}x(1-\\sin^{2}x)\\,dx$</p><p>$\\displaystyle =(n-1)I_{n-2}-(n-1)I_{n}$</p><p>$\\therefore \\ \\displaystyle nI_{n}=(n-1)I_{n-2}$</p><p>$\\therefore \\ \\displaystyle I_{n}=\\dfrac{n-1}{n}I_{n-2}$</p><p>これより</p><p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\sin^{9} x\\,dx$</p><p>$=I_{9}=\\dfrac{8}{9}I_{7}= \\cdots =\\dfrac{8}{9}\\cdot \\dfrac{6}{7}\\cdot \\dfrac{4}{5}\\cdot \\dfrac{2}{3}\\cdot I_{1}=\\boldsymbol{\\dfrac{128}{315}}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\cos^{8} x\\,dx$":
+    // 上級10，ウォリス積分
+    "<p>$\\displaystyle I_{n}=\\int_{0}^{\\frac{\\pi}{2}}\\cos^{n}x\\,dx$ とおくと</p><p>　$I_{n}$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\left(\\sin x\\right)'\\cos^{n-1}x\\,dx$</p><p>$\\displaystyle =\\Bigl[\\sin x\\cos^{n-1}x\\Bigr]_{0}^{\\frac{\\pi}{2}}-\\int_{0}^{\\frac{\\pi}{2}}(n-1)\\cos^{n-2}x(-\\sin^{2} x)\\,dx$</p><p>$\\displaystyle =(n-1)\\int_{0}^{\\frac{\\pi}{2}}\\cos^{n-2}x\\sin^{2}x\\,dx$</p><p>$\\displaystyle =(n-1)\\int_{0}^{\\frac{\\pi}{2}}\\cos^{n-2}x(1-\\cos^{2}x)\\,dx$</p><p>$\\displaystyle =(n-1)I_{n-2}-(n-1)I_{n}$</p><p>$\\therefore \\ \\displaystyle nI_{n}=(n-1)I_{n-2}$</p><p>$\\therefore \\ \\displaystyle I_{n}=\\dfrac{n-1}{n}I_{n-2}$</p><p>これより</p><p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\cos^{8} x\\,dx$</p><p>$=I_{8}=\\dfrac{7}{8}I_{6}= \\cdots =\\dfrac{7}{8}\\cdot \\dfrac{5}{6}\\cdot \\dfrac{3}{4}\\cdot \\dfrac{1}{2}\\cdot I_{0}=\\boldsymbol{\\dfrac{35}{256}\\pi}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{1}x^{m}(1-x)^{n}\\,dx$　$( \\ m，n \\ は \\ 0 \\ 以上の整数 \\ )$":
+    // 上級11，ベータ関数
+    "<p>与式を $B(m,n)$ とおく．</p><p>　$B(m,n)$</p><p>$=\\displaystyle \\int_{0}^{1}x^{m}(1-x)^{n}\\,dx$</p><p>$=\\displaystyle \\int_{0}^{1}\\left(\\frac{x^{m+1}}{m+1}\\right)'(1-x)^{n}\\,dx$</p><p>$=\\displaystyle \\left[\\frac{x^{m+1}}{m+1}(1-x)^{n}\\right]_{0}^{1}-\\int_{0}^{1}\\frac{x^{m+1}}{m+1}(-n)(1-x)^{n-1}\\,dx$</p><p>$=\\displaystyle \\frac{n}{m+1}\\int_{0}^{1}x^{m+1}(1-x)^{n-1}\\,dx$</p><p>$=\\displaystyle \\frac{n}{m+1} B(m+1,n-1)$</p><p>$=\\displaystyle \\frac{n}{m+1}\\cdot\\frac{n-1}{m+2} B(m+2,n-2)$</p><p>$=\\displaystyle \\frac{n}{m+1}\\cdot\\frac{n-1}{m+2}\\cdots \\frac{1}{m+n} B(m+n,0)$</p><p>$=\\displaystyle \\dfrac{m!n!}{(m+n)!} \\int_{0}^{1}x^{m+n}\\,dx$</p><p>$=\\boldsymbol{\\dfrac{m!n!}{(m+n+1)!}}$</p>",
+    
+
+    "$\\displaystyle \\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\sqrt{1+\\sin x}\\,dx$":
+    // 上級12，宮崎大改
+    "<p>$x=\\dfrac{\\pi}{2}-t$ とおくと，$dx=-dt$</p><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$\\dfrac{\\pi}{6} \\ \\to \\ \\dfrac{\\pi}{3}$</td></tr><tr><th>$t$</th><td>$\\dfrac{\\pi}{3} \\ \\to \\ \\dfrac{\\pi}{6}$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\sqrt{1+\\sin x}\\,dx$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{3}}^{\\frac{\\pi}{6}}\\sqrt{1+\\sin \\left(\\dfrac{\\pi}{2}-t\\right)}\\,(-dt)$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\sqrt{1+\\cos t}\\,dt$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\sqrt{1+2\\cos^{2} \\dfrac{t}{2}-1}\\,dt$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\sqrt{2}\\cos \\dfrac{t}{2}\\,dt$</p><p>$\\displaystyle =\\left[2\\sqrt{2}\\sin\\dfrac{t}{2}\\right]_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}$</p><p>$=2\\sqrt{2}\\left(\\sin\\dfrac{\\pi}{6}-\\sin\\dfrac{\\pi}{12}\\right)$</p><p>$=2\\sqrt{2}\\left(\\dfrac{1}{2}-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}\\right)$</p><p>$=\\boldsymbol{\\sqrt{2}-\\sqrt{3}+1}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\dfrac{1}{5\\sin x+12\\cos x}\\,dx$":
+    // 上級13，2017横浜国大改
+    "<p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\dfrac{1}{5\\sin x+12\\cos x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{1}{13\\left(\\sin x \\cdot \\dfrac{5}{13}+\\cos x \\cdot \\dfrac{12}{13}\\right)}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{1}{13\\sin (x+\\alpha)}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{\\sin (x+\\alpha)}{13\\{1-\\cos^{2}(x+\\alpha)\\}}\\,dx$</p><p>$\\displaystyle =\\int_{\\cos \\alpha}^{\\cos\\left(\\frac{\\pi}{2}+\\alpha\\right)}\\dfrac{-1}{13(1-t^{2})}\\,dt$　$(t=\\cos(x+\\alpha))$</p><p>$\\displaystyle =-\\dfrac{1}{13}\\int_{\\cos \\alpha}^{-\\sin\\alpha}\\dfrac{1}{(1-t)(1+t)}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{26}\\int_{-\\sin\\alpha}^{\\cos \\alpha}\\left(\\dfrac{1}{1-t}+\\dfrac{1}{1+t}\\right)\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{26}\\Bigl[-\\log(1-t)+\\log(1+t)\\Bigr]_{-\\frac{12}{13}}^{\\frac{5}{13}}$</p><p>$\\displaystyle =\\dfrac{1}{26}\\left[\\log \\dfrac{1+t}{1-t}\\right]_{-\\frac{12}{13}}^{\\frac{5}{13}}$</p><p>$\\displaystyle =\\dfrac{1}{26}\\left(\\log\\dfrac{18}{8}-\\log\\dfrac{1}{25}\\right)$</p><p>$\\displaystyle =\\dfrac{1}{26}\\log\\dfrac{225}{4}$</p><p>$=\\boldsymbol{\\dfrac{1}{13}\\log\\dfrac{15}{2}}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{\\pi}\\dfrac{x\\sin x}{15+\\sin^{2} x}\\,dx$":
+    // 上級14，x=\pi-tの置換
+    "<p>$I=\\displaystyle \\int_{0}^{\\pi}\\dfrac{x\\sin x}{15+\\sin^{2} x}\\,dx$ とおく</p><p>$\\displaystyle =\\int_{\\pi}^{0}\\dfrac{(\\pi-t)\\sin(\\pi-t)}{15+\\sin^{2}(\\pi-t)}(-1)\\,dt$　$(x=\\pi-t)$</p><p>$\\displaystyle =\\int_{0}^{\\pi}\\dfrac{(\\pi-t)\\sin t}{15+\\sin^{2}t}\\,dt$</p><p>$\\displaystyle =\\pi\\int_{0}^{\\pi}\\dfrac{\\sin t}{15+\\sin^{2}t}\\,dt-I$</p><p>つまり</p><p>　$2I$</p><p>$\\displaystyle =\\pi\\int_{0}^{\\pi}\\dfrac{\\sin t}{16-\\cos^{2}t}\\,dt$</p><p>$\\displaystyle =\\pi\\int_{1}^{-1}\\dfrac{-1}{16-u^{2}}\\,du$　$(u=\\cos t)$</p><p>$\\displaystyle =\\pi\\int_{-1}^{1}\\dfrac{1}{16-u^{2}}\\,du$</p><p>$\\displaystyle =2\\pi\\int_{0}^{1}\\dfrac{1}{(4-u)(4+u)}\\,du$</p><p>$\\displaystyle =\\dfrac{\\pi}{4}\\int_{0}^{1}\\left(\\dfrac{1}{4-u}+\\dfrac{1}{4+u}\\right)\\,du$</p><p>$\\displaystyle =\\dfrac{\\pi}{4}\\Bigl[-\\log|4-u|+\\log|4+u|\\Bigr]_{0}^{1}$</p><p>$\\displaystyle =\\dfrac{\\pi}{4}\\log\\dfrac{5}{3}$</p><p>$\\displaystyle \\therefore \\ I=\\int_{0}^{\\pi}\\dfrac{x\\sin x}{15+\\sin^{2} x}\\,dx=\\boldsymbol{\\dfrac{\\pi}{8}\\log\\dfrac{5}{3}}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{2}}\\dfrac{\\sin x}{\\sin x+\\cos x}\\,dx$":
+    // 上級15，x=\dfrac{\pi}{2}-tの置換
+    "<p>$\\displaystyle I=\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{\\sin x}{\\sin x+\\cos x}\\,dx$ とおく</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{2}}^{0}\\dfrac{\\sin\\left(\\dfrac{\\pi}{2}-t\\right)}{\\sin\\left(\\dfrac{\\pi}{2}-t\\right)+\\cos\\left(\\dfrac{\\pi}{2}-t\\right)}\\,(-dt)$　$\\left(x=\\dfrac{\\pi}{2}-t\\right)$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{\\cos t}{\\cos t+\\sin t}\\,dt$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{\\cos x}{\\cos x+\\sin x}\\,dx$</p><p>つまり</p><p>　$2I$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{\\sin x}{\\sin x+\\cos x}\\,dx+\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{\\cos x}{\\sin x+\\cos x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{\\sin x+\\cos x}{\\sin x+\\cos x}\\,dx$</p><p>$\\displaystyle =\\dfrac{\\pi}{2}$</p><p>$\\displaystyle \\therefore \\ I=\\int_{0}^{\\frac{\\pi}{2}}\\dfrac{\\sin x}{\\sin x+\\cos x}\\,dx=\\boldsymbol{\\dfrac{\\pi}{4}}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{1}\\dfrac{1}{x^{3}+1}\\,dx$":
+    // 上級16，分数関数
+    "<p>　$\\displaystyle \\int_{0}^{1}\\dfrac{1}{x^{3}+1}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{1}\\dfrac{1}{(x+1)(x^{2}-x+1)}\\,dx$</p><p>ここで</p><p>　$\\dfrac{1}{(x+1)(x^{2}-x+1)}=\\dfrac{a}{x+1}+\\dfrac{bx+c}{x^{2}-x+1}$</p><p>とおく．両辺 $(x+1)(x^{2}-x+1)$ かけると</p><p>　$1=a(x^{2}-x+1)+(bx+c)(x+1)$</p><p>右辺整理して，両辺係数比較すると</p><p>　$\\begin{cases}0=a+b \\\\ 0=-a+b+c \\\\ 1=a+c \\end{cases}$ $\\therefore \\ a=\\dfrac{1}{3}，b=-\\dfrac{1}{3}，c=\\dfrac{2}{3}$</p><p>　$\\displaystyle \\int_{0}^{1}\\dfrac{1}{x^{3}+1}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{1}\\left(\\dfrac{\\frac{1}{3}}{x+1}+\\dfrac{-\\frac{1}{3}x+\\frac{1}{6}+\\frac{1}{2}}{x^{2}-x+1}\\right)\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{3}\\int_{0}^{1}\\dfrac{1}{x+1}\\,dx-\\dfrac{1}{6}\\int_{0}^{1}\\dfrac{2x-1}{x^{2}-x+1}\\,dx+\\dfrac{1}{2}\\int_{0}^{1}\\dfrac{1}{\\left(x-\\frac{1}{2}\\right)^{2}+\\frac{3}{4}}\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{3}\\log 2-\\dfrac{1}{6}\\Bigl[\\log|x^{2}-x+1|\\Bigr]_{0}^{1}+\\dfrac{1}{2}\\int_{-\\frac{1}{\\sqrt{3}}}^{\\frac{1}{\\sqrt{3}}}\\dfrac{1}{\\frac{3}{4}t^{2}+\\frac{3}{4}}\\cdot\\dfrac{\\sqrt{3}}{2}\\,dt$　$\\left(x-\\dfrac{1}{2}=\\dfrac{\\sqrt{3}}{2}t\\right)$</p><p>$\\displaystyle =\\dfrac{1}{3}\\log 2+\\dfrac{2\\sqrt{3}}{3}\\int_{0}^{\\frac{1}{\\sqrt{3}}}\\dfrac{1}{t^{2}+1}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{3}\\log 2+\\dfrac{2\\sqrt{3}}{3}\\int_{0}^{\\frac{\\pi}{6}}\\dfrac{1}{\\tan u^{2}+1}\\cdot\\dfrac{1}{\\cos^{2}u}\\,du$　$(t=\\tan u)$</p><p>$\\displaystyle =\\dfrac{1}{3}\\log 2+\\dfrac{2\\sqrt{3}}{3}\\cdot\\dfrac{\\pi}{6}$</p><p>$=\\boldsymbol{\\dfrac{1}{3}\\log 2+\\dfrac{\\sqrt{3}\\pi}{9}}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{4}}\\dfrac{\\tan x}{2-\\cos2x}\\,dx$":
+    // 上級17，2014長崎大
+    "<p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{4}}\\dfrac{\\tan x}{2-\\cos2x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}}\\dfrac{\\tan x}{3-2\\cos^{2}x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}}\\dfrac{\\tan x}{3\\frac{1}{\\cos^{2}x}-2}\\cdot\\dfrac{1}{\\cos^{2}x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{1}\\dfrac{t}{3(1+t^{2})-2}\\,dt$　$(t=\\tan x)$</p><p>$\\displaystyle =\\dfrac{1}{6}\\int_{0}^{1}\\dfrac{6t}{1+3t^{2}}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{6}\\Bigl[\\log(1+3t^{2})\\Bigr]_{0}^{1}$</p><p>$=\\boldsymbol{\\dfrac{1}{3}\\log2}$</p>",
+    
+
+    "$\\displaystyle \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\dfrac{e^{x}+e^{-x}}{2^{x}+1}\\,dx$":
+    // 上級18，オリジナル
+    "<p>$\\displaystyle I=\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\dfrac{e^{x}+e^{-x}}{2^{x}+1}\\,dx$ とおくと</p><p>　$\\displaystyle I$</p><p>$\\displaystyle =\\int_{\\frac{\\pi}{2}}^{-\\frac{\\pi}{2}}\\dfrac{e^{-t}+e^{t}}{2^{-t}+1}(-1)\\,dt$　$(x=-t)$</p><p>$\\displaystyle =\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\dfrac{e^{t}+e^{-t}}{2^{-t}+1}\\,dt$</p><p>$\\displaystyle =\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\dfrac{e^{x}+e^{-x}}{2^{-x}+1}\\,dx$</p><p>　$\\displaystyle 2I$</p><p>$\\displaystyle =\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\dfrac{e^{x}+e^{-x}}{2^{x}+1}\\,dx+\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\dfrac{e^{x}+e^{-x}}{2^{-x}+1}\\,dx$</p><p>$\\displaystyle =\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(e^{x}+e^{-x})\\left(\\dfrac{1}{2^{x}+1}+\\dfrac{1}{2^{-x}+1}\\right)\\,dx$</p><p>$\\displaystyle =\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(e^{x}+e^{-x})\\dfrac{2^{-x}+1+2^{x}+1}{(2^{x}+1)(2^{-x}+1)}\\,dx$</p><p>$\\displaystyle =\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(e^{x}+e^{-x})\\,dx$</p><p>$\\displaystyle =2\\int_{0}^{\\frac{\\pi}{2}}(e^{x}+e^{-x})\\,dx$</p><p>　$\\displaystyle I$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{2}}(e^{x}+e^{-x})\\,dx$</p><p>$\\displaystyle =\\Bigl[e^{x}-e^{-x}\\Bigr]_{0}^{\\frac{\\pi}{2}}$</p><p>$=\\boldsymbol{e^{\\frac{\\pi}{2}}-e^{-\\frac{\\pi}{2}}}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{\\pi}|\\sin nx|\\,dx$　$( \\ n \\ は自然数 \\ )$":
+    // 上級19，絶対値
+    "<p>　$\\displaystyle \\int_{0}^{\\pi}|\\sin nx|\\,dx$</p><p>$\\displaystyle =\\int_{0}^{n\\pi}|\\sin t|\\dfrac{1}{n}\\,dt$　$(t=nx)$</p><p>$\\displaystyle =\\dfrac{1}{n}\\sum_{k=1}^{n}\\int_{(k-1)\\pi}^{k\\pi}|\\sin t|\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{n}\\sum_{k=1}^{n}\\int_{(k-1)\\pi}^{k\\pi}(-1)^{k-1}\\sin t\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{n}\\sum_{k=1}^{n}(-1)^{k-1}\\int_{(k-1)\\pi}^{k\\pi}\\sin t\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{n}\\sum_{k=1}^{n}(-1)^{k-1}\\Bigl[-\\cos t\\Bigr]_{(k-1)\\pi}^{k\\pi}$</p><p>$\\displaystyle =\\dfrac{1}{n}\\sum_{k=1}^{n}(-1)^{k-1}\\left\\{-(-1)^{k}+(-1)^{k-1}\\right\\}$</p><p>$\\displaystyle =\\dfrac{1}{n}\\sum_{k=1}^{n}(-1)^{k-1}\\left\\{(-1)^{k-1}+(-1)^{k-1}\\right\\}$</p><p>$\\displaystyle =\\dfrac{1}{n}\\sum_{k=1}^{n}2$</p><p>$=\\boldsymbol{2}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{1}2^{x^2}\\,dx+\\int_{1}^{2}\\sqrt{\\log_{2}x}\\,dx$":
+    // 上級20，逆関数と面積利用
+    "<div style=\"text-align: center\"><img src=\"noteimages/integral-gacha.png\" alt=\"逆関数同士の積分\" width=\"74%\"></div><p>　$\\\displaystyle \\int_{0}^{1}2^{x^2}\\,dx+\\int_{1}^{2}\\sqrt{\\log_{2}x}\\,dx$</p><p>$\\displaystyle =\\int_{0}^{1}2^{x^2}\\,dx+\\int_{1}^{2}\\sqrt{\\log_{2}y}\\,dy$</p><p>求める積分の値は 図の赤い部分と青い部分の面積の和，つまり長方形の面積になるので，$1\\cdot2=\\boldsymbol{2}$</p>",
+    
+
+    "$\\displaystyle \\int_{2}^{3}\\dfrac{1}{\\sqrt{x^{2}-1}}\\,dx$":
+    // 上級21，双曲線関数
+    "<p>　$x=\\dfrac{e^{t}+e^{-t}}{2}$ $(t&gt;0)$ とおくと，$dx=\\dfrac{e^{t}-e^{-t}}{2}dt$</p><p>また</p><div style=\"text-align: center\"><p>$x=\\dfrac{e^{t}+e^{-t}}{2}$</p><p>$\\Longleftrightarrow \\ (e^{t})^{2}-2xe^{t}+1=0$</p><p>$\\Longleftrightarrow \\ e^{t}=x+\\sqrt{x^{2}-1} \\ (\\because e^{t}&gt;1)$</p><p>$\\Longleftrightarrow \\ t=\\log(x+\\sqrt{x^{2}-1})$</p></div><p>積分範囲は</p><table border=\"1px\" cellpadding=\"10px\" style=\"border-collapse: collapse;text-align: center\" align=\"center\"><caption></caption><tr><th>$x$</th><td>$2 \\ \\to \\ 3$</td></tr><tr><th>$t$</th><td>$\\log(2+\\sqrt{3}) \\ \\to \\ \\log(3+2\\sqrt{2})$</td></tr></table><p>となるので</p><p>　$\\displaystyle \\int_{2}^{3}\\dfrac{1}{\\sqrt{x^{2}-1}}\\,dx$</p><p>$\\displaystyle =\\int_{\\log(2+\\sqrt{3})}^{\\log(3+2\\sqrt{2})}\\dfrac{1}{\\sqrt{\\left(\\dfrac{e^{t}+e^{-t}}{2}\\right)^{2}-1}}\\cdot\\dfrac{e^{t}-e^{-t}}{2}\\,dt$</p><p>$\\displaystyle =\\int_{\\log(2+\\sqrt{3})}^{\\log(3+2\\sqrt{2})}\\dfrac{1}{\\sqrt{\\left(\\dfrac{e^{t}-e^{-t}}{2}\\right)^{2}}}\\cdot\\dfrac{e^{t}-e^{-t}}{2}\\,dt$</p><p>$\\displaystyle =\\int_{\\log(2+\\sqrt{3})}^{\\log(3+2\\sqrt{2})}1\\,dt$</p><p>$=\\log(3+2\\sqrt{2})-\\log(2+\\sqrt{3})$</p><p>$=\\log\\dfrac{3+2\\sqrt{2}}{2+\\sqrt{3}}$</p><p>$=\\boldsymbol{\\log(6-3\\sqrt{3}+4\\sqrt{2}-2\\sqrt{6})}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{4}} \\tan^{5}x\\,dx$":
+    // 上級22，三角関数，積分漸化式
+    "<p>$\\displaystyle I_{n}=\\int_{0}^{\\frac{\\pi}{4}} \\tan^{n}x\\,dx$ とおく</p><p>　$\\displaystyle I_{n+2}$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}} \\tan^{n+2}x\\,dx$</p><p>$\\displaystyle =\\int_{0}^{\\frac{\\pi}{4}} \\tan^{n}x\\left(\\dfrac{1}{\\cos^{2}x}-1\\right)\\,dx$</p><p>$\\displaystyle =\\int_{0}^{1} u^{n}\\,du-\\int_{0}^{\\frac{\\pi}{4}} \\tan^{n}x\\,dx$　( $u=\\tan x$ )</p><p>$\\displaystyle =\\dfrac{1}{n+1}-I_{n}$</p><p>　$I_{5}$</p><p>$=\\dfrac{1}{4}-I_{3}$</p><p>$=\\dfrac{1}{4}-\\left(\\dfrac{1}{2}-I_{1}\\right)$</p><p>$\\displaystyle =-\\dfrac{1}{4}+\\int_{0}^{\\frac{\\pi}{4}} \\tan x\\,dx$</p><p>$\\displaystyle =-\\dfrac{1}{4}-\\int_{0}^{\\frac{\\pi}{4}} \\dfrac{-\\sin x}{\\cos x}\\,dx$</p><p>$\\displaystyle =-\\dfrac{1}{4}-\\Bigl[\\log|\\cos x|\\Bigr]_{0}^{\\frac{\\pi}{4}}$</p><p>$\\displaystyle =-\\dfrac{1}{4}-\\log\\dfrac{1}{\\sqrt{2}}$</p><p>$=\\boldsymbol{-\\dfrac{1}{4}+\\dfrac{1}{2}\\log 2}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{\\frac{1}{2}}f^{-1}(x)\\,dx$　ただし $f(x)=\\sin x$　$\\left(0\\leqq x &lt; \\dfrac{\\pi}{2}\\right)$":
+    // 上級23，逆三角関数の積分
+    "<p>$y=f(x)=\\sin x$　$\\left(0\\leqq x &lt; \\dfrac{\\pi}{2}\\right)$ とおく．</p><p>逆関数は $x=\\sin y$　$\\left(0\\leqq y &lt; \\dfrac{\\pi}{2}\\right)$．両辺 $x$ で微分すると</p><p style=\"text-align: center\">$1=\\cos y \\cdot \\dfrac{dy}{dx}$</p><p style=\"text-align: center\">$\\dfrac{dy}{dx}=\\left(f^{-1}(x)\\right)'=\\dfrac{1}{\\cos y}=\\dfrac{1}{\\sqrt{1-\\sin^{2}y}}=\\dfrac{1}{\\sqrt{1-x^{2}}}$</p><p>これを踏まえ</p><p>　$\\displaystyle \\int_{0}^{\\frac{1}{2}}f^{-1}(x)\\,dx$</p><p>$\\displaystyle =\\Bigl[xf^{-1}(x)\\Bigr]_{0}^{\\frac{1}{2}}-\\int_{0}^{\\frac{1}{2}}x\\left(f^{-1}(x)\\right)'\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{2}\\cdot f^{-1}\\left(\\frac{1}{2}\\right)-\\int_{0}^{\\frac{1}{2}}\\dfrac{x}{\\sqrt{1-x^{2}}}\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{2}\\cdot\\dfrac{\\pi}{6}+\\Bigl[\\sqrt{1-x^{2}}\\Bigr]_{0}^{\\frac{1}{2}}$</p><p>$=\\boldsymbol{\\dfrac{\\pi}{12}+\\dfrac{\\sqrt{3}}{2}-1}$</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{\\frac{\\pi}{4}}(\\cos x)\\log(\\cos x)\\,dx$":
+    // 上級24，2022東大
+    "<p>　$\\displaystyle \\int_{0}^{\\frac{\\pi}{4}}(\\cos x)\\log(\\cos x)\\,dx$</p><p>$\\displaystyle =\\Bigl[(\\sin x)\\log (\\cos x)\\Bigr]_{0}^{\\frac{\\pi}{4}}-\\int_{0}^{\\frac{\\pi}{4}}\\sin x \\cdot \\dfrac{(\\cos x)'}{\\cos x}\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{\\sqrt{2}}\\log\\dfrac{1}{\\sqrt{2}}+\\int_{0}^{\\frac{\\pi}{4}}\\dfrac{\\sin^{2}x}{\\cos x}\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{\\sqrt{2}}\\log\\dfrac{1}{\\sqrt{2}}+\\int_{0}^{\\frac{\\pi}{4}}\\dfrac{\\sin^{2}x}{1-\\sin^{2} x}\\cdot \\cos x\\,dx$</p><p>$\\displaystyle =\\dfrac{1}{\\sqrt{2}}\\log\\dfrac{1}{\\sqrt{2}}+\\int_{0}^{\\frac{1}{\\sqrt{2}}}\\dfrac{t^{2}}{1-t^{2}}\\,dt$　$(t=\\sin x)$</p><p>$\\displaystyle =\\dfrac{1}{\\sqrt{2}}\\log\\dfrac{1}{\\sqrt{2}}+\\int_{0}^{\\frac{1}{\\sqrt{2}}}\\left(-1+\\dfrac{1}{1-t^{2}}\\right)\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{\\sqrt{2}}\\log\\dfrac{1}{\\sqrt{2}}+\\int_{0}^{\\frac{1}{\\sqrt{2}}}\\left\\{-1+\\dfrac{1}{2(1+t)}+\\dfrac{1}{2(1-t)}\\right\\}\\,dt$</p><p>$\\displaystyle =\\dfrac{1}{\\sqrt{2}}\\log\\dfrac{1}{\\sqrt{2}}+\\left[-t+\\dfrac{1}{2}\\log|1+t|-\\dfrac{1}{2}\\log|1-t|\\right]_{0}^{\\frac{1}{\\sqrt{2}}}$</p><p>$\\displaystyle =\\dfrac{1}{\\sqrt{2}}\\log\\dfrac{1}{\\sqrt{2}}-\\dfrac{1}{\\sqrt{2}}+\\dfrac{1}{2}\\log\\dfrac{1+\\frac{1}{\\sqrt{2}}}{1-\\frac{1}{\\sqrt{2}}}$</p><p>$\\displaystyle =-\\dfrac{1}{2\\sqrt{2}}\\log2-\\dfrac{1}{\\sqrt{2}}+\\dfrac{1}{2}\\log(\\sqrt{2}+1)^{2}$</p><p>$=\\boldsymbol{\\log(\\sqrt{2}+1)-\\dfrac{\\sqrt{2}}{4}\\log2-\\dfrac{1}{\\sqrt{2}}}$</p>",
+    
+
+    
+    
+}, ]
         },
         "D": {
-            "$\\displaystyle \\frac{d}{dx}(\\ln(x))$": "<p>$\\displaystyle \\frac{d}{dx}(\\ln(x)) = \\frac{1}{x}$</p>"
+
+            "$\\displaystyle \\int_{}^{} \\ \\dfrac{\\sin^{2}x}{\\sin x+\\cos x+1}\\,dx$":
+    // 超級1，主任
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{}^{} \\ \\sqrt{x^{2}+1} \\ \\sqrt[3]{x+\\sqrt{x^{2}+1}}\\,dx$":
+    // 超級2，
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{x^{2}}{(x\\cos x-\\sin x)^{2}}\\,dx$":
+    // 超級3，主任
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{e^{\\sin^{4}x}\\cos x(1+2\\cos^{2}x-\\cos^{4}x)}{\\sin^{9}x}\\,dx$":
+    // 超級4，主任
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1}{x^{n}(x^{2}-1)}\\,dx$　$( \\ n \\ は自然数 \\ )$":
+    // 超級5，主任
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{e^{2x}-1}{\\sqrt{e^{4x}+4e^{3x}+10e^{2x}+4e^{x}+1}}\\,dx$":
+    // 超級6，こおり！！！！！
+    "<p>TBA</p>",
+    
+
+    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{}^{} \\ \\dfrac{1+x^{2}}{(1-x^{2})\\sqrt{1+x^{4}}}\\,dx$":
+    // 超級7，warning，しん
+    "<p>TBA</p>",
+    
+            "$\\displaystyle \\int_{0}^{\\frac{1}{2}}\\dfrac{1}{(x+1)^{3}\\sqrt{1-x^2}}\\,dx$":
+    // 超級8
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{2\\pi}\\left(\\sum_{k=1}^{n}k\\sin kx\\right)^{2}\\,dx$":
+    // 超級9
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{1}\\dfrac{x^{2}\\log(x+1)}{(x^{2}+1)^{2}}\\,dx$":
+    // 超級10，ジョガマヤ，ちなみにかつて超級10は主任の問題だが3周年で削除
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{\\pi}\\dfrac{(3\\pi-2x)x^{2}\\sin x}{\\sqrt{3-2\\sin^{2}x}}\\,dx$":
+    // 超級11，ジョガマヤ
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{\\frac{3}{2}}^{\\frac{7}{4}}\\sqrt{\\dfrac{x-1}{2-x}}\\,dx$":
+    // 超級12，主任
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{0}^{1}\\dfrac{x^{2}-x+1}{\\sqrt{x^{2}+1}}\\,dx$":
+    // 超級13，牡蠣
+    "<p>TBA</p>",
+    
+
+    "$\\displaystyle \\int_{a}^{b}\\cos\\left(x-\\dfrac{ab}{x}\\right)\\,dx$　$(ab\\geqq0)$":
+    // 超級14，Kay
+    "<p>TBA</p>",
+    
+
+    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(1+\\sin x)^{n}\\,dx$　$( \\ n \\ は自然数 \\ )$":
+    // 超級15，warning
+    "<p>TBA</p>",
+    
+
+    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{-\\frac{4}{3}}^{0}\\dfrac{(2t+1)^{3}(t-2)^{3}}{(t^{2}+1)(3t-1)^{3}(t+3)^{3}}\\,dt$":
+    // 超級16，warning，Au
+    "<p>TBA</p>",
+    
+
+    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{0}^{\\pi}\\sin\\left(\\dfrac{x}{2}\\right)\\sqrt{\\sin x}\\,dx$":
+    // 超級17，warning，Kay
+    "<p>TBA</p>",
+    
+
+    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{\\frac{\\sqrt{2}}{2}}^{1}\\dfrac{(x^{4}-x^{6})\\sqrt{1-x^{2}}}{32x^{8}-64x^{6}+40x^{4}-8x^{2}+1}\\,dx$":
+    // 超級18，warning，トゲ
+    "<p>TBA</p>",
+    
+
+    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{-\\pi}^{\\pi}\\dfrac{\\sin^{2n} x}{(1+e^{x})\\sqrt{1+\\cos x}}\\,dx$　$( \\ n \\ は自然数 \\ )$":
+    // 超級19，warning，kazumath
+    "<p>TBA</p>",
+    
+
+    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{0}^{1}x^{3n}\\sqrt{x-x^{4}}\\,dx$　$( \\ n \\ は \\ 0 \\ 以上の整数 \\ )$":
+    // 超級20，warning，TyLite
+    "<p>TBA</p>",
+    
+
+    "<span class=\"animation danger gaming\">$\\displaystyle \\int_{0}^{1}\\sqrt{\\dfrac{x^{2}+1+\\sqrt{x^{4}-x^{2}+1}}{x^{4}-x^{2}+1}}\\,dx$":
+    // 超級21，warning，NEMO
+    "<p>TBA</p>",
         }
     }
 }
