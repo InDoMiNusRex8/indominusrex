@@ -112,14 +112,14 @@ video {
 
             // Set the video source based on the selected type
             const videoSource = document.getElementById('videoSource');
-            videoSource.src = `${selectedType}.mp4`; // Assuming video files are named 'a.mp4', 'b.mp4', etc.
+            videoSource.src = `$video/{selectedType}.mp4`; // Assuming video files are named 'a.mp4', 'b.mp4', etc.
             const video = document.getElementById('video');
 
             // Play the video
             const videoContainer = document.getElementById('videoContainer');
             videoContainer.classList.remove('hidden');
             video.play();
-            
+
             video.onended = function() {
                 document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
                 document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
