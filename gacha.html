@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body { font-family: Arial, sans-serif; }
+        .hidden { display: none; }
     </style>
 </head>
 <body>
@@ -36,6 +37,10 @@
     <button onclick="gachaRoll()">Roll</button>
 
     <div id="result"></div>
+    
+    <button id="toggleButton" class="hidden" onclick="toggleAnswer()">Show Answer</button>
+
+    <div id="answer" class="hidden"></div>
 
     <script>
         let items = {}; // This will store the gacha items
@@ -62,17 +67,58 @@
                 const resultKey = itemKeys[randomIndex]; // Get the selected key (math expression)
                 const resultValue = selectedItems[resultKey]; // Get the corresponding value (explanation)
 
-                // Display the formula and explanation in HTML
-                document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>${resultValue}`;
+                // Display the formula and explanation in separate sections
+                document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
+                document.getElementById('answer').innerHTML = resultValue;
+
+                // Show the "Toggle Answer" button
+                document.getElementById('toggleButton').classList.remove('hidden');
+                document.getElementById('toggleButton').textContent = "Show Answer";
+
+                // Hide the answer by default
+                document.getElementById('answer').classList.add('hidden');
 
                 // Ensure MathJax is triggered to render LaTeX
-                if (window.MathJax) {
-                    MathJax.typesetPromise();
-                }
+                MathJax.typesetPromise(); // This triggers MathJax to reprocess the newly added LaTeX content
             } else {
                 document.getElementById('result').textContent = "No items found for this selection.";
             }
         }
+
+        // Gacha roll function
+function gachaRoll() {
+    const selectedLevel = document.getElementById('level').value;
+    const selectedType = document.getElementById('type').value;
+
+    if (items[selectedLevel] && items[selectedLevel][selectedType]) {
+        const selectedItems = items[selectedLevel][selectedType];
+        const itemKeys = Object.keys(selectedItems); // Get the keys (math expressions)
+        const randomIndex = Math.floor(Math.random() * itemKeys.length); // Randomly pick one
+        const resultKey = itemKeys[randomIndex]; // Get the selected key (math expression)
+        const resultValue = selectedItems[resultKey]; // Get the corresponding value (explanation)
+
+        // Split the resultValue to separate the explanation if it includes a colon
+        const answerParts = resultValue.split(":");
+        const explanation = answerParts.length > 1 ? answerParts[1].trim() : resultValue; // Get the explanation after the colon
+
+        // Display the formula and explanation in separate sections
+        document.getElementById('result').innerHTML = `<p>You got:</p><p>${resultKey}</p>`;
+        document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
+
+        // Show the "Toggle Answer" button
+        document.getElementById('toggleButton').classList.remove('hidden');
+        document.getElementById('toggleButton').textContent = "Show Answer";
+
+        // Hide the answer by default
+        document.getElementById('answer').classList.add('hidden');
+
+        // Ensure MathJax is triggered to render LaTeX
+        MathJax.typesetPromise();
+    } else {
+        document.getElementById('result').textContent = "No items found for this selection.";
+    }
+}
+
     </script>
 
 </body>
