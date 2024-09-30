@@ -126,7 +126,7 @@ body {
 
             // Show the "Toggle Answer" button
             document.getElementById('toggleButton').classList.remove('hidden');
-            document.getElementById('toggleButton').textContent = "Show Answer";
+            document.getElementById('toggleButton').textContent = "Show me Da Wei";
 
             // Hide the answer by default
             document.getElementById('answer').classList.add('hidden');
@@ -145,10 +145,10 @@ body {
 
         if (answerDiv.classList.contains('hidden')) {
             answerDiv.classList.remove('hidden'); // Show answer
-            toggleButton.textContent = "Hide Answer"; // Change button text to "Hide Answer"
+            toggleButton.textContent = "Get a Wei"; // Change button text to "Hide Answer"
         } else {
             answerDiv.classList.add('hidden'); // Hide answer
-            toggleButton.textContent = "Show Answer"; // Change button text to "Show Answer"
+            toggleButton.textContent = "Show me Da Wei"; // Change button text to "Show Answer"
         }
 
         // Reprocess MathJax for any LaTeX content
