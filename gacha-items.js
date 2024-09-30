@@ -271,30 +271,481 @@ const gachaItems = {
     },
     "2": {
         "A": {
-            "$\\displaystyle \\frac{d}{dx}(e^x)$": "<p>$\\displaystyle \\frac{d}{dx}(e^x) = e^x$</p>"
+            "$a_{1}=1$，$a_{n+1}=a_{n}+1$": "<p>　$\\boldsymbol{a_{n}}=1+(n-1)\\cdot1\\boldsymbol{=n}$</p>",
+    "$a_{1}=-1$，$a_{n+1}=a_{n}+7$": "<p>　$\\boldsymbol{a_{n}}=-1+(n-1)7\\boldsymbol{=7n-8}$</p>",
+    "$a_{1}=1$，$a_{n+1}=a_{n}+\\sqrt{3}$": "<p>　$\\boldsymbol{a_{n}}=1+(n-1)\\sqrt{3}\\boldsymbol{=\\sqrt{3}n-\\sqrt{3}+1}$</p>",
+    "$a_{1}=2$，$a_{n+1}=a_{n}-\\dfrac{1}{7}$": "<p>　$\\boldsymbol{a_{n}}=2+(n-1)\\left(-\\dfrac{1}{7}\\right)\\boldsymbol{=-\\dfrac{1}{7}n+\\dfrac{15}{7}}$</p>",
+    "$a_{1}=-2$，$a_{n+1}=-a_{n}$": "<p>　$\\boldsymbol{a_{n}}=-2(-1)^{n-1}\\boldsymbol{=2(-1)^{n}}$</p>",
+    "$a_{1}=-\\dfrac{1}{4}$，$a_{n+1}=\\dfrac{1}{2}a_{n}$": "<p>　$\\boldsymbol{a_{n}}=-\\dfrac{1}{4}\\left(\\dfrac{1}{2}\\right)^{n-1}\\boldsymbol{=-\\left(\\dfrac{1}{2}\\right)^{n+1}}$</p>",
+    "$a_{1}=\\sqrt{6}$，$a_{n+1}=\\sqrt{2}a_{n}$": "<p>　$\\boldsymbol{a_{n}}=\\sqrt{6}\\left(\\sqrt{2}\\right)^{n-1}\\boldsymbol{=\\sqrt{3}\\cdot 2^{\\frac{n}{2}}}$</p>",
+    "$a_{1}=1$，$a_{n+1}=a_{n}+3\\cdot 2^{n+2}$": "<p>$n\\geqq 2$ のとき</p><p>　$\\displaystyle a_{n}=1+\\sum_{k=1}^{n-1}3\\cdot 2^{k+2}$</p><p>　　$\\displaystyle =1+\\dfrac{24-3\\cdot2^{n+2}}{1-2}$</p><p>　　$\\displaystyle =1+3\\cdot2^{n+2}-24$</p><p>　　$\\displaystyle =3\\cdot2^{n+2}-23$</p><p>これは $n=1$ のときも成り立つ</p><p>　$\\boldsymbol{a_{n}=3\\cdot2^{n+2}-23}$</p>",
+    "$a_{1}=1$，$a_{n+1}=a_{n}+\\left(\\dfrac{1}{3}\\right)^{n-1}$": "<p>$n\\geqq 2$ のとき</p><p>　$\\displaystyle a_{n}=1+\\sum_{k=1}^{n-1}\\left(\\dfrac{1}{3}\\right)^{k-1}$</p><p>　　$\\displaystyle =1+\\dfrac{1-\\left(\\dfrac{1}{3}\\right)^{n-1}}{1-\\dfrac{1}{3}}$</p><p>　　$\\displaystyle =1+\\dfrac{3}{2}-\\dfrac{3}{2}\\left(\\dfrac{1}{3}\\right)^{n-1}$</p><p>　　$\\displaystyle =\\dfrac{5}{2}-\\dfrac{3}{2}\\left(\\dfrac{1}{3}\\right)^{n-1}$</p><p>これは $n=1$ のときも成り立つ</p><p>　$\\boldsymbol{a_{n}=\\dfrac{5}{2}-\\dfrac{3}{2}\\left(\\dfrac{1}{3}\\right)^{n-1}}$</p>",
+    "$a_{1}=1$，$a_{n+1}=a_{n}+5^{n}-6n$": "<p>$n\\geqq 2$ のとき</p><p>　$\\displaystyle a_{n}=1+\\sum_{k=1}^{n-1}(5^{k}-6k)$</p><p>　　$\\displaystyle =1+\\dfrac{5-5^{n-1}\\cdot5}{1-5}-6\\cdot\\dfrac{1}{2}(n-1)n$</p><p>　　$\\displaystyle =1+\\dfrac{5^{n}-5}{4}-3(n-1)n$</p><p>　　$\\displaystyle =\\dfrac{1}{4}\\cdot 5^{n}-3n^{2}+3n-\\dfrac{1}{4}$</p><p>これは $n=1$ のときも成り立つ</p><p>　$\\boldsymbol{a_{n}=\\dfrac{1}{4}\\cdot 5^{n}-3n^{2}+3n-\\dfrac{1}{4}}$</p>",
+    "$a_{1}=1$，$a_{n+1}=a_{n}+n^{2}+2n+1$": "<p>$n\\geqq 2$ のとき</p><p>　$\\displaystyle a_{n}=1+\\sum_{k=1}^{n-1}(k^{2}+2k+1)$</p><p>　　$\\displaystyle =1+\\sum_{k=1}^{n-1}(k+1)^{2}$</p><p>　　$\\displaystyle =1+\\sum_{k=2}^{n}k^{2}$</p><p>　　$\\displaystyle =\\sum_{k=1}^{n}k^{2}$</p><p>　　$\\displaystyle =\\dfrac{1}{6}n(n+1)(2n+1)$</p><p>これは $n=1$ のときも成り立つ</p><p>　$\\boldsymbol{a_{n}=\\dfrac{1}{6}n(n+1)(2n+1)}$</p>",
+    "$a_{1}=1$，$a_{n+1}=a_{n}+\\dfrac{1}{(2n-1)(2n+1)}$": "<p>$n\\geqq 2$ のとき</p><p>　$\\displaystyle a_{n}=1+\\sum_{k=1}^{n-1}\\dfrac{1}{(2k-1)(2k+1)}$</p><p>　　$\\displaystyle =1+\\sum_{k=1}^{n-1}\\dfrac{1}{2}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)$</p><p>　　$\\displaystyle =1+\\dfrac{1}{2}\\left(\\dfrac{1}{1}-\\dfrac{1}{2n-1}\\right)$</p><p>　　$\\displaystyle =\\dfrac{3}{2}-\\dfrac{1}{2(2n-1)}$</p><p>　　$\\displaystyle =\\dfrac{3n-2}{2n-1}$</p><p>これは $n=1$ のときも成り立つ</p><p>　$\\boldsymbol{a_{n}=\\dfrac{3n-2}{2n-1}}$</p>",
+    "$a_{1}=1$，$a_{n+1}=a_{n}+\\dfrac{1}{n(n+2)}$": "<p>$n\\geqq 2$ のとき</p><p>　$\\displaystyle a_{n}=1+\\sum_{k=1}^{n-1}\\dfrac{1}{k(k+2)}$</p><p>　　$\\displaystyle =1+\\sum_{k=1}^{n-1}\\dfrac{1}{2}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+2}\\right)$</p><p>　　$\\displaystyle =1+\\dfrac{1}{2}\\left(1+\\dfrac{1}{2}-\\dfrac{1}{n}-\\dfrac{1}{n+1}\\right)$</p><p>　　$\\displaystyle =\\dfrac{7}{4}-\\dfrac{1}{2n}-\\dfrac{1}{2(n+1)}$</p><p>　　$\\displaystyle =\\dfrac{7n^{2}+3n-2}{4n(n+1)}$</p><p>これは $n=1$ のときも成り立つ</p><p>　$\\boldsymbol{a_{n}=\\dfrac{7n^{2}+3n-2}{4n(n+1)}}$</p>",
+    "$a_{1}=1$，$a_{n}=a_{n-1}+2n-1$　$(n=2,3,\\cdots)$": "<p>$a_{n+1}=a_{n}+2(n+1)-1=a_{n}+2n+1$　$(n=1,2,\\cdots)$</p><p>とすると $n\\geqq 2$ のとき</p><p>　$\\displaystyle a_{n}=1+\\sum_{k=1}^{n-1}(2k+1)$</p><p>　　$\\displaystyle =1+2\\cdot \\dfrac{1}{2}(n-1)n+n-1$</p><p>　　$\\displaystyle =n^2$</p><p>これは $n=1$ のときも成り立つ</p><p>　$\\boldsymbol{a_{n}=n^2}$</p>",
+    "$a_{1}=1$，$a_{n+1}=9a_{n}+8$": "<p>$a_{n+1}+1=9(a_{n}+1)$ と変形すると</p><p>　$a_{n}+1=(a_{1}+1)9^{n-1}=2\\cdot 9^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=2\\cdot 9^{n-1}-1}$</p>",
+    "$a_{1}=3$，$a_{n+1}=5a_{n}+8$": "<p>$a_{n+1}+2=5(a_{n}+2)$ と変形すると</p><p>　$a_{n}+2=(a_{1}+2)5^{n-1}=5^{n}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=5^{n}-2}$</p>",
+    "$a_{1}=1$，$a_{n+1}=-a_{n}+1$": "<p>$a_{n+1}-\\dfrac{1}{2}=-\\left(a_{n}-\\dfrac{1}{2}\\right)$ と変形すると</p><p>　$a_{n}-\\dfrac{1}{2}=\\left(a_{1}-\\dfrac{1}{2}\\right)(-1)^{n-1}=\\dfrac{(-1)^{n-1}}{2}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{(-1)^{n-1}+1}{2}}$</p>",
+    "$a_{1}=3$，$a_{n+1}=\\dfrac{1}{3}a_{n}+4$": "<p>$a_{n+1}-6=\\dfrac{1}{3}(a_{n}-6)$ と変形すると</p><p>　$a_{n}-6=(a_{1}-6)\\left(\\dfrac{1}{3}\\right)^{n-1}=-\\left(\\dfrac{1}{3}\\right)^{n-2}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=-\\left(\\dfrac{1}{3}\\right)^{n-2}+6}$</p>",
+    "$a_{1}=1$，$a_{n+1}=\\pi a_{n}-1$": "<p>$a_{n+1}-\\dfrac{1}{\\pi-1}=\\pi\\left(a_{n}-\\dfrac{1}{\\pi-1}\\right)$ と変形すると</p><p>$a_{n}-\\dfrac{1}{\\pi-1}=\\left(a_{1}-\\dfrac{1}{\\pi-1}\\right)\\pi^{n-1}=\\dfrac{\\pi-2}{\\pi-1}\\cdot \\pi^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{\\pi^{n}-2\\pi^{n-1}+1}{\\pi-1}}$</p>",
+    "$a_{1}=4$，$4a_{n+1}=3a_{n}-1$": "<p>$a_{n+1}=\\dfrac{3}{4}a_{n}-\\dfrac{1}{4}$ とする．</p><p>$a_{n+1}+1=\\dfrac{3}{4}(a_{n}+1)$ と変形すると</p><p>　$a_{n}+1=(a_{1}+1)\\left(\\dfrac{3}{4}\\right)^{n-1}=5\\left(\\dfrac{3}{4}\\right)^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=5\\left(\\dfrac{3}{4}\\right)^{n-1}-1}$</p>",
         },
         "B": {
-            "$\\displaystyle \\frac{d}{dx}(x^3)$": "<p>$\\displaystyle \\frac{d}{dx}(x^3) = 3x^2$</p>"
+            "$a_{1}=2$，$a_{n+1}=5a_{n}+2\\cdot 5^{n}$": "<p>両辺 $5^{n+1}$ で割ると．</p><p>　$\\dfrac{a_{n+1}}{5^{n+1}}=\\dfrac{a_{n}}{5^{n}}+\\dfrac{2}{5}$</p><p>これより</p><p>　$\\dfrac{a_{n}}{5^{n}}=\\dfrac{a_{1}}{5^{1}}+(n-1)\\dfrac{2}{5}=\\dfrac{2}{5}n$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=2n\\cdot5^{n-1}}$</p>",
+    "$a_{1}=4$，$a_{n+1}=6a_{n}-2^{n+2}$": "<p>両辺 $2^{n+1}$ で割ると</p><p>　$\\dfrac{a_{n+1}}{2^{n+1}}=3\\cdot\\dfrac{a_{n}}{2^{n}}-2$</p><p>ここで $b_{n}=\\dfrac{a_{n}}{2^{n}}$ とおくと，$b_{1}=\\dfrac{a_{1}}{2^{1}}=2$．</p><p>　$b_{n+1}=3b_{n}-2$</p><p>$\\Longleftrightarrow \\ b_{n+1}-1=3(b_{n}-1)$</p><p>　$\\therefore \\ b_{n}-1=(b_{1}-1)3^{n-1}=3^{n-1}$</p><p>　$\\therefore \\ b_{n}=3^{n-1}+1$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}}=2^{n}b_{n}\\boldsymbol{=2\\cdot6^{n-1}+2^{n}}$</p>",
+    "$a_{1}=1$，$9a_{n+1}=a_{n}+\\dfrac{2}{3^{n}}$": "<p>両辺 $3^{n}$ をかけると．</p><p>　$3\\cdot3^{n+1}a_{n+1}=3^{n}a_{n}+2$</p><p>ここで $b_{n}=3^{n}a_{n}$ とおくと，$b_{1}=3a_{1}=3$．</p><p>　$3b_{n+1}=b_{n}+2$</p><p>$\\Longleftrightarrow \\ b_{n+1}-1=\\dfrac{1}{3}(b_{n}-1)$</p><p>これより</p><p>　$b_{n}-1=(b_{1}-1)\\left(\\dfrac{1}{3}\\right)^{n-1}=2\\left(\\dfrac{1}{3}\\right)^{n-1}$</p><p>　$\\therefore \\ b_{n}=2\\left(\\dfrac{1}{3}\\right)^{n-1}+1$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}}=\\dfrac{b_{n}}{3^{n}}\\boldsymbol{=\\dfrac{2+3^{n-1}}{3^{2n-1}}}$</p>",
+    "$a_{1}=1$，$a_{n+1}=-a_{n}+n(-1)^{n}$": "<p>両辺 $(-1)^{n+1}$ で割ると．</p><p>　$\\dfrac{a_{n+1}}{(-1)^{n+1}}=\\dfrac{a_{n}}{(-1)^{n}}-n$</p><p>これより，$n\\geqq 2$ のとき</p><p>　$\\displaystyle \\dfrac{a_{n}}{(-1)^{n}}=\\dfrac{a_{1}}{(-1)^{1}}+\\sum_{k=1}^{n-1}(-k)$</p><p>　　　$\\displaystyle =-1-\\dfrac{1}{2}(n-1)n$</p><p>　　　$\\displaystyle =\\dfrac{-n^{2}+n-2}{2}$</p><p>これは $n=1$ のときも成り立つ．</p><p>　$\\boldsymbol{a_{n}=\\dfrac{(n^{2}-n+2)(-1)^{n-1}}{2}}$</p>",
+    "$a_{1}=1$，$a_{n+1}=\\dfrac{3a_{n}}{a_{n}+3}$": "<p>$a_{1}$ および漸化式の形から，$a_{n}\\neq 0$．両辺の逆数をとると</p><p>　$\\dfrac{1}{a_{n+1}}=\\dfrac{a_{n}+3}{3a_{n}}=\\dfrac{1}{a_{n}}+\\dfrac{1}{3}$</p><p>ここで $b_{n}=\\dfrac{1}{a_{n}}$ とおくと</p><p>　$b_{n+1}=b_{n}+\\dfrac{1}{3}$，$b_{1}=\\dfrac{1}{a_{1}}=1$</p><p>となるので</p><p>　$b_{n}=1+(n-1)\\dfrac{1}{3}=\\dfrac{n+2}{3}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{3}{n+2}}$</p>",
+    "$a_{1}=\\dfrac{1}{11}$，$a_{n+1}=\\dfrac{a_{n}}{2-a_{n}}$": "<p>$a_{1}$ および漸化式の形から，$a_{n}\\neq 0$．両辺の逆数をとると</p><p>　$\\dfrac{1}{a_{n+1}}=\\dfrac{2-a_{n}}{a_{n}}=2\\cdot\\dfrac{1}{a_{n}}-1$</p><p>ここで $b_{n}=\\dfrac{1}{a_{n}}$ とおくと</p><p>　$b_{n+1}=2b_{n}-1$，$b_{1}=\\dfrac{1}{a_{1}}=11$</p><p>ここでこの式を</p><p>　$b_{n+1}-1=2\\left(b_{n}-1\\right)$</p><p>と変形すると</p><p>　$b_{n}-1=(b_{1}-1) \\cdot 2^{n-1}$</p><p>　$\\therefore \\ b_{n}=5\\cdot2^{n}+1$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}}=\\dfrac{1}{b_{n}}\\boldsymbol{=\\boldsymbol{\\dfrac{1}{5\\cdot2^{n}+1}}}$</p>",
+    "$a_{1}=1$，$a_{n+1}=\\dfrac{a_{n}}{2na_{n}+1}$": "<p>$a_{1}$ および漸化式の形から，$a_{n}\\neq 0$．両辺の逆数をとると</p><p>　$\\dfrac{1}{a_{n+1}}=\\dfrac{2na_{n}+1}{a_{n}}=\\dfrac{1}{a_{n}}+2n$</p><p>ここで $b_{n}=\\dfrac{1}{a_{n}}$ とおくと</p><p>　$b_{n+1}=b_{n}+2n$，$b_{1}=\\dfrac{1}{a_{1}}=1$</p><p>$n\\geqq 2$ のとき</p><p>　$\\displaystyle b_{n}=b_{1}+\\sum_{k=1}^{n-1}2k$</p><p>　　$\\displaystyle =1+(n-1)n$</p><p>これは $n=1$ のときも成り立つ</p><p>　$\\boldsymbol{a_{n}}=\\dfrac{1}{b_{n}}\\boldsymbol{=\\boldsymbol{\\dfrac{1}{n^{2}-n+1}}}$</p>",
+    "$a_{1}=\\dfrac{1}{2}$，$a_{n+1}=\\dfrac{1}{2}a_{n}+n+1$": "<p>　$a_{n+1}+\\alpha(n+1)+\\beta=\\dfrac{1}{2}(a_{n}+\\alpha n+\\beta)$</p><p>$\\Longleftrightarrow \ a_{n+1}=\\dfrac{1}{2}a_{n}-\\dfrac{1}{2}\\alpha n-\\alpha-\\dfrac{1}{2}\\beta$</p><p>として，これを与式と比較すると</p><p>　$\\begin{cases} -\\dfrac{1}{2}\\alpha=1 \\\\ -\\alpha-\\dfrac{1}{2}\\beta=1 \\end{cases} \ \ \\therefore \\alpha=-2，\\beta=2$</p><p>つまり与式を $a_{n+1}-2(n+1)+2=\\dfrac{1}{2}(a_{n}-2n+2)$ と変形できるので</p><p>$a_{n}-2n+2=(a_{1}-2+2)\\left(\\dfrac{1}{2}\\right)^{n-1}=\\left(\\dfrac{1}{2}\\right)^{n}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\left(\\dfrac{1}{2}\\right)^{n}+2n-2}$</p>",
+    "$a_{1}=1$，$a_{n+1}=-2a_{n}+9n$": "<p>　$a_{n+1}+\\alpha(n+1)+\\beta=-2(a_{n}+\\alpha n+\\beta)$</p><p>$\\Longleftrightarrow \ a_{n+1}=-2a_{n}-3\\alpha n-\\alpha-3\\beta$</p><p>として，これを与式と比較すると</p><p>　$\\begin{cases} -3\\alpha=9 \\\\ -\\alpha-3\\beta=0 \\end{cases} \ \ \\therefore \\alpha=-3，\\beta=1$</p><p>つまり与式を $a_{n+1}-3(n+1)+1=-2(a_{n}-3n+1)$ と変形できるので</p><p>$a_{n}-3n+1=(a_{1}-3+1)(-2)^{n-1}=-(-2)^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=-(-2)^{n-1}+3n-1}$</p>",
+    "$a_{1}=1$，$a_{n+1}=2a_{n}+n^{2}$": "<p>　$a_{n+1}+\\alpha(n+1)^{2}+\\beta(n+1)+\\gamma$</p><p>$=2(a_{n}+\\alpha n^{2}+\\beta n+\\gamma)$</p><p>$\\Longleftrightarrow \ a_{n+1}=2a_{n}+\\alpha n^{2}+(-2\\alpha+\\beta)n-\\alpha-\\beta+\\gamma$</p><p>として，これを与式と比較すると</p><p>　$\\alpha=1，\\beta=2，\\gamma=3$</p><p>つまり与式を</p><p>　$a_{n+1}+(n+1)^{2}+2(n+1)+3$</p><p>$=2(a_{n}+n^{2}+2n+3)$</p><p>と変形できるので</p><p>$a_{n}+n^{2}+2n+3=(a_{1}+1+2+3)2^{n-1}=7\\cdot2^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=7\\cdot2^{n-1}-n^{2}-2n-3}$</p>",
+    "$a_{1}=\\dfrac{11}{2}$，$a_{n+1}=3a_{n}+2n+4^{n}$": "<p>　$a_{n+1}+\\alpha(n+1)+\\beta+\\gamma \\cdot 4^{n+1}$</p><p>$=3(a_{n}+\\alpha n+\\beta +\\gamma\\cdot 4^{n})$</p><p>$\\Longleftrightarrow \ a_{n+1}=3a_{n}+2\\alpha n-\\alpha+2\\beta-\\gamma \\cdot 4^{n}$</p><p>として，これを与式と比較すると</p><p>　$\\alpha=1，\\beta=\\dfrac{1}{2}，\\gamma=-1$</p><p>つまり与式を</p><p>　$a_{n+1}+(n+1)+\\dfrac{1}{2}-4^{n+1}$</p><p>$=3\\left(a_{n}+n+\\dfrac{1}{2}-4^{n}\\right)$</p><p>と変形できるので</p><p>$a_{n}+n+\\dfrac{1}{2}-4^{n}=\\left(a_{1}+1+\\dfrac{1}{2}-4^{1}\\right)3^{n-1}=3^{n}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=3^{n}-n-\\dfrac{1}{2}+4^{n}}$</p>",
+    "$a_{1}=3$，$a_{2}=5$，$a_{n+2}=8a_{n+1}-7a_{n}$": "<p>特性方程式</p><p>　$\\alpha^{2}=8\\alpha-7$</p><p>を解くと，$\\alpha=1$，$7$ ．</p><p>与式を</p><p>　$\\begin{cases} {a_{n+2}-a_{n+1}=7(a_{n+1}-a_{n})} \\\\ a_{n+2}-7a_{n+1}=a_{n+1}-7a_{n}\\end{cases}$</p><p>と変形すると，$\\{a_{n+1}-a_{n}\\}$ は初項 $a_{2}-a_{1}=2$，公比 $7$，$\\{a_{n+1}-7a_{n}\\}$ は初項 $a_{2}-7a_{1}=-16$，公比 $1$のそれぞれ等比数列なので，一般項は</p><p>　$\\begin{cases} a_{n+1}-a_{n}=2\\cdot7^{n-1} \\\\ a_{n+1}-7a_{n}=-16\\end{cases}$</p><p>辺々引くと</p><p>　$6a_{n}=2\\cdot7^{n-1}+16$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{7^{n-1}+8}{3}}$</p>",
+    "$a_{1}=0$，$a_{2}=2$，$a_{n+2}-4a_{n+1}+4a_{n}=0$": "<p>特性方程式</p><p>　$\\alpha^{2}-4\\alpha+4=0$</p><p>を解くと，$\\alpha=2$．</p><p>与式を</p><p>　$a_{n+2}-2a_{n+1}=2(a_{n+1}-2a_{n})$</p><p>と変形すると，$\\{a_{n+1}-2a_{n}\\}$ は初項 $a_{2}-2a_{1}=2$，公比 $2$ の等比数列なので，一般項は</p><p>　$a_{n+1}-2a_{n}=2\\cdot2^{n-1}=2^{n}$</p><p>変形すると</p><p>　$a_{n+1}=2a_{n}+2^{n}$</p><p>両辺 $2^{n+1}$ で割ると</p><p>　$\\dfrac{a_{n+1}}{2^{n+1}}=\\dfrac{a_{n}}{2^{n}}+\\dfrac{1}{2}$</p><p>これより</p><p>　$\\dfrac{a_{n}}{2^{n}}=\\dfrac{a_{1}}{2^{1}}+(n-1)\\dfrac{1}{2}=\\dfrac{n-1}{2}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=(n-1)2^{n-1}}$</p>",
+    "$a_{1}=1$，$a_{2}=1$，$a_{n+2}=a_{n+1}+a_{n}$": "<p>特性方程式</p><p>　$\\alpha^{2}=\\alpha+1$</p><p>$\\Longleftrightarrow \\ \\alpha^{2}-\\alpha-1=0$</p><p>の解を，$\\alpha=\\alpha_{1}$，$\\alpha_{2}$ とおく．</p><p>与式を</p><p>　$\\begin{cases} {a_{n+2}-\\alpha_{1} a_{n+1}=\\alpha_{2} (a_{n+1}-\\alpha_{1} a_{n})} \\\\ a_{n+2}-\\alpha_{2} a_{n+1}=\\alpha_{1} (a_{n+1}-\\alpha_{2} a_{n})\\end{cases}$</p><p>と変形すると，$\\{a_{n+1}-\\alpha_{1}a_{n}\\}$，$\\{a_{n+1}-\\alpha_{2}a_{n}\\}$ の一般項は</p><p>　$\\begin{cases} a_{n+1}-\\alpha_{1}a_{n}=(1-\\alpha_{1})\\alpha_{2}^{n-1} \\\\ a_{n+1}-\\alpha_{2}a_{n}=(1-\\alpha_{2})\\alpha_{1}^{n-1}\\end{cases}$</p><p>辺々引くと</p><p>　$(\\alpha_{2}-\\alpha_{1})a_{n}=\\left\\{(1-\\alpha_{1})\\alpha_{2}^{n-1}-(1-\\alpha_{2})\\alpha_{1}^{n-1}\\right\\}$</p><p>ここで，$\\alpha_{1}=\\dfrac{1-\\sqrt{5}}{2}$，$\\alpha_{2}=\\dfrac{1+\\sqrt{5}}{2}$ として</p><p>　$\\sqrt{5}a_{n}=\\left(\\dfrac{1+\\sqrt{5}}{2}\\right)^{n}-\\left(\\dfrac{1-\\sqrt{5}}{2}\\right)^{n}$</p><p>$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{1}{\\sqrt{5}}\\left\\{\\left(\\dfrac{1+\\sqrt{5}}{2}\\right)^{n}-\\left(\\dfrac{1-\\sqrt{5}}{2}\\right)^{n}\\right\\}}$</p>",
+    "$a_{1}=4$，$b_{1}=1$，$a_{n+1}=a_{n}+3b_{n}$，$b_{n+1}=3a_{n}+b_{n}$": "<p>$a_{n+1}+\\alpha b_{n+1}=\\beta(a_{n}+\\alpha b_{n})$ とおく．左辺に与式を代入すると</p><p>　$a_{n}+3b_{n}+\\alpha(3a_{n}+b_{n})=\\beta(a_{n}+\\alpha b_{n})$</p><p>$\\Longleftrightarrow \\ (1+3\\alpha)a_{n}+(3+\\alpha)b_{n}=\\beta a_{n}+\\beta \\alpha b_{n}$</p><p>両辺係数比較して</p><p>　$\\begin{cases} 1+3\\alpha=\\beta \\\\ 3+\\alpha=\\beta \\alpha\\end{cases}$</p><p>これを解くと</p><p>　$(\\alpha,\\beta)=(-1,-2)，\\left(1,4\\right)$</p><p>より与式を</p><p>　$\\begin{cases}a_{n+1}- b_{n+1}=-2(a_{n}- b_{n}) \\\\ a_{n+1}+b_{n+1}=4\\left(a_{n}+b_{n}\\right)　\\end{cases}$</p><p>と変形できるから，$\\{a_{n}-b_{n}\\}$，$\\left\\{a_{n}+b_{n}\\right\\}$ の一般項は</p><p>　$\\begin{cases}a_{n}- b_{n}=(a_{1}-b_{1}) (-2)^{n-1}=3 (-2)^{n-1}　\\\\ a_{n}+b_{n}=\\left(a_{1}+b_{1}\\right)4^{n-1}=5\\cdot 4^{n-1} \\end{cases}$</p><p>辺々足すと</p><p>　$2a_{n}=3 (-2)^{n-1}+5\\cdot4^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{1}{2}\\left\\{3 (-2)^{n-1}+5\\cdot4^{n-1}\\right\\}}$</p><p>辺々引くと</p><p>　$-2b_{n}=3 (-2)^{n-1}+5\\cdot4^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{b_{n}=\\dfrac{1}{2}\\left\\{5\\cdot4^{n-1}-3 (-2)^{n-1}\\right\\}}$</p>",
+    // 異なる2つの実数解のとき，足したり引いたりで出せる
+    "$a_{1}=4$，$b_{1}=0$，$a_{n+1}=a_{n}+9b_{n}$，$b_{n+1}=-a_{n}+7b_{n}$": "<p>$a_{n+1}+\\alpha b_{n+1}=\\beta(a_{n}+\\alpha b_{n})$ とおく．左辺に与式を代入すると</p><p>　$a_{n}+9b_{n}+\\alpha(-a_{n}+7b_{n})=\\beta(a_{n}+\\alpha b_{n})$</p><p>$\\Longleftrightarrow \\ (1-\\alpha)a_{n}+(9+7\\alpha)b_{n}=\\beta a_{n}+\\beta \\alpha b_{n}$</p><p>両辺係数比較して</p><p>　$\\begin{cases} 1-\\alpha=\\beta \\\\ 9+7\\alpha=\\beta \\alpha\\end{cases}$</p><p>これを解くと</p><p>　$(\\alpha,\\beta)=(-3,4)$</p><p>より与式を</p><p>　$a_{n+1}-3b_{n+1}=4(a_{n}-3b_{n})$</p><p>と変形できるから，$\\{a_{n}-3b_{n}\\}$ の一般項は</p><p>　$a_{n}-3b_{n}=(a_{1}-3b_{1})4^{n-1}=4^{n}$</p><p>$\\Longleftrightarrow \\ a_{n}-4^{n}=3b_{n}$</p><p>これを与式に戻すと</p><p>　$a_{n+1}=a_{n}+3(a_{n}-4^{n})=4a_{n}-3\\cdot4^{n}$</p><p>両辺 $4^{n+1}$ で割ると</p><p>　$\\dfrac{a_{n+1}}{4^{n+1}}=\\dfrac{a_{n}}{4^{n}}-\\dfrac{3}{4}$</p> <p>$\\left\\{\\dfrac{a_{n}}{4^{n}}\\right\\}$ の一般項は</p><p>　$\\dfrac{a_{n}}{4^{n}}=\\dfrac{a_{1}}{4^{1}}+(n-1)\\left(-\\dfrac{3}{4}\\right)=\\dfrac{-3n+7}{4}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=(7-3n)4^{n-1}}$</p><p>$a_{n}-4^{n}=3b_{n}$ に戻すと</p><p>　$3b_{n}=(7-3n)4^{n-1}-4^{n}$</p><p>　$\\therefore \\ \\boldsymbol{b_{n}=(1-n)4^{n-1}}$</p>",
+    // 重解のとき
+    "$a_{1}=1$，$b_{1}=1$，$a_{n+1}=a_{n}+2b_{n}$，$b_{n+1}=a_{n}+b_{n}$": "<p>$a_{n+1}+\\alpha b_{n+1}=\\beta(a_{n}+\\alpha b_{n})$ とおく．左辺に与式を代入すると</p><p>　$a_{n}+2b_{n}+\\alpha(a_{n}+b_{n})=\\beta(a_{n}+\\alpha b_{n})$</p><p>$\\Longleftrightarrow \\ (1+\\alpha)a_{n}+(2+\\alpha)b_{n}=\\beta a_{n}+\\beta \\alpha b_{n}$</p><p>両辺係数比較して</p><p>　$\\begin{cases} 1+\\alpha=\\beta \\\\ 2+\\alpha=\\beta \\alpha\\end{cases}$</p><p>これを解くと</p><p>　$(\\alpha,\\beta)=(\\sqrt{2},1+\\sqrt{2})，(-\\sqrt{2},1-\\sqrt{2})$</p><p>より与式を</p><p>　$\\begin{cases}a_{n+1}+\\sqrt{2}b_{n+1}=(1+\\sqrt{2})(a_{n}+\\sqrt{2}b_{n}) \\\\ a_{n+1}-\\sqrt{2}b_{n+1}=(1-\\sqrt{2})(a_{n}-\\sqrt{2}b_{n}) \\end{cases}$</p><p>と変形できるから，$\\{a_{n}+\\sqrt{2}b_{n}\\}$，$\\{a_{n}-\\sqrt{2}b_{n}\\}$ の一般項は</p><p>　$\\begin{cases}a_{n}+\\sqrt{2}b_{n}=(a_{1}+\\sqrt{2}b_{1})(1+\\sqrt{2})^{n-1}=(1+\\sqrt{2})^{n}　\\\\ a_{n}-\\sqrt{2}b_{n}=(a_{1}-\\sqrt{2}b_{1})(1-\\sqrt{2})^{n-1}=(1-\\sqrt{2})^{n} \\end{cases}$</p><p>辺々足すと</p><p>　$2a_{n}=(1+\\sqrt{2})^{n}+(1-\\sqrt{2})^{n}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{(1+\\sqrt{2})^{n}+(1-\\sqrt{2})^{n}}{2}}$</p><p>辺々引くと</p><p>　$2\\sqrt{2}b_{n}=(1+\\sqrt{2})^{n}-(1-\\sqrt{2})^{n}$</p><p>　$\\therefore \\ \\boldsymbol{b_{n}=\\dfrac{(1+\\sqrt{2})^{n}-(1-\\sqrt{2})^{n}}{2\\sqrt{2}}}$</p>",
+    // 異なる2つの実数解だが解が無理数
+    "$S_{n}=\\dfrac{3}{2}a_{n}+3-4n$": "<p>与式の $n$ のナンバリングを上にずらして，与式と辺々引くと</p><p>　　$S_{n+1}=\\dfrac{3}{2}a_{n+1}+3-4(n+1)$</p><p>　$\\underline{-)　S_{n}=\\dfrac{3}{2}a_{n}+3-4n　　　}$</p><p>　　$a_{n+1}=\\dfrac{3}{2}a_{n+1}-\\dfrac{3}{2}a_{n}-4$</p><p>　$\\Longleftrightarrow  \\ a_{n+1}=3a_{n}+8$</p><p>　$\\Longleftrightarrow  \\ a_{n+1}+4=3(a_{n}+4)$</p><p>$a_{1}$ を得るには与式に $n=1$ を代入すれば</p><p>　$S_{1}=a_{1}=\\dfrac{3}{2}a_{1}+3-4$ $\\Longleftrightarrow $ $a_{1}=2$</p><p>となるから，$\\{a_{n}+4\\}$ の一般項は</p><p>　$a_{n}+4=(a_{1}+4)3^{n-1}=6\\cdot3^{n-1}=2\\cdot3^{n}$</p><p>　$\\boldsymbol {\\therefore \\ a_{n}=2\\cdot3^{n}-4}$</p>",
+    "$a_{1}=1$，$S_{n+1}=2S_{n}+4$": "<p>与式の $n$ のナンバリングを下にずらして，与式と辺々引くと</p><p>　　$S_{n+1}=2S_{n}+4$</p><p>　$\\underline{-)　S_{n}=2S_{n-1}+4　(n\\geqq 2)}$</p><p>　　$a_{n+1}=2a_{n}$ $(n\\geqq 2)$</p><p>　$\\therefore  \\ a_{n}=a_{2}\\cdot 2^{n-2}$ $(n\\geqq 2)$</p><p>ここで与式に $n=1$ を代入すると</p><p>　$S_{2}=2S_{1}+4$ $\\Longleftrightarrow $ $a_{1}+a_{2}=2a_{1}+4$</p><p>となるから，$a_{2}=5$．</p><p>　$\\therefore \\ \\boldsymbol {a_{n}=}\\begin{cases}\\boldsymbol {5\\cdot2^{n-2} \\ (n\\geqq 2)} \\\\ \\boldsymbol {1 \\ \\ (n=1)}\\end{cases}$</p>",
         },
         "C": {
-            "$\\displaystyle \\int_0^1 x^3 \\, dx$": "<p>$\\displaystyle \\int_0^1 x^3 \\, dx = \\frac{1}{4}$</p>"
+            
+    "$a_{1}=2$，$3na_{n+1}=(n+1)a_{n}$":
+    // 上級1，階比型
+    "<p>両辺 $3n(n+1)$ で割ると</p><p>　$\\dfrac{a_{n+1}}{n+1}=\\dfrac{1}{3}\\cdot\\dfrac{a_{n}}{n}$</p><p>ここで $b_{n}=\\dfrac{a_{n}}{n}$ とおくと</p><p>　$b_{n+1}=\\dfrac{1}{3}b_{n}$</p><p>となるので</p><p>　$b_{n}=b_{1}\\left(\\dfrac{1}{3}\\right)^{n-1}=\\dfrac{a_{1}}{1}\\left(\\dfrac{1}{3}\\right)^{n-1}=2\\left(\\dfrac{1}{3}\\right)^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=2n\\left(\\dfrac{1}{3}\\right)^{n-1}}$</p>",
+    
+
+    "$a_{1}=2$，$na_{n+1}=(n+2)a_{n}+2$":
+    // 上級2，階比型，階差型
+    "<p>両辺 $n(n+1)(n+2)$ で割ると</p><p>　$\\dfrac{a_{n+1}}{(n+1)(n+2)}=\\dfrac{a_{n}}{n(n+1)}+\\dfrac{2}{n(n+1)(n+2)}$</p><p>ここで $b_{n}=\\dfrac{a_{n}}{n(n+1)}$ とおくと</p><p>　$b_{n+1}=b_{n}+\\dfrac{2}{n(n+1)(n+2)}$</p><p>となるので</p><p>$n\\geqq 2$ のとき</p><p>$\\displaystyle b_{n}=b_{1}+\\sum_{k=1}^{n-1}\\dfrac{2}{k(k+1)(k+2)}$</p><p>　$\\displaystyle =1+\\sum_{k=1}^{n-1}\\left\\{\\dfrac{1}{k(k+1)}-\\dfrac{1}{(k+1)(k+2)}\\right\\}$</p><p>　$\\displaystyle =1+\\left(\\dfrac{1}{2}-\\dfrac{1}{n(n+1)}\\right)$</p><p>　$\\displaystyle =\\dfrac{3}{2}-\\dfrac{1}{n(n+1)}$</p><p>　$\\displaystyle =\\dfrac{3n(n+1)-2}{2n(n+1)}$</p><p>これは $n=1$ のときも成り立つ．$a_{n}=n(n+1)b_{n}$ より</p><p>　$\\boldsymbol{a_{n}=\\dfrac{3n^{2}+3n-2}{2}}$</p>",
+    
+
+    "$a_{1}=2$，$a_{n+1}=32a_{n}^{6}$":
+    // 上級3，対数型
+    "<p>$a_{1}$ および漸化式の形から $a_{n}&gt;0$．両辺 $2$ を底とする対数をとると</p><p>　$\\log_{2}a_{n+1}=\\log_{2}32a_{n}^{6}=6\\log_{2}a_{n}+5$</p><p>ここで $b_{n}=\\log_{2}a_{n}$ とおくと</p><p>　$b_{n+1}=6b_{n}+5$，$b_{1}=\\log_{2}a_{1}=1$</p><p>となり</p><p>　$b_{n+1}+1=6(b_{n}+1)$</p><p>とすると</p><p>　$b_{n}+1=(b_{1}+1)6^{n-1}=2\\cdot 6^{n-1}$</p><p>　$\\therefore \\ b_{n}=2\\cdot 6^{n-1}-1$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}}=2^{b_{n}}\\boldsymbol{=2^{2\\cdot 6^{n-1}-1}}$</p>",
+    
+
+    "$a_{1}=2$，$4a_{n+1}^{5}=a_{n}^{6}$":
+    // 上級4，対数型
+    "<p>$a_{1}$ および漸化式の形から $a_{n}&gt;0$．両辺 $2$ を底とする対数をとると</p><p>　$2+5\\log_{2}a_{n+1}=6\\log_{2}a_{n}$</p><p>ここで $b_{n}=\\log_{2}a_{n}$ とおくと</p><p>　$2+5b_{n+1}=6b_{n}$，$b_{1}=\\log_{2}a_{1}=1$</p><p>となり</p><p>　$b_{n+1}-2=\\dfrac{6}{5}(b_{n}-2)$</p><p>とすると</p><p>　$b_{n}-2=(b_{1}-2)\\left(\\dfrac{6}{5}\\right)^{n-1}=-\\left(\\dfrac{6}{5}\\right)^{n-1}$</p><p>　$\\therefore \\ b_{n}=2-\\left(\\dfrac{6}{5}\\right)^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}}=2^{b_{n}}\\boldsymbol{=2^{2-\\left(\\frac{6}{5}\\right)^{n-1}}}$</p>",
+    
+
+    "$a_{1}=9$，$a_{n+1}=3^{n}a_{n}^{2}$":
+    // 上級5，対数型
+    "<p>$a_{1}$ および漸化式の形から $a_{n}&gt;0$．両辺 $3$ を底とする対数をとると</p><p>　$\\log_{3}a_{n+1}=\\log_{3}3^{n}a_{n}^{2}=2\\log_{3}a_{n}+n$</p><p>ここで $b_{n}=\\log_{3}a_{n}$ とおくと</p><p>　$b_{n+1}=2b_{n}+n$，$b_{1}=\\log_{3}a_{1}=2$</p><p>となるので</p><p>　$b_{n+1}+\\alpha(n+1)+\\beta=2(b_{n}+\\alpha n+\\beta)$</p><p>$\\Longleftrightarrow \\ b_{n+1}=2b_{n}+\\alpha n-\\alpha+\\beta$</p><p>とすると</p><p>　$\\begin{cases} \\alpha=1 \\\\ -\\alpha+\\beta=0 \\end{cases} \\ \\ \\therefore \\alpha=1，\\beta=1$</p><p>つまり $b_{n+1}+(n+1)+1=2(b_{n}+n+1)$ と変形できるので</p><p>　$b_{n}+n+1=(b_{1}+1+1)2^{n-1}=4\\cdot 2^{n-1}$</p><p>　$\\therefore \\ b_{n}=2^{n+1}-n-1$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}}=3^{b_{n}}\\boldsymbol{=3^{2^{n+1}-n-1}}$</p>",
+    
+
+    "$a_{1}=7$，$a_{n+1}=\\dfrac{7a_{n}+3}{a_{n}+5}$":
+    // 上級6，1次分数型
+    "<p>特性方程式</p><p>　$\\alpha=\\dfrac{7\\alpha+3}{\\alpha+5}$</p><p>を解くと $\\alpha=-1$，$3$ ．</p><p>　$b_{n}=\\dfrac{a_{n}+1}{a_{n}-3}$</p><p>とおく( $a_{n}=3$ とすると $a_{n+1}=3$ となり，$a_{1}=3$ となり矛盾．つまり $a_{n}\\neq 3$)．</p><p>　$b_{n+1}=\\dfrac{a_{n+1}+1}{a_{n+1}-3}$</p><p>　　　$=\\dfrac{\\dfrac{7a_{n}+3}{a_{n}+5}+1}{\\dfrac{7a_{n}+3}{a_{n}+5}-3}$</p><p>　　　$=\\dfrac{7a_{n}+3+(a_{n}+5)}{7a_{n}+3-3(a_{n}+5)}$</p><p>　　　$=\\dfrac{8a_{n}+8}{4a_{n}-12}=2b_{n}$</p><p>　$\\therefore \\ b_{n}=b_{1}\\cdot 2^{n-1}=2\\cdot 2^{n-1}=2^{n}$</p><p>また</p><p>$b_{n}=\\dfrac{a_{n}+1}{a_{n}-3} \\Longleftrightarrow (a_{n}-3)b_{n}=a_{n}+1$</p><p>　$\\hspace{23mm} \\Longleftrightarrow (b_{n}-1)a_{n}=3b_{n}+1$</p><p>　$\\hspace{23mm} \\Longleftrightarrow a_{n}=\\dfrac{3b_{n}+1}{b_{n}-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{3\\cdot 2^{n}+1}{2^{n}-1}}$</p>",
+    
+
+    "$a_{1}=4$，$a_{n+1}=\\dfrac{4a_{n}-9}{a_{n}-2}$":
+    // 上級7，1次分数型
+    "<p>特性方程式</p><p>　$\\alpha=\\dfrac{4\\alpha-9}{\\alpha-2}$</p><p>を解くと，$\\alpha=3$．$b_{n}=a_{n}-3$ とおくと</p><p>　$b_{n+1}=a_{n+1}-3$</p><p>　　　$=\\dfrac{4a_{n}-9}{a_{n}-2}-3$</p><p>　　　$=\\dfrac{a_{n}-3}{a_{n}-2}$</p><p>　　　$=\\dfrac{b_{n}}{b_{n}+1}$</p><p>$b_{1}=1$ および漸化式の形から $b_{n}>0$．両辺の逆数とると</p><p>　$\\dfrac{1}{b_{n+1}}=\\dfrac{b_{n}+1}{b_{n}}=\\dfrac{1}{b_{n}}+1$</p><p>ここで $\\left\\{\\dfrac{1}{b_{n}}\\right\\}$ は初項 $\\dfrac{1}{b_{1}}=1$，公差 $1$ の等差数列より</p><p>　$\\dfrac{1}{b_{n}}=n$</p><p>$\\Longleftrightarrow b_{n}=\\dfrac{1}{n}=a_{n}-3$</p><p>$\\Longleftrightarrow a_{n}=\\dfrac{1}{n}+3$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{3n+1}{n}}$</p>",
+    
+
+    "$a_{1}=1$，$a_{2}=2$，$\\dfrac{a_{n+2}}{a_{n}^{2}}=\\dfrac{1}{a_{n+1}}$":
+    // 上級8，対数型，隣接3項間
+    "<p>$a_{1}$，$a_{2}$ および漸化式の形から $a_{n}&gt;0$．両辺 $2$ を底とする対数をとると</p><p>　$\\log_{2}a_{n+2}-2\\log_{2}a_{n}=-\\log_{2}a_{n+1}$</p><p>ここで $b_{n}=\\log_{2}a_{n}$ とおくと</p><p>$b_{n+2}-2b_{n}=-b_{n+1} \\ \\Longleftrightarrow \\ b_{n+2}+b_{n+1}-2b_{n}=0$</p><p>となり，これを以下のように変形すると</p><p>　$\\begin{cases} b_{n+2}+2b_{n+1}=b_{n+1}+2b_{n} \\\\ b_{n+2}-b_{n+1}=-2(b_{n+1}-b_{n})\\end{cases}$</p><p>$\\{b_{n+1}+2b_{n}\\}$ ，$\\{b_{n+1}-b_{n}\\}$ の一般項はそれぞれ</p><p>$\\begin{cases} b_{n+1}+2b_{n}=b_{2}+2b_{1}=1 \\\\ b_{n+1}-b_{n}=(b_{2}-b_{1})(-2)^{n-1}=(-2)^{n-1}\\end{cases}$</p><p>辺々引くと</p><p>　$3b_{n}=1-(-2)^{n-1}$</p><p>　$\\therefore \\ b_{n}=\\dfrac{1}{3}\\{1-(-2)^{n-1}\\}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=2^{\\frac{1}{3}\\{1-(-2)^{n-1}\\}}}$</p>",
+    
+
+    "$a_{1}=1$，$a_{2}=4$，$a_{n+2}=4a_{n+1}-3a_{n}-2$":
+    // 上級9，隣接3項間の応用
+    "<p>特性方程式</p><p>　$\\alpha^2=4\\alpha-3$</p><p>を解くと，$\\alpha=1$，$3$ ．</p><p>与式を</p><p>　$\\begin{cases}a_{n+2}-a_{n+1}=3(a_{n+1}-a_{n})-2 \\\\ a_{n+2}-3a_{n+1}=a_{n+1}-3a_{n}-2\\end{cases}$</p><p>と変形すると，$a_{n+1}-a_{n}=b_{n}$，$a_{n+1}-3a_{n}=c_{n}$ とおけば</p><p>　$\\begin{cases} b_{n+1}=3b_{n}-2 \\hspace{6mm} b_{1}=a_{2}-a_{1}=3 \\\\ c_{n+1}=c_{n}-2 \\hspace{6mm} c_{1}=a_{2}-3a_{1}=1 \\end{cases}$</p><p>となる．$b_{n+1}-1=3(b_{n}-1)$ とできるので，$\\{b_{n}-1\\}$，$\\{c_{n}\\}$ の一般項は</p><p>　$\\begin{cases} b_{n}-1=(b_{1}-1)3^{n-1}=2\\cdot3^{n-1} \\\\ c_{n}=c_{1}+(n-1)(-2)=-2n+3\\end{cases}$</p><p>つまり</p><p>　$\\begin{cases} b_{n}=a_{n+1}-a_{n}=2\\cdot3^{n-1}+1 \\\\ c_{n}=a_{n+1}-3a_{n}=-2n+3\\end{cases}$</p><p>辺々引くと</p><p>　$2a_{n}=2\\cdot3^{n-1}+2n-2$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=3^{n-1}+n-1}$</p>",
+    
+
+    "$a_{1}=1$，$a_{2}=2$，$a_{n+2}=4a_{n+1}-4a_{n}+6$":
+    // 上級10，隣接3項間の応用
+    "<p>$a_{n}-k=b_{n}$ $\\Longleftrightarrow \\ a_{n}=b_{n}+k$ とすると</p><p>　$b_{n+2}+k=4(b_{n+1}+k)-4(b_{n}+k)+6$</p><p>$\\Longleftrightarrow \\ b_{n+2}-4b_{n+1}+4b_{n}=6-k$</p><p>ここで，$k=6$ とおくと，$b_{1}=a_{1}-6=-5$，$b_{2}=a_{2}-6=-4$．</p><p>さらに</p><p>　$b_{n+2}-2b_{n+1}=2(b_{n+1}-2b_{n})$</p><p>と変形すると，$\\{b_{n+1}-2b_{n}\\}$ は初項 $b_{2}-2b_{1}=6$，公比 $2$ の等比数列なので，一般項は</p><p>　$b_{n+1}-2b_{n}=6\\cdot2^{n-1}$</p><p>変形すると</p><p>　$b_{n+1}=2b_{n}+3\\cdot 2^{n}$</p><p>両辺 $2^{n+1}$ で割ると</p><p>　$\\dfrac{b_{n+1}}{2^{n+1}}=\\dfrac{b_{n}}{2^{n}}+\\dfrac{3}{2}$</p><p>$\\left\\{\\dfrac{b_{n}}{2^{n}}\\right\\}$ は初項 $\\dfrac{b_{1}}{2^{1}}=-\\dfrac{5}{2}$，公差 $\\dfrac{3}{2}$ の等差数列より</p><p>　$\\dfrac{b_{n}}{2^{n}}=-\\dfrac{5}{2}+(n-1)\\dfrac{3}{2}=\\dfrac{3n-8}{2}$</p><p>$\\therefore \\ b_{n}=\\dfrac{3n-8}{2}\\cdot 2^{n}=(3n-8)2^{n-1}$</p><p>$\\therefore \\ \\boldsymbol{a_{n}}=b_{n}+6\\boldsymbol{=(3n-8)2^{n-1}+6}$</p>",
+    
+
+    "$a_{1}=5$，$a_{2}=8$，$a_{n+2}=5a_{n+1}-6a_{n}+4n$":
+    // 上級11，隣接3項間の応用
+    "<p>$a_{n}=b_{n}+\\alpha n+\\beta$ として，与式に代入すると</p><p>$b_{n+2}+\\alpha(n+2)+\\beta=5(b_{n+1}+\\alpha(n+1)+\\beta)-6(b_{n}+\\alpha n+\\beta)+4n$</p><p>$\\Longleftrightarrow \\ b_{n+2}-5b_{n+1}+6b_{n}+(2\\alpha-4)n-3\\alpha+2\\beta=0$</p><p>ここで，$\\alpha=2$，$\\beta=3$ とおくと，$b_{n}=a_{n}-2n-3$．$\\{b_{n}\\}$ の漸化式は</p><p>　$\\begin{cases} b_{1}=a_{1}-2-3=0 \\\\ b_{2}=a_{2}-4-3=1 \\\\ b_{n+2}-5b_{n+1}+6b_{n}=0\\end{cases}$</p><p>を満たす．これを</p><p>　$\\begin{cases} {b_{n+2}-2b_{n+1}=3(b_{n+1}-2b_{n})} \\\\ b_{n+2}-3b_{n+1}=2(b_{n+1}-3b_{n})\\end{cases}$</p><p>と変形すると，$\\{b_{n+1}-2b_{n}\\}$，$\\{b_{n+1}-3b_{n}\\}$ の一般項はそれぞれ</p><p>　$\\begin{cases} b_{n+1}-2b_{n}=(b_{2}-2b_{1})\\cdot3^{n-1}=3^{n-1} \\\\ b_{n+1}-3b_{n}=(b_{2}-3b_{1})\\cdot2^{n-1}=2^{n-1}\\end{cases}$</p><p>辺々引くと</p><p>　$\\therefore \\ b_{n}=3^{n-1}-2^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=3^{n-1}-2^{n-1}+2n+3}$</p>",
+    
+
+    "$a_{1}=1$，$a_{n+1}=\\dfrac{a_{n}}{na_{n}+2}$":
+    // 上級12，逆数型，関数スライド型
+    "<p>$a_{1}$ および漸化式の形から，$a_{n}\\neq 0$．両辺の逆数をとると</p><p>　　$\\dfrac{1}{a_{n+1}}=\\dfrac{na_{n}+2}{a_{n}}=2\\cdot\\dfrac{1}{a_{n}}+n$</p><p>ここで $b_{n}=\\dfrac{1}{a_{n}}$ とおくと</p><p>　　$b_{n+1}=2b_{n}+n$，$b_{1}=\\dfrac{1}{a_{1}}=1$</p><p>ここでこの式を</p><p>　$b_{n+1}+\\alpha(n+1)+\\beta=2\\left(b_{n}+\\alpha n+\\beta\\right)$</p><p>とおいて，展開して元の式と比較すると $\\alpha=\\beta=1$．</p><p>　$b_{n}+n+1=(b_{1}+1+1) \\cdot 2^{n-1}$</p><p>　　$\\therefore \ b_{n}=3\\cdot2^{n-1}-n-1$</p><p>　　$\\therefore \\ \\boldsymbol{a_{n}}=\\dfrac{1}{b_{n}}\\boldsymbol{=\\boldsymbol{\\dfrac{1}{3\\cdot2^{n-1}-n-1}}}$</p>",
+    
+
+    "$a_{1}=1$，$a_{2}=2x$，$a_{n+2}=2xa_{n+1}+(1-x^{2})a_{n}$":
+    // 上級13，隣接3項間の応用，配信力たったの5さん寄贈
+    "<p>与式を</p><p>$\\begin{cases} {a_{n+2}-(x-1)a_{n+1}=(x+1)(a_{n+1}-(x-1)a_{n})} \\\\ a_{n+2}-(x+1)a_{n+1}=(x-1)(a_{n+1}-(x+1)a_{n})\\end{cases}$</p><p>と変形すると，$\\{a_{n+1}-(x-1)a_{n}\\}$，$\\{a_{n+1}-(x+1)a_{n}\\}$ の一般項は</p><p>$\\begin{cases} a_{n+1}-(x-1)a_{n}=(a_{2}-(x-1)a_{1})(x+1)^{n-1}=(x+1)^{n} \\\\ a_{n+1}-(x+1)a_{n}=(a_{2}-(x+1)a_{1})(x-1)^{n-1}=(x-1)^{n}\\end{cases}$</p><p>辺々引くと</p><p>　$2a_{n}=(x+1)^{n}-(x-1)^{n}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{(x+1)^{n}-(x-1)^{n}}{2}}$</p>",
+    
+
+    "$a_{1}=\\dfrac{1}{3}$，$a_{n+1}=\\dfrac{1}{3-2a_{n}}$":
+    // 上級14，1次分数型，元超級
+    "<p>　$\\alpha=\\dfrac{1}{3-2\\alpha}$</p><p>を解くと，$2\\alpha^{2}-3\\alpha+1=0 \\ \\Longleftrightarrow \\ \\alpha=1$，$\\dfrac{1}{2}$．</p><p>　$b_{n}=\\dfrac{a_{n}-\\dfrac{1}{2}}{a_{n}-1}$</p><p>とおく( $a_{n}=1$ とすると $a_{n+1}=1$ となり，$a_{1}=1$ となり矛盾．つまり $a_{n}\\neq 1$ )．</p><p>　$b_{n+1}=\\dfrac{a_{n+1}-\\dfrac{1}{2}}{a_{n+1}-1}$</p><p>　　　$=\\dfrac{\\dfrac{1}{3-2a_{n}}-\\dfrac{1}{2}}{\\dfrac{1}{3-2a_{n}}-1}$</p><p>　　　$=\\dfrac{2-(3-2a_{n})}{2-2(3-2a_{n})}$</p><p>　　　$=\\dfrac{2a_{n}-1}{4a_{n}-4}=\\dfrac{1}{2}b_{n}$</p><p>　$\\therefore \\ b_{n}=b_{1}\\left(\\dfrac{1}{2}\\right)^{n-1}=\\left(\\dfrac{1}{2}\\right)^{n+1}$</p><p>また</p><p>　$b_{n}=\\dfrac{a_{n}-\\dfrac{1}{2}}{a_{n}-1} \\Longleftrightarrow (a_{n}-1)b_{n}=a_{n}-\\dfrac{1}{2}$</p><p>　$\\hspace{24mm} \\Longleftrightarrow (b_{n}-1)a_{n}=b_{n}-\\dfrac{1}{2}$</p><p>　$\\hspace{24mm} \\Longleftrightarrow a_{n}=\\dfrac{b_{n}-\\dfrac{1}{2}}{b_{n}-1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}}=\\dfrac{\\left(\\dfrac{1}{2}\\right)^{n+1}-\\dfrac{1}{2}}{\\left(\\dfrac{1}{2}\\right)^{n+1}-1}\\boldsymbol{=\\dfrac{2^{n}-1}{2^{n+1}-1}}$</p>",
+    
+
+    "$a_{1}=1$，$a_{n+1}=\\dfrac{a_{n}}{1+n\\cdot 2^{n-1}a_{n}}$":
+    // 上級15，逆数型，等差×等比
+    "<p>$a_{1}$ および漸化式の形から，$a_{n}\\neq 0$．両辺の逆数をとると</p><p>　$\\dfrac{1}{a_{n+1}}=\\dfrac{1+n\\cdot 2^{n-1}a_{n}}{a_{n}}=\\dfrac{1}{a_{n}}+n\\cdot2^{n-1}$</p><p>$\\displaystyle S_{n}=\\sum_{k=1}^{n}k\\cdot 2^{k-1}$ とおくと，</p><p>　$S_{n}=1\\cdot1+2\\cdot2+\\cdots+n\\cdot2^{n-1}$</p><p>$\\underline{-)　2S_{n}=　1\\cdot2+\\cdots+(n-1)2^{n-1}+n\\cdot2^{n}}$</p><p>　$-S_{n}=1+2+2^{2}+\\cdots+2^{n-1}-n\\cdot 2^{n}$</p><p>これを整理すると</p><p>　$S_{n}=(n-1)2^{n}+1$</p><p>$n\\geqq 2$ のとき</p><p>　$\\dfrac{1}{a_{n}}=\\dfrac{1}{a_{1}}+S_{n-1}=(n-2)2^{n-1}+2$</p><p>これは $n=1$ のときも成り立つ．</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=\\dfrac{1}{(n-2)2^{n-1}+2}}$</p>",
+    
+
+    "$a_{1}=7$，$a_{n+1}=\\dfrac{1}{2}a_{n}^{2}+a_{n}-\\dfrac{1}{2}$":
+    // 上級16，元超級，白里さん寄贈
+    "<p>両辺に $1$ を足して整理すると</p><p>　$a_{n+1}+1=\\dfrac{1}{2}(a_{n}+1)^{2}$</p><p>$a_{1}+1&gt;0$ および漸化式の形から $a_{n}+1&gt;0$．両辺 $2$ を底とする対数をとると</p><p>　$\\log_{2}(a_{n+1}+1)=2\\log_{2}(a_{n}+1)-1$</p><p>$\\Longleftrightarrow \\log_{2}(a_{n+1}+1)-1=2(\\log_{2}(a_{n}+1)-1)$</p><p>$\\{\\log_{2}(a_{n}+1)-1\\}$ の一般項は</p><p>　$\\log_{2}(a_{n}+1)-1=(\\log_{2}(a_{1}+1)-1)2^{n-1}=2^{n}$</p><p>$\\Longleftrightarrow \\log_{2}(a_{n}+1)=2^{n}+1$</p><p>$\\Longleftrightarrow a_{n}+1=2^{2^{n}+1}$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=2^{2^{n}+1}-1}$</p>",
+    
+
+    "$a_{1}=1$，$a_{n+1}=na_{n}$":
+    // 上級17，階比型
+    "<p>両辺 $n!$ で割ると</p><p>　$\\dfrac{a_{n+1}}{n!}=\\dfrac{a_{n}}{(n-1)!}=\\cdots=\\dfrac{a_{1}}{0!}=1$</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=(n-1)!}$</p>",
+    
+
+    "$a_{1}=1$，$a_{n+1}=a_{n}+|n-10|$":
+    // 上級18，階差型，絶対値
+    "<p>$2\\leqq n\\leqq 10$ のとき</p><p>　$\\displaystyle a_{n}=a_{1}+\\sum_{k=1}^{n-1}(10-k)$</p><p>　　$\\displaystyle =1+10(n-1)-\\dfrac{1}{2}(n-1)n$</p><p>　　$\\displaystyle =-\\dfrac{1}{2}n^{2}+\\dfrac{21}{2}n-9$</p><p>これは $n=1$ のときも成り立つ．</p><p>$n\\geqq 11$ のとき</p><p>　$\\displaystyle a_{n}=a_{10}+\\sum_{k=10}^{n-1}(k-10)$</p><p>　　$\\displaystyle =46+\\{0+1+\\cdots+(n-11)\\}$</p><p>　　$\\displaystyle =46+\\dfrac{(n-10)(n-11)}{2}$</p><p>　　$\\displaystyle =\\dfrac{1}{2}n^{2}-\\dfrac{21}{2}n+101$</p><p>$\\therefore \\ \\boldsymbol {a_{n}=}\\begin{cases}\\boldsymbol {-\\dfrac{1}{2}n^{2}+\\dfrac{21}{2}n-9 \\ \\ (1\\leqq n\\leqq 10)} \\\\ \\boldsymbol {\\dfrac{1}{2}n^{2}-\\dfrac{21}{2}n+101 \\ \\ (n\\geqq 11)}\\end{cases}$</p>",
+    
+
+    "$a_{1}=0$，$b_{1}=1$，$a_{n+1}=a_{n}+3b_{n}+3$，$b_{n+1}=a_{n}-b_{n}$":
+    // 上級19，連立の応用
+    "<p>$a_{n+1}+\\alpha b_{n+1}+\\beta=\\gamma(a_{n}+\\alpha b_{n}+\\beta)$ とおく．左辺に与式を代入すると</p><p>$a_{n}+3b_{n}+3+\\alpha(a_{n}-b_{n})+\\beta=\\gamma(a_{n}+\\alpha b_{n}+\\beta)$</p><p>$\\Longleftrightarrow \\ (1+\\alpha)a_{n}+(3-\\alpha)b_{n}+3+\\beta=\\gamma a_{n}+\\gamma \\alpha b_{n}+\\gamma \\beta$</p><p>両辺係数比較して</p><p>　$\\begin{cases} 1+\\alpha=\\gamma \\\\ 3-\\alpha=\\gamma \\alpha \\\\ 3+\\beta=\\gamma \\beta\\end{cases}$</p><p>これを解くと</p><p>　$(\\alpha,\\gamma,\\beta)=(1,2,3)，\\left(-3,-2,-1\\right)$</p><p>より与式を</p><p>　$\\begin{cases}a_{n+1}+b_{n+1}+3=2(a_{n}+b_{n}+3) \\\\ a_{n+1}-3b_{n+1}-1=-2\\left(a_{n}-3b_{n}-1\\right)　\\end{cases}$</p><p>と変形できるから，$\\{a_{n}+b_{n}+3\\}$，$\\left\\{a_{n}-3b_{n}-1\\right\\}$ の一般項は</p><p>　$\\begin{cases}a_{n}+b_{n}+3=4\\cdot 2^{n-1}　\\\\ a_{n}-3b_{n}-1=-4(-2)^{n-1} \\end{cases}$</p><p>辺々引くと</p><p>　$4b_{n}+4=4\\cdot2^{n-1}+4(-2)^{n-1}$</p><p>　$\\therefore \\ \\boldsymbol{b_{n}=2^{n-1}+(-2)^{n-1}-1}$</p><p>$a_{n}=4\\cdot 2^{n-1}-b_{n}-3$ より</p><p>　$\\therefore \\ \\boldsymbol{a_{n}=3\\cdot2^{n-1}-(-2)^{n-1}-2}$</p>",
+    
+
+    "$a_{1}=2$，$S_{n+1}=3S_{n}+n^{2}+1$":
+    // 上級20，和
+    "<p>与式の $n$ のナンバリングを下にずらして，与式と辺々引くと</p><p>　　$S_{n+1}=3S_{n}+n^{2}+1$</p><p>　$\\underline{-)　S_{n}=3S_{n-1}+(n-1)^{2}+1　(n\\geqq 2)}$</p><p>　　$a_{n+1}=3a_{n}+2n-1$ $(n\\geqq 2)$</p><p>　$\\Longleftrightarrow \\ a_{n+1}+n+1=3(a_{n}+n)$ $(n\\geqq 2)$</p><p>与式に $n=1$ を代入すると</p><p>　$S_{2}=3S_{1}+1+1$ $\\Longleftrightarrow $ $a_{1}+a_{2}=3a_{1}+2$</p><p>となるから $a_{2}=6$．$\\{a_{n}+n\\}$ の一般項は</p><p>　$a_{n}+n=(a_{2}+2)3^{n-2}=8\\cdot3^{n-2}$ $(n\\geqq 2)$</p><p>　$\\therefore \\ \\boldsymbol {a_{n}=}\\begin{cases}\\boldsymbol {8\\cdot3^{n-2}-n \\ \\ (n\\geqq 2)} \\\\ \\boldsymbol {2 \\ \\ (n=1)}\\end{cases}$</p>",
+    
+
+    "$2S_{n}=a_{n}^{2}+n$ $(a_{n}&gt;0)$":
+    // 上級21，和
+    "<p>与式の $n$ のナンバリングを上にずらして，与式と辺々引くと</p><p>　　$2S_{n+1}=a_{n+1}^{2}+n+1$</p><p>　$\\underline{-)　2S_{n}=a_{n}^{2}+n　　}$</p><p>　　$2a_{n+1}=a_{n+1}^{2}-a_{n}^{2}+1$</p><p>　$\\Longleftrightarrow \\ a_{n}^{2}=(a_{n+1}-1)^{2}$</p><p>解くと</p><p>　$a_{n+1}=1\\pm a_{n}$</p><p>与式に $n=1$ を代入すると</p><p>　$2S_{1}=2a_{1}=a_{1}^{2}+1$ $\\Longleftrightarrow $ $a_{1}=1$</p><p>となるから $a_{n}&gt;0$ より</p><p>　$a_{n+1}=1+a_{n}$</p><p>　$\\therefore \\ \\boldsymbol {a_{n}=n}$</p>",
+    
+
+    "$S_{1}=2$，$S_{n+1}-4S_{n}=3^{n+1}-2$":
+    // 上級22，和，サイトにあり
+    "<p>与式の $n$ のナンバリングを下にずらす．</p><p>　$S_{n}-4S_{n-1}=3^{n}-2　(n\\geqq 2)$</p><p>与式と辺々引くと</p><p>　　$S_{n+1}-4S_{n}=3^{n+1}-2$</p><p>$\\underline{ -)　S_{n}-4S_{n-1}=3^{n}-2　(n\\geqq 2)}$</p><p>　　$a_{n+1}-4a_{n}=2\\cdot 3^{n}　(n\\geqq 2) \\ \\cdots$ ①</p><p>ここで</p><p>　$S_{2}=4S_{1}+3^{2}-2=15$　$\\therefore$ $a_{2}=13$</p><p>つまり</p><p>　$a_{2}-4a_{1}=13-4S_{1}=5\\neq 2\\cdot3$</p><p>より ①は $n=1$ では成り立たない．</p><p>①の両辺 $3^{n+1}$ で割ると</p><p>　$\\dfrac{a_{n+1}}{3^{n+1}}-\\dfrac{4}{3}\\cdot\\dfrac{a_{n}}{3^{n}}=\\dfrac{2}{3}$</p><p>$\\Longleftrightarrow \\ \\dfrac{a_{n+1}}{3^{n+1}}+2=\\dfrac{4}{3}\\left(\\dfrac{a_{n}}{3^{n}}+2\\right)$</P><p>となるから，$\\left\\{\\dfrac{a_{n}}{3^{n}}+2\\right\\}$ の一般項は，$n\\geqq 2$ であることを踏まえ</p><p>　$\\dfrac{a_{n}}{3^{n}}+2=\\left(\\dfrac{a_{2}}{3^{2}}+2\\right) \\left(\\dfrac{4}{3}\\right)^{n-2}=\\dfrac{31}{9} \\left(\\dfrac{4}{3}\\right)^{n-2}$</p><p>$\\Longleftrightarrow \\ \\dfrac{a_{n}}{3^{n}}=\\dfrac{31}{9} \\left(\\dfrac{4}{3}\\right)^{n-2}-2$</p><p>　$\\therefore \\ a_{n}=31\\cdot 4^{n-2}-2\\cdot3^{n}$</p><p>$n=1$ のときも考慮すると</p><p>　$\\boldsymbol {a_{n}=\\begin{cases} \\boldsymbol {31\\cdot 4^{n-2}-2\\cdot3^{n} \\ (n\\geqq 2)} \\\\ \\boldsymbol {2 \\hspace{3.2cm} (n=1)} \\end{cases}}$</p>",
+    
+ 
         },
         "D": {
-            "$\\displaystyle \\int_{0}^{\\infty} e^{-x} \\, dx$": "<p>$\\displaystyle \\int_{0}^{\\infty} e^{-x} \\, dx = 1$</p>"
+            "$a_{1}=1，$$a_{2n}=2a_{2n-1}+1，$$a_{2n+1}=a_{2n}+n$":
+    // 超級1
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=0，$$a_{2}=1，$$a_{3}=2，$$a_{n+3}=6a_{n+2}-12a_{n+1}+8a_{n}$":
+    // 超級2
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=2，$$na_{n+1}=a_{n}+n^{2}$":
+    // 超級3，白里さん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=3，$$a_{2}=1，$$a_{n+2}-a_{n+1}+a_{n}=2$":
+    // 超級4，とますさん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=1，$$a_{n+1}=\\dfrac{_{n+1}\\hspace{-0.3mm}{\\rm C}_{2}}{a_{n}}$":
+    // 超級5，とますさん寄贈，rand3=61
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=1，$$a_{2}=3，$$a_{n+2}^{4}a_{n+1}^{4}-2^{n+1}a_{n+2}^{2}a_{n+1}^{2}=4a_{n+1}^{4}a_{n}^{4}-2^{n+2}a_{n+1}^{2}a_{n}^{2}$":
+    // 超級6，りーくーとさん寄贈，rand3=62
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=1，$$\\displaystyle a_{n+1}= \\sum_{k=1}^{n}2ka_{k}+2$":
+    // 超級7，白里さん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=1，$$a_{2}=2，$$\\dfrac{1}{a_{n+2}}-\\dfrac{1}{a_{n+1}}+\\dfrac{1}{(n+2)a_{n}}=0$":
+    // 超級8，白里さん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=\\dfrac{1}{\\sqrt{6}-\\sqrt{2}}，$$a_{n+1}=-1+2a_{n}^2$":
+    // 超級9，abachaさん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=\\sqrt{3}，$$a_{n+1}=\\dfrac{a_{n}+1}{1-a_{n}}$":
+    // 超級10，しんのす毛さん寄贈，rand3=66
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=1，$$\\dfrac{1}{a_{n+1}}=6a_{1}a_{2}\\cdots a_{n}+\\dfrac{1}{a_{1}a_{2}\\cdots a_{n}}+6$":
+    // 超級11，主任さん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=1，$$a_{n}>0，$$a_{n+1}^{2}a_{n}+2a_{n+1}-a_{n}=0$":
+    // 超級12，雨乃松さん寄贈，rand3=68
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=3$$，$$a_{n+1}=a_{n}^{2}-2$":
+    // 超級13，warning，うめぼしさん寄贈，rand3=69
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=\\dfrac{8}{3}，$$a_{n+1}=a_{n}^{3}+3a_{n}$":
+    // 超級14，warning，全理さん寄贈，rand3=70
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=2，$$a_{n+1}=\\dfrac{a_{n}^{2}+2}{2a_{n}}$":
+    // 超級15，warning，しんのす毛さん寄贈，rand3=71
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=0，$$a_{2n}=2a_{n}，$$a_{2n+1}=2a_{n}+1$":
+    // 超級16，warning，白里さん寄贈，rand3=72
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=1，$$a_{2}=\\dfrac{1}{4}，$$a_{n}\\neq \\dfrac{1}{2}，$$2a_{n+1}^{2}-2a_{n}a_{n+2}-2a_{n+1}+a_{n}+a_{n+2}$ $=-\\dfrac{3}{4}\\left(-\\dfrac{1}{12}\\right)^{n}$":
+    // 超級17，danger，白里さん寄贈，rand3=73
+    "<p>TBA</p>",
+    
+
+    "$a_{1}$ $=$ $a_{2}$ $=$ $a_{3}$ $=$ $1$$，$ $a_{n+3}$ $=$ $\\dfrac{a_{n+2}a_{n+1}+1}{a_{n}}$":
+    // 超級18，danger，Auさん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=2，$$a_{n+1}=a_{n}^{2}+n^{2}+n-3\\left[\\dfrac{a_{n}^{2}+n^{2}+n}{3}\\right]$":
+    // ガウスは問題文が違うのでここに，超級19，とますさん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{0}=1，$$a_{n+1}=a_{n}+\\left[\\sqrt{n+1}\\right]+1$ $(n\\geqq0)$":
+    // ガウスは問題文が違うのでここに，超級20，とますさん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=1，$$a_{n}=a_{\\left[\\frac{n+1}{2}\\right]}+a_{\\left[\\frac{n}{2}\\right]}+cn$ $(n\\geqq2)$":
+    // ガウスは問題文が違うのでここに，超級21，warning，開集合さん寄贈
+    "<p>TBA</p>",
+    
+
+
+    "$a_{1}=b_{1}=-1，$$a_{n+1}=2a_{n}-6b_{n}+3n，$$b_{n+1}=a_{n}+7b_{n}+4$":
+    // 超級22，rand3=80
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=\\sqrt{3}+1，$$b_{1}=\\sqrt{3}-1，$$a_{n+1}=\\dfrac{a_{n}^{2}-b_{n}^{2}}{\\sqrt{a_{n}^{2}+b_{n}^{2}}}，$$b_{n+1}=\\dfrac{2a_{n}b_{n}}{\\sqrt{a_{n}^{2}+b_{n}^{2}}}$":
+    // 超級23，白里さん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=1，$$a_{n}=\\dfrac{-S_{n}^{2}}{n(n+1)-S_{n}}$ $(n\\geqq 2)$":
+    // 超級24，rand3=91
+    "<p>TBA</p>",
+    
+
+    "$S_{0}=0，$$\\displaystyle a_{n}=\\dfrac{1}{n}\\sum_{k=0}^{n-1}S_{k}+2-a_{n}$":
+    // 超級25，swan-Pさん寄贈
+    "<p>TBA</p>",
+    
+
+    "$a_{1}=5，$$b_{1}=2，$$c_{1}=-5，$$\\displaystyle a_{n+1}=a_{n}-b_{n}+2c_{n}，$$\\displaystyle b_{n+1}=a_{n}-2b_{n}+c_{n}，$$\\displaystyle c_{n+1}=2a_{n}-3b_{n}-3c_{n}$":
+    // 超級26，warning，NEMOさん寄贈
+    "<p>TBA</p>",
+    
         }
     },
     "1": {
         "A": {
-            "$\\displaystyle \\frac{d}{dx}(e^x)$": "<p>$\\displaystyle \\frac{d}{dx}(e^x) = e^x$</p>"
+            "$12xy^{3}-27x^{3}y$": "<p>　$12xy^{3}-27x^{3}y$</p><p>$=3xy(4y^{2}-9x^{2})$</p><p>$=\\boldsymbol{3xy(2y+3x)(2y-3x)}$</p>", // 中学1
+    "$6x^{2}+x-1$": "<p>　$6x^{2}+x-1$</p><p>$=\\boldsymbol{(2x+1)(3x-1)}$</p>", // たすきがけ1
+    "$16a^{3}+54b^{3}$": "<p>　$16a^{3}+54b^{3}$</p><p>$=2(8a^{3}+27b^{3})$</p><p>$=\\boldsymbol{2(2a+3b)(4a^{2}-6ab+9b^{2})}$</p>", // 3乗
+    "$(x^{2}-2x)^{2}-11(x^{2}-2x)+24$": "<p>　$(x^{2}-2x)^{2}-11(x^{2}-2x)+24$</p><p>$=A^{2}-11A+24$　$(A=x^{2}-2x)$</p><p>$=(A-3)(A-8)$</p><p>$=(x^{2}-2x-3)(x^{2}-2x-8)$</p><p>$=\\boldsymbol{(x-3)(x+1)(x-4)(x+2)}$</p>", // 置き換え
+    "$4xy^{2}z+x^{2}yz^{2}-2xyz$": "<p>　$4xy^{2}z+x^{2}yz^{2}-2xyz$</p><p>$=\\boldsymbol{xyz(4y+xz-2)}$</p>", // 中学2，オリジナル
+    "$9x^{2}+12xy+4y^{2}$": "<p>　$9x^{2}+12xy+4y^{2}$</p><p>$=\\boldsymbol{(3x+2y)^{2}}$</p>", // 中学3，，東京書籍wide
+    "$x^{2}-3x-10$": "<p>　$x^{2}-3x-10$</p><p>$=\\boldsymbol{(x-5)(x+2)}$</p>", // 中学4
+    "$2x^{2}-14x+12$": "<p>　$2x^{2}-14x+12$</p><p>$=2(x^{2}-7x+6)$</p><p>$=\\boldsymbol{2(x-1)(x-6)}$</p>", // 中学5
+    "$16x^{2}-49y^{2}$": "<p>　$16x^{2}-49y^{2}$</p><p>$=\\boldsymbol{(4x+7y)(4x-7y)}$</p>", // 中学6
+    "$x^{2}+33x+90$": "<p>　$x^{2}+33x+90$</p><p>$=\\boldsymbol{(x+30)(x+3)}$</p>", // 中学7，主任
+    "$x^{2}+26x+144$": "<p>　$x^{2}+26x+144$</p><p>$=(x+13)^{2}-25$</p><p>$=(x+13+5)(x+13-5)$</p><p>$=\\boldsymbol{(x+18)(x+8)}$</p>", // 中学8，白里
+    "$12x^{2}+108x+84$": "<p>　$12x^{2}+108x+84$</p><p>$=\\boldsymbol{12(x^{2}+9x+7)}$</p>", // 中学9，白里
+    "$9x^{2}+123x$": "<p>　$9x^{2}+123x$</p><p>$=\\boldsymbol{3x(3x+41)}$</p>", // 中学10，オリジナル
+    "$x^{2}-4x-12$": "<p>　$x^{2}-4x-12$</p><p>$=\\boldsymbol{(x+2)(x-6)}$</p>", // 中学11，オリジナル
+    "$3x^{2}+2x-5$": "<p>　$3x^{2}+2x-5$</p><p>$=\\boldsymbol{(x-1)(3x+5)}$</p>", // たすきがけ2，東京書籍検定教科書例題
+    "$2x^{2}-x-1$": "<p>　$2x^{2}-x-1$</p><p>$=\\boldsymbol{(2x+1)(x-1)}$</p>", // たすきがけ3，主任
+    "$8x^{2}+19x+6$": "<p>　$8x^{2}+19x+6$</p><p>$=\\boldsymbol{(x+2)(8x+3)}$</p>", // たすきがけ4，オリジナル
+    "$6x^{2}+7xy-24y^{2}$": "<p>　$6x^{2}+7xy-24y^{2}$</p><p>$=\\boldsymbol{(2x-3y)(3x+8y)}$</p>", // たすきがけ5，東京書籍wide 
+    "$16x^{2}+43xy+27y^{2}$": "<p>　$16x^{2}+43xy+27y^{2}$</p><p>$=\\boldsymbol{(16x+27y)(x+y)}$</p>", // たすきがけ6，白里
+    "$16x^{2}+48xy+27y^{2}$": "<p>　$16x^{2}+48xy+27y^{2}$</p><p>$=\\boldsymbol{(4x+3y)(4x+9y)}$</p>", // たすきがけ7，白里
+    "$8x^{2}+7xy-18y^{2}$": "<p>　$8x^{2}+7xy-18y^{2}$</p><p>$=\\boldsymbol{(8x-9y)(x+2y)}$</p>", // たすきがけ8，Z会
+    "$2x^{3}-x^{2}-18x+9$": "<p>　$2x^{3}-x^{2}-18x+9$</p><p>$=x^{2}(2x-1)-9(2x-1)$</p><p>$=(x^{2}-9)(2x-1)$</p><p>$=\\boldsymbol{(x+3)(x-3)(2x-1)}$</p>", // 共通因数探し
+    "$(x+y)(x+y+5)+6$": "<p>　$(x+y)(x+y+5)+6$</p><p>$=A(A+5)+6$　$(A=x+y)$</p><p>$=A^{2}+5A+6$</p><p>$=(A+2)(A+3)$</p><p>$=\\boldsymbol{(x+y+2)(x+y+3)}$</p>", // 置き換え，東京書籍wide
+    "$x^{2}-y^{2}+4yz-4z^{2}$": "<p>　$x^{2}-y^{2}+4yz-4z^{2}$</p><p>$=x^{2}-(y^{2}-4yz+4z^{2})$</p><p>$=x^{2}-(y-2z)^{2}$</p><p>$=x^{2}-A^{2}$　$(A=y-2z)$</p><p>$=(x+A)(x-A)$</p><p>$=\\boldsymbol{(x+y-2z)(x-y+2z)}$</p>", // 置き換え，Z会
+    "$4a(ax^{2}+bx+c)+b^{2}-4ac$": "<p>　$4a(ax^{2}+bx+c)+b^{2}-4ac$</p><p>$=4a^{2}x^{2}+4abx+b^{2}$</p><p>$=\\boldsymbol{(2ax+b)^{2}}$</p>", // オムペン
+    "$x^{4}-16$": "<p>　$x^{4}-16$</p><p>$=(x^{2}+4)(x^{2}-4)$</p><p>$=\\boldsymbol{(x^{2}+4)(x+2)(x-2)}$</p>", // 主任
+    "$x^{3}+3x^{2}+3x+1$": "<p>　$x^{3}+3x^{2}+3x+1$</p><p>$=\\boldsymbol{(x+1)^{3}}$</p>", // 3乗，主任
+    "$8x^{3}-12x^{2}+6x-1$": "<p>　$8x^{3}-12x^{2}+6x-1$</p><p>$=\\boldsymbol{(2x-1)^{3}}$</p>", // 3乗2，主任
+    "$x^{3}-64y^{3}$": "<p>　$x^{3}-64y^{3}$</p><p>$=\\boldsymbol{(x-4y)(x^{2}+4xy+16y^{2})}$</p>", // 3乗，オリジナル
+    "$x^{4}-15x^{2}-16$": "<p>　$x^{4}-15x^{2}-16$</p><p>$=(x^{2}+1)(x^{2}-16)$</p><p>$=\\boldsymbol{(x^{2}+1)(x+4)(x-4)}$</p>", // 置き換え，オリジナル
         },
         "B": {
-            "$\\displaystyle \\frac{d}{dx}(x^3)$": "<p>$\\displaystyle \\frac{d}{dx}(x^3) = 3x^2$</p>"
+            "$x(x-1)(x-2)(x-3)-24$": "<p>　$x(x-1)(x-2)(x-3)-24$</p><p>$=x(x-3)(x-1)(x-2)-24$</p><p>$=(x^{2}-3x)(x^{2}-3x+2)-24$</p><p>$=A(A+2)-24$　$(A=x^{2}-3x)$</p><p>$=A^{2}+2A-24$</p><p>$=(A+6)(A-4)$</p><p>$=(x^{2}-3x+6)(x^{2}-3x-4)$</p><p>$=\\boldsymbol{(x^{2}-3x+6)(x-4)(x+1)}$</p>", // 工夫，置き換え
+    "$(x-1)(x-3)(x-5)(x-7)-9$": "<p>　$(x-1)(x-3)(x-5)(x-7)-9$</p><p>$=(x-1)(x-7)(x-3)(x-5)-9$</p><p>$=\\{(x^{2}-8x)+7\\}\\{(x^{2}-8x)+15\\}-9$</p><p>$=(A+7)(A+15)-9$　$(A=x^{2}-8x)$</p><p>$=A^{2}+22A+96$</p><p>$=(A+6)(A+16)$</p><p>$=(x^{2}-8x+6)(x^{2}-8x+16)$</p><p>$=\\boldsymbol{(x^{2}-8x+6)(x-4)^2}$</p>", // 工夫，置き換え，Z会
+    "$a^{3}-a^{2}b-ac^{2}+bc^{2}$": "<p>　$a^{3}-a^{2}b-ac^{2}+bc^{2}$</p><p>$=(c^{2}-a^{2})b+a(a^{2}-c^{2})$</p><p>$=(c^{2}-a^{2})b-a(c^{2}-a^{2})$</p><p>$=(c^{2}-a^{2})(b-a)$</p><p>$=\\boldsymbol{(c+a)(c-a)(b-a)}$</p>", // 最低次数整理
+    "$2x^{2}-5xy-3y^{2}+x+11y-6$": "<p>　$2x^{2}-5xy-3y^{2}+x+11y-6$</p><p>$=2x^{2}+(1-5y)x-3y^{2}+11y-6$</p><p>$=2x^{2}+(1-5y)x-(3y^{2}-11y+6)$</p><p>$=2x^{2}+(1-5y)x-(3y-2)(y-3)$</p><p>$=\\{2x+(y-3)\\}\\{x-(3y-2)\\}$</p><p>$=\\boldsymbol{(2x+y-3)(x-3y+2)}$</p>", // 最低次数整理
+    "$x^{2}+3xy+2y^{2}+x+3y-2$": "<p>　$x^{2}+3xy+2y^{2}+x+3y-2$</p><p>$=x^{2}+(3y+1)x+2y^{2}+3y-2$</p><p>$=x^{2}+(3y+1)x+(2y-1)(y+2)$</p><p>$=\\boldsymbol{(x+2y-1)(x+y+2)}$</p>", // 最低次数整理，東京書籍wide
+    "$x^{2}+5xy+6y^{2}+7x+18y+12$": "<p>　$x^{2}+5xy+6y^{2}+7x+18y+12$</p><p>$=x^{2}+(5y+7)x+6(y^{2}+3y+2)$</p><p>$=x^{2}+(5y+7)x+6(y+1)(y+2)$</p><p>$=\\{x+2(y+2)\\}\\{x+3(y+1)\\}$</p><p>$=\\boldsymbol{(x+2y+4)(x+3y+3)}$</p>", // 最低次数整理，Z会
+    "$2x^{2}+3xy+y^{2}+x-y-6$": "<p>　$2x^{2}+3xy+y^{2}+x-y-6$</p><p>$=2x^{2}+(3y+1)x+y^{2}-y-6$</p><p>$=2x^{2}+(3y+1)x+(y-3)(y+2)$</p><p>$=\\{2x+(y-3)\\}\\{x+(y+2)\\}$</p><p>$=\\boldsymbol{(2x+y-3)(x+y+2)}$</p>", // 最低次数整理，2014宮城大
+    "$3x^{2}+13ax+4a^{2}+8x-a-3$": "<p>　$3x^{2}+13ax+4a^{2}+8x-a-3$</p><p>$=3x^{2}+(13a+8)x+4a^{2}-a-3$</p><p>$=3x^{2}+(13a+8)x+(4a+3)(a-1)$</p><p>$=\\{3x+(a-1)\\}\\{x+(4a+3)\\}$</p><p>$=\\boldsymbol{(3x+a-1)(x+4a+3)}$</p>", // 最低次数整理，オリジナル
+    "$(x^{2}+4x)^{2}+8x^{2}+32x+15$": "<p>　$(x^{2}+4x)^{2}+8x^{2}+32x+15$</p><p>$=A^{2}+8A+15$　$(A=x^{2}+4x)$</p><p>$=(A+3)(A+5)$</p><p>$=(x^{2}+4x+3)(x^{2}+4x+5)$</p><p>$=\\boldsymbol{(x+1)(x+3)(x^{2}+4x+5)}$</p>", // 置き換え，2015北海学園大
+    "$4a^{4}-17a^{2}b^{2}+4b^{4}$": "<p>　$4a^{4}-17a^{2}b^{2}+4b^{4}$</p><p>$=(4a^{2}-b^{2})(a^{2}-4b^{2})$</p><p>$=\\boldsymbol{(2a+b)(2a-b)(a+2b)(a-2b)}$</p>", // たすきがけ，2018昭和大薬
+    "$-9x^{2}+18x-9+4y^{2}$": "<p>　$-9x^{2}+18x-9+4y^{2}$</p><p>$=4y^{2}-9(x-1)^{2}$</p><p>$=\\{2y+3(x-1)\\}\\{2y-3(x-1)\\}$</p><p>$=\\boldsymbol{(2y+3x-3)(2y-3x+3)}$</p>", // 主任
+    "$(ax+by)^{2}+(ay-bx)^{2}$": "<p>　$(ax+by)^{2}+(ay-bx)^{2}$</p><p>$=a^{2}x^{2}+b^{2}y^{2}+a^{2}y^{2}+b^{2}x^{2}$</p><p>$=(a^{2}+b^{2})x^{2}+(a^{2}+b^{2})y^{2}$</p><p>$=\\boldsymbol{(a^{2}+b^{2})(x^{2}+y^{2})}$</p>", // オムペン
+    "$x^{6}-3x^{4}+3x^{2}-1$": "<p>　$x^{6}-3x^{4}+3x^{2}-1$</p><p>$=(x^{2}-1)^{3}$</p><p>$=\\{(x+1)(x-1)\\}^{3}$</p><p>$=\\boldsymbol{(x+1)^{3}(x-1)^{3}}$</p>", // 3乗，主任
+    "$x^{2}-102x+2520$": "<p>　$x^{2}-102x+2520$</p><p>$=(x-51)^{2}-81$</p><p>$=(x-51+9)(x-51-9)$</p><p>$=\\boldsymbol{(x-42)(x-60)}$</p>", // 清水団
+    "$x^{3}+2x^{2}y-x^{2}z-3xy^{2}-2xyz+3y^{2}z$": "<p>　$x^{3}+2x^{2}y-x^{2}z-3xy^{2}-2xyz+3y^{2}z$</p><p>$=(-x^{2}-2xy+3y^{2})z+x^{3}+2x^{2}y-3xy^{2}$</p><p>$=-(x^{2}+2xy-3y^{2})z+(x^{2}+2xy-3y^{2})x$</p><p>$=\\boldsymbol{(x+3y)(x-y)(x-z)}$</p>", // 最低次数整理，オリジナル
+    "$x^{3}-2x^{2}y+xy-2y^{2}$": "<p>　$x^{3}-2x^{2}y+xy-2y^{2}$</p><p>$=-2y^{2}+(-2x^{2}+x)y+x^{3}$</p><p>$=(-2y+x)(y+x^{2})$</p><p>$=\\boldsymbol{(x^{2}+y)(x-2y)}$</p>", // 最低次数整理，オリジナル
+    "$x^{3}-2x^{2}-5x+6$": "<p>　$x^{3}-2x^{2}-5x+6$</p><p>$=(x-1)(x^{2}-x-6)$</p><p>$=\\boldsymbol{(x-1)(x+2)(x-3)}$</p>", // 因数定理
+    "$x^{3}+4x^{2}-7x-10$": "<p>　$x^{3}+4x^{2}-7x-10$</p><p>$=(x+1)(x^{2}+3x-10)$</p><p>$=\\boldsymbol{(x+1)(x+5)(x-2)}$</p>", // 因数定理
+    "$2x^{3}-3x^{2}-11x+6$": "<p>　$2x^{3}-3x^{2}-11x+6$</p><p>$=(x+2)(2x^{2}-7x+3)$</p><p>$=\\boldsymbol{(x+2)(2x-1)(x-3)}$</p>", // 因数定理
+    "$x(x+1)(x+2)-4\\cdot 5\\cdot 6$": "<p>　$x(x+1)(x+2)-4\\cdot 5\\cdot 6$</p><p>$=x^{3}+3x^{2}+2x-120$</p><p>$=\\boldsymbol{(x-4)(x^{2}+7x+30)}$</p>", // 因数定理，主任
+    "$x^{4}-2x^{3}+2x^{2}-7x+6$": "<p>　$x^{4}-2x^{3}+2x^{2}-7x+6$</p><p>$=(x-1)(x^{3}-x^{2}+x-6)$</p><p>$=\\boldsymbol{(x-1)(x-2)(x^{2}+x+3)}$</p>", // 因数定理
+    "$x^{4}+9x^{2}+25$": "<p>　$x^{4}+9x^{2}+25$</p><p>$=x^{4}+10x^{2}+25-x^{2}$</p><p>$=(x^{2}+5)^{2}-x^{2}$</p><p>$=(x^{2}+5+x)(x^{2}+5-x)$</p><p>$=\\boldsymbol{(x^{2}+x+5)(x^{2}-x+5)}$</p>", // 複2次式
+    "$x^{4}-7x^{2}+1$": "<p>　$x^{4}-7x^{2}+1$</p><p>$=x^{4}+2x^{2}+1-9x^{2}$</p><p>$=(x^{2}+1)^{2}-9x^{2}$</p><p>$=(x^{2}+1+3x)(x^{2}+1-3x)$</p><p>$=\\boldsymbol{(x^{2}+3x+1)(x^{2}-3x+1)}$</p>", // 複2次式
+    "$x^{4}+4x^{3}+6x^{2}+4x+5$": "<p>　$x^{4}+4x^{3}+6x^{2}+4x+5$</p><p>$=x^{4}+6x^{2}+5+4x(x^{2}+1)$</p><p>$=(x^{2}+1)(x^{2}+5)+4x(x^{2}+1)$</p><p>$=\\boldsymbol{(x^{2}+1)(x^{2}+4x+5)}$</p>", // 牡蠣
+    "$x^{2}-101x+2520$": "<p>　$x^{2}-101x+2520$</p><p>$=x^{2}-101x+2^{3}\\cdot 3^{2}\\cdot 5\\cdot 7$</p><p>$=\\boldsymbol{(x-56)(x-45)}$</p>", // 清水団
+    "$xyz+2xy+2yz+3zx+6x+4y+6z+12$": "<p>　$xyz+2xy+2yz+3zx+6x+4y+6z+12$</p><p>$=(xy+2y+3x+6)z+2xy+6x+4y+12$</p><p>$=(xy+2y+3x+6)z+(xy+2y+3x+6)2$</p><p>$=(xy+2y+3x+6)(z+2)$</p><p>$=\\boldsymbol{(x+2)(y+3)(z+2)}$</p>", // 主任
+    "$25x^{4}+6x^{2}+1$": "<p>　$25x^{4}+6x^{2}+1$</p><p>$=25x^{4}+10x^{2}+1-4x^{2}$</p><p>$=(5x^{2}+1)^{2}-4x^{2}$</p><p>$=(5x^{2}+1+2x)(5x^{2}+1-2x)$</p><p>$=\\boldsymbol{(5x^{2}+2x+1)(5x^{2}-2x+1)}$</p>", // 複2次式，主任
+    "$3x^{3}-x^{2}y+3x^{2}-2xy^{2}-3x+2y^{2}+y-3$": "<p>　$3x^{3}-x^{2}y+3x^{2}-2xy^{2}-3x+2y^{2}+y-3$</p><p>$=(2-2x)y^{2}+(1-x^{2})y+3x^{3}+3x^{2}-3x-3$</p><p>$=2(1-x)y^{2}+(1-x^{2})y+3x(x^{2}-1)+3(x^{2}-1)$</p><p>$=2(1-x)y^{2}+(1-x^{2})y+3(x+1)^{2}(x-1)$</p><p>$=(1-x)\\{2y^{2}+(1+x)y-3(x+1)^{2}\\}$</p><p>$=(1-x)\\{2y+3(x+1)\\}\\{y-(x+1)\\}$</p><p>$=\\boldsymbol{(x-1)(3x+2y+3)(x-y+1)}$</p>", // 最低次数整理，オリジナル
+    "$x^{4}+x^{2}y^{2}+y^{4}$": "<p>　$x^{4}+x^{2}y^{2}+y^{4}$</p><p>$=x^{4}+2x^{2}y^{2}+y^{4}-x^{2}y^{2}$</p><p>$=(x^{2}+y^{2})^{2}-x^{2}y^{2}$</p><p>$=\\boldsymbol{(x^{2}+y^{2}+xy)(x^{2}+y^{2}-xy)}$</p>", // 複2次式，学院テキスト
+    "$9x^{4}-7x^{2}+1$": "<p>　$9x^{4}-7x^{2}+1$</p><p>$=9x^{4}-6x^{2}+1-x^{2}$</p><p>$=(3x^{2}-1)^{2}-x^{2}$</p><p>$=(3x^{2}-1+x)(3x^{2}-1-x)$</p><p>$=\\boldsymbol{(3x^{2}+x-1)(3x^{2}-x-1)}$</p>", // 複2次式
+    "$x^{8}+x^{4}+1$": "<p>　$x^{8}+x^{4}+1$</p><p>$=x^{8}+2x^{4}+1-x^{4}$</p><p>$=(x^{4}+1)^{2}-x^{4}$</p><p>$=(x^{4}+1+x^{2})(x^{4}+1-x^{2})$</p><p>$=(x^{4}+2x^{2}+1-x^{2})(x^{4}-x^{2}+1)$</p><p>$=\\{(x^{2}+1)^{2}-x^{2}\\}(x^{4}-x^{2}+1)$</p><p>$=\\boldsymbol{(x^{2}+x+1)(x^{2}-x+1)(x^{4}-x^{2}+1)}$</p>", // 複2次式2回
+    "$2x^{4}+11x^{3}+6x^{2}+4x-5$": "<p>　$2x^{4}+11x^{3}+6x^{2}+4x-5$</p><p>$=(2x-1)(x^{3}+6x^{2}+6x+5)$</p><p>$=\\boldsymbol{(2x-1)(x+5)(x^{2}+x+1)}$</p>", // 因数定理
+    "$2x^{4}-7x^{3}+4x^{2}-2x-3$": "<p>　$2x^{4}-7x^{3}+4x^{2}-2x-3$</p><p>$=(2x+1)(x^{3}-4x^{2}+4x-3)$</p><p>$=\\boldsymbol{(2x+1)(x-3)(x^{2}-x+1)}$</p>", // 因数定理
         },
         "C": {
-            "$\\displaystyle \\int_0^1 x^3 \\, dx$": "<p>$\\displaystyle \\int_0^1 x^3 \\, dx = \\frac{1}{4}$</p>"
+            
+        "$a^{3}+b^{3}+c^{3}-3abc$": // 上級1，3乗3つ
+        "<p>　$a^{3}+b^{3}+c^{3}-3abc$</p><p>$=\\boldsymbol{(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca)}$</p><p><b style=\"color: black\">公式の証明</b></p><p>　$a^{3}+b^{3}+c^{3}-3abc$</p><p>$=(a+b)^{3}-3ab(a+b)+c^{3}-3abc$</p><p>$=(a+b)^{3}+c^{3}-3ab(a+b)-3abc$</p><p>$=\\{(a+b)+c\\}\\{(a+b)^{2}-(a+b)c+c^{2}\\}-3ab(a+b+c)$</p><p>$=\\boldsymbol{(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca)}$</p>",
+        
+    
+        "$p^{3}-q^{3}-27r^{3}-9pqr$": // 上級2，3乗3つ
+        "<p>　$p^{3}-q^{3}-27r^{3}-9pqr$</p><p>$=p^{3}+(-q)^{3}+(-3r)^{3}-3p(-q)(-3r)$</p><p>$=\\boldsymbol{(p-q-3r)(p^{2}+q^{2}+9r^{2}+pq-3qr+3rp)}$</p>",
+        
+    
+        "$4x^{6}-4x^{5}+4x^{4}+x^{2}-x+1$": // 上級3，共通因数，複2次式，主任
+        "<p>　$4x^{6}-4x^{5}+4x^{4}+x^{2}-x+1$</p><p>$=4x^{4}(x^{2}-x+1)+x^{2}-x+1$</p><p>$=(4x^{4}+1)(x^{2}-x+1)$</p><p>$=\\{(2x^{2}+1)^{2}-4x^{2}\\}(x^{2}-x+1)$</p><p>$=\\boldsymbol{(2x^{2}+2x+1)(2x^{2}-2x+1)(x^{2}-x+1)}$</p>",
+        
+    
+        "$x(x+1)(x+2)-y(y+1)(y+2)+xy(x-y)$": // 上級4，2007秋田大
+        "<p>$x$，$y$ の交代式なので $x-y$ を因数にもつ．</p><p>　$x(x+1)(x+2)-y(y+1)(y+2)+xy(x-y)$</p><p>$=x^{3}-y^{3}+3(x^{2}-y^{2})+2(x-y)+xy(x-y)$</p><p>$=(x-y)(x^{2}+xy+y^{2}+3x+3y+2+xy)$</p><p>$=(x-y)\\{(x+y)^{2}+3(x+y)+2\\}$</p><p>$=\\boldsymbol{(x-y)(x+y+1)(x+y+2)}$</p>",
+        
+    
+        "$6(x+3)(x+4)(x+6)(x+8)-(x+1)(x+2)(x+12)(x+24)$": // 上級5，2014秋田大
+        "<p>　$6(x+3)(x+4)(x+6)(x+8)-(x+1)(x+2)(x+12)(x+24)$</p><p>$=6(x+3)(x+8)(x+4)(x+6)-(x+1)(x+24)(x+2)(x+12)$</p><p>$=6(x^{2}+11x+24)(x^{2}+10x+24)-(x^{2}+25x+24)(x^{2}+14x+24)$</p><p>$=6(A+11x)(A+10x)-(A+25x)(A+14x)$　$(A=x^{2}+24)$</p><p>$=6(A^{2}+21xA+110x^{2})-(A^{2}+39xA+350x^{2})$</p><p>$=5A^{2}+87xA+310x^{2}$</p><p>$=(5A+62x)(A+5x)$</p><p>$=\\{5(x^{2}+24)+62x\\}\\{(x^{2}+24)+5x\\}$</p><p>$=\\boldsymbol{(5x+12)(x+10)(x^{2}+5x+24)}$</p>",
+        
+    
+        "$2x^{3}+(-4a+y-6)x^{2}+2(y^{2}-3ay+a^{2}+6a)x+(y-6)(y^{2}-2ay+a^{2})$": // 上級6，2016埼玉医科大後期
+        "<p>$a$ の2次式とみて整理します．</p><p>　$2x^{3}+(-4a+y-6)x^{2}+2(y^{2}-3ay+a^{2}+6a)x+(y-6)(y^{2}-2ay+a^{2})$</p><p>$=(2x+y-6)a^{2}+(-4x^{2}-6xy+12x-2y^{2}+12y)a+2x^{3}+2y^{2}x+(y-6)(x^{2}+y^{2})$</p><p>$=(2x+y-6)a^{2}-2(2x^{2}+3xy-6x+y^{2}-6y)a+2x(x^{2}+y^{2})+(y-6)(x^{2}+y^{2})$</p><p>$=(2x+y-6)a^{2}-2\\{y^{2}+(3x-6)y+x(2x-6)\\}a+(2x+y-6)(x^{2}+y^{2})$</p><p>$=(2x+y-6)a^{2}-2(y+x)(y+2x-6)a+(2x+y-6)(x^{2}+y^{2})$</p><p>$=\\boldsymbol{(2x+y-6)(a^{2}-2ax-2ay+x^{2}+y^{2})}$</p>",
+        
+    
+        "$x^{7}+x^{6}+x^{5}+x^{4}+x^{3}+x^{2}+x+1$": // 上級7，K.H
+        "<p>　$x^{7}+x^{6}+x^{5}+x^{4}+x^{3}+x^{2}+x+1$</p><p>$=x^{4}(x^{3}+x^{2}+x+1)+x^{3}+x^{2}+x+1$</p><p>$=(x^{4}+1)(x^{3}+x^{2}+x+1)$</p><p>$=(x^{4}+1)\\{x^{2}(x+1)+x+1\\}$</p><p>$=\\boldsymbol{(x^{4}+1)(x^{2}+1)(x+1)}$</p>",
+        
+    
+        "$x^{6}+27$": // 上級8，numca
+        "<p>　$x^{6}+27$</p><p>$=(x^{2}+3)(x^{4}-3x^{2}+9)$</p><p>$=(x^{2}+3)\\{(x^{2}+3)^{2}-9x^{2}\\}$</p><p>$=\\boldsymbol{(x^{2}+3)(x^{2}+3x+3)(x^{2}-3x+3)}$</p>",
+        
+    
+        "$4x^{4}+2x^{3}y+2x^{2}y+xy+1$": // 上級9，rl
+        "<p>　$4x^{4}+2x^{3}y+2x^{2}y+xy+1$</p><p>$=x(2x^{2}+2x+1)y+4x^{4}+1$</p><p>$=x(2x^{2}+2x+1)y+(2x^{2}+1)^{2}-4x^{2}$</p><p>$=x(2x^{2}+2x+1)y+(2x^{2}+1+2x)(2x^{2}+1-2x)$</p><p>$=\\boldsymbol{(xy+2x^{2}-2x+1)(2x^{2}+2x+1)}$</p>",
+        
+    
+        "$x^{4}+y^{4}+(x+y)^{4}$": // 上級10，Kay
+        "<p>　$x^{4}+y^{4}+(x+y)^{4}$</p><p>$=x^{4}+y^{4}+(x^{2}+y^{2}+2xy)^{2}$</p><p>$=x^{4}+y^{4}+(x^{2}+y^{2})^{2}+4xy(x^{2}+y^{2})+4x^{2}y^{2}$</p><p>$=2(x^{2}+y^{2})^{2}+4xy(x^{2}+y^{2})+2x^{2}y^{2}$</p><p>$=2\\{(x^{2}+y^{2})^{2}+2xy(x^{2}+y^{2})+x^{2}y^{2}\\}$</p><p>$=\\boldsymbol{2(x^{2}+y^{2}+xy)^{2}}$</p>",
+        
+    
+        "$x^{3}+6xy+8y^{3}-1$": // 上級11，3乗3つ，白里
+        "<p>　$x^{3}+6xy+8y^{3}-1$</p><p>$=x^{3}+(2y)^{3}+(-1)^{3}-3x(2y)(-1)$</p><p>$=(x+2y-1)\\{x^{2}+(2y)^{2}+(-1)^{2}-x\\cdot2y-2y(-1)-(-1)x\\}$</p><p>$=\\boldsymbol{(x+2y-1)(x^{2}+4y^{2}-2xy+x+2y+1)}$</p>",
+        
+    
+        "$x^{3}-3x^{2}+xy+2-y$": // 上級12，最低次数整理，主任
+        "<p>　$x^{3}-3x^{2}+xy+2-y$</p><p>$=(x-1)y+x^{3}-3x^{2}+2$</p><p>$=(x-1)y+(x-1)(x^{2}-2x-2)$</p><p>$=\\boldsymbol{(x-1)(y+x^{2}-2x-2)}$</p>",
+        
+    
+        "$(x^{3}+2)^{3}+2(x^{3}+2)^{2}-21(x^{3}+2)+18$": // 上級13，置き換え，因数定理，主任
+        "<p>　$(x^{3}+2)^{3}+2(x^{3}+2)^{2}-21(x^{3}+2)+18$</p><p>$=t^{3}+2t^{2}-21t+18$　$(t=x^{3}+2)$</p><p>$=(t-1)(t^{2}+3t-18)$</p><p>$=(t-1)(t+6)(t-3)$</p><p>$=(x^{3}+1)(x^{3}+8)(x^{3}-1)$</p><p>$=\\boldsymbol{(x+2)(x+1)(x-1)(x^{2}-2x+4)(x^{2}-x+1)(x^{2}+x+1)}$</p>",
+        
+    
+        "$a^{4}+b^{4}+c^{4}-2a^{2}b^{2}-2b^{2}c^{2}-2c^{2}a^{2}$": // 上級14，最低次数整理，2011横浜市立大
+        "<p>　$a^{4}+b^{4}+c^{4}-2a^{2}b^{2}-2b^{2}c^{2}-2c^{2}a^{2}$</p><p>$=a^{4}-2(b^{2}+c^{2})a^{2}+(b^{2}-c^{2})^{2}$</p><p>$=a^{4}-2(b^{2}+c^{2})a^{2}+(b+c)^{2}(b-c)^{2}$</p><p>$=\\{a^{2}-(b+c)^{2}\\}\\{a^{2}-(b-c)^{2}\\}$</p><p>$=\\boldsymbol{(a+b+c)(a-b-c)(a+b-c)(a-b+c)}$</p>",
+        
+    
+        "$x^{12}-1$": // 上級15，Y.S.
+        "<p>　$x^{12}-1$</p><p>$=(x^{6}+1)(x^{6}-1)$</p><p>$=(x^{2}+1)(x^{4}-x^{2}+1)(x^{2}-1)(x^{4}+x^{2}+1)$</p><p>$=(x^{2}+1)(x^{4}-x^{2}+1)(x+1)(x-1)\\{(x^{2}+1)^{2}-x^{2}\\}$</p><p>$=(x^{2}+1)(x^{4}-x^{2}+1)(x+1)(x-1)(x^{2}+1+x)(x^{2}+1-x)$</p><p>$=\\boldsymbol{(x+1)(x-1)(x^{2}+1)(x^{2}+x+1)(x^{2}-x+1)(x^{4}-x^{2}+1)}$</p>",
+        
+    
+        "$x^{6}-x^{4}+3x^{2}-27$": // 上級16，Y.S.
+        "<p>　$x^{6}-x^{4}+3x^{2}-27$</p><p>$=x^{6}-27-x^{2}(x^{2}-3)$</p><p>$=(x^{2}-3)(x^{4}+3x^{2}+9)-x^{2}(x^{2}-3)$</p><p>$=(x^{2}-3)(x^{4}+2x^{2}+9)$</p><p>$=(x^{2}-3)\\{(x^{2}+3)^{2}-4x^{2}\\}$</p><p>$=\\boldsymbol{(x^{2}-3)(x^{2}+2x+3)(x^{2}-2x+3)}$</p>",
+        
+    
+    
         },
         "D": {
-            "$\\displaystyle \\int_{0}^{\\infty} e^{-x} \\, dx$": "<p>$\\displaystyle \\int_{0}^{\\infty} e^{-x} \\, dx = 1$</p>"
+            "$-x^{6}+x^{5}+(y-1)x^{4}-3yx^{3}+(4y-4)x^{2}+(4-6y)x+y^{2}-4$": // 超級1，主任
+        "<p>TBA</p>",
+        
+    
+        "$x^{4}+y^{4}+z^{4}-2(xy+yz+zx)^{2}$": // 超級2
+        "<p>TBA</p>",
+        
+    
+        "$(4x^{4}+121)(4x^{4}+11x^{2}+121)-968x^{4}$": // 超級3，Au
+        "<p>TBA</p>",
+        
+    
+        "$x^{5}+x^{4}-2x+1$": // 超級4，Kay
+        "<p>TBA</p>",
+        
+    
+        "$(a+2b-3c)^{3}+(b+2c-3a)^{3}+(c+2a-3b)^{3}$": // 超級5，白里
+        "<p>TBA</p>",
+        
+    
+        "$(a-b+c)^{3}+(b-c+a)^{3}+(c-a+b)^{3}+24abc$": // 超級6，白里
+        "<p>TBA</p>",
+        
+    
+        "$a^{3}+b^{3}+c^{3}+d^{3}-3abc-3abd-3acd-3bcd$": // 超級7，白里
+        "<p>TBA</p>",
+        
+    
+        "$x^{6}-10x^{4}-6x^{3}+10x^{2}-1$": // 超級8，白里
+        "<p>TBA</p>",
+        
+    
+        "$x^{4}-4x^{3}-3x^{2}-4x+1$": // 超級9，Y.S.
+        "<p>TBA</p>",
+        
+    
+        "$4x^{4}+2x^{3}+x^{2}-3x-1$": // 超級10，雨乃松
+        "<p>TBA</p>",
+        
+    
+        "$6(2x-1)^{2}(3x-1)^{2}-5(2x-1)(3x-1)-x+1$": // 超級Warning，白里
+        "<p>TBA</p>",
+        
+    
+        "$x^{6}-21x^{4}+35x^{2}-7$": // 超級Danger，白里
+        "<p>TBA</p>",
+        
         }
     },
     "4": {
@@ -606,7 +1057,7 @@ const gachaItems = {
     "<p>TBA</p>",
     
 
-    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{}^{} \\ \\dfrac{1+x^{2}}{(1-x^{2})\\sqrt{1+x^{4}}}\\,dx$":
+    "$\\displaystyle \\int_{}^{} \\ \\dfrac{1+x^{2}}{(1-x^{2})\\sqrt{1+x^{4}}}\\,dx$":
     // 超級7，warning，しん
     "<p>TBA</p>",
     
@@ -645,37 +1096,37 @@ const gachaItems = {
     "<p>TBA</p>",
     
 
-    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(1+\\sin x)^{n}\\,dx$　$( \\ n \\ は自然数 \\ )$":
+    "$\\displaystyle \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(1+\\sin x)^{n}\\,dx$　$( \\ n \\ は自然数 \\ )$":
     // 超級15，warning
     "<p>TBA</p>",
     
 
-    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{-\\frac{4}{3}}^{0}\\dfrac{(2t+1)^{3}(t-2)^{3}}{(t^{2}+1)(3t-1)^{3}(t+3)^{3}}\\,dt$":
+    "$\\displaystyle \\int_{-\\frac{4}{3}}^{0}\\dfrac{(2t+1)^{3}(t-2)^{3}}{(t^{2}+1)(3t-1)^{3}(t+3)^{3}}\\,dt$":
     // 超級16，warning，Au
     "<p>TBA</p>",
     
 
-    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{0}^{\\pi}\\sin\\left(\\dfrac{x}{2}\\right)\\sqrt{\\sin x}\\,dx$":
+    "$\\displaystyle \\int_{0}^{\\pi}\\sin\\left(\\dfrac{x}{2}\\right)\\sqrt{\\sin x}\\,dx$":
     // 超級17，warning，Kay
     "<p>TBA</p>",
     
 
-    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{\\frac{\\sqrt{2}}{2}}^{1}\\dfrac{(x^{4}-x^{6})\\sqrt{1-x^{2}}}{32x^{8}-64x^{6}+40x^{4}-8x^{2}+1}\\,dx$":
+    "$\\displaystyle \\int_{\\frac{\\sqrt{2}}{2}}^{1}\\dfrac{(x^{4}-x^{6})\\sqrt{1-x^{2}}}{32x^{8}-64x^{6}+40x^{4}-8x^{2}+1}\\,dx$":
     // 超級18，warning，トゲ
     "<p>TBA</p>",
     
 
-    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{-\\pi}^{\\pi}\\dfrac{\\sin^{2n} x}{(1+e^{x})\\sqrt{1+\\cos x}}\\,dx$　$( \\ n \\ は自然数 \\ )$":
+    "$\\displaystyle \\int_{-\\pi}^{\\pi}\\dfrac{\\sin^{2n} x}{(1+e^{x})\\sqrt{1+\\cos x}}\\,dx$　$( \\ n \\ は自然数 \\ )$":
     // 超級19，warning，kazumath
     "<p>TBA</p>",
     
 
-    "<span class=\"animation warning gaming\">$\\displaystyle \\int_{0}^{1}x^{3n}\\sqrt{x-x^{4}}\\,dx$　$( \\ n \\ は \\ 0 \\ 以上の整数 \\ )$":
+    "$\\displaystyle \\int_{0}^{1}x^{3n}\\sqrt{x-x^{4}}\\,dx$　$( \\ n \\ は \\ 0 \\ 以上の整数 \\ )$":
     // 超級20，warning，TyLite
     "<p>TBA</p>",
     
 
-    "<span class=\"animation danger gaming\">$\\displaystyle \\int_{0}^{1}\\sqrt{\\dfrac{x^{2}+1+\\sqrt{x^{4}-x^{2}+1}}{x^{4}-x^{2}+1}}\\,dx$":
+    "$\\displaystyle \\int_{0}^{1}\\sqrt{\\dfrac{x^{2}+1+\\sqrt{x^{4}-x^{2}+1}}{x^{4}-x^{2}+1}}\\,dx$":
     // 超級21，warning，NEMO
     "<p>TBA</p>",
         }
