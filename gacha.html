@@ -89,6 +89,20 @@ body {
     left: 240px;       /* Adjust as needed for spacing from the right */
 }
 
+.result-section {
+    background-color: transparent;
+    background-image: url('imagegacha/gacha-bg.webp'); /* Replace with your image path */
+    background-size: contain;   /* Adjust to cover the entire section */
+    width: 550px;
+    aspect-ratio: 1054/1054;
+    background-position: center; /* Center the image */
+    padding: 20px;            /* Add some padding for better readability */
+    border-radius: 10px;      /* Optional: add rounded corners */
+
+    margin: 20px 0;           /* Optional: add margin for spacing */
+    z-index: 1;               /* Optional: ensure it appears above other content */
+}
+
 
 </style>
 </head>
@@ -118,7 +132,7 @@ body {
 
     <button id="rollButton" class="roll-button" onclick="gachaRoll()">Wish ×1</button>
 
-    <div id="result"></div>
+    <div id="result" class="result-section"></div>
     
    
 
