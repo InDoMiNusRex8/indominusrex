@@ -57,6 +57,21 @@ body {
 .hidden {
     display: none;
 }
+
+
+/* Show Answer button style */
+.toggle-button {
+    position: relative;
+    border: 3.5px solid transparent;
+    border-radius: 50px;
+    background-color: #e0ddd4;
+    box-shadow: 0 2px 2px #64646433,0 2px 2px #64646430;
+    padding: .25rem 1.5rem;
+    margin: 2px 5px;
+    border: solid transparent;
+    font-size: 90%
+}
+
 </style>
 </head>
 <body>
@@ -87,7 +102,7 @@ body {
 
     <div id="result"></div>
     
-    <button id="toggleButton" class="hidden" onclick="toggleAnswer()">Show me Da Wei</button>
+    <button id="toggleButton" class="toggle-button hidden" onclick="toggleAnswer()">Show me Da Wei</button>
 
     <div id="answer" class="hidden"></div>
 
