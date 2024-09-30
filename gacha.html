@@ -38,19 +38,19 @@ body {
     margin: 20px; /* Set margin around the body */
 }
 .roll-button {
-    background-image: url('imagegacha/button.png'); /* Replace with your image path */
-    background-size: cover; /* Adjusts the background to cover the entire button */
-    background-repeat: no-repeat; /* Prevents the background from repeating */
-    display: flex;
-    align-items: center;
+    background-image: url('imagegacha/button.webp'); /* Replace with your image path */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 230px;
+    aspect-ratio: 355/88;
+    margin: 0 5px;
+    display: inline-flex;
     justify-content: center;
-    border: none; /* Remove default border */
-    width: 355px; /* Set desired width */
-    height: 88px; /* Adjust height automatically */
-    margin: 0 auto; /* Center the image horizontally */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    color: black; /* Change text color (if any) */
-    font-size: 16px; /* Set font size */
+    align-items: center;
+    flex-direction: column;
+    color: #a49a90;
+    transition: all .2s
 }
 
 
