@@ -101,6 +101,10 @@ body {
 
     margin: 20px 0;           /* Optional: add margin for spacing */
     z-index: 1;               /* Optional: ensure it appears above other content */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -132,7 +136,7 @@ body {
 
     <button id="rollButton" class="roll-button" onclick="gachaRoll()">Wish ×1</button>
 
-    <div id="result" class="result-section"></div>
+    <div id="result" class="result-section hidden"></div>
     
    
 
