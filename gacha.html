@@ -175,13 +175,13 @@ body {
             const explanation = answerParts.length > 1 ? answerParts[1].trim() : resultValue; // Get the explanation after the colon
 
             // Display the formula and explanation in separate sections
+            document.getElementById('result').classList.remove('hidden');
             document.getElementById('result').innerHTML = `<p style="font-size:20px; text-align: center;">${resultKey}</p>`;
             document.getElementById('answer').innerHTML = explanation; // Use the explanation derived from the resultValue
 
             // Show the "Toggle Answer" button
             document.getElementById('toggleButton').classList.remove('hidden');
             document.getElementById('give-up').classList.remove('hidden');
-            document.getElementById('result').classList.remove('hidden');
             document.getElementById('toggleButton').textContent = "Show me Da Wei";
 
             // Hide the answer by default
