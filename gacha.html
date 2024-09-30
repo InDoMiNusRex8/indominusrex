@@ -51,6 +51,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    border: none;  
+    outline: none; 
 }
 
 
@@ -72,6 +75,10 @@ body {
     font-size: 90%
 }
 
+.ytplayer {
+    pointer-events: none;
+    opacity: 0.6;
+}
 </style>
 </head>
 <body>
@@ -107,8 +114,45 @@ body {
     <div id="answer" class="hidden"></div>
 
 
+<!-- YouTube API Script -->
+<script id="iframe-demo" src="https://www.youtube.com/iframe_api"></script>
 
+<!-- YouTube Video Embed (Initially hidden) -->
+<div id="player-container" class="ytplayer hidden">
+    <iframe id="video-frame" width="640" height="360"
+        src="https://www.youtube.com/embed/YOUR_VIDEO_ID?enablejsapi=1&version=3&rel=0"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+</div>
 
+<!-- Give Up Button -->
+<button id="give-up" class="toggle-button hidden">I give up!</button>
+ <script>
+        let player; // Declare the player variable
+
+        // This function gets called when the YouTube IFrame API is ready
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('video-frame', {
+                height: '390',
+                width: '640',
+                videoId: 'YOUR_VIDEO_ID', // Replace with your video ID
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+        }
+
+        // Optional: You can set up any player event handling here
+        function onPlayerReady(event) {
+            // Player is ready
+        }
+
+        // Handle the "Give Up" button click
+        document.getElementById('giveUpButton').addEventListener('click', () => {
+            player.seekTo(0); // Reset video to the beginning
+            player.unMute(); // Ensure the video is unmuted
+        });
+    </script>
 
     <script src="/indominusrex/gacha-items.js"></script>
 
