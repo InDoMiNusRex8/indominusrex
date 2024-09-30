@@ -67,7 +67,9 @@ body {
 
 /* Show Answer button style */
 .toggle-button {
-    position: relative;
+    position: fixed;    /* Keep it fixed in place */
+    bottom: 20px;      /* Adjust as needed for spacing from the bottom */
+    left: 20px;       /* Adjust as needed for spacing from the right */
     border: 3.5px solid transparent;
     border-radius: 50px;
     background-color: #e0ddd4;
@@ -78,6 +80,13 @@ body {
     font-size: 90%
 }
 
+.button-container{
+    position: fixed;    /* Keep the container fixed in place */
+    bottom: 20px;      /* Adjust as needed for spacing from the bottom */
+    left: 20px;        /* Adjust as needed for spacing from the left */
+    display: flex;     /* Use flexbox for arranging buttons next to each other */
+    gap: 10px;         /* Space between the buttons */
+}
 
 </style>
 </head>
@@ -109,16 +118,17 @@ body {
 
     <div id="result"></div>
     
-    <button id="toggleButton" class="toggle-button hidden" onclick="toggleAnswer()">Show me Da Wei</button>
+   
 
     <div id="answer" class="hidden"></div>
 
-
-
+<div class="button-container">
+ <button id="toggleButton" class="toggle-button hidden" onclick="toggleAnswer()">Show me Da Wei</button>
 
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
 <button id="give-up" class="toggle-button hidden">I give up!</button>
 </a>
+</div>
 
     <script src="/indominusrex/gacha-items.js"></script>
 
