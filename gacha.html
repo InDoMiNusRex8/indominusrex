@@ -74,18 +74,19 @@ body {
     padding: .25rem 1.5rem;
     margin: 2px 5px;
     border: solid transparent;
-    font-size: 90%
+    font-size: 90%;
+    width: 180px;
 }
-.bottomleft-button {
+.bottomleft1-button {
     position: fixed;    /* Keep it fixed in place */
     bottom: 20px;      /* Adjust as needed for spacing from the bottom */
     left: 20px;       /* Adjust as needed for spacing from the right */
 }
 
-.upperright-button {
+.bottomleft2-button {
     position: fixed;    /* Keep it fixed in place */
-    top: 20px;      /* Adjust as needed for spacing from the bottom */
-    right: 20px;       /* Adjust as needed for spacing from the right */
+    bottom: 20px;      /* Adjust as needed for spacing from the bottom */
+    left: 240px;       /* Adjust as needed for spacing from the right */
 }
 
 
@@ -124,10 +125,10 @@ body {
     <div id="answer" class="hidden"></div>
 
 
- <button id="toggleButton" class="toggle-button hidden bottomleft-button" onclick="toggleAnswer()">Show me Da Wei</button>
+ <button id="toggleButton" class="toggle-button hidden bottomleft1-button" onclick="toggleAnswer()">Show me Da Wei</button>
 
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-<button id="give-up" class="toggle-button hidden upperright-button">I give up!</button>
+<button id="give-up" class="toggle-button hidden bottomleft2-button">I give up!</button>
 </a>
 
 
