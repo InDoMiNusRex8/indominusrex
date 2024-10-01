@@ -210,7 +210,8 @@ body {
             document.getElementById('toggleButton').textContent = "Show me Da Wei";
 
             // Hide the answer by default
-            document.getElementById('answer').classList.add('hidden');
+            document.getElementById('answer').classList.add('hidden');  // Hides the answer box
+            document.getElementById('answer').classList.remove('visible');  // Ensures the answer box is not visible
 
             // Ensure MathJax is triggered to render LaTeX
             MathJax.typesetPromise();
