@@ -110,11 +110,26 @@ body {
     flex-direction: column;
 }
 
-.answer-section {
-    justify-content: center;
-    margin: auto;
-    align-items: center;
-    flex-direction: column;
+#answer {
+    position: fixed;       /* Fix the position relative to the viewport */
+    right: 20px;           /* Distance from the right side of the screen */
+    top: 50%;              /* Center it vertically */
+    transform: translateY(-50%); /* Vertically center the div */
+    width: 300px;          /* Set the width of the textbox */
+    height: auto;          /* Height will adjust based on content */
+    padding: 20px;         /* Add some padding for spacing */
+    background-color: #f9f9f9; /* Light background for textbox effect */
+    border: 2px solid #ccc; /* Border to give it a textbox-like appearance */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    z-index: 2;            /* Ensure it appears above other content */
+    overflow-y: auto;      /* Scroll if content exceeds the height */
+    font-size: 16px;       /* Adjust font size */
+    display: none;         /* Initially hidden */
+}
+
+/* When the answer is visible, toggle the display */
+#answer.visible {
+    display: block;
 }
 
 </style>
@@ -149,7 +164,7 @@ body {
     
    
 
-    <div id="answer" class="hidden answer-section"></div>
+    <div id="answer" class="hidden"></div> 
 
 
  <button id="toggleButton" class="toggle-button hidden bottomleft1-button" onclick="toggleAnswer()">Show me Da Wei</button>
@@ -206,20 +221,22 @@ body {
 
     // Function to toggle the answer visibility
     function toggleAnswer() {
-        const answerDiv = document.getElementById('answer');
-        const toggleButton = document.getElementById('toggleButton');
+    const answerDiv = document.getElementById('answer');
+    const toggleButton = document.getElementById('toggleButton');
 
-        if (answerDiv.classList.contains('hidden')) {
-            answerDiv.classList.remove('hidden'); // Show answer
-            toggleButton.textContent = "Go a Wei"; // Change button text to "Hide Answer"
-        } else {
-            answerDiv.classList.add('hidden'); // Hide answer
-            toggleButton.textContent = "Show me Da Wei"; // Change button text to "Show Answer"
-        }
-
-        // Reprocess MathJax for any LaTeX content
-        MathJax.typesetPromise(); // This triggers MathJax to reprocess any LaTeX in the answer section
+    if (answerDiv.classList.contains('hidden')) {
+        answerDiv.classList.remove('hidden');  // Show the answer
+        answerDiv.classList.add('visible');    // Add the visible class for styling
+        toggleButton.textContent = "Go a Wei"; // Update button text
+    } else {
+        answerDiv.classList.add('hidden');     // Hide the answer
+        answerDiv.classList.remove('visible'); // Remove the visible class
+        toggleButton.textContent = "Show me Da Wei"; // Update button text
     }
+
+    // Reprocess MathJax for any LaTeX content
+    MathJax.typesetPromise(); // Ensure MathJax renders the LaTeX
+}
 </script>
 
 
