@@ -19,13 +19,14 @@
         .section {
             font-family: 'Computer Modern Serif', sans-serif !important;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 16px;  /* Fixed font size in pixels */
             border: 2px solid black;
-            display: inline-block;
+            display: inline-flex;  /* Use inline-flex for better alignment */
+            justify-content: center;  /* Horizontally center content */
+            align-items: center;  /* Vertically center content */
+            width: 45px;  /* Fixed width in pixels */
+            height: 35px;  /* Fixed height in pixels */
             text-align: center;
-            width: 35px;
-            height: 35px;
-            vertical-align: middle;
         }
         .subsection {
             font-family: 'Computer Modern Serif', sans-serif !important;
