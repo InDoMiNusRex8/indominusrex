@@ -51,16 +51,30 @@
         ol {
             padding-left: 20px;
             list-style-type: none; /* Remove default numbering */
+            margin: 0;
+            padding: 0;
         }
 
         /* Custom numbering format for ordered list */
         ol li {
-            counter-increment: item;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
         }
 
         ol li::before {
-            content: "(" counter(item) ") "; /* Adds parentheses around the number */
+            content: "(" counter(item) ")"; /* Adds parentheses around the number */
             font-weight: bold;
+            margin-right: 10px; /* Space between the number and content */
+            vertical-align: middle; /* Aligns the number vertically with the content */
+            width: 2em; /* Set fixed width to keep alignment */
+            text-align: center;
+        }
+
+        /* Ensures flex items stay in line */
+        ol li > span {
+            display: inline-block;
+            margin-left: 5px;
         }
     </style>
 </head>
