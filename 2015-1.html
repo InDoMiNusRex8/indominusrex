@@ -49,33 +49,17 @@
         }
 
         ol {
-            padding-left: 20px;
-            list-style-type: none; /* Remove default numbering */
-            margin: 0;
-            padding: 0;
+          list-style: none;
+          counter-reset: num-counter;
         }
-
-        /* Custom numbering format for ordered list */
         ol li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
+          counter-increment: num-counter;
         }
-
         ol li::before {
-            content: "(" counter(item) ")"; /* Adds parentheses around the number */
-            font-weight: bold;
-            margin-right: 10px; /* Space between the number and content */
-            vertical-align: middle; /* Aligns the number vertically with the content */
-            width: 2em; /* Set fixed width to keep alignment */
-            text-align: center;
+          content: "(" counter(num-counter) ")";
+          font-family: 'Computer Modern Serif', sans-serif !important;
         }
 
-        /* Ensures flex items stay in line */
-        ol li > span {
-            display: inline-block;
-            margin-left: 5px;
-        }
     </style>
 </head>
 <body>
