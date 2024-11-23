@@ -24,7 +24,6 @@
             display: inline-block;
             text-align: center;
             width: 35px;
-
             height: 35px;
             vertical-align: middle;
         }
@@ -49,7 +48,7 @@
             text-align: center;
         }
 
-       ol {
+        ol {
             padding-left: 20px;
             list-style-type: none; /* Remove default numbering */
         }
@@ -57,14 +56,11 @@
         /* Custom numbering format for ordered list */
         ol li {
             counter-increment: item;
-            display: inline-block;  /* Ensures the number and content stay on the same line */
         }
 
         ol li::before {
             content: "(" counter(item) ") "; /* Adds parentheses around the number */
             font-weight: bold;
-            margin-right: 5px; /* Space between the number and content */
-            vertical-align: middle; /* Aligns the number vertically with the content */
         }
     </style>
 </head>
