@@ -21,9 +21,8 @@
             border: 2px solid black;
             display: inline-block;
             text-align: center;
-            width: 20px;
-            height: 20px;
-            line-height: 20px;
+            width: 35px;
+            height: 35px;
         }
         .subsection {
             font-family: 'Computer Modern Serif', sans-serif !important;
@@ -37,27 +36,14 @@
             border-radius: 5px;
             background-color: #f9f9f9;
         }
-        
-        .answer {
-            display: inline-block;
+        .boxed {
+            font-family: 'Computer Modern Serif', sans-serif !important;
             border: 1px solid black;
+            display: inline-block;
             padding: 5px;
             margin-right: 10px;
-            text-align: center;
-            margin-right: 20px; /* Space between answer blocks */
-        }
-
-        
-        .answer .top {
             font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        
-        .answer .bottom {
-            font-size: 1.5em;
-            font-weight: normal;
-            margin-top: 2px; /* Space between top and bottom parts */
+            text-align: center;
         }
     </style>
 </head>
@@ -65,10 +51,7 @@
     <div class="section">I</div> <div class="subsection">問1</div>
     <p>（1）放物線と \( m \) の \( x^2 \) の係数を比べると、\( a + 1 > a \)。したがって、\( m \) は
         上に凸の放物線。（\( A, B, C \) を通る）</p>
-        <p><div class="answer">
-            <div class="top">A</div>
-            <div class="bottom">1</div>
-        </div></p>
+        <p><span class="boxed"><b>A</b>  1</span></p>
     <p>（2）放物線と \( m \) の交点を求めれば、</p>
     <p>
         \[
@@ -78,52 +61,23 @@
         x^2 + 4x + 3 = 0
         \]
     </p>
-    <p>
-        <div class="answer">
-            <div class="top">BC</div>
-            <div class="bottom">43</div>
-        </div>
-    </p>
+    <p><span class="boxed"><b>BC</b> 43</span></p>
     <p>
         \[
         (x + 1)(x + 3) = 0
+        \tag{1}
         \]
     </p>
-    <p>
-        解は \( x = -3, -1 \)。点 B は点 C の左側にあるから、点 B の \( x \) 座標は \( -3 \)、点 C の座標は \( -1 \) である。
-    </p>
-    <p>
-        <div class="answer">
-            <div class="top">DE</div>
-            <div class="bottom">-3</div>
-        </div>
-        <div class="answer">
-            <div class="top">FG</div>
-            <div class="bottom">-1</div>
-        </div>
-    </p>
-    <p>
-        （3）B, C, D を通る放物線は軸に関して対称であるから、軸（\( x = 0 \)）は放物線の対称軸である。
-    </p>
+    <p>\((1)\)の解は \( x = -3, -1 \)。点 B は点 C の左側にあるから、点 B の \( x \) 座標は \( -3 \)、点 C の座標は \( -1 \) である。</p>
+    <p><span class="boxed"><b>DE</b>  -3</span> &nbsp; <span class="boxed"><b>FG</b>  -1</span></p>
+    <p>（3）B, C, D を通る放物線は軸に関して対称であるから、軸（\( x = 0 \)）は放物線の対称軸である。</p>
     <p>
         \[
         x = -\frac{2b}{2a} = 0
         \]
     </p>
-    <p>
-        <div class="answer">
-            <div class="top">H</div>
-            <div class="bottom">0</div>
-        </div>
-    </p>
-    <p>
-        また、放物線 \( m \) の軸は点 B を通る縦線であるから、
-    </p>
-    <p>
-        <div class="answer">
-            <div class="top">IJ</div>
-            <div class="bottom">-3</div>
-        </div>
-    </p>
+    <p><span class="boxed"><b>H</b>  0</span></p>
+    <p>また、放物線 \( m \) の軸は点 B を通る縦線であるから、</p>
+    <p><span class="boxed"><b>IJ</b>  -3</span></p>
 </body>
 </html>
