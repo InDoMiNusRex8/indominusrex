@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Page</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Computer Modern Serif', sans-serif !important;
             margin: 20px;
             line-height: 1.6;
         }
         .section {
+            font-family: 'Computer Modern Serif', sans-serif !important;
             font-weight: bold;
             font-size: 1.2em;
             border: 2px solid black;
@@ -21,6 +23,7 @@
             padding: 0 8px;
         }
         .subsection {
+            font-family: 'Computer Modern Serif', sans-serif !important;
             font-weight: bold;
             margin-top: 20px;
         }
@@ -42,43 +45,91 @@
     </style>
 </head>
 <body>
-    <div class="section">I</div>
+     <div class="section">I</div>
     <div class="subsection">問1</div>
     <p>
         放物線と \( m \) の \( x^2 \) の係数を比べると、\( a + 1 > a \)。したがって、\( m \) は
         上に凸の放物線。（\( A, B, C \) を通る）
     </p>
-    <div class="math-container">
-        <p>（1）</p>
-        <p>A: <span class="boxed">1</span></p>
-        <p>（2）放物線と \( m \) の交点を求めれば、</p>
-        <p>
-            \[
-            ax^2 + 2bx + c = (a + 1)x^2 + 2(b + 2)x + c + 3
-            \]
-            \[
-            x^2 + 4x + 3 = 0
-            \]
-        </p>
-        <p>B: <span class="boxed">4</span> &nbsp; C: <span class="boxed">3</span></p>
-        <p>
-            \[
-            (x + 1)(x + 3) = 0
-            \]
-        </p>
-        <p>解は \( x = -3, -1 \)。点 B は点 C の左側にあるから、点 B の \( x \) 座標は \( -3 \)、点 C の座標は \( -1 \) である。</p>
-        <p>DE: <span class="boxed">-3</span> &nbsp; FG: <span class="boxed">-1</span></p>
-    </div>
-    <div class="math-container">
-        <p>（3）B, C, D を通る放物線は軸に関して対称であるから、軸（\( x = 0 \)）は放物線の対称軸である。</p>
-        <p>
-            \[
-            x = -\frac{2b}{2a} = 0
-            \]
-        </p>
-        <p>H: <span class="boxed">0</span></p>
-        <p>また、放物線 \( m \) の軸は点 B を通る縦線であるから、</p>
-        <p>IJ: <span class="boxed">-3</span></p>
-    </div>
+    <p>
+        （1）<span class="boxed">
+            <div class="boxed-content">
+                <span>A</span>
+                <span>=</span>
+                <span>1</span>
+            </div>
+        </span>
+    </p>
+    <p>（2）放物線と \( m \) の交点を求めれば、</p>
+    <p>
+        \[
+        ax^2 + 2bx + c = (a + 1)x^2 + 2(b + 2)x + c + 3
+        \]
+        \[
+        x^2 + 4x + 3 = 0
+        \]
+    </p>
+    <p>
+        B: <span class="boxed">
+            <div class="boxed-content">
+                <span>B</span>
+                <span>=</span>
+                <span>4</span>
+            </div>
+        </span>
+        &nbsp; C: <span class="boxed">
+            <div class="boxed-content">
+                <span>C</span>
+                <span>=</span>
+                <span>3</span>
+            </div>
+        </span>
+    </p>
+    <p>
+        \[
+        (x + 1)(x + 3) = 0
+        \]
+    </p>
+    <p>解は \( x = -3, -1 \)。点 B は点 C の左側にあるから、点 B の \( x \) 座標は \( -3 \)、点 C の座標は \( -1 \) である。</p>
+    <p>
+        DE: <span class="boxed">
+            <div class="boxed-content">
+                <span>DE</span>
+                <span>=</span>
+                <span>-3</span>
+            </div>
+        </span>
+        &nbsp; FG: <span class="boxed">
+            <div class="boxed-content">
+                <span>FG</span>
+                <span>=</span>
+                <span>-1</span>
+            </div>
+        </span>
+    </p>
+    <p>（3）B, C, D を通る放物線は軸に関して対称であるから、軸（\( x = 0 \)）は放物線の対称軸である。</p>
+    <p>
+        \[
+        x = -\frac{2b}{2a} = 0
+        \]
+    </p>
+    <p>
+        H: <span class="boxed">
+            <div class="boxed-content">
+                <span>H</span>
+                <span>=</span>
+                <span>0</span>
+            </div>
+        </span>
+    </p>
+    <p>また、放物線 \( m \) の軸は点 B を通る縦線であるから、</p>
+    <p>
+        IJ: <span class="boxed">
+            <div class="boxed-content">
+                <span>IJ</span>
+                <span>=</span>
+                <span>-3</span>
+            </div>
+        </span>
 </body>
 </html>
