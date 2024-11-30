@@ -45,7 +45,7 @@ document.getElementById('submit').addEventListener('click', () => {
         document.getElementById('feedback').textContent = `Incorrect. Correct answer: ${correctAnswer}`;
     }
     currentIndex = (currentIndex + 1) % quizData.length;
-    setTimeout(showQuestion, 2000);
+    setTimeout(showQuestion, 1000);
 });
 
 loadQuizData();
