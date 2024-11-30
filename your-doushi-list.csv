@@ -54,13 +54,13 @@
 及ぶ,およぶ,to reach; to amount to; to extend
 及ぼす,およぼす,to harm; to damage
 織る,おる,to weave
-害する,がいする,to injure; to hurt
+害する,おかす,to injure; to hurt
 省みる,かえりみる,to reflect upon
 顧みる,かえりみる,to look back; to pay attention to
 掲げる,かかげる,to raise; to adopt; to publish
 掻く,かく,to scratch
 欠く,かく,to lack; to be missing; to be short of
-かく,"かく (e.g., 「恥を～」)",to cause embarrassment to
+"かく(e.g., 「恥を～」)",かく ,to cause embarrassment to
 駆ける,かける,to run
 賭ける,かける,to bet; to stake
 嵩張る,かさばる,to be bulky
@@ -97,7 +97,7 @@
 志す,こころざす,to intend; to aspire
 試みる,こころみる,to try; to attempt
 拗れる,こじれる,to become complicated; grow worse
-濾す,"こす (e.g., 「水を～」)",to filter
+"濾す(e.g., 「水を～」)",こす ,to filter
 拘る,こだわる,to stick to; to be particular about
 誤魔化す,ごまかす,to cheat; to deceive; to evade
 籠る,こもる,to seclude oneself; to be confined
@@ -106,19 +106,20 @@
 凝る,こる,to devote to; to stiffen; be particular about
 遮る,さえぎる,to obstruct; to interrupt; to block
 囀る,さえずる,to chirp; to sing; to chatter
-冴える,"さえる (e.g., 「月/腕が～」)","to be bright, clear; to be skilled"
+"冴える (e.g., 「月/腕が～」)",さえる,"to be bright, clear; to be skilled"
 栄える,さかえる,to prosper; to flourish
 裂ける,さける,to split; to be torn; to tear
 捧げる,ささげる,to lift up; to give; to offer; to devote
 授ける,さずける,to grant; to bestow; to instruct
-摩する・擦る,さする・する,to rub; to stroke
+摩する,さする,to rub; to stroke
+擦る,する,to rub; to stroke
 定まる,さだまる,to be decided; to become peaceful
 定める,さだめる,to establish; to decide; to determine
 察する,さっする,to understand; to sympathize with
 悟る,さとる,to realize; to understand; to sense
 裁く,さばく,to judge; to settle
 彷徨う,さまよう,to wander; to linger
-誘う,"さそう (e.g., 「子供を～」)",to kidnap
+"誘う(e.g., 「子供を～」)",さそう ,to kidnap
 障る,さわる,to hinder; to affect; to hurt
 強いる,しいる,to force; to compel
 しくじる,しくじる,to fail
@@ -134,9 +135,9 @@
 称する,しょうする,to name; to praise; to pretend
 記す,しるす,to write down; to inscribe in one’s mind
 据え付ける,すえつける,to install; to set; to fix
-据える,"すえる (e.g., 「社長に～」)",to put; to settle down
-掬う,"すくう (e.g., ｢水を～｣)",to scoop
-濯ぐ,"すすぐ (e.g., 「口を～」)",to rinse; to wash
+"据える(e.g., 「社長に～」)",すえる ,to put; to settle down
+"掬う(e.g., ｢水を～｣)",すくう ,to scoop
+"濯ぐ (e.g., 「口を～」)",すすぐ,to rinse; to wash
 廃れる,すたれる,to become obsolete
 清ます,すます,to clarify; to look serious; to look unconcerned
 澄ます,すます,to clarify; to look serious; to look unconcerned
@@ -167,7 +168,7 @@
 奉る,たてまつる,to offer; to present; to show respect
 辿る,たどる,to follow; to trace
 束ねる,たばねる,to bundle; to tie up
-賜う,たまわる,to deign to; to grant; to bestow on
+賜う,たまう,to deign to; to grant; to bestow on
 賜わる,たまわる,to be granted; to be honored with
 保つ,たもつ,to keep; to last; to preserve; to hold
 弛む,たるむ,to get loose; to slacken; to become lazy
@@ -189,7 +190,8 @@
 募る,つのる,to grow violent; to enlist; to gather
 呟く,つぶやく,to murmur; to mutter
 瞑る,つぶる,to close one’s eyes
-摘む・摘まむ,つむ・つまむ,to pick; to pinch
+摘む,つむ,to pick; to pinch
+摘まむ,つまむ,to pick; to pinch
 強まる,つよまる,to strengthen; to intensify
 強める,つよめる,to strengthen; to intensify
 連なる,つらなる,to stretch in a row; to attend
@@ -197,6 +199,7 @@
 連ねる,つらねる,to link; to join; to line up
 手掛ける,てがける,to handle; to take care of
 徹する,てっする,to put one’s heart into; all night
+照り返す,てりかえす,to reflect
 転じる,てんじる,to change; to alter; to move to
 転ずる,てんずる,to be changed; to be transferred
 問い合わせる,といあわせる,to inquire
@@ -302,7 +305,7 @@
 交わる,まじわる,to associate with; to cross; to intersect
 跨る→「馬に～」,またがる,to mount; to sit astride; to extend over
 待ち望む,まちのぞむ,to look forward to; to wait for
-免がれる,まぬかれる,to escape; to get rid of; to avoid; to evade
+免がれる,まぬがれる,to escape; to get rid of; to avoid; to evade
 丸める,まるめる,to make round; to draw to one’s side
 見せびらかす,みせびらかす,to show off; to display
 満たす,みたす,to fill up; to satisfy
@@ -317,11 +320,11 @@
 面する,めんする,to face; to look out
 設ける,もうける,to prepare; to arrange; to establish
 申入れる,もうしいれる,to make a proposition; to offer
-申出でる,もうしでる,to offer; to propose; to request
+申出る,もうしでる,to offer; to propose; to request
 もがく,もがく,to struggle; to be impatient
 齎す,もたらす,to bring; to take; to bring about
 もてる,もてる,to be popular
-揉める →「会議が～」,もめる,to get into trouble; trouble arises
+揉める (e.g.「会議が～」),もめる,to get into trouble; trouble arises
 催す,もよおす,to hold; to give; to feel
 漏らす,もらす,to leak; to omit; to disclose
 漏る,もる,to leak
@@ -341,6 +344,7 @@
 緩める,ゆるめる,to loosen; to relax; to slow down; to ease
 要する,ようする,to require; to need; to take
 避ける,さける,to avoid; to evade; to shun
-甦る・蘇る,よみがえる,to revive; to come back
+甦る,よみがえる,to revive; to come back
+蘇る,よみがえる,to revive; to come back
 弱まる,よわまる,to weaken; to soften; to abate
 弱る,よわる,to weaken; to fail in health; to be tired
