@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yomikata Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .quiz-container { max-width: 600px; margin: auto; text-align: center; }
+        .question { margin-bottom: 20px; }
+        .feedback { margin-top: 10px; color: green; }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Yomikata Quiz</h1>
+        <div class="question" id="question">Loading...</div>
+        <input type="text" id="answer" placeholder="Type the yomikata" />
+        <button id="submit">Submit</button>
+        <div class="feedback" id="feedback"></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
