@@ -28,7 +28,7 @@ function startQuiz() {
 
 function showQuestion() {
     const [doushi, yomikata, translation] = quizData[currentIndex];
-    document.getElementById('question').textContent = `Translate: ${doushi} (${translation})`;
+    document.getElementById('question').textContent = `yomikatanya ${doushi} (${translation}) apa?`;
     document.getElementById('feedback').textContent = '';
     document.getElementById('answer').value = '';
 }
