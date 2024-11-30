@@ -3,10 +3,19 @@ let currentIndex = 0;
 
 // Load CSV data
 async function loadQuizData() {
-    const response = await fetch('/indominusrex/your-doushi-list.csv'); // Replace with your file's path
+    const response = await fetch('your-doushi-list.csv'); // Replace with your file's path
     const text = await response.text();
     quizData = text.split('\n').map(row => row.split(','));
+    shuffleArray(quizData); // Shuffle the data
     startQuiz();
+}
+
+// Shuffle the array using Fisher-Yates algorithm
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 }
 
 function startQuiz() {
@@ -33,7 +42,7 @@ document.getElementById('submit').addEventListener('click', () => {
         document.getElementById('feedback').textContent = `Incorrect. Correct answer: ${correctAnswer}`;
     }
     currentIndex = (currentIndex + 1) % quizData.length;
-    setTimeout(showQuestion, 2000);
+    setTimeout(showQuestion, 1000);
 });
 
 loadQuizData();
