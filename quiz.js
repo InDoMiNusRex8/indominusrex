@@ -1,5 +1,6 @@
 let quizData = [];
 let currentIndex = 0;
+let streak = 0; // Streak counter
 
 // Load CSV data
 async function loadQuizData() {
@@ -31,21 +32,28 @@ function startQuiz() {
 
 function showQuestion() {
     const [doushi, yomikata, translation] = quizData[currentIndex];
-    document.getElementById('question').textContent = `yomikatanya ${doushi} (${translation}) apa?`;
+    document.getElementById('question').textContent = ` ${doushi} (${translation})`;
     document.getElementById('feedback').textContent = '';
     document.getElementById('answer').value = '';
+}
+
+function updateStreakCounter() {
+    document.getElementById('streak-counter').textContent = `Streak: ${streak}`;
 }
 
 document.getElementById('submit').addEventListener('click', () => {
     const userAnswer = document.getElementById('answer').value.trim();
     const correctAnswer = quizData[currentIndex][1]; // Yomikata
     if (userAnswer === correctAnswer) {
-        document.getElementById('feedback').textContent = 'Correct!';
+        streak++;
+        document.getElementById('feedback').textContent = 'yak benar!';
     } else {
-        document.getElementById('feedback').textContent = `Incorrect. Correct answer: ${correctAnswer}`;
+        streak = 0; // Reset streak on wrong answer
+        document.getElementById('feedback').textContent = `eh tholol... yang bener ${correctAnswer} cuy`;
     }
+    updateStreakCounter(); // Update streak display
     currentIndex = (currentIndex + 1) % quizData.length;
-    setTimeout(showQuestion, 1000);
+    setTimeout(showQuestion, 2000);
 });
 
 loadQuizData();
