@@ -3,7 +3,7 @@ let currentIndex = 0;
 
 // Load CSV data
 async function loadQuizData() {
-    const response = await fetch('your-doushi-list.csv'); // Replace with your file's path
+    const response = await fetch('/indominusrex/your-doushi-list.csv'); // Replace with your file's path
     const text = await response.text();
     quizData = text.split('\n').map(row => row.split(','));
     startQuiz();
