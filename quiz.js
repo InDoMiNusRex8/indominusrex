@@ -6,11 +6,14 @@ async function loadQuizData() {
     const response = await fetch('your-doushi-list.csv'); // Replace with your file's path
     const text = await response.text();
     quizData = text.split('\n').map(row => row.split(','));
-    shuffleArray(quizData); // Shuffle the data
+
+    // Shuffle the quiz data
+    shuffleArray(quizData);
+
     startQuiz();
 }
 
-// Shuffle the array using Fisher-Yates algorithm
+// Function to shuffle an array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -42,7 +45,7 @@ document.getElementById('submit').addEventListener('click', () => {
         document.getElementById('feedback').textContent = `Incorrect. Correct answer: ${correctAnswer}`;
     }
     currentIndex = (currentIndex + 1) % quizData.length;
-    setTimeout(showQuestion, 1000);
+    setTimeout(showQuestion, 2000);
 });
 
 loadQuizData();
