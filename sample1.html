@@ -45,21 +45,21 @@
 
       <mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
-          
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="A" autocomplete="off" class="input" value="2" data-answer="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1);"> 
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="A" autocomplete="off" class="input" data-answer="1" data-score="2" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1);"> 
         </annotation-xml></semantics></mn>
 
-        <mn>
-        <semantics>
+        <mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" type="text" maxlength="1" class="input" size="1" data-answer="9" value="3" autocomplete="off" placeholder="B" />
-        </annotation-xml></semantics>
-      </mn>
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="B" autocomplete="off" class="input" data-answer="9" data-score="3" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1);"> 
+        </annotation-xml></semantics></mn>
+
       </mrow>
+
       <mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" type="text" maxlength="1" class="input" size="1" data-answer="3" value="1" autocomplete="off" placeholder="C" />
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="C" autocomplete="off" class="input" data-answer="3" data-score="4" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1);"> 
         </annotation-xml></semantics></mn>
+
     </mfrac>
   </mrow>
 </math>
@@ -136,40 +136,35 @@
   }
 
   function checkAllAnswers() {
-    const inputFields = document.querySelectorAll('input[data-answer]');
-    let allCorrect = true;
-    let totalScore = 0;
-    let anyAnswerProvided = false;
+      const inputFields = document.querySelectorAll('input[data-answer]');
+      let allCorrect = true;
+      let totalScore = 0;
+      let anyAnswerProvided = false;
 
-    inputFields.forEach(function (element) {
-      if (!checkAnswer(element)) {
-        allCorrect = false;
+      inputFields.forEach(function (element) {
+          if (!checkAnswer(element)) {
+              allCorrect = false;
+          } else {
+              anyAnswerProvided = true;
+              totalScore += parseInt(element.dataset.score || "1"); // Default to 1 if no score is set
+          }
+      });
+
+      const resultMessage = document.getElementById('resultMessage');
+      if (allCorrect && anyAnswerProvided) {
+          resultMessage.textContent = `All answers are correct! Your score is ${totalScore}.`;
+      } else if (anyAnswerProvided) {
+          resultMessage.textContent = `Your score is ${totalScore}. Some answers are incorrect. Please try again.`;
       } else {
-        // Calculate score based on the number of correct characters
-        const inputValue = element.value.replace(/[^0-9-]/g, ''); // Remove non-digit and non-dash characters
-        if (inputValue.length > 0) {
-          anyAnswerProvided = true;
-          totalScore += 1; // Add 1 point if there is at least one correct character
-        }
+          resultMessage.textContent = `Your score is 0. No answers were provided. Please try again.`;
       }
-    });
 
-    const resultMessage = document.getElementById('resultMessage');
-    if (allCorrect && anyAnswerProvided) {
-      resultMessage.textContent = `All answers are correct! Your score is ${totalScore}.`;
-    } else if (anyAnswerProvided) {
-      resultMessage.textContent = `Your score is ${totalScore}. Some answers are incorrect. Please try again.`;
-    } else {
-      resultMessage.textContent = `Your score is 0. No answers were provided. Please try again.`;
-    }
+      clearInterval(timer);
+      document.getElementById('checkButton').style.display = 'none';
 
-    clearInterval(timer); // Always stop the timer when checking answers
-
-    const checkButton = document.getElementById('checkButton');
-    checkButton.style.display = 'none'; // Hide the "Check Answers" button
-
-    return allCorrect; // Return whether all answers are correct
+      return allCorrect;
   }
+
 
 
 
