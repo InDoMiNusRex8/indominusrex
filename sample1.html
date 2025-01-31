@@ -115,25 +115,22 @@
   }
 
   function checkAnswer(element) {
-    if (isInAssistiveMathML(element)) {
-      return true; // Ignore input fields inside assistive MathML
+    let userInput = element.value.trim(); // Trim spaces
+    let correctAnswer = element.dataset.answer;
+
+    console.log(`Input Value: ${userInput}`);
+    console.log(`Correct Answer: ${correctAnswer}`);
+
+    if (userInput === "") {
+        return false; // Empty input should not be considered correct
     }
 
-    const inputValue = element.value.replace(/[^0-9-]/g, '');
-    const correctAnswer = element.dataset.answer;
-
-    console.log('Input Value:', inputValue);
-    console.log('Correct Answer:', correctAnswer);
-
-    const isCorrect = inputValue === correctAnswer;
-
-    element.style.backgroundColor = '';
-    if (!isCorrect) {
-      element.style.backgroundColor = 'red';
-    }
+    let isCorrect = userInput === correctAnswer;
+    console.log(`Input: ${userInput}, Answer: ${correctAnswer}, Correct: ${isCorrect}, Score: ${element.dataset.score}`);
 
     return isCorrect;
-  }
+}
+
 
   function checkAllAnswers() {
     const inputFields = document.querySelectorAll('input[data-answer]');
