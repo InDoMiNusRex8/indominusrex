@@ -45,10 +45,7 @@
       <mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
           
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="A" autocomplete="off" class="input" data-answer="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  // Remove non-numeric and non-hyphen characters
-                             .replace(/(?!^)-/g, '')  // Ensure '-' appears only at the start
-                             .slice(0, 1);">  // Limit total input length 
-
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="A" autocomplete="off" class="input" data-answer="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1);"> 
         </annotation-xml></semantics></mn>
         <mn>
         <semantics>
