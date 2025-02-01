@@ -135,41 +135,40 @@
 
 
   function checkAllAnswers() {
-    const inputFields = document.querySelectorAll('input[data-answer]');
-    let allCorrect = true;
-    let totalScore = 0;
-    let anyAnswerProvided = false;
+      const inputFields = Array.from(document.querySelectorAll('input[data-answer]'))
+          .filter(input => document.contains(input)); // Ensure only valid elements are checked
+      
+      let allCorrect = true;
+      let totalScore = 0;
+      let anyAnswerProvided = false;
 
-    inputFields.forEach(function (element) {
-        let isCorrect = checkAnswer(element);
-        let score = parseInt(element.dataset.score || "1"); // Default to 1 if no score is set
+      inputFields.forEach(function (element) {
+          let isCorrect = checkAnswer(element);
+          let score = parseInt(element.dataset.score || "1"); // Default to 1 if no score is set
 
-        console.log(`Input: ${element.value}, Answer: ${element.dataset.answer}, Correct: ${isCorrect}, Score: ${score}`);
+          if (isCorrect) {
+              anyAnswerProvided = true;
+              totalScore += score;
+          } else {
+              allCorrect = false;
+          }
+      });
 
-        if (isCorrect) {
-            anyAnswerProvided = true;
-            totalScore += score;
-        } else {
-            allCorrect = false;
-        }
-    });
+      const resultMessage = document.getElementById('resultMessage');
+      if (allCorrect && anyAnswerProvided) {
+          resultMessage.textContent = `All answers are correct! Your score is ${totalScore}.`;
+      } else if (anyAnswerProvided) {
+          resultMessage.textContent = `Your score is ${totalScore}. Some answers are incorrect. Please try again.`;
+      } else {
+          resultMessage.textContent = `Your score is 0. No answers were provided. Please try again.`;  
+      }
 
-    console.log(`Final Score: ${totalScore}`);
+      clearInterval(timer);
+      document.getElementById('checkButton').style.display = 'none';
 
-    const resultMessage = document.getElementById('resultMessage');
-    if (allCorrect && anyAnswerProvided) {
-        resultMessage.textContent = `All answers are correct! Your score is ${totalScore}.`;
-    } else if (anyAnswerProvided) {
-        resultMessage.textContent = `Your score is ${totalScore}. Some answers are incorrect. Please try again.`;
-    } else {
-        resultMessage.textContent = `Your score is 0. No answers were provided. Please try again.`;
-    }
+      return allCorrect;
+  }
 
-    clearInterval(timer);
-    document.getElementById('checkButton').style.display = 'none';
-
-    return allCorrect;
-}
 
 
 
