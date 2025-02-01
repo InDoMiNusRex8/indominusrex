@@ -106,15 +106,15 @@
   }
 
   function isInAssistiveMathML(element) {
-    // Traverse up the DOM tree to check if the element is inside an <annotation-xml> node
-    while (element !== document.documentElement) {
-      if (element.nodeName.toLowerCase() === 'annotation-xml') {
-        return true; // The element is inside an <annotation-xml> node
-      }
-      element = element.parentNode;
+    let parent = element.parentElement;
+    while (parent) {
+        if (parent.tagName.toLowerCase() === "annotation-xml") {
+            return true;
+        }
+        parent = parent.parentElement;
     }
-    return false; // The element is not inside an <annotation-xml> node
-  }
+    return false;
+}
 
   function checkAnswer(element) {
     let userInput = element.value.trim(); // Trim spaces
@@ -135,8 +135,7 @@
 
 
   function checkAllAnswers() {
-      const inputFields = Array.from(document.querySelectorAll('input[data-answer]'))
-          .filter(input => document.contains(input)); // Ensure only valid elements are checked
+      const inputFields = [...document.querySelectorAll('input[data-answer]')].filter(el => !isInAssistiveMathML(el));
       
       let allCorrect = true;
       let totalScore = 0;
