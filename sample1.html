@@ -115,10 +115,10 @@
         console.log(`Checking input: ${userInput}, Correct answer: ${correctAnswer}`);
 
         if (userInput === correctAnswer) {
-            element.style.borderColor = 'green';
+            element.style.backgroundColor = 'rgba(0, 255, 0, 0.3)'; // Light green
             return true;
         } else {
-            element.style.borderColor = 'red';
+            element.style.backgroundColor = 'rgba(255, 0, 0, 0.3)'; // Light red
             return false;
         }
     }
