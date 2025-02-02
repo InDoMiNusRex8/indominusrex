@@ -106,12 +106,11 @@
   }
 
   function isInAssistiveMathML(element) {
-    let parent = element.parentElement;
-    while (parent) {
-        if (parent.tagName.toLowerCase() === "annotation-xml") {
+    while (element) {
+        if (element.tagName && element.tagName.toLowerCase() === "annotation-xml") {
             return true;
         }
-        parent = parent.parentElement;
+        element = element.parentNode;
     }
     return false;
 }
@@ -135,7 +134,9 @@
 
 
   function checkAllAnswers() {
-      const inputFields = [...document.querySelectorAll('input[data-answer]')].filter(el => !isInAssistiveMathML(el));
+      const inputFields = [...document.querySelectorAll('input[data-answer]')].filter(el => {
+          return el.closest('annotation-xml') === null;
+      });
       
       let allCorrect = true;
       let totalScore = 0;
@@ -175,20 +176,25 @@
 
 
   document.addEventListener('DOMContentLoaded', function () {
-    startQuiz(); // Start the quiz automatically when the page is loaded
+    // Log all detected inputs to check if assistive MathML is included
+    console.log([...document.querySelectorAll('input[data-answer]')]);
 
-    // Add event listener for Enter key press
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
-        event.preventDefault(); // Prevent the default action of submitting forms
-        document.getElementById('checkButton').click(); // Simulate a click on the "Check Answers" button
-      }
-    });
+    
 
-    document.getElementById('checkButton').addEventListener('click', function () {
-      checkAllAnswers();
-    });
-  });
+    // Attach event listener to check button
+    const checkButton = document.getElementById('check-answers');
+    if (checkButton) {
+        checkButton.addEventListener('click', checkAllAnswers);
+    }
+
+    // Force MathJax to re-render
+    if (window.MathJax) {
+        window.MathJax.typesetPromise().then(() => {
+            console.log("MathJax re-rendered.");
+        });
+    }
+});
+    
 </script>
 
 </body>
