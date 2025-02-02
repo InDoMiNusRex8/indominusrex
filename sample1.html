@@ -75,121 +75,91 @@
 
 
 <script>
-  let timer;
-  let timerSeconds = 10; // Set the timer duration in seconds
+  document.addEventListener('DOMContentLoaded', function () {
+    let timer;
+    let timerSeconds = 10; // Set timer duration in seconds
 
-  function startTimer() {
-    timer = setInterval(function () {
-      timerSeconds--;
-      const minutes = Math.floor(timerSeconds / 60);
-      const seconds = timerSeconds % 60;
-      const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-      document.getElementById('timer').textContent = formattedTime; // Update the displayed timer value
-      if (timerSeconds <= 0) {
-        clearInterval(timer);
-        const allCorrect = checkAllAnswers(); // Check all answers when time's up
-        document.getElementById('checkButton').style.display = 'none'; // Hide the check button after time's up
+    function startTimer() {
+        timer = setInterval(function () {
+            timerSeconds--;
+            const minutes = Math.floor(timerSeconds / 60);
+            const seconds = timerSeconds % 60;
+            document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            if (timerSeconds <= 0) {
+                clearInterval(timer);
+                document.getElementById('checkButton').style.display = 'none'; // Hide button
+                checkAllAnswers(); // Auto-check when time is up
+            }
+        }, 1000);
+    }
+
+    function startQuiz() {
+        startTimer(); // Start timer when page loads
+    }
+
+    function isInAssistiveMathML(element) {
+        while (element) {
+            if (element.tagName && element.tagName.toLowerCase() === "annotation-xml") {
+                return true;
+            }
+            element = element.parentNode;
+        }
+        return false;
+    }
+
+    function checkAnswer(element) {
+        let userInput = element.value.trim();
+        let correctAnswer = element.dataset.answer.trim();
+
+        console.log(`Checking input: ${userInput}, Correct answer: ${correctAnswer}`);
+
+        if (userInput === correctAnswer) {
+            element.style.borderColor = 'green';
+            return true;
+        } else {
+            element.style.borderColor = 'red';
+            return false;
+        }
+    }
+
+    function checkAllAnswers() {
+        const inputFields = [...document.querySelectorAll('input[data-answer]')].filter(el => !isInAssistiveMathML(el));
+
+        let allCorrect = true;
+        let totalScore = 0;
+
+        inputFields.forEach(element => {
+            if (checkAnswer(element)) {
+                totalScore += parseInt(element.dataset.score || "1");
+            } else {
+                allCorrect = false;
+            }
+        });
+
         const resultMessage = document.getElementById('resultMessage');
         if (allCorrect) {
-          resultMessage.textContent = 'Time\'s up! All answers are correct!';
+            resultMessage.textContent = `All answers are correct! Score: ${totalScore}`;
         } else {
-          resultMessage.textContent = 'Time\'s up! Some answers are incorrect. Please try again.';
+            resultMessage.textContent = `Score: ${totalScore}. Some answers are incorrect. Try again.`;
         }
-      }
-    }, 1000);
-  }
 
-
-
-  function startQuiz() {
-    startTimer();
-  }
-
-  function isInAssistiveMathML(element) {
-    while (element) {
-        if (element.tagName && element.tagName.toLowerCase() === "annotation-xml") {
-            return true;
-        }
-        element = element.parentNode;
-    }
-    return false;
-}
-
-  function checkAnswer(element) {
-    let userInput = element.value.trim(); // Trim spaces
-    let correctAnswer = element.dataset.answer;
-
-    console.log(`Input Value: ${userInput}`);
-    console.log(`Correct Answer: ${correctAnswer}`);
-
-    if (userInput === "") {
-        return false; // Empty input should not be considered correct
+        clearInterval(timer); // Stop timer after checking
+        document.getElementById('checkButton').style.display = 'none';
     }
 
-    let isCorrect = userInput === correctAnswer;
-    console.log(`Input: ${userInput}, Answer: ${correctAnswer}, Correct: ${isCorrect}, Score: ${element.dataset.score}`);
+    document.getElementById('checkButton').addEventListener('click', checkAllAnswers);
 
-    return isCorrect;
-}
-
-
-  function checkAllAnswers() {
-      const inputFields = [...document.querySelectorAll('input[data-answer]')].filter(el => {
-          return el.closest('annotation-xml') === null;
-      });
-      
-      let allCorrect = true;
-      let totalScore = 0;
-      let anyAnswerProvided = false;
-
-      inputFields.forEach(function (element) {
-          let isCorrect = checkAnswer(element);
-          let score = parseInt(element.dataset.score || "1"); // Default to 1 if no score is set
-
-          if (isCorrect) {
-              anyAnswerProvided = true;
-              totalScore += score;
-          } else {
-              allCorrect = false;
-          }
-      });
-
-      const resultMessage = document.getElementById('resultMessage');
-      if (allCorrect && anyAnswerProvided) {
-          resultMessage.textContent = `All answers are correct! Your score is ${totalScore}.`;
-      } else if (anyAnswerProvided) {
-          resultMessage.textContent = `Your score is ${totalScore}. Some answers are incorrect. Please try again.`;
-      } else {
-          resultMessage.textContent = `Your score is 0. No answers were provided. Please try again.`;  
-      }
-
-      clearInterval(timer);
-      document.getElementById('checkButton').style.display = 'none';
-
-      return allCorrect;
-  }
-
-
-
-
-
-
-
-  document.addEventListener('DOMContentLoaded', function () {
-    startQuiz(); // Start the quiz automatically when the page is loaded
-
-    // Add event listener for Enter key press
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
-        event.preventDefault(); // Prevent the default action of submitting forms
-        document.getElementById('checkButton').click(); // Simulate a click on the "Check Answers" button
-      }
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            document.getElementById('checkButton').click();
+        }
     });
 
-    document.getElementById('checkButton').addEventListener('click', function () {
-      checkAllAnswers();
-    });
-  });
+    startQuiz(); // Start the quiz on page load
+});
+
 </script>
 
 </body>
