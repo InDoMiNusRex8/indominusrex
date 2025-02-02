@@ -76,89 +76,87 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    let timer;
-    let timerSeconds = 10; // Set timer duration in seconds
+      let timer;
+      let timerSeconds = 10; // Set timer duration in seconds
 
-    function startTimer() {
-        timer = setInterval(function () {
-            timerSeconds--;
-            const minutes = Math.floor(timerSeconds / 60);
-            const seconds = timerSeconds % 60;
-            document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      function startTimer() {
+          timer = setInterval(function () {
+              timerSeconds--;
+              const minutes = Math.floor(timerSeconds / 60);
+              const seconds = timerSeconds % 60;
+              document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 
-            if (timerSeconds <= 0) {
-                clearInterval(timer);
-                document.getElementById('checkButton').style.display = 'none'; // Hide button
-                checkAllAnswers(); // Auto-check when time is up
-            }
-        }, 1000);
-    }
+              if (timerSeconds <= 0) {
+                  clearInterval(timer);
+                  document.getElementById('checkButton').style.display = 'none'; // Hide button
+                  checkAllAnswers(); // Auto-check when time is up
+              }
+          }, 1000);
+      }
 
-    function startQuiz() {
-        startTimer(); // Start timer when page loads
-    }
+      function startQuiz() {
+          startTimer(); // Start timer when page loads
+      }
 
-    function isInAssistiveMathML(element) {
-        while (element) {
-            if (element.tagName && element.tagName.toLowerCase() === "annotation-xml") {
-                return true;
-            }
-            element = element.parentNode;
-        }
-        return false;
-    }
+      function isInAssistiveMathML(element) {
+          while (element) {
+              if (element.tagName && element.tagName.toLowerCase() === "annotation-xml") {
+                  return true;
+              }
+              element = element.parentNode;
+          }
+          return false;
+      }
 
-    function checkAnswer(element) {
-        let userInput = element.value.trim();
-        let correctAnswer = element.dataset.answer.trim();
+      function checkAnswer(element) {
+          let userInput = element.value.trim();
+          let correctAnswer = element.dataset.answer.trim();
 
-        console.log(`Checking input: ${userInput}, Correct answer: ${correctAnswer}`);
+          if (userInput === correctAnswer) {
+              element.style.backgroundColor = 'rgba(0, 255, 0, 0.3)'; // Light green
+              return true;
+          } else {
+              element.style.backgroundColor = 'rgba(255, 0, 0, 0.3)'; // Light red
+              return false;
+          }
+      }
 
-        if (userInput === correctAnswer) {
-            element.style.backgroundColor = 'rgba(0, 255, 0, 0.3)'; // Light green
-            return true;
-        } else {
-            element.style.backgroundColor = 'rgba(255, 0, 0, 0.3)'; // Light red
-            return false;
-        }
-    }
+      function checkAllAnswers() {
+          const inputFields = [...document.querySelectorAll('input[data-answer]')].filter(el => !isInAssistiveMathML(el));
 
-    function checkAllAnswers() {
-        const inputFields = [...document.querySelectorAll('input[data-answer]')].filter(el => !isInAssistiveMathML(el));
+          let allCorrect = true;
+          let totalScore = 0;
 
-        let allCorrect = true;
-        let totalScore = 0;
+          inputFields.forEach(element => {
+              if (checkAnswer(element)) {
+                  totalScore += parseInt(element.dataset.score || "1");
+              } else {
+                  allCorrect = false;
+              }
+          });
 
-        inputFields.forEach(element => {
-            if (checkAnswer(element)) {
-                totalScore += parseInt(element.dataset.score || "1");
-            } else {
-                allCorrect = false;
-            }
-        });
+          const resultMessage = document.getElementById('resultMessage');
+          if (allCorrect) {
+              resultMessage.textContent = `All answers are correct! Score: ${totalScore}`;
+          } else {
+              resultMessage.textContent = `Score: ${totalScore}. Some answers are incorrect. Try again.`;
+          }
 
-        const resultMessage = document.getElementById('resultMessage');
-        if (allCorrect) {
-            resultMessage.textContent = `All answers are correct! Score: ${totalScore}`;
-        } else {
-            resultMessage.textContent = `Score: ${totalScore}. Some answers are incorrect. Try again.`;
-        }
+          clearInterval(timer); // Stop timer after checking
+          document.getElementById('checkButton').style.display = 'none';
+      }
 
-        clearInterval(timer); // Stop timer after checking
-        document.getElementById('checkButton').style.display = 'none';
-    }
+      document.getElementById('checkButton').addEventListener('click', checkAllAnswers);
 
-    document.getElementById('checkButton').addEventListener('click', checkAllAnswers);
+      document.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter') {
+              event.preventDefault();
+              document.getElementById('checkButton').click();
+          }
+      });
 
-    document.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-            event.preventDefault();
-            document.getElementById('checkButton').click();
-        }
-    });
-
-    startQuiz(); // Start the quiz on page load
-});
+      startQuiz(); // Start the quiz on page load
+  });
 
 </script>
 
