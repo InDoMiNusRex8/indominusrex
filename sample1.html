@@ -337,6 +337,7 @@
 
 <br>
 <button id="checkButton" style="margin-top: 10px; font-family: Computer Modern Serif, sans-serif;">Check Answers</button>
+<button id="resetTimerButton" style="margin-top: 10px; font-family: Computer Modern Serif, sans-serif;">Restart Timer</button>
 <div id="resultMessage" style="margin-top: 10px; font-family: Computer Modern Serif, sans-serif;"></div>
 
 
@@ -346,25 +347,47 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
       let timer;
-      let timerSeconds = 720; // Set timer duration in seconds
+      const defaultTime = 720; // 10 minutes in seconds
+      let timerSeconds = parseInt(localStorage.getItem('timerSeconds')) || defaultTime;
+
+      function updateTimerDisplay() {
+          const minutes = Math.floor(timerSeconds / 60);
+          const seconds = timerSeconds % 60;
+          document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      }
 
       function startTimer() {
-          timer = setInterval(function () {
-              timerSeconds--;
-              const minutes = Math.floor(timerSeconds / 60);
-              const seconds = timerSeconds % 60;
-              document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+          if (timer) clearInterval(timer);
 
-              if (timerSeconds <= 0) {
+          timer = setInterval(function () {
+              if (timerSeconds > 0) {
+                  timerSeconds--;
+                  localStorage.setItem('timerSeconds', timerSeconds);
+                  updateTimerDisplay();
+              } else {
                   clearInterval(timer);
-                  document.getElementById('checkButton').style.display = 'none'; // Hide button
+                  document.getElementById('checkButton').style.display = 'none';
                   checkAllAnswers(); // Auto-check when time is up
               }
           }, 1000);
       }
 
-      function startQuiz() {
-          startTimer(); // Start timer when page loads
+      function resetTimer() {
+          clearInterval(timer);
+          timerSeconds = defaultTime;
+          localStorage.setItem('timerSeconds', timerSeconds);
+          updateTimerDisplay();
+          startTimer();
+          clearInputs();
+      }
+
+      function clearInputs() {
+          document.querySelectorAll('input[data-answer]').forEach(input => {
+              input.value = '';
+              input.style.backgroundColor = 'transparent';
+          });
+          document.getElementById('resultMessage').textContent = '';
+          document.getElementById('checkButton').style.display = 'inline-block';
       }
 
       function isInAssistiveMathML(element) {
@@ -411,11 +434,12 @@
               resultMessage.textContent = `Score: ${totalScore}. Some answers are incorrect. Try again.`;
           }
 
-          clearInterval(timer); // Stop timer after checking
+          clearInterval(timer); 
           document.getElementById('checkButton').style.display = 'none';
       }
 
       document.getElementById('checkButton').addEventListener('click', checkAllAnswers);
+      document.getElementById('resetTimerButton').addEventListener('click', resetTimer);
 
       document.addEventListener('keydown', function (event) {
           if (event.key === 'Enter') {
@@ -424,7 +448,8 @@
           }
       });
 
-      startQuiz(); // Start the quiz on page load
+      updateTimerDisplay();
+      startTimer();
   });
 
 </script>
