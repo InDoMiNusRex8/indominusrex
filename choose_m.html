@@ -57,21 +57,19 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.standalone.js"></script>
 	<script>
-	  var font = new FontFaceObserver("UDDigiKyokashoNK-R");
+	  document.addEventListener("DOMContentLoaded", function() {
+	    var font = new FontFaceObserver("UDDigiKyokashoNK-R");
 
-	  if (document.fonts.check("16px 'UDDigiKyokashoNK-R'")) {
-	    document.getElementById("loading-screen").style.display = "none";
-	    document.getElementById("content").style.display = "block";
-	  } else {
-	    // Wait for font to load
 	    font.load().then(function () {
+	      // Hide loading screen and show content when font is loaded
 	      document.getElementById("loading-screen").style.display = "none";
 	      document.getElementById("content").style.display = "block";
 	    }).catch(function (err) {
 	      console.error("Font failed to load:", err);
 	    });
-	  }
+	  });
 	</script>
+
 </head>
 <body>
 			<!-- Loading Screen -->
