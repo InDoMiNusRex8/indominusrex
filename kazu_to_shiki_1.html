@@ -62,20 +62,17 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.standalone.js"></script>
 	<script>
-	  var font = new FontFaceObserver("UDDigiKyokashoNK-R");
+	  document.addEventListener("DOMContentLoaded", function() {
+	    var font = new FontFaceObserver("UDDigiKyokashoNK-R");
 
-	  if (document.fonts.check("normal UDDigiKyokashoNK-R")) {
-	    document.getElementById("loading-screen").style.display = "none";
-	    document.getElementById("content").style.display = "block";
-	  } else {
-	    // Wait for font to load
 	    font.load().then(function () {
+	      // Hide loading screen and show content when font is loaded
 	      document.getElementById("loading-screen").style.display = "none";
 	      document.getElementById("content").style.display = "block";
 	    }).catch(function (err) {
 	      console.error("Font failed to load:", err);
 	    });
-	  }
+	  });
 	</script>
 </head>
 <body>
@@ -87,7 +84,7 @@
 			  </div>
 			</div>
 
-
+	<div id="content" style="display: none;">
 	<nav class="navbar navbar-expand-lg bg-light">
 		  <div class="container-fluid">
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -195,6 +192,6 @@
 		  </div>
 		</div>
 
-
+</div>
 </body>
 </html>
