@@ -59,12 +59,18 @@
 	<script>
 	  var font = new FontFaceObserver("UDDigiKyokashoNK-R");
 
-	  font.load().then(function () {
+	  if (document.fonts.check("normal UDDigiKyokashoNK-R")) {
 	    document.getElementById("loading-screen").style.display = "none";
 	    document.getElementById("content").style.display = "block";
-	  }).catch(function (err) {
-	    console.error("Font failed to load:", err);
-	  });
+	  } else {
+	    // Wait for font to load
+	    font.load().then(function () {
+	      document.getElementById("loading-screen").style.display = "none";
+	      document.getElementById("content").style.display = "block";
+	    }).catch(function (err) {
+	      console.error("Font failed to load:", err);
+	    });
+	  }
 	</script>
 </head>
 <body>
