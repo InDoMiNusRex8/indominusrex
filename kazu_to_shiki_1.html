@@ -9,6 +9,11 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
 	<style type="text/css">
 
 	@font-face {
@@ -85,8 +90,8 @@
 		        </nav>
 		        <a class="nav-link" href="#2">Factorizing expressions</a>
 		        <nav class="nav nav-pills flex-column">
-		          <a class="nav-link ms-3 my-1" href="#2-1">たすきがけ</a>
-		          <a class="nav-link ms-3 my-1" href="#2-2">復2次式</a>
+		          <a class="nav-link ms-3 my-1" href="#2-1"><span class="jp-text">たすきがけ</span></a>
+		          <a class="nav-link ms-3 my-1" href="#2-2"><span class="jp-text">復2次式</span></a>
 		          <a class="nav-link ms-3 my-1" href="#2-3">Factor theorem</a>
 		          <a class="nav-link ms-3 my-1" href="#2-4">Symmetric polynomials (2)</a>
 		          <a class="nav-link ms-3 my-1" href="#2-5">Alternating polynomials</a>
@@ -100,20 +105,33 @@
 		    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
 		      <div id="1">
 		        <h4>Expanding expressions</h4>
+		        <p>Fundamentally, multiplying the factors one by one is the most effective and error-free method.</p>
+		        <p>\(
+		        	\begin{align*}
+		        	    c(a+b)&=ca+cb\\
+		        	    (a+b)^2&=a^2+2ab+b^2\\
+		        	    (a-b)^2&=a^2-2ab+b^2\\
+		        	    (a+b)(a-b)&=a^2-b^2
+		        	\end{align*}
+		        \)</p>
 		      </div>
 		      <div id="1-1">
 		        <h5>Symmetric polynomials (1)</h5>
-		        <p>...</p>
+		        <p>
+		        	A symmetric polynomial is a polynomial which remains the same after interchanging the variables. For example, consider
+		        	$$(a+b+c)(a^2+b^2+c^2-ab-bc-ca).$$
+		        	Since expanding it results in $a^3$, we can predict that $b^3$and$c^3$must also appear and their respective coefficients are equal.
+		        </p>
 		      </div>
 		      <div id="2">
 		        <h4>Factorizing expressions</h4>
 		      </div>
 		      <div id="2-1">
-		        <h5>たすきがけ</h5>
+		        <h5><span class="jp-text">たすきがけ</span></h5>
 		        <p>...</p>
 		      </div>
 		      <div id="2-2">
-		        <h5>復2次式</h5>
+		        <h5><span class="jp-text">復2次式</span></h5>
 		        <p>...</p>
 		      </div>
 		      <div id="2-3">
