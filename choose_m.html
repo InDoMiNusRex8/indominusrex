@@ -61,8 +61,13 @@
 	  document.addEventListener("DOMContentLoaded", function() {
 	    var font = new FontFaceObserver("UDDigiKyokashoNK-R");
 
+	    var timeout = setTimeout(function() {
+	      document.getElementById("loading-screen").style.display = "none";
+	      document.getElementById("content").style.display = "block";
+	    }, 3000);
+
 	    font.load().then(function () {
-	      // Hide loading screen and show content when font is loaded
+	      clearTimeout(timeout); 
 	      document.getElementById("loading-screen").style.display = "none";
 	      document.getElementById("content").style.display = "block";
 	    }).catch(function (err) {
