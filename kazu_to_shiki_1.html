@@ -67,7 +67,7 @@
       height: 80vh; 
       overflow-y: auto;
     }
-    .list-group-item.active {
+    .nav-link.active {
       background-color: #a3a3a3; 
       color: black;
     }  
@@ -94,8 +94,10 @@
 	</script>
 
 	<script>
-    var scrollSpy = new bootstrap.ScrollSpy(document.querySelector('.scrollspy-container'), {
-      target: '#navbar-2'
+    document.addEventListener("DOMContentLoaded", function () {
+      var scrollSpy = new bootstrap.ScrollSpy(document.querySelector('.scrollspy-container'), {
+        target: '#navbar-2'
+      });
     });
   	</script>
 </head>
