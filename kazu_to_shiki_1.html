@@ -37,7 +37,7 @@
 
 	body {
       font-family: 'Computer Modern Serif', sans-serif; /* Default font for English text */
-      margin:0;padding:0
+      position: relative;
     }
 	.jp-text {
 	      font-family: 'UDDigiKyokashoNK-R', sans-serif; /* Use Klee One only for Japanese */
@@ -60,6 +60,19 @@
 	#content {
 	      display: none;
 	    }
+
+
+    .scrollspy-container {
+      position: relative;
+      height: 300px; /* This makes the div scrollable */
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding-right: 10px;
+    }
+    .list-group-item.active {
+      background-color: #0d6efd; /* Bootstrap primary color */
+      color: white;
+    }  
 	</style>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.standalone.js"></script>
