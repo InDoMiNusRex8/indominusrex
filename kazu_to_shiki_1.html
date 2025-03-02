@@ -68,7 +68,7 @@
       overflow-y: auto;
     }
     .list-group-item.active {
-      background-color: #0d6efd; /* Bootstrap primary color */
+      background-color: #0d6efd; 
       color: white;
     }  
 	</style>
@@ -92,6 +92,12 @@
 	    });
 	  });
 	</script>
+
+	<script>
+    var scrollSpy = new bootstrap.ScrollSpy(document.querySelector('.scrollspy-container'), {
+      target: '#navbar-2'
+    });
+  </script>
 </head>
 <body>
 			<!-- Loading Screen -->
