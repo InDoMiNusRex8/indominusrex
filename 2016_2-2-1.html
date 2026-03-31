@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+
+    <script>
+      window.MathJax = {
+        options: {
+          enableAssistiveMml: false // Disable assistive MathML
+        },
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+      };
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+    <style>
+    .input {
+      width: 20px;
+      text-align: center;
+      font-family: Computer Modern Serif, sans-serif;
+    }
+
+    .red {
+      background-color: darkred;
+    }
+
+    @font-face {
+      font-family: 'UDDigiKyokashoNK-R';
+      src: url('fonts/UDDigiKyokashoNK-R.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'UDDigiKyokashoNK-R', sans-serif;
+      font-size: 20px;
+    }
+    </style>
+</head>
+<body>
+
+$x$の2次関数 <math>
+  <mrow>
+    <mo form="prefix" stretchy="false">{</mo>
+    <msub>
+      <mi>a</mi>
+      <mi>n</mi>
+    </msub>
+    <mo form="postfix" stretchy="false">}</mo>
+  </mrow></math> を
+<math display="block" class="tml-display" style="display:block math;">
+  <mrow>
+    <msub>
+      <mi>a</mi>
+      <mi>n</mi>
+    </msub>
+    <mo>=</mo>
+    <msubsup>
+      <mo movablelimits="false">∫</mo>
+      <mn>0</mn>
+      <mfrac>
+        <mi>π</mi>
+        <mn>2</mn>
+      </mfrac>
+    </msubsup>
+    <msup>
+      <mi>cos</mi>
+      <mi>n</mi>
+    </msup>
+    <mo>⁡</mo>
+    <mspace width="0.1667em"></mspace>
+    <mi>x</mi>
+    <mspace width="0.2778em"></mspace>
+    <mi>d</mi>
+    <mi>x</mi>
+    <mspace width="0.2778em"></mspace>
+    <mspace width="0.2778em"></mspace>
+    <mspace width="0.2778em"></mspace>
+    <mspace width="0.2778em"></mspace>
+    <mo form="prefix" stretchy="false">(</mo>
+    <mi>n</mi>
+    <mo>=</mo>
+    <mn>0</mn>
+    <mo separator="true">,</mo>
+    <mn>1</mn>
+    <mo separator="true">,</mo>
+    <mn>2</mn>
+    <mo separator="true">,</mo>
+    <mo>⋯</mo>
+    <mspace width="0.1667em"></mspace>
+    <mo form="postfix" stretchy="false">)</mo>
+  </mrow></math>
+と定める。ただし、 <math>
+  <mrow>
+    <mi>n</mi>
+    <mo>=</mo>
+  </mrow>
+  <mrow>
+    <mn>0</mn>
+  </mrow></math> のときは <math>
+  <mrow>
+    <msub>
+      <mi>a</mi>
+      <mn>0</mn>
+    </msub>
+    <mo>=</mo>
+  </mrow>
+  <mrow>
+    <msubsup>
+      <mo movablelimits="false">∫</mo>
+      <mn>0</mn>
+      <mfrac>
+        <mi>π</mi>
+        <mn>2</mn>
+      </mfrac>
+    </msubsup>
+    <mi>d</mi>
+    <mi>x</mi>
+  </mrow></math> であるとする。
+
+このとき <math>
+  <mrow>
+    <msub>
+      <mi>a</mi>
+      <mn>1</mn>
+    </msub>
+    <mo>=</mo>
+
+    <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="A" autocomplete="off" class="input" data-answer="1" data-score="2" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+  </mrow>
+</math> である。また、部分積分を行うと、漸化式
+<math display="block" class="tml-display" style="display:block math;">
+  <mrow>
+    <msub>
+      <mi>a</mi>
+      <mrow>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>2</mn>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <msubsup>
+      <mo movablelimits="false">∫</mo>
+      <mn>0</mn>
+      <mfrac>
+        <mi>π</mi>
+        <mn>2</mn>
+      </mfrac>
+    </msubsup>
+    <msup>
+      <mi>cos</mi>
+      <mrow>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>2</mn>
+      </mrow>
+    </msup>
+    <mo>⁡</mo>
+    <mspace width="0.1667em"></mspace>
+    <mi>x</mi>
+    <mspace width="0.2778em"></mspace>
+    <mi>d</mi>
+    <mi>x</mi>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mi>n</mi>
+
+        <mo lspace="0.1em" rspace="0.1em">+</mo>
+
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="B" autocomplete="off" class="input" data-answer="1" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+      </mrow>
+      <mrow>
+        <mi>n</mi>
+        <mo lspace="0.1em" rspace="0.1em">+</mo>
+
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="C" autocomplete="off" class="input" data-answer="2" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+      </mrow>
+    </mfrac>
+    <msub>
+      <mi>a</mi>
+      <mi>n</mi>
+    </msub>
+    <mspace width="0.2778em"></mspace>
+    <mspace width="0.2778em"></mspace>
+    <mspace width="0.2778em"></mspace>
+    <mspace width="0.2778em"></mspace>
+    <mo form="prefix" stretchy="false">(</mo>
+    <mi>n</mi>
+    <mo>=</mo>
+    <mn>0</mn>
+    <mo separator="true">,</mo>
+    <mn>1</mn>
+    <mo separator="true">,</mo>
+    <mn>2</mn>
+    <mo separator="true">,</mo>
+    <mo>⋯</mo>
+    <mspace width="0.1667em"></mspace>
+    <mo form="postfix" stretchy="false">)</mo>
+  </mrow>
+</math>
+が得られる。したがって、
+<math display="block" class="tml-display" style="display:block math;">
+  <mrow>
+    <msub>
+      <mi>a</mi>
+      <mn>2</mn>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mi>
+
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="D" autocomplete="off" class="input" data-answer="1" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+      </mi>
+      <mi>
+
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="E" autocomplete="off" class="input" data-answer="4" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+      </mi>
+    </mfrac>
+    <mi>π</mi>
+    <mo separator="true">,</mo>
+    <mspace width="0.2778em"></mspace>
+    <msub>
+      <mi>a</mi>
+      <mn>3</mn>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mi>
+
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="F" autocomplete="off" class="input" data-answer="2" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+      </mi>
+      <mi>
+
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="G" autocomplete="off" class="input" data-answer="3" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+      </mi>
+    </mfrac>
+    <mi>π</mi>
+    <mo separator="true">,</mo>
+    <mspace width="0.2778em"></mspace>
+    <msub>
+      <mi>a</mi>
+      <mn>4</mn>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mi>
+
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="H" autocomplete="off" class="input" data-answer="3" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+      </mi>
+      <mi>
+
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="I" autocomplete="off" class="input" data-answer="1" data-score="0.5" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="J" autocomplete="off" class="input" data-answer="6" data-score="0.5" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+      </mi>
+    </mfrac>
+    <mi>π</mi>
+    <mo separator="true">,</mo>
+    <mspace width="0.2778em"></mspace>
+    <msub>
+      <mi>a</mi>
+      <mn>5</mn>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mi>
+
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="K" autocomplete="off" class="input" data-answer="8" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+      </mi>
+      <mi>
+
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="L" autocomplete="off" class="input" data-answer="1" data-score="0.5" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+        <mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="M" autocomplete="off" class="input" data-answer="5" data-score="0.5" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn>
+
+      </mi>
+    </mfrac>
+    <mi>π</mi>
+  </mrow>
+</math>
+である。
+
+
+<br>
+<button id="checkButton" style="margin-top: 10px; font-family: Computer Modern Serif, sans-serif;">Check Answers</button>
+<button id="resetTimerButton" style="margin-top: 10px; font-family: Computer Modern Serif, sans-serif;">Restart Timer</button>
+<div id="resultMessage" style="margin-top: 10px; font-family: Computer Modern Serif, sans-serif;"></div>
+
+
+<div id="timerDisplay" style="font-family: Computer Modern Serif, sans-serif;">Time remaining: <span id="timer">12:00</span></div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      let timer;
+      const defaultTime = 720; // 10 minutes in seconds
+      let timerSeconds = parseInt(localStorage.getItem('timerSeconds')) || defaultTime;
+
+      function updateTimerDisplay() {
+          const minutes = Math.floor(timerSeconds / 60);
+          const seconds = timerSeconds % 60;
+          document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      }
+
+      function startTimer() {
+          if (timer) clearInterval(timer);
+
+          timer = setInterval(function () {
+              if (timerSeconds > 0) {
+                  timerSeconds--;
+                  localStorage.setItem('timerSeconds', timerSeconds);
+                  updateTimerDisplay();
+              } else {
+                  clearInterval(timer);
+                  document.getElementById('checkButton').style.display = 'none';
+                  checkAllAnswers(); // Auto-check when time is up
+              }
+          }, 1000);
+      }
+
+      function resetTimer() {
+          clearInterval(timer);
+          timerSeconds = defaultTime;
+          localStorage.setItem('timerSeconds', timerSeconds);
+          updateTimerDisplay();
+          startTimer();
+          clearInputs();
+      }
+
+      function clearInputs() {
+          document.querySelectorAll('input[data-answer]').forEach(input => {
+              input.value = '';
+              input.style.backgroundColor = 'transparent';
+          });
+          document.getElementById('resultMessage').textContent = '';
+          document.getElementById('checkButton').style.display = 'inline-block';
+      }
+
+      function isInAssistiveMathML(element) {
+          while (element) {
+              if (element.tagName && element.tagName.toLowerCase() === "annotation-xml") {
+                  return true;
+              }
+              element = element.parentNode;
+          }
+          return false;
+      }
+
+      function checkAnswer(element) {
+          let userInput = element.value.trim();
+          let correctAnswer = element.dataset.answer.trim();
+
+          if (userInput === correctAnswer) {
+              element.style.backgroundColor = 'rgba(0, 255, 0, 0.3)'; // Light green
+              return true;
+          } else {
+              element.style.backgroundColor = 'rgba(255, 0, 0, 0.3)'; // Light red
+              return false;
+          }
+      }
+
+      function checkAllAnswers() {
+          const inputFields = [...document.querySelectorAll('input[data-answer]')].filter(el => !isInAssistiveMathML(el));
+
+          let allCorrect = true;
+          let totalScore = 0;
+
+          inputFields.forEach(element => {
+              if (checkAnswer(element)) {
+                  totalScore += parseInt(element.dataset.score || "1");
+              } else {
+                  allCorrect = false;
+              }
+          });
+
+          const resultMessage = document.getElementById('resultMessage');
+          if (allCorrect) {
+              resultMessage.textContent = `All answers are correct! Score: ${totalScore}`;
+          } else {
+              resultMessage.textContent = `Score: ${totalScore}. Some answers are incorrect. Try again.`;
+          }
+
+          clearInterval(timer); 
+          document.getElementById('checkButton').style.display = 'none';
+      }
+
+      document.getElementById('checkButton').addEventListener('click', checkAllAnswers);
+      document.getElementById('resetTimerButton').addEventListener('click', resetTimer);
+
+      document.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter') {
+              event.preventDefault();
+              document.getElementById('checkButton').click();
+          }
+      });
+
+      updateTimerDisplay();
+      startTimer();
+  });
+
+</script>
+
+</body>
+</html>
