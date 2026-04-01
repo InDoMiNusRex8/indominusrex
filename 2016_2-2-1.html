@@ -33,23 +33,30 @@
       font-style: normal;
     }
 
+    html, body {
+      height: 100%;        /* Keep full height of the viewport */
+      margin: 0;           /* Remove default margin */
+      display: flex;       /* Use Flexbox */
+      justify-content: center; /* Center content horizontally */
+      align-items: flex-start; /* Align content at the top */
+      overflow: auto;      /* Allow scrolling */
+    }
+
     body {
       font-family: 'IPAexMincho', sans-serif;
       font-size: 20px;
-      width: 210mm;          /* A4 width */
-      height: 297mm;         /* A4 height */
-      margin: 25.4mm;        /* Standard 1 inch margin on all sides (25.4mm) */
+      width: 210mm;         /* A4 width */
+      margin: 25.4mm;       /* Standard 1 inch margin */
       padding: 0;
       box-sizing: border-box;
       line-height: 1.5;
+      max-height: 100%;     /* Prevent body from stretching too much */
     }
 
-    html, body {
-      height: 100%; /* Full height of the viewport */
-      margin: 0; /* Remove default margins */
-      display: flex; /* Use flexbox to align */
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
+    .content {
+      width: 100%;           /* Ensure content is inside the page */
+      max-width: 210mm;      /* Limit width to A4 size */
+      overflow: auto;        /* Allow overflow of content if needed */
     }
 
     .mathjax-inline  {
@@ -63,9 +70,7 @@
       padding-bottom: 25px;
     }
 
-    .content {
-      padding: 20mm;  /* Add some padding inside the content area */
-    }
+
     </style>
 </head>
 <body>
@@ -76,7 +81,7 @@
   \( \hphantom{\hspace{15pt}\cdots\cdots\hspace{10pt}\text{①}} y = ax^2 + bx + c \hspace{15pt}\cdots\cdots\hspace{5pt}\hphantom{\cdots}\) ①
 </div>
 を考える。関数①は<span class="mathjax-inline">$r=1$</span>のとき最大値<span class="mathjax-inline">$16$</span>をとり, そのグラフは軸と<span class="mathjax-inline">$2$</span>点で交わり, その<span class="mathjax-inline">$2$</span>点を結ぶ線分の長さを<span class="mathjax-inline">$8$</span>とする。このとき, <span class="mathjax-inline">$a$, $b$, $c$</span>の値を求めよう。
-<br>
+<br><br>
 条件より, ①は
 
 <math display="block" class="tml-display" style="display:block math;">
