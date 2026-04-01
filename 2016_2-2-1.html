@@ -29,7 +29,7 @@
     @font-face {
       font-family: 'IPAexMincho';
       src: url('fonts/ipaexm.ttf') format('truetype');
-      font-weight: normal;
+      font-weight: 600;
       font-style: normal;
     }
 
@@ -303,7 +303,7 @@ function resetTimer() {
     clearInterval(timer);
     document.getElementById('checkButton').style.display = 'none'; // Hide check button after checking answers
     document.getElementById('resetTimerButton').style.display = 'inline-block'; // Show reset button after checking answers
-}
+} 
 
       document.getElementById('checkButton').addEventListener('click', checkAllAnswers);
       document.getElementById('resetTimerButton').addEventListener('click', resetTimer);
