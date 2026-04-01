@@ -85,7 +85,7 @@
 <div class="centered">
   \( \hphantom{\hspace{15pt}\cdots\cdots\hspace{10pt}\text{①}} y = ax^2 + bx + c \hspace{15pt}\cdots\cdots\hspace{5pt}\hphantom{\cdots}\) ①
 </div>
-を考える。関数①は<span class="mathjax-inline">$r=1$</span>のとき最大値<span class="mathjax-inline">$16$</span>をとり, そのグラフは軸と<span class="mathjax-inline">$2$</span>点で交わり, その<span class="mathjax-inline">$2$</span>点を結ぶ線分の長さを<span class="mathjax-inline">$8$</span>とする。このとき, <span class="mathjax-inline">$a$, $b$, $c$</span>の値を求めよう。
+を考える。関数①は<span class="mathjax-inline">$r=1$</span>のとき最大値<span class="mathjax-inline">$16$</span>をとり, そのグラフは<span class="mathjax-inline">$x$</span>軸と<span class="mathjax-inline">$2$</span>点で交わり, その<span class="mathjax-inline">$2$</span>点を結ぶ線分の長さを<span class="mathjax-inline">$8$</span>とする。このとき, <span class="mathjax-inline">$a$, $b$, $c$</span>の値を求めよう。
 <br><br>
 条件より, ①は
 
@@ -123,211 +123,74 @@
 
   </mrow>
 </math>
-である。また、部分積分を行うと、漸化式
+と表すことができる。また, ①のグラフと<span class="mathjax-inline">$x$</span>軸が交わる<span class="mathjax-inline">$2$</span>点の座標は
 <math display="block" class="tml-display" style="display:block math;">
   <mrow>
-    <msub>
-      <mi>a</mi>
-      <mrow>
-        <mi>n</mi>
-        <mo>+</mo>
-        <mn>2</mn>
-      </mrow>
-    </msub>
-    <mo>=</mo>
-    <msubsup>
-      <mo movablelimits="false">∫</mo>
-      <mn>0</mn>
-      <mfrac>
-        <mi>π</mi>
-        <mn>2</mn>
-      </mfrac>
-    </msubsup>
-    <msup>
-      <mi>cos</mi>
-      <mrow>
-        <mi>n</mi>
-        <mo>+</mo>
-        <mn>2</mn>
-      </mrow>
-    </msup>
-    <mo>⁡</mo>
-    <mspace width="0.1667em"></mspace>
-    <mi>x</mi>
-    <mspace width="0.2778em"></mspace>
-    <mi>d</mi>
-    <mi>x</mi>
-    <mo>=</mo>
-    <mfrac>
-      <mrow>
-        <mi>n</mi>
-
-        <mo lspace="0.1em" rspace="0.1em">+</mo>
-
-        <mn><semantics>
-        <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="B" autocomplete="off" class="input" data-answer="1" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
-           if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-
-      </mrow>
-      <mrow>
-        <mi>n</mi>
-        <mo lspace="0.1em" rspace="0.1em">+</mo>
-
-        <mn><semantics>
-        <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="C" autocomplete="off" class="input" data-answer="2" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
-           if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-
-      </mrow>
-    </mfrac>
-    <msub>
-      <mi>a</mi>
-      <mi>n</mi>
-    </msub>
-    <mspace width="0.2778em"></mspace>
-    <mspace width="0.2778em"></mspace>
-    <mspace width="0.2778em"></mspace>
-    <mspace width="0.2778em"></mspace>
-    <mo form="prefix" stretchy="false">(</mo>
-    <mi>n</mi>
-    <mo>=</mo>
-    <mn>0</mn>
-    <mo separator="true">,</mo>
-    <mn>1</mn>
-    <mo separator="true">,</mo>
-    <mn>2</mn>
-    <mo separator="true">,</mo>
-    <mo>⋯</mo>
-    <mspace width="0.1667em"></mspace>
-    <mo form="postfix" stretchy="false">)</mo>
-  </mrow>
-</math>
-が得られる。したがって、
-<math display="block" class="tml-display" style="display:block math;">
-  <mrow>
-    <msub>
-      <mi>a</mi>
-      <mn>2</mn>
-    </msub>
-    <mo>=</mo>
-    <mfrac>
-      <mi>
-
-        <mn><semantics>
+    <mo fence="false" symmetric="true" minsize="1.8em" maxsize="1.8em">(</mo>
+    <mo>−</mo>
+    <mi><mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
           <input xmlns="http://www.w3.org/1999/xhtml" placeholder="D" autocomplete="off" class="input" data-answer="1" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
            if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-
-      </mi>
-      <mi>
-
-        <mn><semantics>
+        </annotation-xml></semantics></mn></mi>
+    <mo separator="true">,</mo>
+    <mn>0</mn>
+    <mo fence="false" symmetric="true" minsize="1.8em" maxsize="1.8em">)</mo>
+    <mo separator="true">,</mo>
+    <mspace width="1em"></mspace>
+    <mo fence="false" symmetric="true" minsize="1.8em" maxsize="1.8em">(</mo>
+    <mi><mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
           <input xmlns="http://www.w3.org/1999/xhtml" placeholder="E" autocomplete="off" class="input" data-answer="4" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
            if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-
-      </mi>
-    </mfrac>
-    <mi>π</mi>
+        </annotation-xml></semantics></mn></mi>
     <mo separator="true">,</mo>
-    <mspace width="0.2778em"></mspace>
-    <msub>
-      <mi>a</mi>
-      <mn>3</mn>
-    </msub>
+    <mn>0</mn>
+    <mo fence="false" symmetric="true" minsize="1.8em" maxsize="1.8em">)</mo>
+  </mrow>
+</math>
+である。
+<br>
+<br>
+したがって、<math>
+  <mrow>
+    <mi>a</mi>
     <mo>=</mo>
-    <mfrac>
-      <mi>
-
-        <mn><semantics>
+    <mi><mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="F" autocomplete="off" class="input" data-answer="2" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="F" autocomplete="off" class="input" data-answer="4" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
            if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-
-      </mi>
-      <mi>
-
-        <mn><semantics>
+        </annotation-xml></semantics></mn></mi>
+    <mi><mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="G" autocomplete="off" class="input" data-answer="3" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="G" autocomplete="off" class="input" data-answer="4" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
            if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-
-      </mi>
-    </mfrac>
-    <mi>π</mi>
+        </annotation-xml></semantics></mn></mi>
+  </mrow>
+</math>である。よって
+<math display="block" class="tml-display" style="display:block math;">
+  <mrow>
+    <mi>b</mi>
+    <mo>=</mo>
+    <mi><mn><semantics>
+        <annotation-xml encoding="application/xhtml+xml">
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="H" autocomplete="off" class="input" data-answer="4" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+           if(this.value !== '') this.setAttribute('value', this.value);"> 
+        </annotation-xml></semantics></mn></mi>
     <mo separator="true">,</mo>
-    <mspace width="0.2778em"></mspace>
-    <msub>
-      <mi>a</mi>
-      <mn>4</mn>
-    </msub>
+    <mspace width="1em"></mspace>
+    <mi>c</mi>
     <mo>=</mo>
-    <mfrac>
-      <mi>
-
-        <mn><semantics>
+    <mi><mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="H" autocomplete="off" class="input" data-answer="3" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="I" autocomplete="off" class="input" data-answer="4" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
            if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-
-      </mi>
-      <mi>
-
-        <mn><semantics>
+        </annotation-xml></semantics></mn></mi>
+    <mi><mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="I" autocomplete="off" class="input" data-answer="1" data-score="0.5" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
+          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="J" autocomplete="off" class="input" data-answer="4" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
            if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-        <mn><semantics>
-        <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="J" autocomplete="off" class="input" data-answer="6" data-score="0.5" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
-           if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-
-      </mi>
-    </mfrac>
-    <mi>π</mi>
-    <mo separator="true">,</mo>
-    <mspace width="0.2778em"></mspace>
-    <msub>
-      <mi>a</mi>
-      <mn>5</mn>
-    </msub>
-    <mo>=</mo>
-    <mfrac>
-      <mi>
-
-        <mn><semantics>
-        <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="K" autocomplete="off" class="input" data-answer="8" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
-           if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-
-      </mi>
-      <mi>
-
-        <mn><semantics>
-        <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="L" autocomplete="off" class="input" data-answer="1" data-score="0.5" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
-           if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-        <mn><semantics>
-        <annotation-xml encoding="application/xhtml+xml">
-          <input xmlns="http://www.w3.org/1999/xhtml" placeholder="M" autocomplete="off" class="input" data-answer="5" data-score="0.5" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
-           if(this.value !== '') this.setAttribute('value', this.value);"> 
-        </annotation-xml></semantics></mn>
-
-      </mi>
-    </mfrac>
-    <mi>π</mi>
+        </annotation-xml></semantics></mn></mi>
   </mrow>
 </math>
 である。
