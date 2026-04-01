@@ -63,7 +63,6 @@
       height: auto;            /* Allow content to expand vertically */
       margin: 0 auto;          /* Ensure horizontal centering */
       overflow: hidden;
-      font-weight: 600;
     }
 
     .mathjax-inline  {
@@ -128,7 +127,7 @@
 と表すことができる。また, ①のグラフと<span class="mathjax-inline">$x$</span>軸が交わる<span class="mathjax-inline">$2$</span>点の座標は
 <math display="block" class="tml-display" style="display:block math;">
   <mrow>
-    <mo fence="false" symmetric="true" minsize="1.8em" maxsize="1.8em">(</mo>
+    <mo fence="true" form="prefix" stretchy="false">(</mo>
     <mo>−</mo>
     <mi><mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
@@ -137,10 +136,10 @@
         </annotation-xml></semantics></mn></mi>
     <mo separator="true">,</mo>
     <mn>0</mn>
-    <mo fence="false" symmetric="true" minsize="1.8em" maxsize="1.8em">)</mo>
+    <mo fence="true" form="postfix" stretchy="false">)</mo>
     <mo separator="true">,</mo>
     <mspace width="1em"></mspace>
-    <mo fence="false" symmetric="true" minsize="1.8em" maxsize="1.8em">(</mo>
+    <mo fence="true" form="prefix" stretchy="false">(</mo>
     <mi><mn><semantics>
         <annotation-xml encoding="application/xhtml+xml">
           <input xmlns="http://www.w3.org/1999/xhtml" placeholder="E" autocomplete="off" class="input" data-answer="5" data-score="1" type="text" oninput="this.value = this.value.replace(/[^0-9-]/g, '')  .replace(/(?!^)-/g, '')  .slice(0, 1); 
@@ -148,7 +147,7 @@
         </annotation-xml></semantics></mn></mi>
     <mo separator="true">,</mo>
     <mn>0</mn>
-    <mo fence="false" symmetric="true" minsize="1.8em" maxsize="1.8em">)</mo>
+    <mo fence="true" form="postfix" stretchy="false">)</mo>
   </mrow>
 </math>
 である。
