@@ -217,30 +217,35 @@
           document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
       }
 
-      function startTimer() {
-          if (timer) clearInterval(timer);
+      // Initially hide the reset button
+document.getElementById('resetTimerButton').style.display = 'none';
 
-          timer = setInterval(function () {
-              if (timerSeconds > 0) {
-                  timerSeconds--;
-                  localStorage.setItem('timerSeconds', timerSeconds);
-                  updateTimerDisplay();
-              } else {
-                  clearInterval(timer);
-                  document.getElementById('checkButton').style.display = 'none';
-                  checkAllAnswers(); // Auto-check when time is up
-              }
-          }, 1000);
-      }
+function startTimer() {
+    if (timer) clearInterval(timer);
 
-      function resetTimer() {
-          clearInterval(timer);
-          timerSeconds = defaultTime;
-          localStorage.setItem('timerSeconds', timerSeconds);
-          updateTimerDisplay();
-          startTimer();
-          clearInputs();
-      }
+    timer = setInterval(function () {
+        if (timerSeconds > 0) {
+            timerSeconds--;
+            localStorage.setItem('timerSeconds', timerSeconds);
+            updateTimerDisplay();
+        } else {
+            clearInterval(timer);
+            document.getElementById('checkButton').style.display = 'none'; // Hide check button when time's up
+            document.getElementById('resetTimerButton').style.display = 'inline-block'; // Show reset button
+            checkAllAnswers(); // Auto-check when time is up
+        }
+    }, 1000);
+}
+
+function resetTimer() {
+    clearInterval(timer);
+    timerSeconds = defaultTime;
+    localStorage.setItem('timerSeconds', timerSeconds);
+    updateTimerDisplay();
+    startTimer();
+    clearInputs();
+    document.getElementById('resetTimerButton').style.display = 'none'; // Hide reset button after reset
+}
 
       function clearInputs() {
           document.querySelectorAll('input[data-answer]').forEach(input => {
@@ -275,29 +280,30 @@
       }
 
       function checkAllAnswers() {
-          const inputFields = [...document.querySelectorAll('input[data-answer]')].filter(el => !isInAssistiveMathML(el));
+    const inputFields = [...document.querySelectorAll('input[data-answer]')].filter(el => !isInAssistiveMathML(el));
 
-          let allCorrect = true;
-          let totalScore = 0;
+    let allCorrect = true;
+    let totalScore = 0;
 
-          inputFields.forEach(element => {
-              if (checkAnswer(element)) {
-                  totalScore += parseInt(element.dataset.score || "1");
-              } else {
-                  allCorrect = false;
-              }
-          });
+    inputFields.forEach(element => {
+        if (checkAnswer(element)) {
+            totalScore += parseInt(element.dataset.score || "1");
+        } else {
+            allCorrect = false;
+        }
+    });
 
-          const resultMessage = document.getElementById('resultMessage');
-          if (allCorrect) {
-              resultMessage.textContent = `All answers are correct! Score: ${totalScore}`;
-          } else {
-              resultMessage.textContent = `Score: ${totalScore}. Some answers are incorrect. Try again.`;
-          }
+    const resultMessage = document.getElementById('resultMessage');
+    if (allCorrect) {
+        resultMessage.textContent = `All answers are correct! Score: ${totalScore}`;
+    } else {
+        resultMessage.textContent = `Score: ${totalScore}. Some answers are incorrect. Try again.`;
+    }
 
-          clearInterval(timer); 
-          document.getElementById('checkButton').style.display = 'none';
-      }
+    clearInterval(timer);
+    document.getElementById('checkButton').style.display = 'none'; // Hide check button after checking answers
+    document.getElementById('resetTimerButton').style.display = 'inline-block'; // Show reset button after checking answers
+}
 
       document.getElementById('checkButton').addEventListener('click', checkAllAnswers);
       document.getElementById('resetTimerButton').addEventListener('click', resetTimer);
