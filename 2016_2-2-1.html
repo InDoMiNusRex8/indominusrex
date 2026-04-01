@@ -47,7 +47,9 @@
     html, body {
       height: 100%; /* Full height of the viewport */
       margin: 0; /* Remove default margins */
-      display: flex; /* Flexbox to center the content */
+      display: flex; /* Use flexbox to align */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
     }
 
     .mathjax-inline  {
@@ -60,10 +62,14 @@
       padding-top: 25px;   /* Vertical padding above */
       padding-bottom: 25px;
     }
+
+    .content {
+      padding: 20mm;  /* Add some padding inside the content area */
+    }
     </style>
 </head>
 <body>
-
+<div class="content">
 <span class="mathjax-inline">$x$</span>の<span class="mathjax-inline">$2$</span>次関数
 <div class="centered">
   \( \hphantom{\hspace{15pt}\cdots\cdots\hspace{10pt}\text{①}} y = ax^2 + bx + c \hspace{15pt}\cdots\cdots\hspace{5pt}\hphantom{\cdots}\) ①
@@ -324,7 +330,7 @@
 
 
 <div id="timerDisplay" style="font-family: Computer Modern Serif, sans-serif;">Time remaining: <span id="timer">12:00</span></div>
-
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
